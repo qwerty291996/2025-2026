@@ -1,2 +1,2 @@
-txt = '12.1'
-print(float(txt)) # выведет 12.0
+tst = list('4321')
+print(tst)
