@@ -1,0 +1,16 @@
+﻿[Save]
+IsSaveConfig=0
+IsUseWindowSettings=0
+
+[Highlighting]
+IsHighlightingTheme=1
+
+[TemplateTest]
+IsUseTemplateTest=1
+TemplateTestFileName=TemplateTest.mtt
+TemplateTestDir=
+
+[VerificationTask]
+IsVerificationTaskAfterSaveTask=0
+IsVerificationTasksBeforeSaveTest=0
+
