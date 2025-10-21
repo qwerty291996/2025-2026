@@ -5,38 +5,39 @@ from PyQt5.QtWidgets import QMessageBox
 class MainWindow(QtWidgets.QMainWindow):
     def __init__(self):
         super().__init__()
-        uic.loadUi("main_window.ui", self)  # .ui faylni yuklaymiz
+        uic.loadUi("color_menu.ui", self)  # Qt Designer faylini yuklash
 
-        # Menu action’larini ulash (Designer’dagi objectName’lar bilan)
-        self.actionSayHello.triggered.connect(self.say_hello)
-        self.actionClear.triggered.connect(self.clear_text)
-        self.actionExit.triggered.connect(self.close)           # tayyor slot
+        # --- Menu bandlarini bog‘lash
+        self.actionRed.triggered.connect(lambda: self.change_color("red"))
+        self.actionBlue.triggered.connect(lambda: self.change_color("lightblue"))
+        self.actionReset.triggered.connect(self.reset_view)
         self.actionAbout.triggered.connect(self.show_about)
 
-        # Dastlabki holat
-        self.labelMsg.setText("Menyudan biror amalni tanlang 🙂")
+        # Boshlang‘ich holat
+        self.labelInfo.setText("Menyudan rang tanlang 🎨")
         self.statusBar().showMessage("Tayyor")
 
-    # --- Slotlar (funksiyalar)
-    def say_hello(self):
-        self.labelMsg.setText("Salom, Menyu!")
-        self.statusBar().showMessage("Hello bosildi")
+    # --- Funksiyalar
+    def change_color(self, color):
+        self.labelInfo.setStyleSheet(f"background-color: {color}; font-size: 16px;")
+        self.statusBar().showMessage(f"Fon rangi: {color}")
 
-    def clear_text(self):
-        self.labelMsg.clear()
-        self.statusBar().showMessage("Matn tozalandi")
+    def reset_view(self):
+        self.labelInfo.setStyleSheet("background-color: none; font-size: 16px;")
+        self.labelInfo.setText("Menyudan rang tanlang 🎨")
+        self.statusBar().showMessage("Tiklandi (Reset)")
 
     def show_about(self):
         QMessageBox.information(
             self,
             "About",
-            "Eng oddiy menyu misoli: File → Say Hello / Clear / Exit, Help → About"
+            "Bu oddiy PyQt menyu dasturi.\nMenyudan fon rangini tanlashingiz mumkin."
         )
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
     w = MainWindow()
-    w.setWindowTitle("Oddiy Menyu — PyQt misoli")
-    w.resize(420, 260)
+    w.setWindowTitle("Rangli Menyu — PyQt misoli")
+    w.resize(400, 250)
     w.show()
     sys.exit(app.exec_())
