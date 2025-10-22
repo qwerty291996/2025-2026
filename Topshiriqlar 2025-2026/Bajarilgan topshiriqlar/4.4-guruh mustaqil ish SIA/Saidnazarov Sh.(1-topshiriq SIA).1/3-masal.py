@@ -1,0 +1,5 @@
+s = input("Satrni kiriting: ")
+b1 = ord(s[0])
+bn = ord(s[-1])
+print(f"Birinchi belgi: '{s[0]}', kodi: {b1}")
+print(f"Oxirgi belgi: '{s[-1]}', kodi: {bn}")
