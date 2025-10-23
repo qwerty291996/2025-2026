@@ -5,8 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1a834b9e-3566-4f36-a9e9-3f8035b185d0" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../Dars materiallari 2025-2026/Sun'iy intellekt asoslari 2025-2026/3.2 Socket moduli bilan ishlash/3.2 Socket moduli bilan ishlash.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../Dars materiallari 2025-2026/Sun'iy intellekt asoslari 2025-2026/3.2 Socket moduli bilan ishlash/3.2 Socket moduli bilan ishlash.docx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Socket/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/Socket/client.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Socket/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/Socket/server.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,7 +133,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-164cda30dcd9-0af03a5fa574-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-252.26830.99" />
+        <option value="bundled-python-sdk-7e47963ff851-f0eec537fc84-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-252.23892.515" />
       </set>
     </attachedChunks>
   </component>

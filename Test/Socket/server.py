@@ -1,25 +1,22 @@
 import socket
 
-# 1) Soket yaratish
+# Server soketini yaratish
 server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-
-# 2) Soketni localhost va port 5000 ga bog'lash
-server_socket.bind(("127.0.0.1", 5000))
-
-# 3) Serverni ulanishlarni kutish holatiga o‘tkazish
+server_socket.bind(("127.0.0.1", 5000))  # Serverni localhost va 5000-portga bog'lash
 server_socket.listen(5)
+
 print("Server ulanishlarni kutmoqda...")
 
-# 4) Yangi ulanishni qabul qilish
-conn, addr = server_socket.accept()  # Yangi ulanishni kutib olish
+# Yangi ulanishni qabul qilish
+conn, addr = server_socket.accept()
 print(f"Yangi mijoz ulanishi: {addr}")
 
-# Mijozdan ma'lumot olish va qaytarish
-while True:
-    data = conn.recv(1024)  # Mijozdan ma'lumot olish
-    if not data:
-        break  # Ma'lumot bo'lmasa, chiqish
-    print(f"Mijozdan keldi: {data.decode('utf-8')}")
-    conn.sendall(data)  # Qaytadan yuborish
+# Mijozdan ma'lumot olish
+data = conn.recv(1024)
+print(f"Mijozdan keldi: {data.decode('utf-8')}")
+
+# Serverdan javob yuborish
+response = "Xabar qabul qilindi".encode("utf-8")
+conn.sendall(response)  # Javob yuborish
 
 conn.close()  # Soketni yopish
