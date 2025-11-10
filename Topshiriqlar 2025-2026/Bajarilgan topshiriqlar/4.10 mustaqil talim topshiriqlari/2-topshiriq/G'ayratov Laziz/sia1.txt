@@ -1,0 +1,14 @@
+royxat = [5, 8, 2, 9, 4, 1, 7]
+
+min_son = min(royxat)
+max_son = max(royxat)
+
+yangi = [x for x in royxat if min_son < x < max_son]
+
+print("Asl ro'yxat:", royxat)
+print("Eng kichik son:", min_son)
+print("Eng katta son:", max_son)
+print("Qiymat bo'yicha ular orasidagi sonlar:", yangi)
+Asl ro'yxat: [5, 8, 2, 9, 4, 1, 7]
+Eng kichik son: 1
+Eng katta son: 9

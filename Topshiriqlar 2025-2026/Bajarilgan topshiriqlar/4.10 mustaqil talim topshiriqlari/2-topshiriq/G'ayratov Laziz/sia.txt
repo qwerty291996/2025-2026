@@ -1,0 +1,19 @@
+sonlar = []
+
+son = float(input("Son kiriting (0 kiritilsa tugaydi): "))
+while son != 0:
+    sonlar.append(son)
+    son = float(input("Son kiriting (0 kiritilsa tugaydi): "))
+
+if sonlar:
+    print(f"Kiritilgan sonlar soni: {len(sonlar)}")
+    print(f"O'rtacha arifmetik: {sum(sonlar)/len(sonlar)}")
+else:
+    print("Hech qanday son kiritilmadi.")
+
+Son kiriting (0 kiritilsa tugaydi): 4
+Son kiriting (0 kiritilsa tugaydi): 5
+Son kiriting (0 kiritilsa tugaydi): 6
+Son kiriting (0 kiritilsa tugaydi): 0
+Kiritilgan sonlar soni: 3
+O'rtacha arifmetik: 5.0
