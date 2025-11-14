@@ -1,0 +1,46 @@
+[OPTIONS]
+ Compatibility=1.1 or later
+ Compiled file=C:\Documents and Settings\ASB2602\Мои документы\Document suite\АКХУ\Упакованные файлы\base.chm
+ Contents file=content.hhc
+ Default Window=Navigation Panel
+ Display compile progress=Yes
+ Full-text search=Yes
+ Index file=index.hhk
+ Title=Основная справка
+
+[WINDOWS]
+ Navigation Panel="Окно справки","content.hhc","index.hhk",,,,,,,0x63520,,0x304e,[100,100,1000,800],,,,,2,,0
+
+[FILES]
+ Bosh oyna.htm
+ Kirish.htm
+ Asosiy tushunchalar va belgilashlar.htm
+ Tarihiy shifrlar.htm
+ Oddiy urin almashtirish shifrlash usuli.htm
+ Murakkab urin almashtirish shifrlash usuli.htm
+ Urniga kuyish shifrlash usuli.htm
+ Gammalash usuli.htm
+ Kriptotizimlarga kuyiladigan talablar.htm
+ Kriptografik tizimlarning bardoshliligi hakida tushuncha.htm
+ Faystel tarmogi hossalari va turlari.htm
+ DES shifrlash algoritmi.htm
+ GOST 28147-89 shifrlash algoritmi.htm
+ AES shifrlash algoritmi.htm
+ RSA algoritmi.htm
+ El-Gamal algoritmi.htm
+ Rabin shemasi.htm
+ Polig-Hellman shemasi.htm
+ Mak-Elis algoritmi.htm
+ Asosiy tushunchalar.htm
+ MD 5 hesh-funkciyasi.htm
+ GOST R 34.11-94 hesh-funkciyasi.htm
+ RSA algoritmi asosida elektron imzo.htm
+ El-Gamal algoritmi asosida elektron imzo.htm
+ GOST R 34.10-94 elektron rakamli imzo algoritmi.htm
+ DSA elektron rakamli imzo algoritmi.htm
+ Dastlabki tushunchalar.htm
+ Simmetrik kalitli kriptografik algoritmlar yordamida mahfiy alokani tashkil kiluvchi protokollar.htm
+ Asimmetrik kalitli algoritmlar yordamida mahfiy alokani tashkil kilish protokollari.htm
+ Ahborotni kriptografik himoyalash vositalari.htm
+ Asosiy malumotlar.htm
+ 

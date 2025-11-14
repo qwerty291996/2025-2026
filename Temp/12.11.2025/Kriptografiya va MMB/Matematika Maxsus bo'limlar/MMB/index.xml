@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?><root index="Xml Help Content">
+   <file index="Бош сахифа" chapter="True" root="True">
+      <file code="0" type="htm" name="Бош сахифа.htm" index="Бош сахифа">
+      </file>
+   </file>
+   <file index="Таккослама ва унинг хоссалари" chapter="True" root="True">
+      <file code="1" type="htm" name="Таккослама ва унинг хоссалари.htm" index="Таккослама ва унинг хоссалари">
+      </file>
+   </file>
+   <file index="Евклид алгоритми" chapter="True" root="True">
+      <file code="2" type="htm" name="Евклид алгоритми.htm" index="Евклид алгоритми">
+      </file>
+   </file>
+   <file index="Кенгайтирлган Евклид алгоритми" chapter="True" root="True">
+      <file code="3" type="htm" name="Кенгайтирлган Евклид алгоритми.htm" index="Кенгайтирлган Евклид алгоритми">
+      </file>
+   </file>
+   <file index="Диофант тенгламаси" chapter="True" root="True">
+      <file code="4" type="htm" name="Диофант тенгламаси.htm" index="Диофант тенгламаси">
+      </file>
+   </file>
+   <file index="Эйлер функцияси" chapter="True" root="True">
+      <file code="5" type="htm" name="Эйлер функцияси.htm" index="Эйлер функцияси">
+      </file>
+   </file>
+   <file index="Модул бўйича тескари элемент топиш" chapter="True" root="True">
+      <file code="6" type="htm" name="Модул бўйича тескари элемент топиш.htm" index="Модул бўйича тескари элемент топиш">
+      </file>
+   </file>
+   <file index="Чизикли таккослама тенглама" chapter="True" root="True">
+      <file code="7" type="htm" name="Чизикли таккослама тенглама.htm" index="Чизикли таккослама тенглама">
+      </file>
+   </file>
+   <file index="Колдиклар хакида Хитой теоремаси" chapter="True" root="True">
+      <file code="8" type="htm" name="Колдиклар хакида Хитой теоремаси.htm" index="Колдиклар хакида Хитой теоремаси">
+      </file>
+   </file>
+   <file index="Таккосламани хисоблашнинг эффектив усули" chapter="True" root="True">
+      <file code="9" type="htm" name="Таккосламани хисоблашнинг эффектив усули.htm" index="Таккосламани хисоблашнинг эффектив усули">
+      </file>
+   </file>
+   <file index="Квадратик таккослама ва унинг ечимлари" chapter="True" root="True">
+      <file code="10" type="htm" name="Квадратик таккослама.htm" index="Квадратик таккослама">
+      </file>
+      <file code="11" type="htm" name="Лежандр символи.htm" index="Лежандр символи">
+      </file>
+      <file code="12" type="htm" name="Якоби символи.htm" index="Якоби символи">
+      </file>
+      <file code="13" type="htm" name="Квадратик таккосламани ечиш.htm" index="Квадратик таккосламани ечиш">
+      </file>
+   </file>
+   <file index="Махсус кўринишга эга сонлар" chapter="True" root="True">
+      <file code="14" type="htm" name="Туб сонлар хакида.htm" index="Туб сонлар хакида">
+      </file>
+      <file code="15" type="htm" name="Ферма сонлари.htm" index="Ферма сонлари">
+      </file>
+      <file code="16" type="htm" name="Мерсен сонлари.htm" index="Мерсен сонлари">
+      </file>
+      <file code="17" type="htm" name="Лукас теоремаси.htm" index="Лукас теоремаси">
+      </file>
+   </file>
+   <file index="Тубликка текширишнинг эхтимоллик тестлари" chapter="True" root="True">
+      <file code="18" type="htm" name="Соловей-Штрассен тести.htm" index="Соловей-Штрассен тести">
+      </file>
+      <file code="19" type="htm" name="Миллер Рабин тести.htm" index="Миллер Рабин тести">
+      </file>
+   </file>
+   <file index="Математик структуралар" chapter="True" root="True">
+      <file code="20" type="htm" name="Дастлабки тушунчалар.htm" index="Дастлабки тушунчалар">
+      </file>
+      <file code="21" type="htm" name="Группа.htm" index="Группа">
+      </file>
+      <file code="22" type="htm" name="Халка.htm" index="Халка">
+      </file>
+      <file code="23" type="htm" name="Майдон.htm" index="Майдон">
+      </file>
+   </file>
+   <file index="Келтирилмайдиган купхадлар майдони" chapter="True" root="True">
+      <file code="24" type="htm" name="Келтирилмайдиган купхадлар майдони.htm" index="Келтирилмайдиган купхадлар майдони">
+      </file>
+   </file>
+   <file index="Мёбус функцияси ва унинг хоссалари" chapter="True" root="True">
+      <file code="25" type="htm" name="Мёбус функцияси ва унинг хоссалари.htm" index="Мёбус функцияси ва унинг хоссалари">
+      </file>
+   </file>
+   <file index="AES алгоритмининг математик асослари" chapter="True" root="True">
+      <file code="26" type="htm" name="AES алгоритмининг математик асослари.htm" index="AES алгоритмининг математик асослари">
+      </file>
+   </file>
+   <file index="Чекли майдонда дискрет логарифмлаш усули" chapter="True" root="True">
+      <file code="27" type="htm" name="Дитерминирланган усули.htm" index="Дитерминирланган усули">
+      </file>
+      <file code="28" type="htm" name="Полларднинг усули.htm" index="Полларднинг усули">
+      </file>
+      <file code="29" type="htm" name="Полиг-Хеллман-Сильвер усули.htm" index="Полиг-Хеллман-Сильвер усули">
+      </file>
+      <file code="30" type="htm" name="Гельфонд усули.htm" index="Гельфонд усули">
+      </file>
+      <file code="31" type="htm" name="Базага ёйиш усули.htm" index="Базага ёйиш усули">
+      </file>
+   </file>
+   <file index="Туб кўпайтувчиларга ажратиш усуллари" chapter="True" root="True">
+      <file code="32" type="htm" name="Ферма усули.htm" index="Ферма усули">
+      </file>
+      <file code="33" type="htm" name="Поллард усули.htm" index="Поллард усули">
+      </file>
+      <file code="34" type="htm" name="Шерман Леман усули.htm" index="Шерман Леман усули">
+      </file>
+   </file>
+   <file index="Фикрлар алгебраси" chapter="True" root="True">
+      <file code="35" type="htm" name="Фикрлар ва улар устида амаллар.htm" index="Фикрлар ва улар устида амаллар">
+      </file>
+      <file code="36" type="htm" name="Эквивалент формулалар.htm" index="Эквивалент формулалар">
+      </file>
+      <file code="37" type="htm" name="ДНФ ва КНФ. МДНФ ва МКНФ.htm" index="ДНФ ва КНФ. МДНФ ва МКНФ">
+      </file>
+   </file>
+   <file index="Криптографик акслантиришларнинг хоссалари" chapter="True" root="True">
+      <file code="38" type="htm" name="Буль функция ва унинг турли характеристикалари.htm" index="Буль функция ва унинг турли характеристикалари">
+      </file>
+      <file code="39" type="htm" name="Алгебраик иммуннитетлик.htm" index="Алгебраик иммуннитетлик">
+      </file>
+   </file>
+   <file index="Графлар назарияси" chapter="True" root="True">
+      <file code="40" type="htm" name="Графлар назарияси.htm" index="Графлар назарияси">
+      </file>
+   </file>
+   <file index="Эхтимоллар назарияси" chapter="True" root="True">
+      <file code="41" type="htm" name="Эхтимоллик ва унинг таърифи.htm" index="Эхтимоллик ва унинг таърифи">
+      </file>
+      <file code="42" type="htm" name="Ходисалар устида амаллар. Шартли эхтимоллик.htm" index="Ходисалар устида амаллар. Шартли эхтимоллик">
+      </file>
+      <file code="43" type="htm" name="Эхтимолликларни кўшиш ва кўпайтириш теоремалари.htm" index="Эхтимолликларни кўшиш ва кўпайтириш теоремалари">
+      </file>
+      <file code="44" type="htm" name="Богликмас тажрибалар кетма-кетлиги.htm" index="Богликмас тажрибалар кетма-кетлиги">
+      </file>
+      <file code="45" type="htm" name="Дискрет тасодифий микдорлар. Таксимот конуни.htm" index="Дискрет тасодифий микдорлар. Таксимот конуни">
+      </file>
+      <file code="46" type="htm" name="Дискрет тасодифий микдорларнинг сонли тавсифлари ва уларнинг хоссалари.htm" index="Дискрет тасодифий микдорларнинг сонли тавсифлари ва уларнинг хоссалари">
+      </file>
+      <file code="47" type="htm" name="Узлуксиз тасодифий микдорларнинг таксимот ва зичлик функциялари, уларнинг хоссалари.htm" index="Узлуксиз тасодифий микдорларнинг таксимот ва зичлик функциялари, уларнинг хоссалари">
+      </file>
+      <file code="48" type="htm" name="Узлуксиз тасодифий микдорларнинг сонли тавсифлари.htm" index="Узлуксиз тасодифий микдорларнинг сонли тавсифлари">
+      </file>
+   </file>
+   <file index="Энтропия тушунчаси ва унинг кўлланиши" chapter="True" root="True">
+      <file code="49" type="htm" name="Энтропия тушунчаси ва унинг кўлланиши.htm" index="Энтропия тушунчаси ва унинг кўлланиши">
+      </file>
+   </file>
+</root>

@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?><root name="Xml Quiz Content">
+   <question file="question1.htm" name="Алфавит тушунчасига кайси жавобда тугри таъриф берилган">
+      <answer file="answer1.htm">
+      </answer>
+      <answer file="answer2.htm">
+      </answer>
+      <answer file="answer3.htm">
+      </answer>
+      <answer file="answer4.htm" right="TRUE">
+      </answer>
+   </question>
+   <question file="question2.htm" name="Шифр тушунчасига кайси жавобда тугри таъриф берилган">
+      <answer file="answer5.htm">
+      </answer>
+      <answer file="answer6.htm" right="TRUE">
+      </answer>
+      <answer file="answer7.htm">
+      </answer>
+      <answer file="answer8.htm">
+      </answer>
+   </question>
+   <question file="question3.htm" name="Криптотизим деб нимага айтилади">
+      <answer file="answer9.htm" right="TRUE">
+      </answer>
+      <answer file="answer10.htm">
+      </answer>
+      <answer file="answer11.htm">
+      </answer>
+      <answer file="answer12.htm">
+      </answer>
+   </question>
+   <question file="question4.htm" name="Качон шифрлаш алгоритмлари мутлако бардошли дейилади">
+      <answer file="answer13.htm" right="TRUE">
+      </answer>
+      <answer file="answer14.htm">
+      </answer>
+      <answer file="answer15.htm">
+      </answer>
+      <answer file="answer16.htm">
+      </answer>
+   </question>
+   <question file="question5.htm" name="Цезарь шифрлаш усулининг асосий мохияти нимадан иборат">
+      <answer file="answer17.htm">
+      </answer>
+      <answer file="answer18.htm">
+      </answer>
+      <answer file="answer19.htm" right="TRUE">
+      </answer>
+      <answer file="answer20.htm">
+      </answer>
+   </question>
+   <question file="question6.htm" name="Урнига куйиш шифрларида шифр матн кандай хосил килинади">
+      <answer file="answer21.htm" right="TRUE">
+      </answer>
+      <answer file="answer22.htm">
+      </answer>
+      <answer file="answer23.htm">
+      </answer>
+      <answer file="answer24.htm">
+      </answer>
+   </question>
+   <question file="question7.htm" name="Ахборотлар тизими мухофазасининг замонавий криптографик услубларига куйилган умумий талабларга кура, шифрлаш">
+      <answer file="answer25.htm">
+      </answer>
+      <answer file="answer26.htm">
+      </answer>
+      <answer file="answer27.htm">
+      </answer>
+      <answer file="answer28.htm" right="TRUE">
+      </answer>
+   </question>
+   <question file="question8.htm" name="Очик калитли криптотизимлар бардошлилиги жихатидан кандай булиши лозим">
+      <answer file="answer29.htm">
+      </answer>
+      <answer file="answer30.htm" right="TRUE">
+      </answer>
+      <answer file="answer31.htm">
+      </answer>
+      <answer file="answer32.htm">
+      </answer>
+   </question>
+   <question file="question9.htm" name="DES шифрлаш алгоритмининг криптографик характеристикалари кайси жавобда тугри келтирилган">
+      <answer file="answer33.htm">
+      </answer>
+      <answer file="answer34.htm">
+      </answer>
+      <answer file="answer35.htm" right="TRUE">
+      </answer>
+      <answer file="answer36.htm">
+      </answer>
+   </question>
+   <question file="question10.htm" name="ГОСТ 12847-89 шифрлаш алгоритмининг криптографик характеристикалари кайси жавобда тугри келтирилган">
+      <answer file="answer37.htm">
+      </answer>
+      <answer file="answer38.htm">
+      </answer>
+      <answer file="answer39.htm" right="TRUE">
+      </answer>
+      <answer file="answer40.htm">
+      </answer>
+   </question>
+   <question file="question11.htm" name="AES шифрлаш алгоритмининг криптографик характеристикалари кайси жавобда тугри келтирилган">
+      <answer file="answer41.htm">
+      </answer>
+      <answer file="answer42.htm" right="TRUE">
+      </answer>
+      <answer file="answer43.htm">
+      </answer>
+      <answer file="answer44.htm">
+      </answer>
+   </question>
+</root>
