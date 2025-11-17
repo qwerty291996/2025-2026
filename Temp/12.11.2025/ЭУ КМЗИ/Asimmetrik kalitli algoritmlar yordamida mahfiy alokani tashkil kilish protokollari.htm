@@ -1,0 +1,815 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office"><HEAD><TITLE>Asimmetrik kalitli algoritmlar yordamida mahfiy alokani tashkil kilish protokollari</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=utf-8">
+<META content="MSHTML 6.00.6000.16414" name=GENERATOR>
+<STYLE>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:"PANDA Times UZ";}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+h1
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:Arial;
+	font-weight:bold;}
+h2
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:Arial;
+	font-weight:bold;
+	font-style:italic;}
+h3
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	page-break-after:avoid;
+	font-size:13.0pt;
+	font-family:Arial;
+	font-weight:bold;}
+h4
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Times New Roman";
+	font-weight:normal;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+span.MsoPageNumber
+	{font-family:"Times New Roman";}
+p.MsoListBullet, li.MsoListBullet, div.MsoListBullet
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:18.0pt;
+	margin-bottom:.0001pt;
+	text-indent:-18.0pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	punctuation-wrap:simple;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoBodyTextIndent, li.MsoBodyTextIndent, div.MsoBodyTextIndent
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:108.0pt;
+	margin-bottom:.0001pt;
+	text-indent:-108.0pt;
+	font-size:12.0pt;
+	font-family:"PANDA Times UZ";}
+p.MsoBodyTextIndent2, li.MsoBodyTextIndent2, div.MsoBodyTextIndent2
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:14.15pt;
+	line-height:200%;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{font-family:"Times New Roman";
+	color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;}
+strong
+	{font-family:"Times New Roman";}
+p.MsoPlainText, li.MsoPlainText, div.MsoPlainText
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Courier New";}
+p
+	{margin-right:0cm;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-autospace:none;
+	font-size:8.0pt;
+	font-family:Tahoma;}
+p.Textlist, li.Textlist, div.Textlist
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:1.0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:-14.15pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	color:black;}
+p.a, li.a, div.a
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+p.Text, li.Text, div.Text
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:35.45pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.ab, li.ab, div.ab
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:1.0cm;
+	font-size:14.0pt;
+	font-family:"Times New Roman";}
+p.2, li.2, div.2
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:center;
+	text-indent:25.0pt;
+	line-height:116%;
+	page-break-after:avoid;
+	text-autospace:none;
+	font-size:14.0pt;
+	font-family:"Times New Roman";}
+span.texhtml
+	{font-family:"Times New Roman";}
+p.a0, li.a0, div.a0
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:0cm;
+	text-align:right;
+	line-height:12.0pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+ /* Page Definitions */
+ @page Section1
+	{size:595.45pt 841.7pt;
+	margin:56.75pt 42.55pt 2.0cm 3.0cm;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+.style1 {
+	font-size: 18pt;
+}
+.style2 {
+	color: navy;
+}
+.style3 {
+	font-size: 18pt;
+	color: navy;
+}
+.style4 {
+	color: #008080;
+}
+.style5 {
+	font-size: 22pt;
+	text-decoration: underline;
+	color: #000080;
+}
+.style7 {
+	text-indent: 0;
+}
+.style8 {
+	font-size: 22pt;
+	color: #008000;
+}
+.style9 {
+	color: #008000;
+}
+.style10 {
+	color: #FF0000;
+}
+.style11 {
+	font-size: 22pt;
+	color: #000000;
+}
+.style12 {
+	font-size: 22pt;
+}
+.style13 {
+	font-size: 18pt;
+	color: green;
+}
+.style14 {
+	font-size: 24pt;
+	color: #FFFFFF;
+	background-color: #000000;
+}
+.style15 {
+	color: #FFFFFF;
+	background-color: #008000;
+}
+.style16 {
+	text-align: center;
+}
+.style17 {
+	text-align: justify;
+}
+.style18 {
+	text-align: left;
+}
+.style19 {
+	background-color: #008000;
+}
+.style20 {
+	color: white;
+}
+.style21 {
+	font-size: 16pt;
+}
+.style41 {
+	color: #FF00FF;
+}
+.style29 {
+	text-align: left;
+}
+.style39 {
+	text-align: right;
+}
+.style43 {
+	font-size: 17pt;
+	color: maroon;
+}
+.style44 {
+	color: maroon;
+}
+.style45 {
+	font-size: 17pt;
+	font-weight: bold;
+	color: maroon;
+}
+.style46 {
+	font-size: 17pt;
+	font-weight: bold;
+}
+-->
+</STYLE>
+<script type="text/javascript">
+<!--
+function FP_preloadImgs() {//v1.0
+ var d=document,a=arguments; if(!d.FP_imgs) d.FP_imgs=new Array();
+ for(var i=0; i<a.length; i++) { d.FP_imgs[i]=new Image; d.FP_imgs[i].src=a[i]; }
+}
+
+function FP_swapImg() {//v1.0
+ var doc=document,args=arguments,elm,n; doc.$imgSwaps=new Array(); for(n=2; n<args.length;
+ n+=2) { elm=FP_getObjectByID(args[n]); if(elm) { doc.$imgSwaps[doc.$imgSwaps.length]=elm;
+ elm.$src=elm.src; elm.src=args[n+1]; } }
+}
+
+function FP_getObjectByID(id,o) {//v1.0
+ var c,el,els,f,m,n; if(!o)o=document; if(o.getElementById) el=o.getElementById(id);
+ else if(o.layers) c=o.layers; else if(o.all) el=o.all[id]; if(el) return el;
+ if(o.id==id || o.name==id) return o; if(o.childNodes) c=o.childNodes; if(c)
+ for(n=0; n<c.length; n++) { el=FP_getObjectByID(id,c[n]); if(el) return el; }
+ f=o.forms; if(f) for(n=0; n<f.length; n++) { els=f[n].elements;
+ for(m=0; m<els.length; m++){ el=FP_getObjectByID(id,els[n]); if(el) return el; } }
+ return null;
+}
+// -->
+</script>
+</HEAD>
+<BODY lang=RU style="TEXT-JUSTIFY-TRIM: punctuation" vLink=purple link=blue onLoad="FP_preloadImgs(/*url*/'button6.jpg',/*url*/'button5.jpg',/*url*/'button8.jpg',/*url*/'button84.jpg',/*url*/'button85.jpg',/*url*/'button86.jpg',/*url*/'button87.jpg')">
+<DIV class=Section1>
+<P class=MsoNormal style="MARGIN-BOTTOM: 6pt; TEXT-ALIGN: justify">
+<SPAN class="style45">Асимметрик </SPAN>
+<SPAN 
+style="COLOR: red" class="style46"> <SPAN class="style44">калитли</SPAN> 
+<SPAN class="style44">алгоритмлар</SPAN> 
+<SPAN class="style44">ёрдамида</SPAN> <SPAN class="style44">махфий</SPAN> 
+</SPAN><SPAN class="style45">алоқани </SPAN><B>
+<SPAN lang=UZ-CYR 
+style="COLOR: red"><SPAN class="style43">ташкил</SPAN></SPAN><SPAN lang=UZ-CYR class="style43"> қилиш 
+протоколлари </SPAN></B></P>
+<hr style="height: 4px" class="style41">
+<div class="style29">
+	<table style="width: 100%">
+		<tr>
+			<td style="width: 100px">
+			<p class="style40">&nbsp;</p>
+			</td>
+			<td style="width: 178px">
+			<p class="style40">&nbsp;</p>
+			</td>
+			<td class="style39">
+			<p class="style40"><a href="Файлы%20пользователя/VIDEO/AES.avi">
+			<embed src="Файлы пользователя/AUDIO/Asm_protokol.mp3" width="75" height="28"></a></p>
+			</td>
+		</tr>
+	</table>
+</div>
+<hr style="height: 4px" class="style41">
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+<SPAN 
+lang=UZ-CYR class="style1"><span class="style2"><em>Асимметрик </em><em>калитли</em></span>
+<span class="style2"><em>алгоритмларга асосланган идентификация 
+протоколларида узатувчи томонларнинг </em><em>махфий</em></span>
+<span class="style2"><em>калитга эга эканлигини қуйидаги икки 
+усул </em><em>ёрдамида</em></span> <span class="style2"><em>сезиш мумкин:</em></span></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-AUTOSPACE: ideograph-numeric; TEXT-ALIGN: justify">
+<em><SPAN 
+lang=UZ-CYR class="style13">1.&nbsp;</SPAN><SPAN 
+lang=UZ-CYR class="style3">&nbsp;&nbsp;&nbsp; Унинг очик калити 
+билан шифрланган суровни дешифрлаш оркали;</SPAN></em></P>
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-AUTOSPACE: ideograph-numeric; TEXT-ALIGN: justify">
+<SPAN 
+lang=UZ-CYR class="style1"><em><span class="style9">2.&nbsp;&nbsp;&nbsp;</span><span class="style2">&nbsp; Суровномага 
+узининг электрон</span></em> <span class="style2"><em>ракамли </em><em>имзо</em><em> (ЭРИ) сини куйиш оркали.
+</em></span> </SPAN></P>
+<hr class="style4">
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+<SPAN 
+lang=UZ-CYR class="style1">Ушбу икки усулга қуйида батафсил тўхталамиз. 
+</SPAN></P>
+<P class=style7 
+style="MARGIN-BOTTOM: 6pt; TEXT-ALIGN: justify"><SPAN class="style14">&nbsp;1 </SPAN>
+<SPAN class="style1">&nbsp;Биринчи усул учун шартли равишда қуйидаги 
+белгилашларга келишилади:</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+<SPAN 
+lang=EN-US class="style1">h</SPAN><SPAN class="style1"> – бир 
+томонли функция;</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+<SPAN 
+lang=EN-US class="style1">E<SUB>A</SUB></SPAN><SUB><SPAN lang=EN-US class="style1"> </SPAN></SUB>
+<SPAN class="style1">ва 
+</SPAN><SPAN lang=EN-US class="style1">D<SUB>A</SUB></SPAN><SUB><SPAN 
+lang=EN-US class="style1"> </SPAN></SUB><SPAN class="style1">лар мос равишда А томон <SPAN 
+style="COLOR: windowtext">шифрлаш</SPAN> ва дешифрлаш алгоритмлари.</SPAN><SPAN 
+lang=UZ-CYR class="style1"> </SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+<SPAN class="style5">Усул ушбу</SPAN><SPAN lang=UZ-CYR class="style5"> протоколга асосланган: </SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+<SPAN 
+lang=UZ-CYR class="style12">1) </SPAN><span class="style9">
+<SPAN class="style12">В<IMG height=12 
+src="img291.png" width=27></SPAN></span><SPAN class="style12"><span class="style10">А</span></SPAN><SPAN lang=UZ-CYR class="style8">: 
+</SPAN><SPAN lang=EN-US class="style12">h</SPAN><SPAN class="style12">(</SPAN><SPAN lang=EN-US class="style12">Z</SPAN><SPAN class="style12">)</SPAN><SPAN 
+lang=UZ-CYR class="style12">, </SPAN><SPAN lang=EN-US class="style12">B</SPAN><SPAN class="style12">, </SPAN>
+<SPAN lang=EN-US class="style12">E<SUB>A</SUB></SPAN><SPAN class="style12">(</SPAN><SPAN lang=EN-US class="style12">Z</SPAN><SPAN class="style1">,</SPAN><SPAN class="style12"><SUB> 
+</SUB></SPAN><SPAN lang=EN-US class="style12">B</SPAN><SPAN class="style12">) </SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+<SPAN class="style11">2)</SPAN><SPAN class="style8"> </SPAN>
+<SPAN lang=EN-US class="style12"><span class="style10">A</span><span class="style9"><IMG 
+height=12 src="img291.png" width=27>B</span></SPAN><SPAN lang=UZ-CYR class="style8">:</SPAN><SPAN lang=UZ-CYR class="style12"> 
+</SPAN><SPAN lang=EN-US class="style12">Z</SPAN></P>
+<P class=style7 
+style="MARGIN-BOTTOM: 6pt; TEXT-ALIGN: justify"><SPAN class="style1">бу ерда, </SPAN>
+<SPAN lang=EN-US class="style1">Z</SPAN><SPAN class="style1"> – тасодифий сон, 
+В – ушбу томон идентификация ра</SPAN><SPAN lang=UZ-CYR class="style1">қами. </SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+<SPAN class="style1">В томон </SPAN><SPAN lang=EN-US class="style1">Z</SPAN><SPAN lang=UZ-CYR class="style1"> ни 
+хосил қилади, </SPAN><SPAN lang=EN-US class="style1">h</SPAN><SPAN class="style1">(</SPAN><SPAN lang=EN-US class="style1">Z</SPAN><SPAN class="style1">)</SPAN><SPAN 
+lang=UZ-CYR class="style1"> ни ва С</SPAN><SPAN class="style1">=</SPAN><SPAN lang=EN-US class="style1">E<SUB>A</SUB></SPAN><SPAN class="style1">(</SPAN><SPAN lang=EN-US class="style1">Z</SPAN><SPAN style="FONT-SIZE: 12pt">,</SPAN><SPAN class="style1"><SUB> 
+</SUB></SPAN><SPAN lang=EN-US class="style1">B</SPAN><SPAN class="style1">) суровномани 
+ҳисоблайди.</SPAN><SPAN 
+style="FONT-SIZE: 12pt"> </SPAN> <SPAN lang=UZ-CYR class="style1">Ўзининг хаконийлигини исбот 
+қилувчи А 
+томон, суровномани дешифрлайди ва хеш-функция қиймати ҳамда идентификатор 
+ракамларининг тугрилигини текширади. А</SPAN><SPAN class="style1">гар фаркни аникласа, у холда А томон дархол протоколни 
+тўхтатади.</SPAN><SPAN lang=UZ-CYR style="FONT-SIZE: 12pt"> </SPAN>
+<SPAN lang=UZ-CYR class="style1"> А</SPAN><SPAN class="style1">кс холда А томон </SPAN>
+<SPAN lang=EN-US class="style1">Z</SPAN><SPAN lang=UZ-CYR class="style1"> ни В 
+томонга узатади. </SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+<SPAN class="style1">Агар А томондан қабул қилинган </SPAN>
+<SPAN lang=EN-US class="style1">Z</SPAN><SPAN lang=UZ-CYR class="style1"> сони 
+В томонга маълум бўлган сонга тенг бўлса, В томон А ни идентификациялайди. 
+</SPAN></P>
+<hr class="style4">
+<P class=style7 
+style="MARGIN-BOTTOM: 6pt; TEXT-ALIGN: justify"><SPAN class="style14">&nbsp;2 </SPAN>
+<SPAN class="style1">&nbsp;</SPAN><SPAN 
+lang=UZ-CYR class="style1">Иккинчи усулни куриб чикиш учун ҳам шартли 
+<SPAN style="COLOR: windowtext">белгилашлар</SPAN> қабул қилинади:</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+<SPAN 
+lang=EN-US class="style1">Z<SUB>A</SUB></SPAN><SUB><SPAN lang=EN-US class="style1"> </SPAN></SUB>
+<SPAN class="style1">– А томон 
+тасодифий сони;</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+<SPAN 
+lang=EN-US class="style1">t<SUB>A</SUB></SPAN><SPAN class="style1"> – А </SPAN>
+<SPAN lang=UZ-CYR class="style1">томон вакт меткаси;</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+<SPAN 
+lang=EN-US class="style1">S<SUB>A</SUB></SPAN><SPAN class="style1"> – А </SPAN>
+<SPAN lang=UZ-CYR class="style1">томоннинг <SPAN 
+style="COLOR: windowtext">электрон</SPAN> ракамли имзоси (ЭРИ). </SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+<SPAN 
+lang=UZ-CYR class="style1">ЭРИ ни текшириш <SPAN 
+style="COLOR: windowtext">алгоритми</SPAN> В томонга маълум деб 
+хисобланади.</SPAN></P>
+<hr class="style4">
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+<SPAN class="style5">Усулни қуйидаги учта протокол мисолида кўриш 
+мумкин.</SPAN><SPAN lang=UZ-CYR class="style3"> </SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+<SPAN 
+lang=UZ-CYR class="style1"><span class="style15">&nbsp;1.</span> Вакт меткасидан фойдаланиб бир томонлама 
+идентификацияни таъминлаш.</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+<SPAN 
+lang=UZ-CYR class="style1"><strong>1)</strong> </SPAN><SPAN class="style1">А 
+томон В га </SPAN><SPAN lang=EN-US 
+style="FONT-SIZE: 12pt">t</SPAN><SPAN lang=EN-US class="style1"><SUB>A</SUB></SPAN><SPAN lang=UZ-CYR class="style1">, </SPAN>
+<SPAN class="style1">В томон 
+идентификацион раками ва уларга куйилган ЭРИни</SPAN><SPAN lang=UZ-CYR 
+style="FONT-SIZE: 12pt"> </SPAN><SPAN lang=UZ-CYR class="style1"> узатади </SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: center" 
+align=center><SPAN class="style12"><span class="style10">А</span><IMG height=12 src="img291.png" width=27><span class="style4">В</span></SPAN><SPAN lang=UZ-CYR class="style12">: 
+</SPAN><SPAN lang=SV class="style12">t<SUB>A</SUB></SPAN><SPAN lang=SV style="FONT-SIZE: 12pt"><SPAN lang=SV class="style12">, B, 
+S<SUB>A</SUB>(t<SUB>A</SUB>,<SUB> </SUB>B)</SPAN></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+<SPAN class="style1"><strong>2)</strong> В томон </SPAN><SPAN lang=EN-US 
+style="FONT-SIZE: 12pt">t</SPAN><SPAN lang=EN-US class="style1"><SUB>A</SUB></SPAN><SUB><SPAN lang=EN-US class="style1"> </SPAN></SUB>
+<SPAN class="style1">нинг 
+белгиланган ораликда эканини, узининг идентификацион ракамининг мослигини ва ЭРИ 
+тугрилигини текширади</SPAN><SPAN lang=UZ-CYR class="style1">.</SPAN></P>
+<hr class="style4">
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+<SPAN 
+lang=UZ-CYR class="style1"><span class="style15">&nbsp;2.</span> Тасодифий сондан фойдаланиб бир томонлама 
+идентификацияни таъминлаш.</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+<SPAN 
+lang=UZ-CYR class="style1"><strong>1)</strong> В томон </SPAN>
+<SPAN lang=EN-US class="style1">Z</SPAN><SUB><SPAN class="style1">В 
+</SPAN></SUB><SPAN lang=UZ-CYR class="style1">тасодифий сонини А га 
+узатади </SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: center" 
+align=center><SPAN class="style12"><span class="style4">В</span><IMG height=12 src="img291.png" width=27>
+<span class="style10">А</span></SPAN><SPAN 
+lang=UZ-CYR class="style12">: </SPAN><SPAN lang=EN-US class="style12">Z</SPAN><SUB><SPAN class="style12">В</SPAN></SUB></P>
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+<SPAN 
+lang=UZ-CYR class="style1"><strong>2)</strong> А томон </SPAN>
+<SPAN class="style1">сони қабул қилиб, кайта В га ушбуни узатади </SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: center" 
+align=center><SPAN class="style12"><span class="style10">А</span><IMG height=12 src="img291.png" width=27><span class="style4">В</span></SPAN><SPAN 
+lang=UZ-CYR class="style12">: </SPAN><SPAN lang=PL class="style12">Z<SUB>A</SUB></SPAN><SPAN lang=PL 
+style="FONT-SIZE: 12pt"><SPAN lang=PL class="style12">, B, S<SUB>A</SUB>(Z<SUB>A</SUB>, 
+Z</SPAN></SPAN><sub><SPAN class="style12">В</SPAN></sub><SPAN lang=PL class="style12">,<SUB> </SUB></SPAN><SPAN lang=PL 
+style="FONT-SIZE: 12pt"><SPAN lang=PL class="style12">B)</SPAN></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+<SPAN class="style1"><strong>3)</strong> В томон идентификацион ра</SPAN><SPAN lang=UZ-CYR class="style1">кам мос 
+келишини ва ЭРИни т</SPAN><SPAN class="style1">екширади.</SPAN></P>
+<hr class="style4">
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+<SPAN 
+lang=UZ-CYR class="style1"><span class="style15">&nbsp;3.</span> Тасодифий сондан фойдаланиб узаро 
+идентификацияни таъминлаш. </SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 36pt; TEXT-ALIGN: justify">
+<SPAN 
+lang=UZ-CYR class="style1"><strong>1)</strong> В томон А га </SPAN>
+<SPAN lang=EN-US class="style1">Z</SPAN><SUB><SPAN class="style1">В </SPAN></SUB>
+<SPAN class="style1">ни узатади </SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: center" 
+align=center><SPAN class="style12"><span class="style4">В</span><IMG height=12 src="img291.png" width=27>
+<span class="style10">А</span></SPAN><SPAN 
+lang=UZ-CYR class="style12">: </SPAN><SPAN lang=EN-US class="style12">Z</SPAN><sub><SPAN class="style12">В</SPAN></sub></P>
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 36pt; TEXT-ALIGN: justify">
+<SPAN 
+lang=UZ-CYR class="style1"><strong>2)</strong> А томон </SPAN><SPAN lang=EN-US 
+style="FONT-SIZE: 12pt">Z</SPAN><SPAN lang=EN-US class="style1"><SUB>A</SUB></SPAN><SPAN class="style1">, 
+</SPAN><SPAN lang=EN-US class="style1">Z</SPAN><SUB><SPAN class="style1">В </SPAN></SUB>
+<SPAN class="style1">ва </SPAN><SPAN lang=EN-US class="style1">B</SPAN><SPAN lang=UZ-CYR style="FONT-SIZE: 12pt"> </SPAN>
+<SPAN lang=UZ-CYR class="style1"> томон 
+идентификацион ракамларини бирлаштириб ЭРИ куяди. Ш</SPAN><SPAN class="style1">унга </SPAN><SPAN lang=EN-US 
+style="FONT-SIZE: 12pt">Z</SPAN><SPAN lang=EN-US class="style1"><SUB>A</SUB></SPAN><SUB><SPAN lang=EN-US class="style1"> </SPAN></SUB>
+<SPAN class="style1">ва В 
+идентификацион ракамни </SPAN><SPAN lang=UZ-CYR class="style1">бирлаштириб B га узатади</SPAN></P>
+<P class=style16 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 36pt; ">
+<SPAN lang=UZ-CYR class="style12"><span class="style10">А</span><IMG height=12 src="img291.png" width=27><span class="style4">В</span>: 
+Z<SUB>A</SUB>, B, S<SUB>A</SUB>(Z<SUB>A</SUB>, Z<SUB>В</SUB>,<SUB> 
+</SUB>B)</SPAN></P>
+<P class=style17 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 36pt; ">
+<SPAN 
+lang=UZ-CYR class="style1"><strong>3)</strong> В томон ЭРИни текширади. У </SPAN>
+<SPAN 
+lang=EN-US class="style1">Z</SPAN><SUB><SPAN class="style1">В </SPAN></SUB>
+<SPAN class="style1">га </SPAN><SPAN lang=EN-US 
+style="FONT-SIZE: 12pt">Z</SPAN><SPAN lang=EN-US class="style1"><SUB>A</SUB></SPAN><SUB><SPAN lang=EN-US class="style1"> </SPAN></SUB>
+<SPAN class="style1">ни ва А 
+томон идентификацион ракамини бирлаштириб ракамли <SPAN 
+style="COLOR: windowtext">имзо</SPAN> куяди.</SPAN><SPAN lang=UZ-CYR 
+style="FONT-SIZE: 12pt"> </SPAN><SPAN lang=UZ-CYR class="style1"> И</SPAN><SPAN class="style1">мзога А томон 
+идентификацион ракамини кушиб А га узатади </SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: center" 
+align=center><SPAN class="style12"><span class="style4">В</span><IMG height=12 src="img291.png" width=27><span class="style10">А</span></SPAN><SPAN 
+lang=UZ-CYR class="style12">: </SPAN><SPAN class="style12">А, 
+</SPAN><SPAN lang=EN-US class="style12">S</SPAN><SPAN class="style12"><sub>В</sub>(</SPAN><SPAN lang=EN-US class="style12">Z</SPAN><SUB><SPAN class="style12">В</SPAN></SUB><SPAN lang=UZ-CYR class="style12">, </SPAN>
+<SPAN lang=EN-US class="style12">Z<SUB>A</SUB></SPAN><SPAN class="style12">, А)</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+<SPAN 
+lang=UZ-CYR class="style1">&nbsp;<strong>4)</strong> А томон маълумотни қабул килгач, уз идентификацион ракамига кура, маълумот айнан унга узатилганлигини 
+аниклайди. </SPAN><SPAN class="style1">Сунг ЭРИни текширади. Натижага 
+кура А томон В томон билан алока </SPAN><SPAN lang=UZ-CYR class="style1">урнатганлигига ишонч хосил 
+қилади. </SPAN></P>
+<hr class="style4">
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+<SPAN 
+lang=UZ-CYR class="style1">Бу турдаги <SPAN 
+style="COLOR: windowtext">протоколлар</SPAN> умумий <SPAN 
+style="COLOR: windowtext">махфий</SPAN> маълумотдан фойдаланмаган холда сеанс 
+калитини хосил қилиш имкониятини беради. Калитларни очик холда таксимловчи 
+протоколларнинг узига хос хусусияти шундаки, хеч бир томон олдиндан калитнинг 
+қийматини хисоблай олмайди. Чекли майдонда дискрет логарифмлаш масаласининг 
+мураккаблигига асосланган биринчи шундай протокол 1976 йилда <strong>У. Диффи</strong> ва
+<strong>М. </strong> 
+<SPAN style="COLOR: windowtext"><strong>Хеллман</strong></SPAN> томонидан тавсия этилди.</SPAN></P>
+<hr class="style4">
+<table style="WIDTH: 100%">
+	<tr>
+		<td style="WIDTH: 125px">
+		<a href="Файлы%20пользователя/DASTUR/DH.exe">
+		<img id="img1" style="BORDER-RIGHT: 0px; BORDER-TOP: 0px; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px" height="36" alt="ДХ дастури" src="button88.jpg" width="125" fp-title="ДХ дастури" fp-style="fp-btn: Corporate 4; fp-proportional: 0" onMouseOver="FP_swapImg(1,0,/*id*/'img1',/*url*/'button84.jpg')" onMouseOut="FP_swapImg(0,0,/*id*/'img1',/*url*/'button88.jpg')" onMouseDown="FP_swapImg(1,0,/*id*/'img1',/*url*/'button85.jpg')" onMouseUp="FP_swapImg(0,0,/*id*/'img1',/*url*/'button84.jpg')"></a></td>
+		<td style="WIDTH: 178px">
+		  <a href="Файлы пользователя/VIDEO/Diff_Hellman.exe"><img src="button89.jpg" alt="Дастурдан фойдаланиш" name="img2" width="178" height="36" border="0" id="img2" style="BORDER-RIGHT: 0px; BORDER-TOP: 0px; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px" onMouseDown="FP_swapImg(1,0,/*id*/'img2',/*url*/'button87.jpg')" onMouseUp="FP_swapImg(0,0,/*id*/'img2',/*url*/'button86.jpg')" onMouseOver="FP_swapImg(1,0,/*id*/'img2',/*url*/'button86.jpg')" onMouseOut="FP_swapImg(0,0,/*id*/'img2',/*url*/'button89.jpg')" fp-title="Дастурдан фойдаланиш" fp-style="fp-btn: Corporate 4"></a></td>
+		<td>&nbsp;</td>
+	</tr>
+</table>
+<hr class="style4">
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+<SPAN 
+lang=UZ-CYR class="style1">У. Диффи ва М.<SPAN 
+style="COLOR: windowtext">Хеллман</SPAN> томонидан кашф этилган калитларни очик 
+таксимлаш <SPAN style="COLOR: windowtext">усули</SPAN> фойдаланувчиларга 
+калитларни химояланмаган алока каналлари оркали алмашишга имкон беради. 
+</SPAN></P>
+<P class=style18 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; " 
+align=center><SPAN lang=UZ-CYR class="style1"><span class="style15">&nbsp;Диффи-Хеллманнинг 
+калитларни очик таксимлаш </span> <SPAN class="style20"><span class="style19">схемаси:</span></SPAN></SPAN></P>
+<P class=MsoNormal style="TEXT-ALIGN: center" align=center>
+<SPAN lang=UZ-CYR 
+style="FONT-SIZE: 14pt"><IMG height=311 
+src="img292.jpg" width=464 border=0></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+<SPAN 
+lang=UZ-CYR class="style1">Ахборот алмашинувида иштирок этувчи 
+фойдаланувчилар А ва В мустакил равишда узларининг <SPAN 
+style="COLOR: windowtext">махфий</SPAN> калитларини k<SUB>A </SUB>ва k<SUB>B 
+</SUB>ни генерация- лайдилар (k<SUB>A</SUB> ва k<SUB>B </SUB>калитлар 
+фойдаланувчилар А ва В лар сир сакловчи тасодифий катта бутун 
+сонлар).</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+<SPAN 
+lang=UZ-CYR class="style1">Сунгра фойдаланувчи А узининг <SPAN 
+style="COLOR: windowtext">махфий</SPAN> калити k<SUB>А </SUB><SPAN 
+style="COLOR: windowtext">асосида</SPAN> очик ка- литни хисоблайди:</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: center" 
+align=center><SPAN lang=UZ-CYR class="style12">К<SUB>А</SUB></SPAN><SPAN lang=UZ-CYR style="FONT-SIZE: 12pt"><SPAN lang=UZ-CYR class="style12">=g<SUP>K</SUP></SPAN></SPAN><SPAN class="style21"><span lang="en-us">a</span></SPAN><SPAN lang=UZ-CYR class="style12"><SPAN lang=UZ-CYR> (mod N)</SPAN></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+<SPAN 
+lang=UZ-CYR class="style1">Бир вактнинг узида фойдаланувчи В узининг 
+<SPAN style="COLOR: windowtext">махфий</SPAN> калити </SPAN><span lang="en-us">
+<SPAN class="style1">K</SPAN></span><SPAN 
+lang=UZ-CYR class="style1"><SUB>B </SUB>асосида 
+очик калитни хисоблайди:</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: center" 
+align=center><SPAN lang=UZ-CYR class="style12">К<SUB>В</SUB></SPAN><SPAN lang=UZ-CYR style="FONT-SIZE: 12pt"><SPAN lang=UZ-CYR class="style12">=g<SUP>K</SUP></SPAN></SPAN><span lang="en-us"><SPAN class="style21">b</SPAN></span><SPAN lang=UZ-CYR class="style12"><SPAN lang=UZ-CYR> (mod N)</SPAN></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+<SPAN 
+lang=UZ-CYR class="style1">Бу ерда N ва g катта бутун сонлар. Арифметик 
+амаллар N нинг модулига келтириш оркали бажарилади. N ва g сонларни сир саклаш 
+шарт эмас, чунки одатда, бу қийматлар тармок ва тизимдан фойдаланувчи- ларнинг 
+барчаси учун умумий хисобланади. </SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+<SPAN 
+lang=UZ-CYR class="style1">Сунгра фойдаланувчилар А ва В узларининг 
+очик калитларини химояланмаган канал оркали алмаштирадилар ва умумий <SPAN 
+style="COLOR: windowtext">махфий</SPAN> калити K ни (булинувчи сирни) хисоблашда 
+ишлатадилар:</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+<SPAN class="style1">фойдаланувчи</SPAN><SPAN lang=UZ-CYR class="style1"> А: </SPAN>
+<SPAN class="style1">К =</SPAN><SPAN 
+lang=UZ-CYR class="style1"> (К<SUB>В</SUB>)</SPAN><SUP><SPAN class="style1">К</SPAN></SUP><SUB><SPAN class="style1">А</SPAN></SUB><SPAN lang=UZ-CYR class="style1"> 
+(mod N) </SPAN><SPAN class="style1">= (</SPAN><SPAN lang=UZ-CYR class="style1">g <SUP>K</SUP><SUB>В</SUB></SPAN><SPAN class="style1">)<SUP> К</SUP><SUB>А</SUB></SPAN><SPAN lang=UZ-CYR class="style1"> (mod N) </SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+<SPAN class="style1">фойдаланувчи В</SPAN><SPAN lang=UZ-CYR class="style1">: </SPAN>
+<SPAN class="style1">К`=</SPAN><SPAN 
+lang=UZ-CYR class="style1"> (К</SPAN><SUB><SPAN lang=EN-US class="style1">A</SPAN></SUB><SPAN lang=UZ-CYR class="style1">)</SPAN><SUP><SPAN class="style1">К</SPAN></SUP><SUB><SPAN lang=EN-US class="style1">B </SPAN></SUB>
+<SPAN lang=UZ-CYR class="style1">(mod N) </SPAN><SPAN class="style1">= 
+(</SPAN><SPAN lang=UZ-CYR class="style1">g 
+<SUP>K</SUP></SPAN><SUB><SPAN lang=EN-US class="style1">A</SPAN></SUB><SPAN class="style1">)<SUP> 
+К</SUP></SPAN><SUB><SPAN lang=EN-US class="style1">B</SPAN></SUB><SPAN 
+lang=UZ-CYR class="style1"> (mod N) </SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+<SPAN class="style1">бунда </SPAN><SPAN lang=EN-US class="style1">K</SPAN><SPAN class="style1"> = </SPAN>
+<SPAN 
+lang=EN-US class="style1">K</SPAN><SPAN class="style1">`, 
+чунки (</SPAN><SPAN lang=UZ-CYR class="style1">g 
+<SUP>K</SUP><SUB>В</SUB></SPAN><SPAN class="style1">)<SUP> 
+К</SUP><SUB>А </SUB></SPAN><SPAN style="FONT-SIZE: 12pt"><SPAN class="style1">= (</SPAN></SPAN><SPAN lang=UZ-CYR class="style1">g 
+<SUP>K</SUP></SPAN><SUB><SPAN lang=EN-US class="style1">A</SPAN></SUB><SPAN class="style1">)<SUP> 
+К</SUP></SPAN><SUB><SPAN lang=EN-US class="style1">B</SPAN></SUB><SPAN 
+lang=UZ-CYR class="style1"> (mod N)</SPAN><SPAN class="style1">.</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+<SPAN class="style1">Шундай </SPAN><SPAN lang=UZ-CYR class="style1">қ</SPAN><SPAN class="style1">илиб, ушбу амаллар 
+натижасида иккала <SPAN style="COLOR: windowtext">махфий</SPAN> калит 
+</SPAN><SPAN lang=EN-US class="style1">k<SUB>A</SUB></SPAN><SUB><SPAN 
+lang=EN-US class="style1"> </SPAN></SUB><SPAN class="style1">ва </SPAN>
+<SPAN 
+lang=EN-US class="style1">k<SUB>B</SUB></SPAN><SUB><SPAN lang=EN-US class="style1"> </SPAN></SUB>
+<SPAN class="style1">ларнинг </SPAN>
+<SPAN 
+style="COLOR: windowtext" class="style1">функцияси</SPAN><SPAN class="style1"> 
+бўлган умумий </SPAN><SPAN 
+style="COLOR: windowtext" class="style1">махфий</SPAN><SPAN class="style1"> калити </SPAN>
+<SPAN lang=UZ-CYR class="style1">х</SPAN><SPAN class="style1">осил </SPAN>
+<SPAN 
+lang=UZ-CYR class="style1">қ</SPAN><SPAN class="style1">илинади. </SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+<SPAN 
+lang=UZ-CYR class="style1">Очик калитлар К<SUB>А </SUB>ва К<SUB>В 
+</SUB>қийматлари маълум бўлгани билан <SPAN 
+style="COLOR: windowtext">махфий</SPAN> калити К ни хисоблай олмайди, чунки 
+<SPAN style="COLOR: windowtext">махфий</SPAN> калитлар k<SUB>A </SUB>ва 
+k<SUB>В</SUB> қийматларини билмайди. Бир томонлама функциянинг ишлатилиши 
+сабабли очик калитни хисоблаш амали кайтарилмайдиган амал, яъни абонентнинг очик 
+калити қиймати буйича унинг <SPAN style="COLOR: windowtext">махфий</SPAN> 
+калитини хисоблаш мумкин эмас.</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+<SPAN 
+lang=UZ-CYR class="style1">Диффи-<SPAN 
+style="COLOR: windowtext">Хеллман</SPAN> усулининг аҳамиятлиги шундан иборатки, 
+абонентлар жуфти тармок оркали очик калитларни узатганларида факат узларига 
+маълум <SPAN style="COLOR: windowtext">махфий</SPAN> сонни олиш имкониятига эга. 
+Сунгра абонентлар узатилаётган ахборотни маълум текширилган усулда олинган 
+умумий сессия <SPAN style="COLOR: windowtext">махфий</SPAN> калитидан 
+фойдаланган холда, симметрик шифрлашни ишлатиб химоялашга киришишлари 
+мумкин.</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+<SPAN 
+lang=UZ-CYR class="style1">Диффи-<SPAN 
+style="COLOR: windowtext">Хеллман</SPAN> <SPAN 
+style="COLOR: windowtext">схемаси</SPAN> узатилаётган маълумотларнинг конфиден- 
+циаллигини ва аутентлигини (аслига тугрилигини) комплекс химоялаш усулини ҳам амалга ошириш имконини беради. Алгоритм фойдаланувчига ракамли имзони ва 
+симметрик шифрлашни бажаришда бир хил калитларни шакллантириш ва ишлатиш 
+имконини беради.</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+<SPAN 
+lang=UZ-CYR class="style1">Маълумотлар яхлитлигини ва 
+конфиденциаллигини бир вактда химоялаш учун <SPAN 
+style="COLOR: windowtext">шифрлаш</SPAN> ва ЭРИдан комплекс фойдаланиш максадга 
+мувофик хисобланади. Диффи-<SPAN style="COLOR: windowtext">Хеллман</SPAN> <SPAN 
+style="COLOR: windowtext">схемаси</SPAN> ишлашининг оралик натижаларидан 
+узатилаётган маълумотларнинг яхлитлигини ва конфиденциаллагини комплекс 
+химоялаш усулини амалга оширишда фойдаланиш мумкин. Хакикатан, ушбу алгоритмга 
+биноан фойдаланувчилар А ва В аввал узларининг <SPAN 
+style="COLOR: windowtext">махфий</SPAN> калитлари k<SUB>A</SUB> ва k<SUB>B 
+</SUB>ни генерациялайдилар ва очик калитлари К<SUB>A</SUB> ва К<SUB>B </SUB>ни 
+хисоблайдилар. Сунгра абонентлар А ва В бу оралик натижалардан маълумотларни 
+симметрик шифрлашда фойдаланилиши мум- кин бўлган умумий булинувчи <SPAN 
+style="COLOR: windowtext">махфий</SPAN> калити К ни бир вактда хисоблаш учун 
+ишлатади.</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+<SPAN 
+lang=UZ-CYR class="style1">Узатилаётган маълумотларнинг 
+конфиденциаллигини ва аутентилигини комплекс химоялаш <SPAN 
+style="COLOR: windowtext">усули</SPAN> қуйидаги схема буйича ишлайди: 
+</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+<SPAN 
+lang=UZ-CYR class="style1">- абонент А ракамли имзонинг стандарт 
+алгоритмидан фойдаланиб, узининг <SPAN style="COLOR: windowtext">махфий</SPAN> 
+калити k<SUB>A </SUB><SPAN style="COLOR: windowtext">ёрдамида</SPAN> М 
+маълумотга <SPAN style="COLOR: windowtext">имзо</SPAN> чекади; </SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+<SPAN 
+lang=UZ-CYR class="style1">- абонент А узининг <SPAN 
+style="COLOR: windowtext">махфий</SPAN> калити k<SUB>А </SUB>ва абонент В нинг 
+очик калити К<SUB>В </SUB>дан Диффи-<SPAN 
+style="COLOR: windowtext">Хеллман</SPAN> <SPAN 
+style="COLOR: windowtext">алгоритми</SPAN> буйича умумий булинувчи <SPAN 
+style="COLOR: windowtext">махфий</SPAN> калити К ни хисоблайди; </SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+<SPAN 
+lang=UZ-CYR class="style1">- абонент А олинган узаро булинувчи <SPAN 
+style="COLOR: windowtext">махфий</SPAN> калитда алмашинув буйича шериги билан 
+келишилган симметрик <SPAN style="COLOR: windowtext">шифрлаш</SPAN> алгоритмидан 
+фой- даланган холда М маълумотни шифрлайди; </SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+<SPAN 
+lang=UZ-CYR class="style1">- абонент В шифрланган М маълумотни олиши 
+билан узининг <SPAN style="COLOR: windowtext">махфий</SPAN> калити k<SUB>B 
+</SUB>ва абонент А нинг очик калити К<SUB>А</SUB> дан Диффи-<SPAN 
+style="COLOR: windowtext">Хеллман</SPAN> алгоритми буйича узаро булинувчи 
+<SPAN style="COLOR: windowtext">махфий</SPAN> калит К ни хисоблайди; </SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+<SPAN 
+lang=UZ-CYR class="style1">- абонент В олинган М маълумотни калити К 
+<SPAN style="COLOR: windowtext">ёрдамида</SPAN> дешифрлайди; </SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+<SPAN 
+lang=UZ-CYR class="style1">- абонент В абонент А нинг очи</SPAN><SPAN class="style1">к</SPAN><SPAN lang=UZ-CYR class="style1"> калит 
+К<SUB>А </SUB><SPAN style="COLOR: windowtext">ёрдамида</SPAN> </SPAN>
+<SPAN class="style1">дешифрланган</SPAN><SPAN lang=UZ-CYR class="style1"> М маълумотнинг имзосини 
+текширади.</SPAN></P>
+</DIV>
+
+</BODY></HTML>

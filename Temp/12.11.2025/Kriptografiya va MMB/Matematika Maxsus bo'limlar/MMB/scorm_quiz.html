@@ -1,0 +1,1542 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<head>
+<meta http-equiv="Content-Type" content="text/html;  charset=utf-8" />
+<title>JetDraft Document Suite Web Book System</title>
+<style type="text/css">
+body{
+	margin:0;
+	padding:0;
+	background:#f1f1f1;
+	font:70% Arial, Helvetica, sans-serif; 
+	color:#555;
+	line-height:150%;
+	text-align:left;
+}
+h1{
+	font-size:140%;
+	margin:0 20px;
+}
+h2{
+	font-size:120%;
+}
+.textInput
+{
+border: 1px solid #003366;
+color: #003366;
+font-size: 1.1em;
+}
+
+input.btn,select.btn{
+	font-family:'trebuchet ms',helvetica,sans-serif;
+	font-weight:bold;
+	background-color:#fed;
+	border:1px solid;
+	border-top-color:#800000;
+	border-left-color:#800000;
+	border-right-color:#800000;
+	border-bottom-color:#800000;
+	filter:progid:DXImageTransform.Microsoft.Gradient(
+		GradientType=0,StartColorStr='#ffffffff',EndColorStr='#ffeeddaa');}
+
+
+input.btnhov{
+	border-top-color:#c63;
+	border-left-color:#c63;
+	border-right-color:#930;
+	border-bottom-color:#930;}
+
+table	{border-collapse:collapse;}
+thead th {
+	font:bold 13px/18px georgia;
+	text-align:left;
+	background:#fff4c6;
+	color:#333;
+	padding:8px 16px 8px 8px;
+	border-right:1px solid #fff;
+	border-bottom:1px solid #fff;
+}
+thead th.null {background:#fff;}
+tbody th {
+	font:bold 12px/15px georgia;
+	text-align:left;
+	background:#fff9e1;
+	color:#333;
+	padding:8px;
+	border-bottom:1px solid #f3f0e4;
+	border-right:1px solid #fff;
+}
+tbody td {
+	font:normal 12px/15px georgia;
+	color:#333;
+	padding:8px;
+	border-left:1px solid #f3f0e4;
+	border-right:1px solid #f3f0e4;
+	border-bottom:1px solid #f3f0e4;
+}
+
+tbody td.on {background:#f3f0e4;}
+thead th.on {background:#ffe068;}
+tbody th.on {background:#ffe068;}
+</style>
+<script type="text/javascript">
+<!-- //<![CDATA[
+var numQuestions = 10;
+var rawScore = 0;
+var actualScore = 0;
+var question0;
+var question1;
+var question2;
+var question3;
+var question4;
+var question5;
+var question6;
+var question7;
+var question8;
+var question9;
+var key0 = 2;
+var key1 = 1;
+var key2 = 3;
+var key3 = 0;
+var key4 = 0;
+var key5 = 3;
+var key6 = 0;
+var key7 = 2;
+var key8 = 3;
+var key9 = 2;
+function getAnswer(){
+	doLMSSetValue("cmi.interactions.0.id","key0b0");
+	doLMSSetValue("cmi.interactions.0.type","choice");
+	doLMSSetValue("cmi.interactions.0.correct_responses.0.pattern", "2");
+	for(var i=0; i < 4; i++){
+		if(document.getElementById("quizForm0").key0b0[i].checked){
+		question0 = document.getElementById("quizForm0").key0b0[i].value;
+		doLMSSetValue("cmi.interactions.0.student_response",question0);
+	break;}}
+	doLMSSetValue("cmi.interactions.1.id","key1b0");
+	doLMSSetValue("cmi.interactions.1.type","choice");
+	doLMSSetValue("cmi.interactions.1.correct_responses.0.pattern", "1");
+	for(var i=0; i < 4; i++){
+		if(document.getElementById("quizForm0").key1b0[i].checked){
+		question1 = document.getElementById("quizForm0").key1b0[i].value;
+		doLMSSetValue("cmi.interactions.1.student_response",question1);
+	break;}}
+	doLMSSetValue("cmi.interactions.2.id","key2b0");
+	doLMSSetValue("cmi.interactions.2.type","choice");
+	doLMSSetValue("cmi.interactions.2.correct_responses.0.pattern", "3");
+	for(var i=0; i < 4; i++){
+		if(document.getElementById("quizForm0").key2b0[i].checked){
+		question2 = document.getElementById("quizForm0").key2b0[i].value;
+		doLMSSetValue("cmi.interactions.2.student_response",question2);
+	break;}}
+	doLMSSetValue("cmi.interactions.3.id","key3b0");
+	doLMSSetValue("cmi.interactions.3.type","choice");
+	doLMSSetValue("cmi.interactions.3.correct_responses.0.pattern", "0");
+	for(var i=0; i < 4; i++){
+		if(document.getElementById("quizForm0").key3b0[i].checked){
+		question3 = document.getElementById("quizForm0").key3b0[i].value;
+		doLMSSetValue("cmi.interactions.3.student_response",question3);
+	break;}}
+	doLMSSetValue("cmi.interactions.4.id","key4b0");
+	doLMSSetValue("cmi.interactions.4.type","choice");
+	doLMSSetValue("cmi.interactions.4.correct_responses.0.pattern", "0");
+	for(var i=0; i < 4; i++){
+		if(document.getElementById("quizForm0").key4b0[i].checked){
+		question4 = document.getElementById("quizForm0").key4b0[i].value;
+		doLMSSetValue("cmi.interactions.4.student_response",question4);
+	break;}}
+	doLMSSetValue("cmi.interactions.5.id","key5b0");
+	doLMSSetValue("cmi.interactions.5.type","choice");
+	doLMSSetValue("cmi.interactions.5.correct_responses.0.pattern", "3");
+	for(var i=0; i < 4; i++){
+		if(document.getElementById("quizForm0").key5b0[i].checked){
+		question5 = document.getElementById("quizForm0").key5b0[i].value;
+		doLMSSetValue("cmi.interactions.5.student_response",question5);
+	break;}}
+	doLMSSetValue("cmi.interactions.6.id","key6b0");
+	doLMSSetValue("cmi.interactions.6.type","choice");
+	doLMSSetValue("cmi.interactions.6.correct_responses.0.pattern", "0");
+	for(var i=0; i < 4; i++){
+		if(document.getElementById("quizForm0").key6b0[i].checked){
+		question6 = document.getElementById("quizForm0").key6b0[i].value;
+		doLMSSetValue("cmi.interactions.6.student_response",question6);
+	break;}}
+	doLMSSetValue("cmi.interactions.7.id","key7b0");
+	doLMSSetValue("cmi.interactions.7.type","choice");
+	doLMSSetValue("cmi.interactions.7.correct_responses.0.pattern", "2");
+	for(var i=0; i < 4; i++){
+		if(document.getElementById("quizForm0").key7b0[i].checked){
+		question7 = document.getElementById("quizForm0").key7b0[i].value;
+		doLMSSetValue("cmi.interactions.7.student_response",question7);
+	break;}}
+	doLMSSetValue("cmi.interactions.8.id","key8b0");
+	doLMSSetValue("cmi.interactions.8.type","choice");
+	doLMSSetValue("cmi.interactions.8.correct_responses.0.pattern", "3");
+	for(var i=0; i < 4; i++){
+		if(document.getElementById("quizForm0").key8b0[i].checked){
+		question8 = document.getElementById("quizForm0").key8b0[i].value;
+		doLMSSetValue("cmi.interactions.8.student_response",question8);
+	break;}}
+	doLMSSetValue("cmi.interactions.9.id","key9b0");
+	doLMSSetValue("cmi.interactions.9.type","choice");
+	doLMSSetValue("cmi.interactions.9.correct_responses.0.pattern", "2");
+	for(var i=0; i < 4; i++){
+		if(document.getElementById("quizForm0").key9b0[i].checked){
+		question9 = document.getElementById("quizForm0").key9b0[i].value;
+		doLMSSetValue("cmi.interactions.9.student_response",question9);
+	break;}}
+}
+function calcRawScore(){
+if (question0 == key0){
+	doLMSSetValue("cmi.interactions.0.result","correct");
+	rawScore++;} else {
+	doLMSSetValue("cmi.interactions.0.result","wrong");}
+if (question1 == key1){
+	doLMSSetValue("cmi.interactions.1.result","correct");
+	rawScore++;} else {
+	doLMSSetValue("cmi.interactions.1.result","wrong");}
+if (question2 == key2){
+	doLMSSetValue("cmi.interactions.2.result","correct");
+	rawScore++;} else {
+	doLMSSetValue("cmi.interactions.2.result","wrong");}
+if (question3 == key3){
+	doLMSSetValue("cmi.interactions.3.result","correct");
+	rawScore++;} else {
+	doLMSSetValue("cmi.interactions.3.result","wrong");}
+if (question4 == key4){
+	doLMSSetValue("cmi.interactions.4.result","correct");
+	rawScore++;} else {
+	doLMSSetValue("cmi.interactions.4.result","wrong");}
+if (question5 == key5){
+	doLMSSetValue("cmi.interactions.5.result","correct");
+	rawScore++;} else {
+	doLMSSetValue("cmi.interactions.5.result","wrong");}
+if (question6 == key6){
+	doLMSSetValue("cmi.interactions.6.result","correct");
+	rawScore++;} else {
+	doLMSSetValue("cmi.interactions.6.result","wrong");}
+if (question7 == key7){
+	doLMSSetValue("cmi.interactions.7.result","correct");
+	rawScore++;} else {
+	doLMSSetValue("cmi.interactions.7.result","wrong");}
+if (question8 == key8){
+	doLMSSetValue("cmi.interactions.8.result","correct");
+	rawScore++;} else {
+	doLMSSetValue("cmi.interactions.8.result","wrong");}
+if (question9 == key9){
+	doLMSSetValue("cmi.interactions.9.result","correct");
+	rawScore++;} else {
+	doLMSSetValue("cmi.interactions.9.result","wrong");}
+}
+function calcScore2(){
+           computeTime();  // the student has stopped here.
+           document.getElementById("quizForm0").submitB.disabled = true;
+           getAnswer();
+           calcRawScore();
+           actualScore = Math.round(rawScore / numQuestions * 100);
+			alert("Ваш результат  " + actualScore + "%")
+           doLMSSetValue( "cmi.core.score.raw", actualScore+"" );
+           var mode = doLMSGetValue( "cmi.core.lesson_mode" );
+               if ( mode != "review"  &&  mode != "browse" ){
+                 if ( actualScore < 85 ){
+                   doLMSSetValue( "cmi.core.lesson_status", "failed" );} else {
+                   doLMSSetValue( "cmi.core.lesson_status", "passed" );}
+                 doLMSSetValue( "cmi.core.exit", "" );} 
+          exitPageStatus = true;
+          doLMSCommit();
+          doLMSFinish();
+        }
+
+//]]> -->
+
+function startTime()
+{
+var today=new Date();
+var y=today.getFullYear();
+var mnt=today.getMonth();
+var d=today.getDay();
+var h=today.getHours();
+var m=today.getMinutes();
+var s=today.getSeconds();
+// add a zero in front of numbers<10
+if(document.getElementById('base_clock')){
+	m=checkTime(m);
+	s=checkTime(s);
+	document.getElementById('base_clock').innerHTML = y + "/" + mnt + "/" + d + " "+h+":"+m+":"+s;
+	t=setTimeout('startTime()',500);
+}
+}
+
+function checkTime(i)
+{
+if (i<10)
+  {
+  i="0" + i;
+  }
+return i;
+}
+</script>
+</head>
+
+<script type="text/javascript" src="common.js"></script>
+<script type="text/javascript" src="APIWrapper.js"></script>
+<script type="text/javascript" src="SCOFunctions.js"></script>
+<body onload="startTime();loadPage()" onunload="unloadPage()"><div id="outer">
+
+<div align="center">
+	<form name="quizForm0" id="quizForm0" action="javascript:calcScore2();">
+	<table border="0" width="95%" height="100%" bgcolor="#FFFFFF">
+		<tr>
+			<td align="center" bgcolor="#FFFDF2" height="20">
+			<h1 align="left">Блок проверки знаний</h1>
+			</td>
+		</tr>
+		<tr>
+			<td align="center">
+			<div class="iDevice emphasis1">
+			<div class="iDevice_inner">
+			<div class="passrate" value="85"></div>
+					<table width="97%" height="45">
+		<tr>
+		<th colspan="2" height="45">
+		<p style="margin-left: 10px; margin-right: 10px">
+		
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="JetDraft Software Dual Core">
+
+</head>
+<body lang=UZ-CYR>
+<div class=WordSection1>
+<p class=MsoNormal><b><span style='font-size:14.0pt'>Таккосланувчи сонлар</span></b><b><span
+style='font-size:14.0pt'>га энг тўгри таъриф кайси жавобда келтирилган?</span></b></p>
+</div>
+</body>
+</html>		</p>
+		</th>
+		</tr>
+			<tr>
+			<td width="89%">
+			<p style="margin-left: 10px; margin-right: 10px">
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="JetDraft Software Dual Core">
+
+</head>
+<body lang=UZ-CYR>
+<div class=WordSection1>
+<p class=MsoNormal><span style='font-size:12.0pt'>А) бир хил </span><span
+style='font-size:12.0pt'>сонга каррали бўлган сонлар</span></p>
+</div>
+</body>
+</html>
+			</p></td>
+			<td width="8%">
+			<p align="center">
+			<input type="radio" name="key0b0" value="0"/></p>
+			</td>
+			</tr>
+			<tr>
+			<td width="89%">
+			<p style="margin-left: 10px; margin-right: 10px">
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="JetDraft Software Dual Core">
+
+</head>
+<body lang=UZ-CYR>
+<div class=WordSection1>
+<p class=MsoNormal><span style='font-size:12.0pt'>Б) ўзаро туб сонлар</span></p>
+</div>
+</body>
+</html>
+			</p></td>
+			<td width="8%">
+			<p align="center">
+			<input type="radio" name="key0b0" value="1"/></p>
+			</td>
+			</tr>
+			<tr>
+			<td width="89%">
+			<p style="margin-left: 10px; margin-right: 10px">
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="JetDraft Software Dual Core">
+
+</head>
+<body lang=UZ-CYR>
+<div class=WordSection1>
+<p class=MsoNormal><span style='font-size:12.0pt'>В) тенг колдикли сонлар</span></p>
+</div>
+</body>
+</html>
+			</p></td>
+			<td width="8%">
+			<p align="center">
+			<input type="radio" name="key0b0" value="2"/></p>
+			</td>
+			</tr>
+			<tr>
+			<td width="89%">
+			<p style="margin-left: 10px; margin-right: 10px">
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="JetDraft Software Dual Core">
+
+</head>
+<body lang=UZ-CYR>
+<div class=WordSection1>
+<p class=MsoNormal><span style='font-size:12.0pt'>Г)</span><span
+style='font-size:12.0pt'> ўзаро фаркли сонлар</span></p>
+</div>
+</body>
+</html>
+			</p></td>
+			<td width="8%">
+			<p align="center">
+			<input type="radio" name="key0b0" value="3"/></p>
+			</td>
+			</tr>
+		</table>
+		<p></p>
+		<table width="97%" height="45">
+		<tr>
+		<th colspan="2" height="45">
+		<p style="margin-left: 10px; margin-right: 10px">
+		
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="JetDraft Software Dual Core">
+
+</head>
+<body lang=UZ-CYR>
+<div class=WordSection1>
+<p class=MsoNormal><b><span style='font-size:14.0pt'>Диофант тенгламасининг
+умумий ечимини аниклаш формуласи кайси </span></b><b><span style='font-size:
+14.0pt'>жавобда тўгри келтирилган?</span></b></p>
+</div>
+</body>
+</html>		</p>
+		</th>
+		</tr>
+			<tr>
+			<td width="89%">
+			<p style="margin-left: 10px; margin-right: 10px">
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="JetDraft Software Dual Core">
+
+</head>
+<body lang=UZ-CYR>
+<div class=WordSection1>
+<p class=MsoNormal><span style='font-size:12.0pt'>А) </span><i><span
+lang=EN-US style='font-size:12.0pt;color:black'>x</span></i><span lang=EN-US
+style='font-size:12.0pt;color:black'>=<i>(uc)/</i></span><i><span
+style='font-size:12.0pt;color:black'>ЭКУБ(</span></i><i><span lang=EN-US
+style='font-size:12.0pt;color:black'>a,b</span></i><i><span style='font-size:
+12.0pt;color:black'>)</span></i><i><span lang=EN-US style='font-size:12.0pt;
+color:black'>,</span></i><i><span lang=EN-US style='font-size:12.0pt;
+color:black'> </span></i><i><span lang=EN-US style='font-size:12.0pt;
+color:black'>y</span></i><span lang=EN-US style='font-size:12.0pt;color:black'>=<i>(vc)/</i></span><i><span
+style='font-size:12.0pt;color:black'>ЭКУБ(</span></i><i><span lang=EN-US
+style='font-size:12.0pt;color:black'>a,b</span></i><i><span style='font-size:
+12.0pt;color:black'>)</span></i></p>
+</div>
+</body>
+</html>
+			</p></td>
+			<td width="8%">
+			<p align="center">
+			<input type="radio" name="key1b0" value="0"/></p>
+			</td>
+			</tr>
+			<tr>
+			<td width="89%">
+			<p style="margin-left: 10px; margin-right: 10px">
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="JetDraft Software Dual Core">
+
+</head>
+<body lang=UZ-CYR>
+<div class=WordSection1>
+<p class=MsoNormal style='vertical-align:baseline'><span style='font-size:12.0pt'>Б)</span><span
+style='font-size:12.0pt'> </span><i><span style='font-size:12.0pt;color:black'>x</span></i><span
+style='font-size:12.0pt;color:black'>=<i>x<sub>0</sub>+(bt)/d, y</i>=<i>y<sub>0</sub>–(at)/d</i></span></p>
+</div>
+</body>
+</html>
+			</p></td>
+			<td width="8%">
+			<p align="center">
+			<input type="radio" name="key1b0" value="1"/></p>
+			</td>
+			</tr>
+			<tr>
+			<td width="89%">
+			<p style="margin-left: 10px; margin-right: 10px">
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="JetDraft Software Dual Core">
+
+</head>
+<body lang=UZ-CYR>
+<div class=WordSection1>
+<p class=MsoNormal><span style='font-size:12.0pt'>В) </span><i><span
+style='font-size:12.0pt;color:black'>x</span></i><span style='font-size:12.0pt;
+color:black'>=<i>(</i></span><i><span lang=EN-US style='font-size:12.0pt;
+color:black'>v</span></i><i><span style='font-size:12.0pt;color:black'>c)/ЭКУБ(a,b),
+y</span></i><span style='font-size:12.0pt;color:black'>=<i>(</i></span><i><span
+lang=EN-US style='font-size:12.0pt;color:black'>u</span></i><i><span
+style='font-size:12.0pt;color:black'>c)/ЭКУБ(a,b)</span></i></p>
+</div>
+</body>
+</html>
+			</p></td>
+			<td width="8%">
+			<p align="center">
+			<input type="radio" name="key1b0" value="2"/></p>
+			</td>
+			</tr>
+			<tr>
+			<td width="89%">
+			<p style="margin-left: 10px; margin-right: 10px">
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="JetDraft Software Dual Core">
+
+</head>
+<body lang=UZ-CYR>
+<div class=WordSection1>
+<p class=MsoNormal><span style='font-size:12.0pt'>Г) </span><i><span
+style='font-size:12.0pt;color:black'>x</span></i><span style='font-size:12.0pt;
+color:black'>=<i>(bt)/d, y</i>=<i>(at)/d</i></span></p>
+</div>
+</body>
+</html>
+			</p></td>
+			<td width="8%">
+			<p align="center">
+			<input type="radio" name="key1b0" value="3"/></p>
+			</td>
+			</tr>
+		</table>
+		<p></p>
+		<table width="97%" height="45">
+		<tr>
+		<th colspan="2" height="45">
+		<p style="margin-left: 10px; margin-right: 10px">
+		
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="JetDraft Software Dual Core">
+
+</head>
+<body lang=UZ-CYR>
+<div class=WordSection1>
+<p class=MsoNormal><b><span style='font-size:14.0pt'>Эйлер</span></b><b><span
+style='font-size:14.0pt'> функцияси </span></b><b><span style='font-size:14.0pt'>деб
+кандай функцияга айтилади?</span></b></p>
+</div>
+</body>
+</html>		</p>
+		</th>
+		</tr>
+			<tr>
+			<td width="89%">
+			<p style="margin-left: 10px; margin-right: 10px">
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="JetDraft Software Dual Core">
+
+</head>
+<body lang=UZ-CYR>
+<div class=WordSection1>
+<p class=MsoNormal><span style='font-size:12.0pt'>А) </span><span
+style='font-size:12.0pt'>Берилган <i>n</i> натурал сондан кичик ва <i>n</i>
+билан ўзаро туб бўлган сонларни аникловчи функцияга айтилади.</span></p>
+</div>
+</body>
+</html>
+			</p></td>
+			<td width="8%">
+			<p align="center">
+			<input type="radio" name="key2b0" value="0"/></p>
+			</td>
+			</tr>
+			<tr>
+			<td width="89%">
+			<p style="margin-left: 10px; margin-right: 10px">
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="JetDraft Software Dual Core">
+
+</head>
+<body lang=UZ-CYR>
+<div class=WordSection1>
+<p class=MsoNormal><span style='font-size:12.0pt'>Б) </span><span
+style='font-size:12.0pt'>Берилган <i>n</i> натурал сондан кичик туб сонларнинг
+нечталигини ифодаловчи функцияга айтилади.</span></p>
+</div>
+</body>
+</html>
+			</p></td>
+			<td width="8%">
+			<p align="center">
+			<input type="radio" name="key2b0" value="1"/></p>
+			</td>
+			</tr>
+			<tr>
+			<td width="89%">
+			<p style="margin-left: 10px; margin-right: 10px">
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="JetDraft Software Dual Core">
+
+</head>
+<body lang=UZ-CYR>
+<div class=WordSection1>
+<p class=MsoNormal style='vertical-align:baseline'><span style='font-size:12.0pt'>В)
+</span><span style='font-size:12.0pt'>Берилган <i>n</i> натурал сондан катта ва
+<i>n</i> билан ўзаро туб бўлган сонларнинг нечталигини ифодаловчи функцияга айтилади.</span></p>
+</div>
+</body>
+</html>
+			</p></td>
+			<td width="8%">
+			<p align="center">
+			<input type="radio" name="key2b0" value="2"/></p>
+			</td>
+			</tr>
+			<tr>
+			<td width="89%">
+			<p style="margin-left: 10px; margin-right: 10px">
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="JetDraft Software Dual Core">
+
+</head>
+<body lang=UZ-CYR>
+<div class=WordSection1>
+<p class=MsoNormal><span style='font-size:12.0pt'>Г)</span><span
+style='font-size:12.0pt'> </span><span style='font-size:12.0pt'>Берилган <i>n</i>
+натурал сондан кичик ва <i>n</i> билан ўзаро туб бўлган сонларнинг нечталигини
+ифодаловчи функцияга айтилади.</span></p>
+</div>
+</body>
+</html>
+			</p></td>
+			<td width="8%">
+			<p align="center">
+			<input type="radio" name="key2b0" value="3"/></p>
+			</td>
+			</tr>
+		</table>
+		<p></p>
+		<table width="97%" height="45">
+		<tr>
+		<th colspan="2" height="45">
+		<p style="margin-left: 10px; margin-right: 10px">
+		
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="JetDraft Software Dual Core">
+
+</head>
+<body lang=UZ-CYR>
+<div class=WordSection1>
+<p class=MsoNormal><b><span style='font-size:14.0pt'>Модул</span></b><b><span
+style='font-size:14.0pt'> (<i>n</i>) бўйича <i>a</i> сонига тескари элемент
+качон мавжуд бўлади?</span></b></p>
+</div>
+</body>
+</html>		</p>
+		</th>
+		</tr>
+			<tr>
+			<td width="89%">
+			<p style="margin-left: 10px; margin-right: 10px">
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="JetDraft Software Dual Core">
+
+</head>
+<body lang=UZ-CYR>
+<div class=WordSection1>
+<p class=MsoNormal><span style='font-size:12.0pt'>А) Агар </span><i><span
+style='font-size:12.0pt;color:black'>а</span></i><span style='font-size:12.0pt;
+color:black'> ва <i>n </i>бутун сонлар ўзаро туб бўлса.</span></p>
+</div>
+</body>
+</html>
+			</p></td>
+			<td width="8%">
+			<p align="center">
+			<input type="radio" name="key3b0" value="0"/></p>
+			</td>
+			</tr>
+			<tr>
+			<td width="89%">
+			<p style="margin-left: 10px; margin-right: 10px">
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="JetDraft Software Dual Core">
+
+</head>
+<body lang=UZ-CYR>
+<div class=WordSection1>
+<p class=MsoNormal><span style='font-size:12.0pt'>Б) Агар </span><i><span
+style='font-size:12.0pt;color:black'>а</span></i><span style='font-size:12.0pt;
+color:black'> ва <i>n </i>бутун сонлар ўзаро туб бўлмаса.</span></p>
+</div>
+</body>
+</html>
+			</p></td>
+			<td width="8%">
+			<p align="center">
+			<input type="radio" name="key3b0" value="1"/></p>
+			</td>
+			</tr>
+			<tr>
+			<td width="89%">
+			<p style="margin-left: 10px; margin-right: 10px">
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="JetDraft Software Dual Core">
+
+</head>
+<body lang=UZ-CYR>
+<div class=WordSection1>
+<p class=MsoNormal><span style='font-size:12.0pt'>В) </span><span
+style='font-size:12.0pt'>Хар доим мавжуд бўлади</span><span style='font-size:
+12.0pt'>.</span></p>
+</div>
+</body>
+</html>
+			</p></td>
+			<td width="8%">
+			<p align="center">
+			<input type="radio" name="key3b0" value="2"/></p>
+			</td>
+			</tr>
+			<tr>
+			<td width="89%">
+			<p style="margin-left: 10px; margin-right: 10px">
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="JetDraft Software Dual Core">
+
+</head>
+<body lang=UZ-CYR>
+<div class=WordSection1>
+<p class=MsoNormal><span style='font-size:12.0pt'>Г) Агар </span><i><span
+style='font-size:12.0pt;color:black'>а</span></i><span style='font-size:12.0pt;
+color:black'> ва <i>n </i>бутун сонлар туб бўлса</span></p>
+</div>
+</body>
+</html>
+			</p></td>
+			<td width="8%">
+			<p align="center">
+			<input type="radio" name="key3b0" value="3"/></p>
+			</td>
+			</tr>
+		</table>
+		<p></p>
+		<table width="97%" height="45">
+		<tr>
+		<th colspan="2" height="45">
+		<p style="margin-left: 10px; margin-right: 10px">
+		
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="JetDraft Software Dual Core">
+
+</head>
+<body lang=UZ-CYR>
+<div class=WordSection1>
+<p class=MsoNormal><b><span style='font-size:14.0pt'>Кандай кўринишдаги
+сонларга Ферма сонлари дейилади</span></b><b><span style='font-size:14.0pt'>?</span></b></p>
+</div>
+</body>
+</html>		</p>
+		</th>
+		</tr>
+			<tr>
+			<td width="89%">
+			<p style="margin-left: 10px; margin-right: 10px">
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="JetDraft Software Dual Core">
+
+</head>
+<body lang=UZ-CYR>
+<div class=WordSection1>
+<p class=MsoNormal><span style='font-size:12.0pt'>А) </span><i><span
+style='font-size:12.0pt'>F<sub>k</sub></span></i><span style='font-size:12.0pt'>=2<i><sup>t</sup>+</i>1<i>,
+t</i>=2<i><sup>k</sup>, k</i>=0, 1, 2, ...</span></p>
+</div>
+</body>
+</html>
+			</p></td>
+			<td width="8%">
+			<p align="center">
+			<input type="radio" name="key4b0" value="0"/></p>
+			</td>
+			</tr>
+			<tr>
+			<td width="89%">
+			<p style="margin-left: 10px; margin-right: 10px">
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="JetDraft Software Dual Core">
+
+</head>
+<body lang=UZ-CYR>
+<div class=WordSection1>
+<p class=MsoNormal><span style='font-size:12.0pt'>Б) </span><i><span
+style='font-size:12.0pt'>F<sub>k</sub></span></i><span style='font-size:12.0pt'>=2<i><sup>t</sup>–</i>1<i>,
+t</i>=2<i><sup>k</sup>, k</i>=0, 1, 2, ...</span></p>
+</div>
+</body>
+</html>
+			</p></td>
+			<td width="8%">
+			<p align="center">
+			<input type="radio" name="key4b0" value="1"/></p>
+			</td>
+			</tr>
+			<tr>
+			<td width="89%">
+			<p style="margin-left: 10px; margin-right: 10px">
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="JetDraft Software Dual Core">
+
+</head>
+<body lang=UZ-CYR>
+<div class=WordSection1>
+<p class=MsoNormal><span style='font-size:12.0pt'>В) </span><i><span
+style='font-size:12.0pt'>F<sub>k</sub></span></i><span style='font-size:12.0pt'>=2<i><sup>t</sup>–</i>1<i>,
+t</i>=0, 1, 2, ...</span></p>
+</div>
+</body>
+</html>
+			</p></td>
+			<td width="8%">
+			<p align="center">
+			<input type="radio" name="key4b0" value="2"/></p>
+			</td>
+			</tr>
+			<tr>
+			<td width="89%">
+			<p style="margin-left: 10px; margin-right: 10px">
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="JetDraft Software Dual Core">
+
+</head>
+<body lang=UZ-CYR>
+<div class=WordSection1>
+<p class=MsoNormal><span style='font-size:12.0pt'>Г) </span><i><span
+style='font-size:12.0pt'>F<sub>k</sub></span></i><span style='font-size:12.0pt'>=2<i><sup>t</sup>+</i>1<i>,
+t</i>=0, 1, 2, ...</span></p>
+</div>
+</body>
+</html>
+			</p></td>
+			<td width="8%">
+			<p align="center">
+			<input type="radio" name="key4b0" value="3"/></p>
+			</td>
+			</tr>
+		</table>
+		<p></p>
+		<table width="97%" height="45">
+		<tr>
+		<th colspan="2" height="45">
+		<p style="margin-left: 10px; margin-right: 10px">
+		
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="JetDraft Software Dual Core">
+
+</head>
+<body lang=UZ-CYR>
+<div class=WordSection1>
+<p class=MsoNormal><b><i><span style='font-size:14.0pt;color:black'>ax</span></i></b><b><span
+style='font-size:14.0pt;color:black'>=</span></b><b><i><span style='font-size:
+14.0pt;color:black'>c(mod m)</span></i></b><b><span style='font-size:14.0pt;
+color:black'> таккослама тенгламанинг ечими</span></b><b><span
+style='font-size:14.0pt'>ни аниклаш формуласи кайси жавобда тўгри кетирилган?</span></b></p>
+</div>
+</body>
+</html>		</p>
+		</th>
+		</tr>
+			<tr>
+			<td width="89%">
+			<p style="margin-left: 10px; margin-right: 10px">
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="JetDraft Software Dual Core">
+
+</head>
+<body lang=UZ-CYR>
+<div class=WordSection1>
+<p class=MsoNormal><span style='font-size:12.0pt'>А) </span><i><span
+lang=EN-US style='font-size:12.0pt;color:black'>x</span></i><i><span
+lang=EN-US style='font-size:12.0pt;color:black'> </span></i><span lang=RU
+style='font-size:12.0pt;color:black'>=</span><i><span lang=RU style='font-size:
+12.0pt;color:black'> </span></i><i><span lang=RU style='font-size:12.0pt;
+color:black'>(</span></i><i><span style='font-size:12.0pt;color:black'>с–</span></i><i><span
+lang=EN-US style='font-size:12.0pt;color:black'>tm</span></i><i><span lang=RU
+style='font-size:12.0pt;color:black'>/</span></i><i><span style='font-size:
+12.0pt;color:black'>ЭКУБ</span></i><i><span lang=RU style='font-size:12.0pt;
+color:black'>(</span></i><i><span lang=EN-US style='font-size:12.0pt;
+color:black'>a</span></i><i><span lang=RU style='font-size:12.0pt;color:black'>,</span></i><i><span
+lang=EN-US style='font-size:12.0pt;color:black'>m</span></i><i><span lang=RU
+style='font-size:12.0pt;color:black'>)) (</span></i><i><span lang=EN-US
+style='font-size:12.0pt;color:black'>mod</span></i><i><span lang=EN-US
+style='font-size:12.0pt;color:black'> </span></i><i><span lang=EN-US
+style='font-size:12.0pt;color:black'>m</span></i><i><span lang=RU
+style='font-size:12.0pt;color:black'>)</span></i></p>
+</div>
+</body>
+</html>
+			</p></td>
+			<td width="8%">
+			<p align="center">
+			<input type="radio" name="key5b0" value="0"/></p>
+			</td>
+			</tr>
+			<tr>
+			<td width="89%">
+			<p style="margin-left: 10px; margin-right: 10px">
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="JetDraft Software Dual Core">
+
+</head>
+<body lang=UZ-CYR>
+<div class=WordSection1>
+<p class=MsoNormal><span style='font-size:12.0pt'>Б) </span><i><span
+lang=EN-US style='font-size:12.0pt;color:black'>x</span></i><i><span
+lang=EN-US style='font-size:12.0pt;color:black'> </span></i><span lang=EN-US
+style='font-size:12.0pt;color:black'>=</span><i><span lang=EN-US
+style='font-size:12.0pt;color:black'> </span></i><i><span lang=EN-US
+style='font-size:12.0pt;color:black'>(</span></i><i><span style='font-size:
+12.0pt;color:black'>с</span></i><i><span lang=EN-US style='font-size:12.0pt;
+color:black'>+tm/</span></i><i><span style='font-size:12.0pt;color:black'>ЭКУБ</span></i><i><span
+lang=EN-US style='font-size:12.0pt;color:black'>(a,m)) (mod m)</span></i></p>
+</div>
+</body>
+</html>
+			</p></td>
+			<td width="8%">
+			<p align="center">
+			<input type="radio" name="key5b0" value="1"/></p>
+			</td>
+			</tr>
+			<tr>
+			<td width="89%">
+			<p style="margin-left: 10px; margin-right: 10px">
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="JetDraft Software Dual Core">
+
+</head>
+<body lang=UZ-CYR>
+<div class=WordSection1>
+<p class=MsoNormal><span style='font-size:12.0pt'>В) </span><i><span
+lang=EN-US style='font-size:12.0pt;color:black'>x</span></i><i><span
+lang=EN-US style='font-size:12.0pt;color:black'> </span></i><span lang=EN-US
+style='font-size:12.0pt;color:black'>=</span><i><span lang=EN-US
+style='font-size:12.0pt;color:black'> </span></i><i><span lang=EN-US
+style='font-size:12.0pt;color:black'>(x<sub>0</sub></span></i><i><span
+style='font-size:12.0pt;color:black'>–</span></i><i><span lang=EN-US
+style='font-size:12.0pt;color:black'>tm/</span></i><i><span style='font-size:
+12.0pt;color:black'>ЭКУБ</span></i><i><span lang=EN-US style='font-size:12.0pt;
+color:black'>(a,m)) (mod m)</span></i></p>
+</div>
+</body>
+</html>
+			</p></td>
+			<td width="8%">
+			<p align="center">
+			<input type="radio" name="key5b0" value="2"/></p>
+			</td>
+			</tr>
+			<tr>
+			<td width="89%">
+			<p style="margin-left: 10px; margin-right: 10px">
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="JetDraft Software Dual Core">
+
+</head>
+<body lang=UZ-CYR>
+<div class=WordSection1>
+<p class=MsoNormal style='margin-bottom:6.0pt;vertical-align:baseline'><span
+style='font-size:12.0pt'>Г)</span><i><span lang=EN-US style='font-size:12.0pt;
+color:black'> x</span></i><i><span lang=EN-US style='font-size:12.0pt;
+color:black'> </span></i><span lang=EN-US style='font-size:12.0pt;color:black'>=</span><i><span
+lang=EN-US style='font-size:12.0pt;color:black'> </span></i><i><span
+lang=EN-US style='font-size:12.0pt;color:black'>(x<sub>0</sub>+tm/</span></i><i><span
+style='font-size:12.0pt;color:black'>ЭКУБ</span></i><i><span lang=EN-US
+style='font-size:12.0pt;color:black'>(a,m)) (mod m)</span></i></p>
+</div>
+</body>
+</html>
+			</p></td>
+			<td width="8%">
+			<p align="center">
+			<input type="radio" name="key5b0" value="3"/></p>
+			</td>
+			</tr>
+		</table>
+		<p></p>
+		<table width="97%" height="45">
+		<tr>
+		<th colspan="2" height="45">
+		<p style="margin-left: 10px; margin-right: 10px">
+		
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="JetDraft Software Dual Core">
+
+</head>
+<body lang=UZ-CYR>
+<div class=WordSection1>
+<p class=MsoNormal><b><span style='font-size:14.0pt;color:black'>m</span></b><b><i><span
+style='font-size:14.0pt;color:black'> </span></i></b><b><span style='font-size:
+14.0pt;color:black'>модул бўйича чегирмалар синфи<i> </i>деганда<i> </i></span></b><b><span
+style='font-size:14.0pt;color:black'>нимани тушунасиз</span></b><b><span
+style='font-size:14.0pt'>?</span></b></p>
+</div>
+</body>
+</html>		</p>
+		</th>
+		</tr>
+			<tr>
+			<td width="89%">
+			<p style="margin-left: 10px; margin-right: 10px">
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="JetDraft Software Dual Core">
+
+</head>
+<body lang=UZ-CYR>
+<div class=WordSection1>
+<p class=MsoNormal><span style='font-size:12.0pt'>А) </span><span lang=EN-US
+style='font-size:12.0pt;color:black'>m</span><span lang=RU style='font-size:
+12.0pt;color:black'> натурал сонига бўлганда бир хил колдик берадиган сонлар
+тўплами </span><span lang=EN-US style='font-size:12.0pt;color:black'>m</span><span
+lang=RU style='font-size:12.0pt;color:black'> модул бўйича чегирмалар синфи дейилади.</span></p>
+</div>
+</body>
+</html>
+			</p></td>
+			<td width="8%">
+			<p align="center">
+			<input type="radio" name="key6b0" value="0"/></p>
+			</td>
+			</tr>
+			<tr>
+			<td width="89%">
+			<p style="margin-left: 10px; margin-right: 10px">
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="JetDraft Software Dual Core">
+
+</head>
+<body lang=UZ-CYR>
+<div class=WordSection1>
+<p class=MsoNormal><span style='font-size:12.0pt'>Б) </span><span lang=EN-US
+style='font-size:12.0pt;color:black'>m</span><span lang=RU style='font-size:
+12.0pt;color:black'> натурал сонига бўлганда бир хил колдик бер</span><span
+style='font-size:12.0pt;color:black'>м</span><span lang=RU style='font-size:
+12.0pt;color:black'>а</span><span style='font-size:12.0pt;color:black'>й</span><span
+lang=RU style='font-size:12.0pt;color:black'>диган сонлар тўплами </span><span
+lang=EN-US style='font-size:12.0pt;color:black'>m</span><span lang=RU
+style='font-size:12.0pt;color:black'> модул бўйича чегирмалар синфи дейилади.</span></p>
+</div>
+</body>
+</html>
+			</p></td>
+			<td width="8%">
+			<p align="center">
+			<input type="radio" name="key6b0" value="1"/></p>
+			</td>
+			</tr>
+			<tr>
+			<td width="89%">
+			<p style="margin-left: 10px; margin-right: 10px">
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="JetDraft Software Dual Core">
+
+</head>
+<body lang=UZ-CYR>
+<div class=WordSection1>
+<p class=MsoNormal><span style='font-size:12.0pt'>В) </span><span
+style='font-size:12.0pt;color:black'>m натурал сонига каррали бўлган сонлар
+тўплами m модул бўйича чегирмалар синфи дейилади.</span></p>
+</div>
+</body>
+</html>
+			</p></td>
+			<td width="8%">
+			<p align="center">
+			<input type="radio" name="key6b0" value="2"/></p>
+			</td>
+			</tr>
+			<tr>
+			<td width="89%">
+			<p style="margin-left: 10px; margin-right: 10px">
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="JetDraft Software Dual Core">
+
+</head>
+<body lang=UZ-CYR>
+<div class=WordSection1>
+<p class=MsoNormal><span style='font-size:12.0pt'>Г)</span><span
+style='font-size:12.0pt;color:black'> </span><span lang=EN-US style='font-size:
+12.0pt;color:black'>m</span><span lang=RU style='font-size:12.0pt;color:black'>
+натурал сонига </span><span style='font-size:12.0pt;color:black'>бўлинувчи </span><span
+lang=RU style='font-size:12.0pt;color:black'>сонлар тўплами </span><span
+lang=EN-US style='font-size:12.0pt;color:black'>m</span><span lang=RU
+style='font-size:12.0pt;color:black'> модул бўйича чегирмалар синфи дейилади.</span></p>
+</div>
+</body>
+</html>
+			</p></td>
+			<td width="8%">
+			<p align="center">
+			<input type="radio" name="key6b0" value="3"/></p>
+			</td>
+			</tr>
+		</table>
+		<p></p>
+		<table width="97%" height="45">
+		<tr>
+		<th colspan="2" height="45">
+		<p style="margin-left: 10px; margin-right: 10px">
+		
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="JetDraft Software Dual Core">
+
+</head>
+<body lang=UZ-CYR>
+<div class=WordSection1>
+<p class=MsoNormal><b><span style='font-size:14.0pt;color:black'>Мултпликатив
+функцияга кайси жавобда тўгри таъриф бе</span></b><b><span style='font-size:
+14.0pt;color:black'>рилган</span></b><b><span style='font-size:14.0pt'>?</span></b></p>
+</div>
+</body>
+</html>		</p>
+		</th>
+		</tr>
+			<tr>
+			<td width="89%">
+			<p style="margin-left: 10px; margin-right: 10px">
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="JetDraft Software Dual Core">
+
+</head>
+<body lang=UZ-CYR>
+<div class=WordSection1>
+<p class=MsoNormal><span style='font-size:12.0pt'>А) </span><span
+style='font-size:12.0pt'>натурал сонлар тўпламида аникланган <i>f(<sup>.</sup>)</i>
+– функция учун <i>ЭКУБ(m<sup>.</sup>n)</i>=<i>1</i> бўлганда <i>f(m<sup>.</sup>n)</i>=<i>f(m
+f(n))</i> бажарилса, у холда <i>f(<sup>.</sup>)</i> – функцияга <i>мултипликатив
+функция</i> дейилади.</span></p>
+</div>
+</body>
+</html>
+			</p></td>
+			<td width="8%">
+			<p align="center">
+			<input type="radio" name="key7b0" value="0"/></p>
+			</td>
+			</tr>
+			<tr>
+			<td width="89%">
+			<p style="margin-left: 10px; margin-right: 10px">
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="JetDraft Software Dual Core">
+
+</head>
+<body lang=UZ-CYR>
+<div class=WordSection1>
+<p class=MsoNormal><span style='font-size:12.0pt'>Б) </span><span
+style='font-size:12.0pt'>натурал сонлар тўпламида аникланган <i>f(<sup>.</sup>)</i>
+– функция учун <i>ЭКУБ(m<sup>.</sup>n)</i>=<i>1</i> бўлганда <i>f(m<sup>.</sup>n)</i>=<i>f(m)<sup>–</sup>f(n)</i>
+бажарилса, у холда <i>f(<sup>.</sup>)</i> – функцияга <i>мултипликатив функция</i>
+дейилади.</span></p>
+</div>
+</body>
+</html>
+			</p></td>
+			<td width="8%">
+			<p align="center">
+			<input type="radio" name="key7b0" value="1"/></p>
+			</td>
+			</tr>
+			<tr>
+			<td width="89%">
+			<p style="margin-left: 10px; margin-right: 10px">
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="JetDraft Software Dual Core">
+
+</head>
+<body lang=UZ-CYR>
+<div class=WordSection1>
+<p class=MsoNormal><span style='font-size:12.0pt'>В) </span><span
+style='font-size:12.0pt'>натурал сонлар тўпламида аникланган <i>f(<sup>.</sup>)</i>
+– функция учун <i>ЭКУБ(m<sup>.</sup>n)</i>=<i>1</i> бўлганда <i>f(m<sup>.</sup>n)</i>=<i>f(m)<sup>.</sup>f(n)</i>
+бажарилса, у холда <i>f(<sup>.</sup>)</i> – функцияга <i>мултипликатив функция</i>
+дейилади.</span></p>
+</div>
+</body>
+</html>
+			</p></td>
+			<td width="8%">
+			<p align="center">
+			<input type="radio" name="key7b0" value="2"/></p>
+			</td>
+			</tr>
+			<tr>
+			<td width="89%">
+			<p style="margin-left: 10px; margin-right: 10px">
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="JetDraft Software Dual Core">
+
+</head>
+<body lang=UZ-CYR>
+<div class=WordSection1>
+<p class=MsoNormal><span style='font-size:12.0pt'>Г)</span><span
+style='font-size:12.0pt;color:black'> </span><span style='font-size:12.0pt'>натурал
+сонлар тўпламида аникланган <i>f(<sup>.</sup>)</i> – функция учун <i>ЭКУБ(m<sup>.</sup>n)</i>=<i>1</i>
+бўлганда <i>f(m<sup>.</sup>n)</i>=<i>f(m)+<sup>.</sup>f(n)</i> бажарилса, у
+холда <i>f(<sup>.</sup>)</i> – функцияга <i>мултипликатив функция</i> дейилади.</span></p>
+</div>
+</body>
+</html>
+			</p></td>
+			<td width="8%">
+			<p align="center">
+			<input type="radio" name="key7b0" value="3"/></p>
+			</td>
+			</tr>
+		</table>
+		<p></p>
+		<table width="97%" height="45">
+		<tr>
+		<th colspan="2" height="45">
+		<p style="margin-left: 10px; margin-right: 10px">
+		
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="JetDraft Software Dual Core">
+
+</head>
+<body lang=UZ-CYR>
+<div class=WordSection1>
+<p class=MsoNormal><b><span style='font-size:14.0pt;color:black'>Эйлер
+теоремаси кайси жавобда тўгри баён килинган</span></b><b><span
+style='font-size:14.0pt'>?</span></b></p>
+</div>
+</body>
+</html>		</p>
+		</th>
+		</tr>
+			<tr>
+			<td width="89%">
+			<p style="margin-left: 10px; margin-right: 10px">
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="JetDraft Software Dual Core">
+
+</head>
+<body lang=UZ-CYR>
+<div class=WordSection1>
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>А)
+Агар <i>p</i> туб сон бўлиб, <i>a </i>сон<i> p </i>га<i> </i>бўлинмаса, у холда
+<i>a<sup>p</sup> </i>= <i>1(mod p)<b> </b></i>таккослама ўринлидир.</span></p>
+</div>
+</body>
+</html>
+			</p></td>
+			<td width="8%">
+			<p align="center">
+			<input type="radio" name="key8b0" value="0"/></p>
+			</td>
+			</tr>
+			<tr>
+			<td width="89%">
+			<p style="margin-left: 10px; margin-right: 10px">
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="JetDraft Software Dual Core">
+
+</head>
+<body lang=UZ-CYR>
+<div class=WordSection1>
+<p class=MsoNormal><span style='font-size:12.0pt'>Б) Агар <i>m&gt;1</i> ва <i>ЭКУБ(a,m)</i>=<i>1</i>
+бўлса, у холда <span style='position:relative;top:6.0pt'><img width=133
+height=27 src="img941.png"></span>таккослама ўринлидир.</span></p>
+</div>
+</body>
+</html>
+			</p></td>
+			<td width="8%">
+			<p align="center">
+			<input type="radio" name="key8b0" value="1"/></p>
+			</td>
+			</tr>
+			<tr>
+			<td width="89%">
+			<p style="margin-left: 10px; margin-right: 10px">
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="JetDraft Software Dual Core">
+
+</head>
+<body lang=UZ-CYR>
+<div class=WordSection1>
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>В)
+Агар <i>p</i> туб сон бўлиб, <i>a </i>сон<i> p </i>га<i> </i>бўлинмаса, у холда
+<i>a<sup>p-1</sup> </i>= <i>1(mod p)<b> </b></i>таккослама ўринлидир.</span></p>
+</div>
+</body>
+</html>
+			</p></td>
+			<td width="8%">
+			<p align="center">
+			<input type="radio" name="key8b0" value="2"/></p>
+			</td>
+			</tr>
+			<tr>
+			<td width="89%">
+			<p style="margin-left: 10px; margin-right: 10px">
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="JetDraft Software Dual Core">
+
+</head>
+<body lang=UZ-CYR>
+<div class=WordSection1>
+<p class=MsoNormal><span style='font-size:12.0pt'>Г)</span><span
+style='font-size:12.0pt;color:black'> </span><span style='font-size:12.0pt'>Агар
+<i>m&gt;1</i> ва <i>ЭКУБ(a,m)</i>=<i>1</i> бўлса, у холда <span
+style='position:relative;top:6.0pt'><img width=120 height=27
+src="img961.png"></span>таккослама ўринлидир.</span></p>
+</div>
+</body>
+</html>
+			</p></td>
+			<td width="8%">
+			<p align="center">
+			<input type="radio" name="key8b0" value="3"/></p>
+			</td>
+			</tr>
+		</table>
+		<p></p>
+		<table width="97%" height="45">
+		<tr>
+		<th colspan="2" height="45">
+		<p style="margin-left: 10px; margin-right: 10px">
+		
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="JetDraft Software Dual Core">
+
+</head>
+<body lang=UZ-CYR>
+<div class=WordSection1>
+<p class=MsoNormal><b><span style='font-size:14.0pt;color:black'>Ферманинг
+кичик теоремаси кайси жавобда тўгри баён килинган</span></b><b><span
+style='font-size:14.0pt'>?</span></b></p>
+</div>
+</body>
+</html>		</p>
+		</th>
+		</tr>
+			<tr>
+			<td width="89%">
+			<p style="margin-left: 10px; margin-right: 10px">
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="JetDraft Software Dual Core">
+
+</head>
+<body lang=UZ-CYR>
+<div class=WordSection1>
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>А)
+Агар <i>p</i> туб сон бўлиб, <i>a </i>сон<i> p </i>га<i> </i>бўлинмаса, у холда
+<i>a<sup>p</sup> </i>= <i>1(mod p)<b> </b></i>таккослама ўринлидир.</span></p>
+</div>
+</body>
+</html>
+			</p></td>
+			<td width="8%">
+			<p align="center">
+			<input type="radio" name="key9b0" value="0"/></p>
+			</td>
+			</tr>
+			<tr>
+			<td width="89%">
+			<p style="margin-left: 10px; margin-right: 10px">
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="JetDraft Software Dual Core">
+
+</head>
+<body lang=UZ-CYR>
+<div class=WordSection1>
+<p class=MsoNormal><span style='font-size:12.0pt'>Б) Агар <i>m&gt;1</i> ва <i>ЭКУБ(a,m)</i>=<i>1</i>
+бўлса, у холда <span style='position:relative;top:6.0pt'><img width=133
+height=27 src="img981.png"></span>таккослама ўринлидир.</span></p>
+</div>
+</body>
+</html>
+			</p></td>
+			<td width="8%">
+			<p align="center">
+			<input type="radio" name="key9b0" value="1"/></p>
+			</td>
+			</tr>
+			<tr>
+			<td width="89%">
+			<p style="margin-left: 10px; margin-right: 10px">
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="JetDraft Software Dual Core">
+
+</head>
+<body lang=UZ-CYR>
+<div class=WordSection1>
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>В)
+Агар <i>p</i> туб сон бўлиб, <i>a </i>сон<i> p </i>га<i> </i>бўлинмаса, у холда
+<i>a<sup>p-1</sup> </i>= <i>1(mod p)<b> </b></i>таккослама ўринлидир.</span></p>
+</div>
+</body>
+</html>
+			</p></td>
+			<td width="8%">
+			<p align="center">
+			<input type="radio" name="key9b0" value="2"/></p>
+			</td>
+			</tr>
+			<tr>
+			<td width="89%">
+			<p style="margin-left: 10px; margin-right: 10px">
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="JetDraft Software Dual Core">
+
+</head>
+<body lang=UZ-CYR>
+<div class=WordSection1>
+<p class=MsoNormal><span style='font-size:12.0pt'>Г)</span><span
+style='font-size:12.0pt;color:black'> </span><span style='font-size:12.0pt'>Агар
+<i>m&gt;1</i> ва <i>ЭКУБ(a,m)</i>=<i>1</i> бўлса, у холда <span
+style='position:relative;top:6.0pt'><img width=120 height=27
+src="img1001.png"></span>таккослама ўринлидир.</span></p>
+</div>
+</body>
+</html>
+			</p></td>
+			<td width="8%">
+			<p align="center">
+			<input type="radio" name="key9b0" value="3"/></p>
+			</td>
+			</tr>
+		</table>
+		<p></p>
+
+			</div></div>
+			</td>
+		<tr>
+			<td align="center" height="20">
+			<div align="right">
+				<input type="submit" name="submitB" value="Закончить тест" class="btn" style="float: right" /> </div>
+			<div align="left">
+				&nbsp;
+			</div>
+			</td>
+		</tr>
+
+		</tr>
+		<tr>
+			<td align="center" height="20" bgcolor="#FFFDF2">
+			<div align="right">
+				<div id="base_clock">
+					<p align="right">&nbsp;</p>
+				</div>
+			</div>
+			</td>
+		</tr>
+	</table>
+	</form>
+</div>
+
+</body>
+
+</html>

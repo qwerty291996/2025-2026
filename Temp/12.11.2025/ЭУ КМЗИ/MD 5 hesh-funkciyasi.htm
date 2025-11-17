@@ -1,0 +1,720 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office"><HEAD><TITLE>MD 5 hesh-funkciyasi</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=utf-8">
+<META content="MSHTML 6.00.6000.16414" name=GENERATOR>
+<STYLE>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:"PANDA Times UZ";}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+h1
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:Arial;
+	font-weight:bold;}
+h2
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:Arial;
+	font-weight:bold;
+	font-style:italic;}
+h3
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	page-break-after:avoid;
+	font-size:13.0pt;
+	font-family:Arial;
+	font-weight:bold;}
+h4
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Times New Roman";
+	font-weight:normal;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+span.MsoPageNumber
+	{font-family:"Times New Roman";}
+p.MsoListBullet, li.MsoListBullet, div.MsoListBullet
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:18.0pt;
+	margin-bottom:.0001pt;
+	text-indent:-18.0pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	punctuation-wrap:simple;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoBodyTextIndent, li.MsoBodyTextIndent, div.MsoBodyTextIndent
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:108.0pt;
+	margin-bottom:.0001pt;
+	text-indent:-108.0pt;
+	font-size:12.0pt;
+	font-family:"PANDA Times UZ";}
+p.MsoBodyTextIndent2, li.MsoBodyTextIndent2, div.MsoBodyTextIndent2
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:14.15pt;
+	line-height:200%;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{font-family:"Times New Roman";
+	color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;}
+strong
+	{font-family:"Times New Roman";}
+p.MsoPlainText, li.MsoPlainText, div.MsoPlainText
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Courier New";}
+p
+	{margin-right:0cm;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-autospace:none;
+	font-size:8.0pt;
+	font-family:Tahoma;}
+p.Textlist, li.Textlist, div.Textlist
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:1.0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:-14.15pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	color:black;}
+p.a, li.a, div.a
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+p.Text, li.Text, div.Text
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:35.45pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.ab, li.ab, div.ab
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:1.0cm;
+	font-size:14.0pt;
+	font-family:"Times New Roman";}
+p.2, li.2, div.2
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:center;
+	text-indent:25.0pt;
+	line-height:116%;
+	page-break-after:avoid;
+	text-autospace:none;
+	font-size:14.0pt;
+	font-family:"Times New Roman";}
+span.texhtml
+	{font-family:"Times New Roman";}
+p.a0, li.a0, div.a0
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:0cm;
+	text-align:right;
+	line-height:12.0pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+ /* Page Definitions */
+ @page Section1
+	{size:595.45pt 841.7pt;
+	margin:56.75pt 42.55pt 2.0cm 3.0cm;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+.style1 {
+	font-size: 18pt;
+}
+.style2 {
+	font-size: 18pt;
+	font-style: italic;
+}
+.style3 {
+	font-size: 22pt;
+	color: #FFFFFF;
+	background-color: #000000;
+}
+.style4 {
+	font-size: 18pt;
+	color: #000080;
+}
+.style5 {
+	color: #000080;
+}
+.style6 {
+	color: #008000;
+}
+.style7 {
+	background-color: #00FFFF;
+}
+.style8 {
+	text-decoration: underline;
+}
+.style10 {
+	text-indent: 1cm;
+}
+.style11 {
+	font-size: 20pt;
+	color: maroon;
+}
+.style12 {
+	color: #800000;
+}
+.style13 {
+	font-size: 20pt;
+}
+.style14 {
+	font-size: 20pt;
+	background-color: #FFFF00;
+}
+.style15 {
+	color: #FF00FF;
+}
+.style16 {
+	text-indent: 0;
+}
+.style18 {
+	text-align: left;
+	text-indent: 3cm;
+}
+.style19 {
+	font-style: italic;
+}
+.style20 {
+	font-size: 18pt;
+	color: #000080;
+	font-style: italic;
+}
+.style21 {
+	font-size: 18pt;
+	color: #800000;
+	text-decoration: underline;
+}
+.style22 {
+	font-size: 18pt;
+	color: #800000;
+}
+.style24 {
+	text-indent: 3cm;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+.style25 {
+	text-indent: 1cm;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+.style26 {
+	color: #800000;
+	text-decoration: underline;
+}
+.style41 {
+	color: #FF00FF;
+}
+.style29 {
+	text-align: left;
+}
+.style39 {
+	text-align: right;
+}
+.style42 {
+	font-size: 18pt;
+	font-weight: bold;
+	color: maroon;
+}
+-->
+</STYLE>
+<script type="text/javascript">
+<!--
+function FP_preloadImgs() {//v1.0
+ var d=document,a=arguments; if(!d.FP_imgs) d.FP_imgs=new Array();
+ for(var i=0; i<a.length; i++) { d.FP_imgs[i]=new Image; d.FP_imgs[i].src=a[i]; }
+}
+
+function FP_swapImg() {//v1.0
+ var doc=document,args=arguments,elm,n; doc.$imgSwaps=new Array(); for(n=2; n<args.length;
+ n+=2) { elm=FP_getObjectByID(args[n]); if(elm) { doc.$imgSwaps[doc.$imgSwaps.length]=elm;
+ elm.$src=elm.src; elm.src=args[n+1]; } }
+}
+
+function FP_getObjectByID(id,o) {//v1.0
+ var c,el,els,f,m,n; if(!o)o=document; if(o.getElementById) el=o.getElementById(id);
+ else if(o.layers) c=o.layers; else if(o.all) el=o.all[id]; if(el) return el;
+ if(o.id==id || o.name==id) return o; if(o.childNodes) c=o.childNodes; if(c)
+ for(n=0; n<c.length; n++) { el=FP_getObjectByID(id,c[n]); if(el) return el; }
+ f=o.forms; if(f) for(n=0; n<f.length; n++) { els=f[n].elements;
+ for(m=0; m<els.length; m++){ el=FP_getObjectByID(id,els[n]); if(el) return el; } }
+ return null;
+}
+// -->
+</script>
+</HEAD>
+<BODY lang=RU style="TEXT-JUSTIFY-TRIM: punctuation" vLink=purple link=blue onLoad="FP_preloadImgs(/*url*/'button42.jpg',/*url*/'button43.jpg',/*url*/'button44.jpg',/*url*/'button45.jpg',/*url*/'button6.jpg',/*url*/'button5.jpg')">
+<DIV class=Section1>
+<P class=MsoNormal style="MARGIN-BOTTOM: 6pt"><SPAN lang=UZ-CYR class="style42">MD 5&nbsp;&nbsp; х э ш&nbsp; -&nbsp; ф у н к ц и я с 
+и</SPAN></P>
+<hr style="height: 4px" class="style41">
+<div class="style29">
+	<table style="width: 100%">
+		<tr>
+			<td style="width: 100px">
+			<p class="style40"><a href="Файлы%20пользователя/DASTUR/MD5.exe">
+			<img style="border: 0" id="img1" src="button46.jpg" height="36" width="100" alt="MD5 дастури" fp-style="fp-btn: Corporate 4; fp-proportional: 0" fp-title="MD5 дастури" onMouseOver="FP_swapImg(1,0,/*id*/'img1',/*url*/'button42.jpg')" onMouseOut="FP_swapImg(0,0,/*id*/'img1',/*url*/'button46.jpg')" onMouseDown="FP_swapImg(1,0,/*id*/'img1',/*url*/'button43.jpg')" onMouseUp="FP_swapImg(0,0,/*id*/'img1',/*url*/'button42.jpg')"></a></p>
+			</td>
+			<td style="width: 178px">
+			<p class="style40"><a href="Файлы пользователя/VIDEO/MD5.exe">
+			<img src="button47.jpg" alt="Дастурдан фойдаланиш" name="img2" width="178" height="36" border="0" id="img2" style="border: 0" onMouseDown="FP_swapImg(1,0,/*id*/'img2',/*url*/'button45.jpg')" onMouseUp="FP_swapImg(0,0,/*id*/'img2',/*url*/'button44.jpg')" onMouseOver="FP_swapImg(1,0,/*id*/'img2',/*url*/'button44.jpg')" onMouseOut="FP_swapImg(0,0,/*id*/'img2',/*url*/'button47.jpg')" fp-style="fp-btn: Corporate 4" fp-title="Дастурдан фойдаланиш"></a></p>
+			</td>
+			<td class="style39">
+			<p class="style40"><a href="Файлы%20пользователя/VIDEO/AES.avi">
+			<embed src="Файлы пользователя/AUDIO/md5.mp3" width="75" height="28"></a></p>
+			</td>
+		</tr>
+	</table>
+</div>
+<hr style="height: 4px" class="style41">
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+<SPAN 
+lang=UZ-CYR class="style3"><em>&nbsp;MD 5</em></SPAN><SPAN 
+lang=UZ-CYR class="style1"> <span class="style5"><em>хеш-функцияси </em><em>калитсиз
+</em><em>хеш-функциялар </em><em>туркумига </em><em>мансуб бўлиб, Массачусетс 
+</em></span><span class="style5"><em>технология</em></span></SPAN><SPAN class="style4"><em>лар</em></SPAN><SPAN lang=UZ-CYR 
+style="FONT-SIZE: 12pt" class="style5"><em> </em> 
+</SPAN><SPAN lang=UZ-CYR class="style1"> <span class="style5"><em>институти профессори Р. Ривест</em></span>
+<span class="style5"><em>томонидан 1992 йилда </em></span> 
+</SPAN><SPAN class="style4"><em>тақдим қилинган. </em> </SPAN></P>
+<hr style="height: 4px" class="style6">
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+<SPAN 
+lang=UZ-CYR class="style1">MD 5 хэш-функциясида хешланувчи маълумот узунлиги 
+иҳтиёрий бўлиб, <span class="style7">хэш қиймат 
+узунлиги 128 бит </span>кўринишида олинади. </SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+<SPAN 
+lang=UZ-CYR class="style1">MD 5 хэш-функциясида хешланувчи маълумот 
+512 битлик блокларга ажратилиб, улар 16 та 32 битлик қисм блокларга ажратилади 
+ва улар устида амаллар бажарилади. </SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+<SPAN 
+lang=UZ-CYR class="style1"><span class="style8">Масалан</span>, узунлиги b бит 
+бўлган (бу ерда b 
+иҳтиёрий манфий бўлмаган бутун сон), маълумот берилган ва бу маълумотнинг 
+битлари <I>m<SUB>0</SUB> m<SUB>1</SUB> ... m<SUB>(b-1)</SUB> </I>тартибда 
+ёзилган. </SPAN></P>
+<hr style="height: 4px" class="style6">
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+<SPAN 
+lang=UZ-CYR class="style1"><SPAN style="COLOR: black"><strong>Хэш қийматни ҳисоблаш учун 
+қуйидаги <span class="style8">бешта босқич</span> бажарилади: </strong> </SPAN></SPAN></P>
+<P class=MsoNormal style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm">
+<SPAN 
+lang=UZ-CYR style="COLOR: black"><span class="style14">&nbsp;<strong>1-босқич</strong>.</span></SPAN><SPAN 
+lang=UZ-CYR style="COLOR: black" class="style13"> </SPAN>
+<SPAN 
+lang=UZ-CYR class="style11"><em><strong>Тўлдириш битларини қўшиш.</strong></em></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+<SPAN 
+lang=UZ-CYR style="COLOR: black" class="style1">Берилган маълумот узунлиги 512 
+модул бўйича 448 билан таққосланадиган (маълумот узунлиги </SPAN>
+<SPAN 
+lang=UZ-CYR 
+style="COLOR: black; FONT-FAMILY: Symbol" class="style1">?</SPAN><SPAN 
+lang=UZ-CYR style="COLOR: black" class="style1"> 448 mod 512) кўринишда тўлдирилади, яъни, кенгайтирилган маълумотнинг узунлиги унга энг яқин 
+бўлган 512 
+га каррали бўлган сондан 64 битга кичик бўлиши керак. Тўлдириш ҳамма вақт 
+хаттоки маълумот узунлиги 512 модул бўйича 448 билан таққосланадиган бўлса ҳам бажарилади. </SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+<SPAN 
+lang=UZ-CYR style="COLOR: black" class="style1"><em>Тўлдириш қуйидаги тартибда 
+амалга оширилади: </em> </SPAN><SPAN 
+lang=UZ-CYR class="style4">Маълумотга қиймати 1 га тенг бўлган битта бит қўшилади, 
+қолган 
+битлар эса 0 лар билан тўлдирилади. Шунинг учун қўшилган битлар сони 1 дан 512 
+тагача бўлади. </SPAN></P>
+<hr style="height: 2px" class="style15">
+<P class=MsoNormal style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm">
+<SPAN 
+lang=UZ-CYR><span class="style14">&nbsp;<strong>2-босқич</strong></span></SPAN><SPAN 
+lang=UZ-CYR class="style13">. <span class="style12"><em><strong>Маълумотнинг узунлигини 
+қўшиш.</strong></em></span></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+<SPAN 
+lang=UZ-CYR class="style1">1-босқичнинг натижасига берилган маълумот 
+узунлигининг 64 битлик қиймати қўшилади. Агар маълумотнинг узунлиги 264 битдан 
+катта бўлса, бу узунлик mod 264 бўйича олиниб қўшилади. Шундай қилиб, биринчи 
+иккита босқич бажарилгандан кейин узунлиги 512 битга каррали бўлган маълумот 
+олинади, яъни кенгайтирилган маълумот узунлиги 16 та 32 битлик сўздан иборат 
+блок узунлигига каррали бўлади. </SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+<SPAN 
+lang=UZ-CYR class="style1">Натижада хосил қилинган маълумот сўзларини <strong>М[0,...,N-1] 
+</strong>орқали белгилаймиз, у холда N сони 16 га каррали бўлади. Шундай қилиб N = L </SPAN>
+<SPAN lang=EN-US 
+style="FONT-FAMILY: Symbol" class="style1">?</SPAN><SPAN lang=UZ-CYR class="style1"> 16 
+бўлади. </SPAN></P>
+<hr style="height: 2px" class="style15">
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+<SPAN 
+lang=UZ-CYR><span class="style14"><strong>&nbsp;3- босқич</strong></span></SPAN><SPAN 
+lang=UZ-CYR class="style13">. <span class="style12"><strong><em>Хэш қиймат учун буфер 
+инициализация қилиш.</em></strong></span></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+<SPAN 
+lang=UZ-CYR class="style1">Хэш-функциянинг оралиқ ва охирги 
+натижаларини сақлаш учун 128 битлик буфердан фойдаланилади. Бу буферни тўртта 32 
+битлик </SPAN><SPAN class="style1"><strong>А, </strong></SPAN>
+<SPAN lang=EN-US class="style1"><strong>B</strong></SPAN><SPAN class="style1"><strong>,
+</strong></SPAN><SPAN lang=EN-US class="style1"><strong>C</strong></SPAN><SPAN lang=UZ-CYR class="style1"><strong>, 
+</strong> 
+</SPAN><SPAN lang=EN-US class="style1"><strong>D</strong></SPAN><SPAN lang=UZ-CYR 
+style="FONT-SIZE: 12pt"><strong> </strong> 
+</SPAN><SPAN lang=UZ-CYR class="style1"> <strong>регистрлар </strong>кўринишида тасвирлаш мумкин. Бу регистрларга 
+</SPAN><SPAN class="style1">16</SPAN><SPAN lang=UZ-CYR class="style1"> лик саноқ системасида</SPAN><SPAN class="style1">ги</SPAN><SPAN style="FONT-SIZE: 12pt"> </SPAN> 
+<SPAN 
+lang=UZ-CYR class="style1">қуйидаги бошланғич қийматлар берилади: </SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+<SPAN 
+lang=UZ-CYR class="style1"><strong>А</strong> = 0х01234567</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+<SPAN 
+lang=UZ-CYR class="style1"><strong>B </strong>= 0х89ABCDEF</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+<SPAN 
+lang=UZ-CYR class="style1"><strong>C</strong> = 0хFEDCBA98</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+<SPAN 
+lang=UZ-CYR class="style1"><strong>D</strong> = 0х76543210</SPAN></P>
+<hr style="height: 2px" class="style15">
+<P class=MsoNormal style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm">
+<SPAN 
+lang=UZ-CYR><span class="style14"><strong>&nbsp;4-босқич</strong></span></SPAN><SPAN 
+lang=UZ-CYR class="style13">. <span class="style12"><strong><em>Маълумотни 512 битлик блокларга 
+ажратиб кайта ишлаш. </em></strong></span></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+<SPAN 
+lang=UZ-CYR class="style1">Аргументи ва қиймати 32 битлик сўз бўладиган 
+тўртта ёрдамчи функцияни аниқлаймиз: </SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 1cm"><SPAN lang=UZ-CYR class="style1">
+<strong>F(</strong>X,Y,Z<strong>)</strong> = (X /\ Y) \/ ( </SPAN>
+<SPAN lang=UZ-CYR 
+style="FONT-FAMILY: Symbol" class="style1">u</SPAN><SPAN lang=UZ-CYR class="style1"> X /\ Z)</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 1cm"><SPAN lang=UZ-CYR class="style1">
+<strong>G(</strong>X,Y,Z<strong>)</strong> = (X /\ Z) \/ (Y /\ </SPAN>
+<SPAN lang=UZ-CYR 
+style="FONT-FAMILY: Symbol" class="style1">u</SPAN><SPAN lang=UZ-CYR class="style1"> Z)</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 1cm"><SPAN lang=UZ-CYR class="style1">
+<strong>H(</strong>X,Y,Z<strong>)</strong> = X </SPAN>
+<SPAN lang=UZ-CYR 
+style="FONT-FAMILY: Symbol" class="style1">A</SPAN><SPAN lang=UZ-CYR class="style1"> Y </SPAN>
+<SPAN lang=UZ-CYR 
+style="FONT-FAMILY: Symbol" class="style1">A</SPAN><SPAN lang=UZ-CYR class="style1"> Z</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 1cm"><SPAN lang=UZ-CYR class="style1">
+<strong>I(</strong>X,Y,Z<strong>) </strong>= Y </SPAN>
+<SPAN lang=UZ-CYR 
+style="FONT-FAMILY: Symbol" class="style1">A</SPAN><SPAN lang=UZ-CYR class="style1"> (X \/ </SPAN>
+<SPAN lang=UZ-CYR 
+style="FONT-FAMILY: Symbol" class="style1">u</SPAN><SPAN lang=UZ-CYR class="style1"> Z)</SPAN></P>
+<P class=style16 
+style="MARGIN-BOTTOM: 6pt; TEXT-ALIGN: justify">
+<SPAN 
+lang=UZ-CYR class="style1">бу ерда, битлар бўйича мантикҳқий
+<span class="style8">AND</span>, <span class="style8">OR</span>, 
+<span class="style8">NOT</span>, <span class="style8">XOR</span> амаллари мос равишда \/, /\, </SPAN>
+<SPAN lang=UZ-CYR 
+style="FONT-FAMILY: Symbol" class="style1">u</SPAN><SPAN lang=UZ-CYR class="style1">, </SPAN>
+<SPAN lang=UZ-CYR 
+style="FONT-FAMILY: Symbol" class="style1">A</SPAN><SPAN lang=UZ-CYR 
+style="FONT-SIZE: 12pt"> </SPAN><SPAN lang=UZ-CYR class="style1"> белгилари билан ифодаланган. </SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+<SPAN 
+lang=UZ-CYR class="style1">Бу босқичда синус функцияси <SPAN 
+style="COLOR: windowtext">асосида</SPAN> 64 та сўздан қурилган T[1,...,64] 
+жадвалдан фойдаланилади. T[<I>i</I>]=[4294967296</SPAN><SPAN lang=EN-US 
+style="FONT-FAMILY: Symbol" class="style1">?</SPAN><SPAN lang=UZ-CYR class="style1">abs(sin(<I>i</I>))] 
+бўлиб, жадвалнинг <I>i </I>– 
+элементини ифодалайди. Бу ерда [q] ифода q соннинг бутун қисмини билдиради, 
+<I>i</I> эса радианларда ифодаланган. </SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+<SPAN lang=UZ-CYR class="style1"><strong>Ушбу босқичда қуйидаги амаллар бажарилади.</strong></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+<SPAN lang=UZ-CYR class="style1">Хар бир 16 сўзлик блок қайта ишланади. </SPAN></P>
+<P class=style18 
+style="MARGIN-BOTTOM: 6pt; " 
+align=center><SPAN lang=EN-US class="style20">for i = 0 to N/16 – 
+1 do</SPAN><SPAN lang=EN-US class="style19">&nbsp;&nbsp;&nbsp; </SPAN>
+<SPAN lang=EN-US class="style2">i- </SPAN><SPAN class="style2">блок </SPAN>
+<SPAN 
+lang=EN-US class="style2">X</SPAN><SPAN lang=UZ-CYR class="style1"><i> га ёзиб олинади</i></SPAN><SPAN lang=EN-US class="style1">.</SPAN></P>
+<P class=style18 
+style="MARGIN-BOTTOM: 6pt; " 
+align=center><SPAN lang=EN-US class="style2"><span class="style5">for j = 
+0 to 15 do&nbsp; </span>&nbsp;X</SPAN><SPAN lang=EN-GB class="style2">[</SPAN><SPAN lang=EN-US class="style2">j</SPAN><SPAN lang=EN-GB class="style2">] = 
+</SPAN><SPAN lang=EN-US class="style2">M</SPAN><SPAN lang=EN-GB class="style2">[</SPAN><SPAN lang=EN-US class="style2">i</SPAN><SPAN lang=EN-GB class="style2">*16 
++ </SPAN><SPAN lang=EN-US class="style2">j</SPAN><SPAN 
+lang=EN-GB class="style2">].</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+<SPAN 
+lang=UZ-CYR class="style1">A нинг қиймати AA га, B нинг қиймати BB га, 
+C нинг қиймати CC га, D нинг қиймати DD га ёзиб олинади. </SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 1cm"><SPAN lang=UZ-CYR class="style4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><SPAN lang=EN-US class="style4">AA</SPAN><SPAN lang=EN-GB class="style4"> = </SPAN>
+<SPAN lang=EN-US class="style4">A</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 1cm"><SPAN lang=EN-GB class="style4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><SPAN lang=EN-US class="style4">BB</SPAN><SPAN lang=EN-GB class="style4"> = </SPAN>
+<SPAN lang=EN-US class="style4">B</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 1cm"><SPAN lang=EN-GB class="style4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><SPAN lang=EN-US class="style4">CC</SPAN><SPAN lang=EN-GB class="style4"> = </SPAN>
+<SPAN lang=EN-US class="style4">C</SPAN></P>
+<P class=MsoNormal style="TEXT-INDENT: 1cm"><SPAN lang=EN-GB class="style4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</SPAN><SPAN lang=EN-US class="style4">DD</SPAN><SPAN lang=EN-GB class="style4"> = </SPAN>
+<SPAN lang=EN-US class="style4">D</SPAN></P>
+<P class=MsoNormal style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm"><strong>
+<SPAN 
+lang=UZ-CYR class="style21">1-қадам</SPAN></strong><SPAN 
+lang=UZ-CYR class="style22"><strong>:</strong></SPAN></P>
+<P class=MsoNormal style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm"><SPAN 
+lang=UZ-CYR style="FONT-SIZE: 12pt">[</SPAN><SPAN 
+lang=UZ-CYR class="style2">abcd k s i</SPAN><SPAN 
+lang=UZ-CYR style="FONT-SIZE: 12pt"><SPAN 
+lang=UZ-CYR class="style1">] ифода қуйидаги амални 
+билдиради:</SPAN></SPAN></P>
+<P class=MsoNormal style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm">
+<SPAN 
+lang=EN-US class="style2">a</SPAN><SPAN lang=EN-US class="style1"> = <I>b</I> </SPAN>
+<SPAN lang=EN-GB class="style1">+</SPAN><SPAN lang=EN-US class="style1"> 
+((<I>a</I></SPAN><SPAN lang=EN-GB class="style2">+</SPAN><SPAN 
+lang=EN-GB class="style1"> </SPAN><SPAN lang=EN-US class="style1">F(<I>b</I>,<I>c</I>,<I>d</I>) </SPAN>
+<SPAN lang=EN-GB class="style1">+</SPAN><SPAN lang=EN-US class="style1">X[<I>k</I>] </SPAN>
+<SPAN lang=EN-GB class="style1">+</SPAN><SPAN lang=EN-US class="style1">T[<I>i</I>]) &lt;&lt;&lt; <I>s</I>)</SPAN><SPAN 
+lang=UZ-CYR class="style1">.</SPAN></P>
+<P class=MsoNormal style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm">
+<SPAN 
+lang=UZ-CYR class="style1">Қуйидаги 16 та амал бажарилади:</SPAN></P>
+<P class=style24><SPAN lang=EN-US class="style4">[ABCD 0 7 1] [DABC 1 12 2] [CDAB 2 17 3] [BCDA 3 
+22 4]</SPAN></P>
+<P class=style24><SPAN lang=EN-US class="style4">[ABCD 4 7 5] [DABC 5 12 6] [CDAB 6 17 7] [BCDA 7 
+22 8]</SPAN></P>
+<P class=style24><SPAN lang=EN-US class="style4">[ABCD 8 7 9] [DABC 9 12 10] [CDAB 10 17 11] [BCDA 
+11 22 12]</SPAN></P>
+<P class=style24><SPAN lang=EN-US class="style4">[ABCD 12 7 13] [DABC 13 12 14] [CDAB 14 17 15] 
+[BCDA 15 22 16]</SPAN></P>
+<P class=MsoNormal style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm"><strong>
+<SPAN 
+lang=UZ-CYR class="style21">2-қадам</SPAN></strong><SPAN 
+lang=UZ-CYR class="style22"><strong>:</strong></SPAN></P>
+<P class=MsoNormal style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm">
+<SPAN 
+lang=UZ-CYR class="style1">&nbsp;[<I>abcd k s i</I>] ифода қуйидаги 
+амални билдиради:</SPAN></P>
+<P class=MsoNormal style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm">
+<SPAN 
+lang=UZ-CYR class="style2">&nbsp;</SPAN><SPAN lang=EN-US class="style2">a</SPAN><SPAN lang=EN-US class="style1"> = 
+<I>b</I></SPAN><SPAN lang=EN-GB class="style1">+</SPAN><SPAN lang=EN-US class="style1"> ((<I>a</I> </SPAN>
+<SPAN lang=EN-GB class="style1">+</SPAN><SPAN lang=EN-US class="style1"> 
+G(<I>b</I>,<I>c</I>,<I>d</I>) </SPAN><SPAN lang=EN-GB class="style1">+</SPAN><SPAN lang=EN-US class="style1">X[<I>k</I>] </SPAN>
+<SPAN lang=EN-GB class="style1">+</SPAN><SPAN lang=EN-US class="style1">T[<I>i</I>]) &lt;&lt;&lt; <I>s</I>). </SPAN></P>
+<P class=MsoNormal style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm">
+<SPAN 
+lang=UZ-CYR class="style1">Қуйидаги 16 та амал бажарилади.</SPAN></P>
+<P class=style24><SPAN lang=EN-US class="style4">&nbsp;[ABCD 1 5 17] [DABC 6 9 18] [CDAB 11 14 19] [BCDA 
+0 20 20]</SPAN></P>
+<P class=style24><SPAN lang=EN-US class="style4">&nbsp;[ABCD 5 5 21] [DABC 10 9 22] [CDAB 15 14 23] [BCDA 
+4 20 24]</SPAN></P>
+<P class=style24><SPAN lang=EN-US class="style4">&nbsp;[ABCD 9 5 25] [DABC 14 9 26] [CDAB 3 14 27] [BCDA 
+8 20 28]</SPAN></P>
+<P class=style24><SPAN lang=EN-US class="style4">&nbsp;[ABCD 13 5 29] [DABC 2 9 30] [CDAB 7 14 31] [BCDA 
+12 20 32] </SPAN></P>
+<P class=style25><SPAN 
+lang=UZ-CYR class="style22"><strong><span class="style8">3-қадам</span>:</strong></SPAN><SPAN lang=EN-US class="style22"><strong>
+</strong> </SPAN></P>
+<P class=MsoNormal style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm">
+<SPAN lang=EN-US class="style1">&nbsp;[<I>abcd k s i</I>] </SPAN>
+<SPAN lang=UZ-CYR class="style1">ифода қуйидаги амални билдиради:</SPAN></P>
+<P class=MsoNormal style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm">
+<SPAN 
+lang=EN-US class="style2">&nbsp;a</SPAN><SPAN lang=EN-US class="style1"> = <I>b</I> </SPAN>
+<SPAN lang=EN-GB class="style1">+</SPAN><SPAN lang=EN-US class="style1"> 
+((<I>a</I> </SPAN><SPAN lang=EN-GB class="style1">+</SPAN><SPAN 
+lang=EN-US class="style1"> H(<I>b</I>,<I>c</I>,<I>d</I>)</SPAN><SPAN 
+lang=EN-GB class="style1">+</SPAN><SPAN lang=EN-US class="style1"> X[<I>k</I>] </SPAN>
+<SPAN lang=EN-GB class="style1">+</SPAN><SPAN lang=EN-US class="style1"> 
+T[<I>i</I>]) &lt;&lt;&lt; <I>s</I>). </SPAN></P>
+<P class=MsoNormal style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm">
+<SPAN 
+lang=UZ-CYR class="style1">Қуйидаги 16 та амал бажарилади.</SPAN></P>
+<P class=style24><SPAN lang=EN-US class="style4">&nbsp;[ABCD 5 4 33] [DABC 8 11 34] [CDAB 11 16 35] [BCDA 
+14 23 36]</SPAN></P>
+<P class=style24><SPAN lang=EN-US class="style4">&nbsp;[ABCD 1 4 37] [DABC 4 11 38] [CDAB 7 16 39] [BCDA 
+10 23 40]</SPAN></P>
+<P class=style24><SPAN lang=EN-US class="style4">&nbsp;[ABCD 13 4 41] [DABC 0 11 42] [CDAB 3 16 43] [BCDA 
+6 23 44]</SPAN></P>
+<P class=style24><SPAN lang=EN-US class="style4">&nbsp;[ABCD 9 4 45] [DABC 12 11 46] [CDAB 15 16 47] 
+[BCDA 2 23 48]</SPAN></P>
+<P class=MsoNormal style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm">
+<SPAN lang=EN-US class="style21"><strong>4-</strong></SPAN><span class="style26"><strong><SPAN lang=UZ-CYR class="style1">қадам</SPAN></strong></span><SPAN lang=UZ-CYR class="style1">:</SPAN></P>
+<P class=MsoNormal style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm">
+<SPAN lang=EN-US class="style1">&nbsp;[<I>abcd k s i</I>] </SPAN>
+<SPAN lang=UZ-CYR class="style1">ифода қуйидаги амални билдиради:</SPAN></P>
+<P class=MsoNormal style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm">
+<SPAN 
+lang=EN-US class="style2">&nbsp;a</SPAN><SPAN lang=EN-US class="style1"> = <I>b</I> </SPAN>
+<SPAN lang=EN-GB class="style1">+</SPAN><SPAN lang=EN-US class="style1"> 
+((<I>a</I> </SPAN><SPAN lang=EN-GB class="style1">+</SPAN><SPAN 
+lang=EN-US class="style1"> I(<I>b</I>,<I>c</I>,<I>d</I>) </SPAN>
+<SPAN 
+lang=EN-GB class="style1">+</SPAN><SPAN lang=EN-US class="style1"> X[<I>k</I>] </SPAN>
+<SPAN lang=EN-GB class="style1">+</SPAN><SPAN lang=EN-US class="style1"> 
+T[<I>i</I>]) &lt;&lt;&lt; <I>s</I>). </SPAN></P>
+<P class=MsoNormal style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm">
+<SPAN 
+lang=UZ-CYR class="style1">Қуйидаги 16 та амал бажарилади.</SPAN><SPAN 
+lang=EN-US class="style1"> </SPAN></P>
+<P class=style24><SPAN lang=EN-US class="style4">&nbsp;[ABCD 0 6 49] [DABC 7 10 50] [CDAB 14 15 51] [BCDA 
+5 21 52]</SPAN></P>
+<P class=style24><SPAN lang=EN-US class="style4">&nbsp;[ABCD 12 6 53] [DABC 3 10 54] [CDAB 10 15 55] 
+[BCDA 1 21 56]</SPAN></P>
+<P class=style24><SPAN lang=EN-US class="style4">&nbsp;[ABCD 8 6 57] [DABC 15 10 58] [CDAB 6 15 59] [BCDA 
+13 21 60]</SPAN></P>
+<P class=style24><SPAN lang=EN-US class="style4">&nbsp;[ABCD 4 6 61] [DABC 11 10 62] [CDAB 2 15 63] [BCDA 
+9 21 64] </SPAN></P>
+<P class=MsoNormal style="MARGIN: 6pt 0cm; TEXT-INDENT: 1cm">
+<SPAN lang=UZ-CYR class="style1">Қуйидаги қўшиш амали бажарилади. </SPAN></P>
+<P class=style24><SPAN lang=UZ-CYR class="style4">A = A + AA</SPAN></P>
+<P class=style24><SPAN lang=EN-US class="style4">B</SPAN><SPAN lang=EN-GB class="style4"> = 
+</SPAN><SPAN lang=EN-US class="style4">B + BB</SPAN></P>
+<P class=style24><SPAN lang=EN-US class="style4">C</SPAN><SPAN lang=EN-GB class="style4"> = 
+</SPAN><SPAN lang=EN-US class="style4">C + CC</SPAN></P>
+<P class=style24><SPAN lang=EN-US class="style4">D = D + DD</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+<SPAN 
+lang=EN-US class="style1">MD 5 </SPAN><SPAN class="style1">х</SPAN><SPAN lang=UZ-CYR class="style1">эш-функция</SPAN><SPAN class="style1">сида</SPAN><SPAN style="FONT-SIZE: 12pt"> </SPAN> 
+<SPAN 
+lang=UZ-CYR class="style1">битта регистр қийматини ҳисоблаш </SPAN>
+<SPAN class="style1">қуйидаги </SPAN><SPAN lang=UZ-CYR class="style1">расм</SPAN><SPAN class="style1">да келтирилган:</SPAN></P>
+<P class=MsoNormal style="TEXT-ALIGN: center" align=center><SPAN 
+style="FONT-SIZE: 12pt"><IMG height=307 src="img211.png" width=620 
+border=0></SPAN></P>
+<P class=MsoNormal style="TEXT-ALIGN: center" align=center>
+<SPAN lang=EN-US class="style1">MD</SPAN><SPAN class="style1"> 5 да битта 
+операциянинг бажарилиш кетма-кетлиги қуйидаги </SPAN>
+<SPAN lang=UZ-CYR class="style1">расм</SPAN><SPAN class="style1">да келтирилган: 
+</SPAN></P>
+<P class=MsoNormal style="MARGIN-BOTTOM: 6pt; TEXT-ALIGN: center" 
+align=center><SPAN lang=EN-US style="FONT-SIZE: 12pt"><IMG height=260 
+src="img212.png" width=625 border=0></SPAN></P>
+<hr style="height: 2px" class="style15">
+<P class=style10 style="MARGIN-BOTTOM: 6pt; TEXT-ALIGN: justify">
+<SPAN 
+lang=UZ-CYR><span class="style14"><strong>&nbsp;5-босқич</strong></span></SPAN><SPAN 
+lang=UZ-CYR class="style13">. <span class="style12"><strong><em>Натижа</em></strong></span>.</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+<SPAN 
+lang=UZ-CYR class="style4"><strong>Маълумотнинг хэш қиймати А, B, C, D 
+регистрлардаги қийматларни бирлаштириш натижасида ҳосил қилинади. </strong> </SPAN></P>
+<hr style="height: 2px" class="style15">
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+<SPAN 
+lang=UZ-CYR class="style1">MD 5 хэш-функция <SPAN 
+style="COLOR: windowtext">ёрдамида</SPAN> маълумотларни хэшлаш жараёни, бошқа 
+хэш-функцияларга нисбатан анча тез амалга оширилади. Бунинг сабаби функцияда, 
+осон ҳисобланадиган \/, /\, </SPAN>
+<SPAN lang=UZ-CYR 
+style="FONT-FAMILY: Symbol" class="style1">u</SPAN><SPAN lang=UZ-CYR class="style1">, </SPAN>
+<SPAN lang=UZ-CYR 
+style="FONT-FAMILY: Symbol" class="style1">A</SPAN><SPAN lang=UZ-CYR 
+style="FONT-SIZE: 12pt"> </SPAN><SPAN lang=UZ-CYR class="style1"> амаллари ишлатилган. Битта операция тҳртта 
+қадамда 
+амалга оширилади. Барча амаллар бажарилгандан сўнг, тўртта регистрдаги қийматлар 
+бирлаштирилиб, хэш қиймат хосил қилинади, шу олинган охирги хэш қиймат ҳисобланади.</SPAN></P>
+</DIV>
+
+</BODY></HTML>

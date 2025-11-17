@@ -1,0 +1,857 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>DSA elektron rakamli imzo algoritmi</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=utf-8">
+<META content="MSHTML 6.00.6000.16414" name=GENERATOR>
+<STYLE>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:"PANDA Times UZ";}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+h1
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:Arial;
+	font-weight:bold;}
+h2
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:Arial;
+	font-weight:bold;
+	font-style:italic;}
+h3
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	page-break-after:avoid;
+	font-size:13.0pt;
+	font-family:Arial;
+	font-weight:bold;}
+h4
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Times New Roman";
+	font-weight:normal;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+span.MsoPageNumber
+	{font-family:"Times New Roman";}
+p.MsoListBullet, li.MsoListBullet, div.MsoListBullet
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:18.0pt;
+	margin-bottom:.0001pt;
+	text-indent:-18.0pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	punctuation-wrap:simple;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoBodyTextIndent, li.MsoBodyTextIndent, div.MsoBodyTextIndent
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:108.0pt;
+	margin-bottom:.0001pt;
+	text-indent:-108.0pt;
+	font-size:12.0pt;
+	font-family:"PANDA Times UZ";}
+p.MsoBodyTextIndent2, li.MsoBodyTextIndent2, div.MsoBodyTextIndent2
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:14.15pt;
+	line-height:200%;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{font-family:"Times New Roman";
+	color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;}
+strong
+	{font-family:"Times New Roman";}
+p.MsoPlainText, li.MsoPlainText, div.MsoPlainText
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Courier New";}
+p
+	{margin-right:0cm;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-autospace:none;
+	font-size:8.0pt;
+	font-family:Tahoma;}
+p.Textlist, li.Textlist, div.Textlist
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:1.0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:-14.15pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	color:black;}
+p.a, li.a, div.a
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+p.Text, li.Text, div.Text
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:35.45pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.ab, li.ab, div.ab
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:1.0cm;
+	font-size:14.0pt;
+	font-family:"Times New Roman";}
+p.2, li.2, div.2
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:center;
+	text-indent:25.0pt;
+	line-height:116%;
+	page-break-after:avoid;
+	text-autospace:none;
+	font-size:14.0pt;
+	font-family:"Times New Roman";}
+span.texhtml
+	{font-family:"Times New Roman";}
+p.a0, li.a0, div.a0
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:0cm;
+	text-align:right;
+	line-height:12.0pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+ /* Page Definitions */
+ @page Section1
+	{size:595.45pt 841.7pt;
+	margin:56.75pt 42.55pt 2.0cm 3.0cm;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+.style1 {
+	font-size: 18pt;
+}
+.style2 {
+	font-size: 18pt;
+	font-style: italic;
+}
+.style3 {
+	font-size: 18pt;
+	font-weight: bold;
+	color: blue;
+}
+.style4 {
+	color: navy;
+}
+.style5 {
+	color: white;
+	font-size: 22pt;
+	background-color: #000000;
+}
+.style6 {
+	font-size: 22pt;
+}
+.style7 {
+	color: white;
+	background-color: #000000;
+}
+.style8 {
+	color: yellow;
+	background-color: #000000;
+}
+.style9 {
+	color: #008000;
+}
+.style10 {
+	text-align: justify;
+}
+.style11 {
+	text-align: center;
+}
+.style12 {
+	font-size: 22pt;
+	font-style: italic;
+}
+.style13 {
+	font-style: italic;
+	background-color: #FFFF00;
+}
+.style14 {
+	background-color: #FFFF00;
+}
+.style15 {
+	font-style: italic;
+}
+.style18 {
+	background-color: #00FFFF;
+}
+.style19 {
+	text-decoration: underline;
+	color: #FF0000;
+}
+.style20 {
+	color: #FF0000;
+}
+.style21 {
+	color: #000000;
+}
+.style22 {
+	font-size: 19pt;
+}
+.style23 {
+	font-size: 18pt;
+	color: blue;
+}
+.style24 {
+	font-size: 18pt;
+	font-style: italic;
+	color: blue;
+}
+.style25 {
+	color: blue;
+	font-style: italic;
+}
+.style26 {
+	color: blue;
+}
+.style27 {
+	font-size: 18pt;
+	color: red;
+}
+.style28 {
+	color: #FF0000;
+	font-size: 19pt;
+}
+.style29 {
+	text-align: left;
+}
+.style30 {
+	text-align: left;
+	text-indent: 2cm;
+}
+.style31 {
+	color: blue;
+	font-weight: bold;
+}
+.style32 {
+	font-size: 18pt;
+	font-style: italic;
+	color: blue;
+	font-weight: bold;
+}
+.style33 {
+	font-size: 18pt;
+	font-style: italic;
+	color: red;
+	text-decoration: underline;
+}
+.style34 {
+	text-decoration: underline;
+	background-color: #FFFFFF;
+}
+.style35 {
+	text-decoration: underline;
+}
+.style36 {
+	font-size: 18pt;
+	color: red;
+	text-decoration: underline;
+}
+.style37 {
+	background-color: #FFFFFF;
+}
+.style38 {
+	text-indent: 0cm;
+}
+.style39 {
+	text-align: right;
+}
+.style40 {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+.style41 {
+	color: #FF00FF;
+}
+.style42 {
+	font-size: large;
+	font-weight: bold;
+}
+.style43 {
+	color: purple;
+}
+.style44 {
+	font-size: large;
+	font-weight: bold;
+	color: purple;
+}
+.style45 {
+	font-size: 18pt;
+	font-style: italic;
+	color: purple;
+}
+-->
+</STYLE>
+<script type="text/javascript">
+<!--
+function FP_swapImg() {//v1.0
+ var doc=document,args=arguments,elm,n; doc.$imgSwaps=new Array(); for(n=2; n<args.length;
+ n+=2) { elm=FP_getObjectByID(args[n]); if(elm) { doc.$imgSwaps[doc.$imgSwaps.length]=elm;
+ elm.$src=elm.src; elm.src=args[n+1]; } }
+}
+
+function FP_preloadImgs() {//v1.0
+ var d=document,a=arguments; if(!d.FP_imgs) d.FP_imgs=new Array();
+ for(var i=0; i<a.length; i++) { d.FP_imgs[i]=new Image; d.FP_imgs[i].src=a[i]; }
+}
+
+function FP_getObjectByID(id,o) {//v1.0
+ var c,el,els,f,m,n; if(!o)o=document; if(o.getElementById) el=o.getElementById(id);
+ else if(o.layers) c=o.layers; else if(o.all) el=o.all[id]; if(el) return el;
+ if(o.id==id || o.name==id) return o; if(o.childNodes) c=o.childNodes; if(c)
+ for(n=0; n<c.length; n++) { el=FP_getObjectByID(id,c[n]); if(el) return el; }
+ f=o.forms; if(f) for(n=0; n<f.length; n++) { els=f[n].elements;
+ for(m=0; m<els.length; m++){ el=FP_getObjectByID(id,els[n]); if(el) return el; } }
+ return null;
+}
+// -->
+</script>
+</HEAD>
+<BODY lang=RU style="TEXT-JUSTIFY-TRIM: punctuation" vLink=purple link=blue onLoad="FP_preloadImgs(/*url*/'button5.jpg',/*url*/'button6.jpg',/*url*/'button8.jpg',/*url*/'button9.jpg')">
+<DIV class=Section1>
+<P class=style29 style="MARGIN: 6pt 0cm; "><SPAN 
+lang=UZ-CYR class="style44">DSА </SPAN>
+<SPAN 
+lang=UZ-CYR style="COLOR: red" class="style42"> <SPAN class="style43">&nbsp;&nbsp; э л е к т р о н&nbsp;&nbsp; </SPAN> &nbsp; </SPAN>
+<SPAN 
+lang=UZ-CYR class="style44">р а к а м л и&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>
+<SPAN 
+lang=UZ-CYR style="COLOR: red" class="style42"> <SPAN class="style43">и м з о </SPAN> 
+&nbsp;<SPAN class="style43">&nbsp;&nbsp; а л г о р и т м и</SPAN></SPAN></P>
+<hr style="height: 4px" class="style41">
+<div class="style29">
+<table style="width: 100%">
+	<tr>
+		<td style="width: 100px">
+		<p class="style40">
+<a href="Файлы%20пользователя/DASTUR/DSA.exe">
+<img style="border: 0" id="img1" src="button7.jpg" height="36" width="100" alt="DSA дастури" onMouseOver="FP_swapImg(1,0,/*id*/'img1',/*url*/'button5.jpg')" onMouseOut="FP_swapImg(0,0,/*id*/'img1',/*url*/'button7.jpg')" onMouseDown="FP_swapImg(1,0,/*id*/'img1',/*url*/'button6.jpg')" onMouseUp="FP_swapImg(0,0,/*id*/'img1',/*url*/'button5.jpg')" fp-style="fp-btn: Corporate 4; fp-proportional: 0" fp-title="DSA дастури"></a></p>
+		</td>
+		<td style="width: 178px">
+		<p class="style40">
+<a href="Файлы пользователя/VIDEO/DSA ERI.exe">
+<img src="button13.jpg" alt="Дастурдан фойдаланиш" name="img2" width="178" height="36" border="0" id="img2" style="border: 0" onMouseDown="FP_swapImg(1,0,/*id*/'img2',/*url*/'button9.jpg')" onMouseUp="FP_swapImg(0,0,/*id*/'img2',/*url*/'button8.jpg')" onMouseOver="FP_swapImg(1,0,/*id*/'img2',/*url*/'button8.jpg')" onMouseOut="FP_swapImg(0,0,/*id*/'img2',/*url*/'button13.jpg')" fp-style="fp-btn: Corporate 4" fp-title="Дастурдан фойдаланиш"></a></p>
+		</td>
+		<td class="style39">
+		<p class="style40">
+	<a href="Файлы%20пользователя/VIDEO/AES.avi">
+<embed src="Файлы пользователя/AUDIO/dsa eri.mp3" width="75" height="28"></a></p>
+		</td>
+	</tr>
+</table>
+</div>
+<hr style="height: 4px" class="style41">
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: justify"><em>
+<SPAN 
+lang=UZ-CYR><span class="style5">&nbsp;DSA </span> </SPAN>
+<SPAN 
+lang=UZ-CYR class="style1"><span class="style4">&nbsp;алгоритми</span></SPAN></em><SPAN 
+lang=UZ-CYR class="style1"> <span class="style4"><em>- чекли майдонда дискрет логарифмлаш 
+масаласига асосланган бўлиб, AКШни NIST (National Institute of Standarts and 
+Technology) томонидан 1991 йилда таклиф этилган.</em></span> </SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+<SPAN 
+lang=UZ-CYR class="style1">Қуйида ушбу алгоритмнинг ишлаш жараёни келтирилади. 
+</SPAN></P>
+<hr style="height: 4px" class="style9">
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+<SPAN 
+lang=UZ-CYR class="style6"><span class="style7">&nbsp;</span><span class="style8">Имзони 
+хисоблаш</span><span class="style7"> </span></SPAN> <SPAN style="COLOR: black">
+<SPAN 
+lang=UZ-CYR class="style1">&nbsp;қисми:</SPAN></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+<span class="style20"><span lang="en-us" class="style22"><strong>I</strong></span><span class="style22">.</span></span><span class="style22">
+</span><span class="style19"><strong><span class="style22">Калитлар генерацияси</span></strong></span><font size="5"><strong><span class="style20">:</span></strong></font></P>
+<ul>
+	<li>
+	<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+	<SPAN 
+lang=UZ-CYR class="style45"><strong>Н(М)</strong></SPAN><SPAN lang=UZ-CYR class="style1"><span class="style26"> хеш-функция 
+	</span><SPAN class="style25">М</SPAN><SPAN class="style26"> маълумотни <em>1</em> ва
+	<I>q</I> оралиқдаги бирор бутун сонга акслантиради (бу ерда SHA </SPAN>
+	<span class="style26">хеш-функцияси</span> <span class="style26">ишлатилган). 
+	</span></SPAN></P>
+	</li>
+	<li>
+	<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+	<SPAN 
+lang=UZ-CYR class="style45"><strong>р</strong></SPAN><SPAN lang=UZ-CYR class="style1"><span class="style26"> туб 
+сон, </span><SPAN class="style25">р</SPAN><SPAN class="style26"> 
+сонинг бит узунлиги 64 га каррали. </SPAN></SPAN></P>
+	</li>
+	<li>
+	<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+	<SPAN 
+lang=UZ-CYR class="style2"><span class="style43"><strong>q</strong></span><span class="style26"> </span>
+	</SPAN><SPAN lang=UZ-CYR class="style1"><span class="style26">туб сон, 
+	</span><span class="style25">q </span><span class="style26">сони </span>
+	<SPAN class="style25">р-</SPAN><SPAN class="style26">1 нинг булувчиси бўлсин.</SPAN></SPAN></P>
+	</li>
+	<li>
+	<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+	<SPAN 
+lang=UZ-CYR class="style2"><span class="style43"><strong>g</strong></span><span class="style26"> </span>
+	</SPAN><SPAN lang=UZ-CYR class="style1"><span class="style26">сони, </span>
+	<span class="style25">g = h <SUP>(p-</SUP></span><SUP><span class="style26"><em>1</em></span><span class="style25">)/q 
+	</span></SUP><span class="style25">(mod p)</span></SPAN></P>
+	</li>
+	<li>
+	<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+	<SPAN 
+lang=EN-US class="style2"><span class="style43"><strong>h</strong></span><span class="style26"> </span>
+	</SPAN><SPAN lang=UZ-CYR class="style23">бутун сон, </SPAN>
+	<SPAN class="style23"><em>1</em></SPAN><SPAN lang=UZ-CYR class="style24">&lt;h&lt;р</SPAN><SPAN lang=UZ-CYR class="style23">.</SPAN></P>
+	</li>
+	<li>
+	<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+	<SPAN 
+lang=UZ-CYR class="style2"><span class="style43"><strong>х</strong></span><span class="style26"> </span>
+	</SPAN><SPAN class="style23">имзо</SPAN><SPAN 
+style="FONT-SIZE: 12pt" class="style26"> </SPAN><SPAN class="style1">
+	<span class="style26">қўйувчи 
+томонга маълум махфий </span></SPAN><SPAN lang=UZ-CYR class="style1">
+	<span class="style26">калит 
+(</span><span class="style25">0</span></SPAN><SPAN class="style24">&lt;</SPAN><SPAN 
+lang=EN-US class="style24">x</SPAN><SPAN class="style24">&lt;</SPAN><SPAN lang=EN-US class="style24">q</SPAN><SPAN lang=UZ-CYR class="style24">)</SPAN><SPAN lang=UZ-CYR 
+style="FONT-SIZE: 12pt" class="style26">.</SPAN><SPAN lang=UZ-CYR class="style24">
+	</SPAN></P>
+	</li>
+	<li>
+	<P class=style10 style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm">
+	<SPAN 
+lang=UZ-CYR class="style45"><strong>y</strong></SPAN><SPAN lang=UZ-CYR 
+style="FONT-SIZE: 12pt" class="style26"> </SPAN><SPAN lang=UZ-CYR>
+	<SPAN class="style23">имзо</SPAN></SPAN><SPAN lang=UZ-CYR 
+style="FONT-SIZE: 12pt"> <SPAN lang=UZ-CYR class="style1"><span class="style26">хақиқийлигини текшириш мақсадида фойдаланувчи 
+	очиқ калит, қуйидаги формула ёрдамида</span> <span class="style26">хисобланади: 
+	</span></SPAN></SPAN></P>
+	</li>
+</ul>
+<P class=style11 style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm"><SPAN lang=UZ-CYR>
+<SPAN lang=UZ-CYR class="style12"><span class="style26">y = g <SUP>x 
+</SUP>(mod p)</span></SPAN><SPAN lang=UZ-CYR class="style6">.</SPAN></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+<SPAN 
+lang=UZ-CYR class="style1">Ахборот алмашинувчи томонлар учун
+<span class="style14">очиқ 
+параметрлар </span><span class="style13">- (p, q, g, y)</span>, <SPAN style="COLOR: windowtext">
+<span class="style18">махфий</span></SPAN><span class="style18"> 
+калит </span><span class="style15"><span class="style18">х</span></span>, <I>(p, q, g) </I>сонлар жуфтлиги эса томонлар учун умумий булиши 
+мумкин. </SPAN></P>
+<hr style="height: 4px" class="style9">
+<P class=MsoNormal style="MARGIN: 0cm 0cm 6pt 1cm">
+<span lang="en-us" class="style20"><span class="style22"><strong>II.</strong></span></span><span class="style22">
+<span class="style19"><strong>Имзони қўйиш</strong></span></span><strong><span class="style22"><span class="style20">: 
+(</span></span><span class="style21"><span class="style22">А</span><span lang="en-us"><span class="style22">--&gt;B</span></span></span><font size="5"><span class="style20">)</span></font></strong></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 6pt 1cm">
+<SPAN lang=UZ-CYR class="style1"><span class="style26">1. А томон, бирор </span>
+<span class="style25">k </span>(<span class="style25">0 &lt; k &lt; q) 
+</span><span class="style26">тасодифий сон олади. <BR>2. Қуйидаги формула ёрдамида</span>
+<span class="style25">r</span> <span class="style26">ва </span>
+<span class="style25">s </span><span class="style26">ларни 
+хисоблайди:</span></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: center" 
+align=center><SPAN lang=UZ-CYR class="style2"><span class="style26">r = (g <SUP>k 
+</SUP>mod p ) mod q</span></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: center" 
+align=center><SPAN lang=UZ-CYR class="style2"><span class="style26">s = (k <SUP>-1 
+</SUP>(H(М) + x*r)) mod q</span></SPAN></P>
+<P class=MsoNormal style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm">
+<SPAN 
+lang=UZ-CYR class="style24">(r, s) </SPAN><SPAN lang=UZ-CYR>
+<SPAN class="style23">имзо</SPAN></SPAN><SPAN lang=UZ-CYR 
+style="FONT-SIZE: 12pt" class="style26"> </SPAN>
+<SPAN lang=UZ-CYR class="style1"><span class="style26">ва</span><span class="style25"> М 
+</span><span class="style26">маълумот, В томонга узатилади.</span></SPAN></P>
+<hr style="height: 4px" class="style9">
+<P class=MsoNormal style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm">
+<SPAN 
+lang=UZ-CYR class="style6"><span class="style7">&nbsp;</span><span class="style8">Имзони 
+текшириш</span><span class="style7"> </span></SPAN>
+<SPAN 
+lang=UZ-CYR class="style1"> <SPAN style="COLOR: black">&nbsp;қисми: </SPAN></SPAN>
+<SPAN 
+lang=UZ-CYR> <SPAN class="style28"><strong>(</strong></SPAN></SPAN><span lang="en-us" style="color: black"><SPAN class="style22"><strong>B</strong></SPAN></span><SPAN 
+lang=UZ-CYR class="style27">)</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+<SPAN 
+lang=UZ-CYR class="style24">1. 0&lt;r&lt;q</SPAN><SPAN 
+lang=UZ-CYR class="style23">, <I>0&lt;s &lt;q 
+</I>шартлардан биттаси бажарилмаса </SPAN>
+<SPAN 
+lang=UZ-CYR style="COLOR: black" class="style1"> <SPAN class="style26">имзо</SPAN> 
+</SPAN><SPAN 
+lang=UZ-CYR class="style23">хакикий эмас, деб хисобланади. </SPAN></P>
+<P class=style29 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; " 
+align=center><SPAN lang=UZ-CYR class="style24">2. w = s 
+<SUP>-1 </SUP>mod q.</SPAN></P>
+<P class=style29 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; " 
+align=center><SPAN lang=UZ-CYR class="style24">3. u 
+<SUB>1</SUB> = ( H(М) * w ) mod q. </SPAN></P>
+<P class=style29 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; " 
+align=center><SPAN lang=UZ-CYR class="style24">4. u <SUB>2</SUB> = ( r * w ) mod q. </SPAN></P>
+<P class=style29 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; " 
+align=center><SPAN lang=UZ-CYR class="style24">5. v = ((g * 
+y)mod p) mod q.</SPAN></P>
+<P class=style30 
+style="MARGIN-BOTTOM: 6pt; " 
+align=center><SPAN 
+lang=UZ-CYR class="style3">Агар </SPAN><SPAN 
+lang=EN-US class="style32">v </SPAN><SPAN class="style32">= </SPAN>
+<SPAN lang=EN-US class="style32">r</SPAN><SPAN lang=EN-US class="style3"> </SPAN>
+<SPAN class="style3">бажарилса, </SPAN><SPAN lang=UZ-CYR 
+style="COLOR: black"><SPAN class="style3">имзо</SPAN></SPAN><SPAN lang=UZ-CYR 
+style="FONT-SIZE: 12pt; " class="style31"> </SPAN>
+<SPAN lang=UZ-CYR class="style3">ҳақиқий саналади.</SPAN></P>
+<hr style="height: 4px" class="style9">
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+<SPAN 
+style="COLOR: black" class="style1"><strong>Масалан</strong>, </SPAN>
+<SPAN 
+style="COLOR: black" class="style2">А </SPAN>
+<SPAN 
+style="COLOR: black" class="style1">томон</SPAN><SPAN lang=UZ-CYR 
+style="COLOR: black" class="style1">, </SPAN>
+<SPAN lang=UZ-CYR 
+style="COLOR: black" class="style2">В</SPAN><SPAN lang=UZ-CYR 
+style="COLOR: black" class="style1"> </SPAN>
+<SPAN 
+style="COLOR: black" class="style1">томонга</SPAN><SPAN 
+style="FONT-SIZE: 12pt; COLOR: black"> </SPAN>
+<SPAN 
+style="COLOR: black" class="style1"> <I><SPAN lang=UZ-CYR>М</SPAN></I><SPAN 
+lang=UZ-CYR> маълумотни узат</SPAN>моқда</SPAN><SPAN lang=UZ-CYR 
+style="COLOR: black" class="style1">: </SPAN></P>
+<P class=style38 
+style="MARGIN-BOTTOM: 6pt; TEXT-ALIGN: justify"><SPAN class="style33"><strong>&nbsp;А
+</strong></SPAN><SPAN class="style36"><strong>томон</strong></SPAN><SPAN 
+style="FONT-SIZE: 12pt; " class="style19"><strong> </strong></SPAN>
+<SPAN class="style20"> <SPAN lang=UZ-CYR class="style1"><span class="style35">
+<strong>қуйидагиларни амалга </strong></span><span class="style14"><strong>
+<span class="style34">оширади</span><span class="style37">:</span></strong></span></SPAN></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+<SPAN 
+style="COLOR: black" class="style2">Н(М) </SPAN>
+<SPAN 
+style="COLOR: black" class="style1">хеш</SPAN><SPAN lang=UZ-CYR 
+style="COLOR: black" class="style1">-</SPAN><SPAN 
+style="COLOR: black" class="style1">функция</SPAN><SPAN lang=UZ-CYR 
+style="COLOR: black" class="style1">, </SPAN>
+<SPAN lang=EN-US 
+style="COLOR: black" class="style2">q</SPAN><SPAN 
+style="COLOR: black" class="style1"> = 7</SPAN><SPAN lang=UZ-CYR 
+style="COLOR: black" class="style1">, <I>р</I> </SPAN>
+<SPAN 
+style="COLOR: black" class="style1">= 29</SPAN><SPAN lang=UZ-CYR 
+style="COLOR: black" class="style1">, (</SPAN><SPAN 
+style="COLOR: black" class="style1">29</SPAN><SPAN lang=UZ-CYR 
+style="COLOR: black" class="style1">-1)/</SPAN><SPAN 
+style="COLOR: black" class="style1">7 = 4 бажарилади</SPAN><SPAN lang=UZ-CYR 
+style="COLOR: black" class="style1">. </SPAN>
+<SPAN lang=EN-US 
+style="COLOR: black" class="style1">h </SPAN>
+<SPAN 
+style="COLOR: black" class="style1">= 3</SPAN><SPAN lang=UZ-CYR 
+style="COLOR: black" class="style1">, 0&lt; </SPAN>
+<SPAN 
+style="COLOR: black" class="style1">3</SPAN><SPAN lang=UZ-CYR 
+style="COLOR: black" class="style1">&lt; </SPAN>
+<SPAN 
+style="COLOR: black" class="style1">29</SPAN><SPAN lang=UZ-CYR 
+style="COLOR: black" class="style1">. </SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+<SPAN lang=SV 
+style="COLOR: black" class="style1"><em>g = h </em> <SUP><em>(p-1)/q</em></SUP><em> (mod 
+p) = 3</em><SUP><em>4</em></SUP></SPAN><SUP><SPAN 
+lang=SV style="COLOR: black" class="style1"><em> </em> </SPAN></SUP>
+<SPAN lang=SV 
+style="COLOR: black" class="style1"><em>(mod 29) = 81 mod 29 = 23</em></SPAN><SPAN lang=UZ-CYR 
+style="COLOR: black" class="style1">.</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+<SPAN 
+lang=UZ-CYR style="COLOR: black" class="style2">х </SPAN>
+<SPAN lang=UZ-CYR 
+style="COLOR: black" class="style1"><i>= 5 </i> <SPAN 
+style="COLOR: black">махфий</SPAN> калит (<I>0&lt;</I>5<I>&lt;</I>7), <I>y</I> 
+очиқ калит <I>y = g<SUP> x </SUP>(mod p) = 23<SUP>5 </SUP>mod 29 = 25. 
+</I> 
+</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+<SPAN 
+style="COLOR: black" class="style2">А </SPAN>
+<SPAN 
+style="COLOR: black" class="style1">ва</SPAN><SPAN 
+style="FONT-SIZE: 12pt; COLOR: black"> </SPAN>
+<SPAN 
+style="COLOR: black" class="style1"> <I><SPAN lang=UZ-CYR>В</SPAN></I><SPAN 
+lang=UZ-CYR> </SPAN>томонларга маълум <strong>о</strong></SPAN><SPAN 
+lang=UZ-CYR style="COLOR: black" class="style1"><strong>чиқ параметрлар (</strong></SPAN><SPAN 
+style="COLOR: black" class="style1"><strong>29, 7, 23, 25</strong></SPAN><SPAN lang=UZ-CYR 
+style="COLOR: black" class="style1">), </SPAN><SPAN 
+style="COLOR: black"><SPAN style="COLOR: black" class="style1"><strong>махфий</strong></SPAN></SPAN><SPAN 
+style="COLOR: black" class="style1"><strong> 
+калит </strong> <I><strong>х=</strong></I>5.</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+<SPAN 
+lang=UZ-CYR class="style36"><strong>Имзони хисоблаш</strong></SPAN><strong><SPAN 
+lang=UZ-CYR class="style27">:</SPAN></strong></P>
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+<SPAN 
+lang=UZ-CYR style="COLOR: black" class="style2">H(</SPAN><SPAN 
+style="COLOR: black" class="style2">М</SPAN><SPAN lang=UZ-CYR 
+style="COLOR: black" class="style2">)</SPAN><SPAN lang=UZ-CYR 
+style="FONT-SIZE: 12pt; COLOR: black"> </SPAN>
+<SPAN lang=UZ-CYR 
+style="COLOR: black" class="style1"> х</SPAN><SPAN 
+style="COLOR: black" class="style1">е</SPAN><SPAN lang=UZ-CYR 
+style="COLOR: black" class="style1">ш-функция, </SPAN>
+<SPAN lang=UZ-CYR 
+style="COLOR: black" class="style2">М</SPAN><SPAN lang=UZ-CYR 
+style="FONT-SIZE: 12pt; COLOR: black">
+<SPAN lang=UZ-CYR 
+style="COLOR: black" class="style1">маълумот</SPAN></SPAN><SPAN 
+style="COLOR: black" class="style1">ни бирор </SPAN>
+<SPAN lang=UZ-CYR 
+style="COLOR: black" class="style1">бутун сонга акслантиради, </SPAN>
+<SPAN 
+style="COLOR: black" class="style1">у</SPAN><SPAN lang=UZ-CYR 
+style="COLOR: black" class="style1">шбу</SPAN><SPAN 
+style="COLOR: black" class="style1"> сон бу ерда 15</SPAN><SPAN lang=UZ-CYR 
+style="FONT-SIZE: 12pt; COLOR: black"> </SPAN>
+<SPAN lang=UZ-CYR 
+style="COLOR: black" class="style1"> булсин.</SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 6pt 1cm">
+<SPAN lang=UZ-CYR 
+style="COLOR: black" class="style1">1. А </SPAN>
+<SPAN 
+style="COLOR: black" class="style1">томон </SPAN>
+<SPAN lang=EN-US 
+style="COLOR: black" class="style2">k </SPAN>
+<SPAN 
+style="COLOR: black" class="style1">= 3</SPAN><SPAN lang=UZ-CYR 
+style="COLOR: black" class="style1"> (</SPAN><SPAN 
+style="COLOR: black" class="style1">0&lt;3&lt;7</SPAN><SPAN lang=UZ-CYR 
+style="COLOR: black" class="style1">) тасодифий сон</SPAN><SPAN 
+style="COLOR: black" class="style1">и</SPAN><SPAN lang=UZ-CYR 
+style="FONT-SIZE: 12pt; COLOR: black"> </SPAN>
+<SPAN lang=UZ-CYR 
+style="COLOR: black" class="style1"> олади.</SPAN><SPAN 
+style="FONT-SIZE: 12pt; COLOR: black"> </SPAN>
+<SPAN 
+style="COLOR: black" class="style1"> <BR></SPAN>
+<SPAN lang=UZ-CYR 
+style="COLOR: black" class="style1">2</SPAN><SPAN 
+style="COLOR: black" class="style1">. </SPAN>
+<SPAN lang=UZ-CYR 
+style="COLOR: black" class="style1">Қуйидаги формула</SPAN><SPAN 
+style="COLOR: black" class="style1">лар</SPAN><SPAN 
+style="FONT-SIZE: 12pt; COLOR: black"> </SPAN> <SPAN lang=UZ-CYR>
+<SPAN 
+style="COLOR: black"> <SPAN 
+style="COLOR: black" class="style1">ёрдамида</SPAN></SPAN><SPAN 
+style="FONT-SIZE: 12pt; COLOR: black"><SPAN 
+style="COLOR: black" class="style1"> </SPAN></SPAN> </SPAN>
+<SPAN lang=EN-US 
+style="COLOR: black" class="style2">r </SPAN>
+<SPAN 
+style="COLOR: black" class="style1">ва </SPAN>
+<SPAN lang=EN-US 
+style="COLOR: black" class="style2">s</SPAN><SPAN lang=UZ-CYR 
+style="FONT-SIZE: 12pt; COLOR: black"> </SPAN>
+<SPAN lang=UZ-CYR 
+style="COLOR: black" class="style1"> лар хисобла</SPAN><SPAN 
+style="COLOR: black" class="style1">нади:</SPAN></P>
+<P class=MsoNormal style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm">
+<SPAN lang=SV 
+style="COLOR: black" class="style2">r = (g </SPAN><SUP>
+<SPAN lang=SV 
+style="COLOR: black" class="style2">k</SPAN></SUP><SPAN lang=SV 
+style="COLOR: black" class="style2"> mod p) mod q = (23 </SPAN><SUP>
+<SPAN lang=SV 
+style="COLOR: black" class="style2">3</SPAN></SUP><SPAN lang=SV 
+style="COLOR: black" class="style2"> mod 29) mod 7 = 2 </SPAN></P>
+<P class=MsoNormal style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm">
+<SPAN lang=SV 
+style="COLOR: black" class="style2">s = (k<SUP>-</SUP></SPAN><SUP><SPAN 
+lang=UZ-CYR style="COLOR: black" class="style2">1 </SPAN></SUP>
+<SPAN 
+lang=UZ-CYR style="COLOR: black" class="style2">(</SPAN><SPAN lang=SV 
+style="COLOR: black" class="style2">H(</SPAN><SPAN 
+style="COLOR: black" class="style2">М</SPAN><SPAN lang=SV 
+style="COLOR: black" class="style2">) + x</SPAN><SPAN lang=UZ-CYR 
+style="COLOR: black" class="style2">*</SPAN><SPAN lang=SV 
+style="COLOR: black" class="style2">r )</SPAN><SPAN lang=UZ-CYR 
+style="COLOR: black" class="style2">) </SPAN>
+<SPAN lang=SV 
+style="COLOR: black" class="style2">mod q = (3<SUP>-1 </SUP></SPAN>
+<SPAN 
+lang=UZ-CYR style="COLOR: black" class="style2">(</SPAN><SPAN lang=SV 
+style="COLOR: black" class="style2">15 + 5</SPAN><SPAN lang=UZ-CYR 
+style="COLOR: black" class="style2">*</SPAN><SPAN lang=SV 
+style="COLOR: black" class="style2">2 )</SPAN><SPAN lang=UZ-CYR 
+style="COLOR: black" class="style2">) </SPAN>
+<SPAN lang=SV 
+style="COLOR: black" class="style2">mod 7 = 6</SPAN><SPAN lang=UZ-CYR 
+style="COLOR: black" class="style2">. </SPAN></P>
+<P class=MsoNormal style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm">
+<SPAN lang=SV 
+style="COLOR: black" class="style2"><strong>(r, s) = (2, 6) </strong></SPAN>
+<SPAN lang=UZ-CYR 
+style="COLOR: black"><SPAN style="COLOR: black" class="style1"><strong>имзо</strong></SPAN></SPAN><SPAN lang=UZ-CYR 
+style="FONT-SIZE: 12pt; COLOR: black"><strong> </strong> </SPAN>
+<SPAN lang=UZ-CYR 
+style="COLOR: black" class="style1"><strong>ва</strong><I><strong> М </strong> </I>
+<strong>маълумот </strong> </SPAN><SPAN 
+style="COLOR: black" class="style1"><strong>В томонга узатилади</strong></SPAN><SPAN lang=SV 
+style="COLOR: black" class="style1"><strong>.</strong></SPAN></P>
+<P class=MsoNormal style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm">
+<SPAN 
+lang=UZ-CYR class="style36"><strong>Имзони текшириш</strong></SPAN><strong><SPAN 
+lang=UZ-CYR class="style27">:</SPAN></strong></P>
+<P class=MsoNormal style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm">
+<SPAN 
+lang=UZ-CYR style="COLOR: black" class="style1">0&lt;2&lt;7 ,0&lt;6&lt;7 
+шартлар бажарилади.</SPAN></P>
+<P class=MsoNormal style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm">
+<SPAN 
+lang=UZ-CYR style="COLOR: black" class="style2">w = s<SUP>-1</SUP> mod q 
+</SPAN><SPAN lang=UZ-CYR style="COLOR: black" class="style1">= 6<SUP>-1 
+</SUP><I>mod </I>7 = 6 </SPAN></P>
+<P class=MsoNormal style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm"><I><SPAN lang=NL 
+style="FONT-SIZE: 12pt; COLOR: black">u</SPAN><SPAN lang=NL 
+style="COLOR: black" class="style1"><SUB>1</SUB></SPAN></I><SUB><SPAN 
+lang=NL style="COLOR: black" class="style2"> </SPAN></SUB>
+<SPAN lang=NL 
+style="COLOR: black" class="style2">= (H(</SPAN><SPAN 
+style="COLOR: black" class="style2">М</SPAN><SPAN lang=NL 
+style="COLOR: black" class="style2">) * w) mod q =</SPAN><SPAN lang=NL 
+style="COLOR: black" class="style1"> (15*6) <I>mod</I> 7 = 6</SPAN><SPAN lang=UZ-CYR 
+style="COLOR: black" class="style1"> </SPAN></P>
+<P class=MsoNormal style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm"><I><SPAN lang=SV 
+style="FONT-SIZE: 12pt; COLOR: black">u</SPAN><SPAN lang=SV 
+style="COLOR: black" class="style1"><SUB>2</SUB></SPAN><SPAN lang=SV 
+style="FONT-SIZE: 12pt; COLOR: black"><SPAN lang=SV 
+style="COLOR: black" class="style1"> = (r*w)</SPAN></SPAN></I><SPAN 
+lang=SV style="COLOR: black" class="style2"> mod q = </SPAN>
+<SPAN lang=SV 
+style="COLOR: black" class="style1">(2*6) </SPAN>
+<SPAN lang=SV 
+style="COLOR: black" class="style2">mod</SPAN><SPAN lang=SV 
+style="COLOR: black" class="style1"> 7 = 5</SPAN><SPAN lang=UZ-CYR 
+style="COLOR: black" class="style1"> </SPAN></P>
+<P class=MsoNormal style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm">
+<SPAN lang=SV 
+style="COLOR: black" class="style2">v = ((g * y) mod p) mod q</SPAN><SPAN 
+lang=SV style="COLOR: black" class="style1"> = ((236 * 255) <I>mod</I> 29) </SPAN>
+<SPAN lang=SV 
+style="COLOR: black" class="style2">mod </SPAN>
+<SPAN lang=SV 
+style="COLOR: black" class="style1">7 = 2</SPAN><SPAN lang=UZ-CYR 
+style="COLOR: black" class="style1">. </SPAN></P>
+<P class=MsoNormal style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm">
+<SPAN 
+lang=UZ-CYR style="COLOR: black" class="style2"><strong>v = r </strong> </SPAN>
+<SPAN 
+lang=UZ-CYR style="COLOR: black" class="style1"><strong>тенглик ўринли, яъни, 2 = 2 
+демак </strong> <SPAN style="COLOR: black"><strong>имзо</strong></SPAN> 
+<strong>хакикий.</strong></SPAN></P></DIV></BODY></HTML>

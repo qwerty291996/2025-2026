@@ -1,0 +1,367 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office"><HEAD><TITLE>Polig-Hellman shemasi</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=utf-8">
+<META content="MSHTML 6.00.6000.16414" name=GENERATOR>
+<STYLE>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:"PANDA Times UZ";}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+h1
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:Arial;
+	font-weight:bold;}
+h2
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:Arial;
+	font-weight:bold;
+	font-style:italic;}
+h3
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	page-break-after:avoid;
+	font-size:13.0pt;
+	font-family:Arial;
+	font-weight:bold;}
+h4
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Times New Roman";
+	font-weight:normal;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+span.MsoPageNumber
+	{font-family:"Times New Roman";}
+p.MsoListBullet, li.MsoListBullet, div.MsoListBullet
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:18.0pt;
+	margin-bottom:.0001pt;
+	text-indent:-18.0pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	punctuation-wrap:simple;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoBodyTextIndent, li.MsoBodyTextIndent, div.MsoBodyTextIndent
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:108.0pt;
+	margin-bottom:.0001pt;
+	text-indent:-108.0pt;
+	font-size:12.0pt;
+	font-family:"PANDA Times UZ";}
+p.MsoBodyTextIndent2, li.MsoBodyTextIndent2, div.MsoBodyTextIndent2
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:14.15pt;
+	line-height:200%;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{font-family:"Times New Roman";
+	color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;}
+strong
+	{font-family:"Times New Roman";}
+p.MsoPlainText, li.MsoPlainText, div.MsoPlainText
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Courier New";}
+p
+	{margin-right:0cm;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-autospace:none;
+	font-size:8.0pt;
+	font-family:Tahoma;}
+p.Textlist, li.Textlist, div.Textlist
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:1.0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:-14.15pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	color:black;}
+p.a, li.a, div.a
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+p.Text, li.Text, div.Text
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:35.45pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.ab, li.ab, div.ab
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:1.0cm;
+	font-size:14.0pt;
+	font-family:"Times New Roman";}
+p.2, li.2, div.2
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:center;
+	text-indent:25.0pt;
+	line-height:116%;
+	page-break-after:avoid;
+	text-autospace:none;
+	font-size:14.0pt;
+	font-family:"Times New Roman";}
+span.texhtml
+	{font-family:"Times New Roman";}
+p.a0, li.a0, div.a0
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:0cm;
+	text-align:right;
+	line-height:12.0pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+ /* Page Definitions */
+ @page Section1
+	{size:595.45pt 841.7pt;
+	margin:56.75pt 42.55pt 2.0cm 3.0cm;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+.style1 {
+	font-size: 18pt;
+}
+.style2 {
+	font-size: 18pt;
+	color: #000080;
+}
+.style3 {
+	text-align: center;
+}
+.style4 {
+	font-size: 22pt;
+}
+.style5 {
+	background-color: #FFFF00;
+}
+.style6 {
+	color: #000080;
+}
+.style7 {
+	background-color: #FFFFFF;
+}
+.style8 {
+	color: maroon;
+}
+.style9 {
+	text-indent: 0cm;
+}
+.style10 {
+	color: #008000;
+}
+.style11 {
+	color: #000000;
+}
+.style12 {
+	background-color: #00FFFF;
+}
+.style13 {
+	text-indent: 0;
+}
+.style14 {
+	color: red;
+}
+.style41 {
+	color: #FF00FF;
+}
+.style29 {
+	text-align: left;
+}
+.style39 {
+	text-align: right;
+}
+.style42 {
+	font-size: 18pt;
+	font-weight: bold;
+}
+.style43 {
+	font-size: 18pt;
+	font-weight: bold;
+	color: maroon;
+}
+-->
+</STYLE>
+<script type="text/javascript">
+<!--
+function FP_preloadImgs() {//v1.0
+ var d=document,a=arguments; if(!d.FP_imgs) d.FP_imgs=new Array();
+ for(var i=0; i<a.length; i++) { d.FP_imgs[i]=new Image; d.FP_imgs[i].src=a[i]; }
+}
+// -->
+</script>
+</HEAD>
+<BODY lang=RU style="TEXT-JUSTIFY-TRIM: punctuation" vLink=purple link=blue onLoad="FP_preloadImgs(/*url*/'button6.jpg',/*url*/'button5.jpg')">
+<DIV class=Section1>
+<P class=MsoNormal style="MARGIN-BOTTOM: 6pt"><SPAN lang=UZ-CYR class="style43">П о л и г&nbsp; -&nbsp; Х е л л м а н&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>
+<SPAN lang=UZ-CYR 
+style="COLOR: red" class="style42"> <SPAN class="style8">с х е м а с и</SPAN></SPAN></P>
+<hr style="height: 4px" class="style41">
+<div class="style29">
+	<table style="width: 100%">
+		<tr>
+			<td style="width: 100px">
+			<p class="style40">&nbsp;</p>
+			</td>
+			<td style="width: 178px">
+			<p class="style40">&nbsp;</p>
+			</td>
+			<td class="style39">
+			<p class="style40"><a href="Файлы%20пользователя/VIDEO/AES.avi"></a></p>
+			</td>
+		</tr>
+	</table>
+</div>
+<hr style="height: 4px" class="style41">
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+<SPAN 
+lang=UZ-CYR class="style2"><em>Бу алгоритм асимметрик криптотизимлар 
+синфига маънсуб. </em></SPAN><SPAN 
+lang=UZ-CYR class="style1"><span class="style6"><em>Лекин таклиф этилаётган схема 
+очиқ </em><em>калитли</em></span> <span class="style6"><em>эмас, </em><em>яьни
+</em><em>шифрлаш</em></span> <span class="style6"><em>ва </em><em>дешифрлаш </em>
+<em>калитлари сир </em><em>сақланади. 
+</em></span></SPAN></P>
+<hr style="height: 4px" class="style10">
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+<SPAN 
+lang=UZ-CYR class="style1">Худди <SPAN style="COLOR: windowtext">RSA</SPAN> алгоритмига 
+ўхшаш берилган М 
+очиқ маьлумотни <SPAN class="style14"><strong>ШИФРЛАШ</strong></SPAN><span class="style5"><span class="style7"><span class="style6">
+</span><span class="style11">формуласи</span></span></span> </SPAN></P>
+<P class=style3 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; ">
+<SPAN 
+lang=UZ-CYR class="style4"><i><strong>С=М</strong><SUP><strong>е</strong></SUP><strong> (mod n),
+</strong></i></SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+<SPAN 
+lang=UZ-CYR class="style1"><span class="style7"><span class="style14">ДЕШИФРЛАШ</span><span class="style8">
+</span>формуласи эса</span></SPAN></P>
+<P class=style3 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; ">
+<SPAN 
+lang=UZ-CYR class="style4"><i><strong>М=С</strong><SUP><strong>d </strong> </SUP>
+<strong>(mod 
+n) </strong></i></SPAN></P>
+<P class=style9 
+style="MARGIN-BOTTOM: 6pt; TEXT-ALIGN: justify">
+<SPAN 
+lang=UZ-CYR class="style1">каби аниқланган. Бу ерда ed</SPAN><SPAN lang=EN-US 
+style="POSITION: relative; TOP: 1pt" class="style1"><IMG height=12 
+src="img181.png" width=13 border=0></SPAN><SPAN lang=UZ-CYR class="style1">1(mod <I>k</I>), <I>k </I>– 
+қандайдир мураккаб сон. 
+</SPAN></P>
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+<SPAN 
+lang=UZ-CYR><SPAN style="COLOR: windowtext" class="style1">RSA</SPAN></SPAN><SPAN 
+lang=UZ-CYR style="FONT-SIZE: 12pt"> </SPAN><SPAN 
+lang=UZ-CYR class="style1">алгоритмидан фарқи, n сони икки туб сонлар кўпайтмасидан иборат эмас ва бу 
+сон ҳам калитнинг бир қисми сифатида <SPAN style="COLOR: windowtext">махфий</SPAN> 
+сақланади. </SPAN></P>
+<hr style="height: 4px" class="style10">
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+<SPAN 
+lang=UZ-CYR class="style1">Демак, таклиф этилаётган алгоритмга мувофик, 
+<span class="style6"><strong>e</strong><em><strong> </strong></em><strong>ва d</strong>
+<strong>параметрлар махфий</strong></span> сақланар экан. 
+<SPAN 
+style="COLOR: windowtext">RSA</SPAN> алгоритмидан фарқли жихати ҳам шундадир, чунки <SPAN 
+style="COLOR: windowtext">RSA</SPAN> алгоритмида е - очиқ параметр, d - эса <SPAN 
+style="COLOR: windowtext">махфий</SPAN> параметр хисобланар эди. </SPAN></P>
+<hr style="height: 4px" class="style10">
+<P class=MsoNormal 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; TEXT-ALIGN: justify">
+<SPAN 
+lang=UZ-CYR class="style1">Мазкур <span class="style12">алгоритмнинг мураккаблиги чекли 
+майдонда дискрет логарифмлаш масаласига асосланган </span>бўлиб, криптоаналитик e ва d 
+параметрларни билмаган холда </SPAN></P>
+<P class=style3 
+style="MARGIN-BOTTOM: 6pt; TEXT-INDENT: 1cm; ">
+<SPAN 
+lang=UZ-CYR class="style4"><i><strong>е=Log</strong><SUB><strong>M </strong> </SUB>
+<strong>C(mod n) </strong></i> </SPAN></P>
+<P class=style13 
+style="MARGIN-BOTTOM: 6pt; TEXT-ALIGN: justify">
+<SPAN 
+lang=UZ-CYR class="style1">ифодани ҳисоблаши 
+керак бўлади. </SPAN><SPAN class="style2">Масала ечимининг бугунги кунда эффектив алгоритмлари мавжуд 
+эмас.</SPAN></P></DIV></BODY></HTML>
