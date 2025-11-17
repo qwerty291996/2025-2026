@@ -1,14 +1,13 @@
-from sklearn.linear_model import LinearRegression
 import numpy as np
+import time
 
-# Uy ma'lumotlari (m²) va narxlari
-x = np.array([[50], [70], [100]])  # maydon
-y = np.array([40, 55, 80])         # narx (ming $)
+my_list = list(range(10000))
+my_array = np.array(range(10000))
 
-# Model yaratamiz
-model = LinearRegression()
-model.fit(x, y)
-
-# 90 m² uyning narxini taxmin qilamiz
-prediction = model.predict([[90]])
-print("Taxminiy narx:", round(prediction[0], 2), "ming $")
+start = time.time()
+for i in range(10000):
+    my_list[i] *= 2
+   
+end = time.time()
+print(my_list)
+print("Ishlash vaqti:", end - start, "sekund")
