@@ -7531,7 +7531,7 @@ a.anchor-link {
 <h4>
 5-Mavzu: Mashinali o‘qitishda NumPy va Pandas paketlarining qo‘llanilishi.
 
-<p>2-mashg‘ulot. <strong>NumPy va Pandas bilan ma’lumotlarni qayta ishlash</strong></p>
+<p>2-mashg‘ulot. <strong>NumPy va Pandas bilan ma’lumotlarni qayta ishlash</strong> (Amaliy)</p>
 <pre><code>            O‘quv savollari:</code></pre>
 <ol>
 <li>NumPy kutubxonasida amallar bajarish</li>
@@ -7548,7 +7548,7 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 style="text-align: center">1-o'quv savoli: <b>1. NumPy kutubxonasida amallar bajarish</b></h3>
+<h3 style="text-align: center">1-o'quv savoli: <b>NumPy kutubxonasida amallar bajarish</b></h3>
 </div>
 </div>
 </div>
@@ -7655,14 +7655,7 @@ a.anchor-link {
 <strong>Vektorlashgan usul:</strong> shu operatsiyani 1000 ta elementga <em>bir yo‘la</em> bajaradi.</p>
 </blockquote>
 <hr/>
-<h1 id="Nega-bunga-%E2%80%9Cvektorlashgan%E2%80%9D-deyishadi?">Nega bunga “vektorlashgan” deyishadi?<a class="anchor-link" href="#Nega-bunga-%E2%80%9Cvektorlashgan%E2%80%9D-deyishadi?">¶</a></h1><p>Chunki ma’lumotlar <strong>vektorlar</strong> (ya’ni elementlar ketma-ketligi) ko‘rinishida qayta ishlanadi:</p>
-<ul>
-<li>numpy massivlari</li>
-<li>GPU/CPU SIMD registrlari</li>
-<li>parallel instruktsiyalar</li>
-</ul>
-<hr/>
-<h1 id="Oddiy-misol-(Python-%E2%80%93-oddiy-sikl)">Oddiy misol (Python – oddiy sikl)<a class="anchor-link" href="#Oddiy-misol-(Python-%E2%80%93-oddiy-sikl)">¶</a></h1>
+<h3 id="Oddiy-misol-(Python-%E2%80%93-oddiy-sikl)">Oddiy misol (Python – oddiy sikl)<a class="anchor-link" href="#Oddiy-misol-(Python-%E2%80%93-oddiy-sikl)">¶</a></h3>
 </div>
 </div>
 </div>
@@ -7691,7 +7684,7 @@ a.anchor-link {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p>Bu yerda Python <strong>har bir elementni alohida hisoblaydi</strong> → sekinroq.</p>
 <hr/>
-<h1 id="Vektorlashgan-misol-(NumPy)">Vektorlashgan misol (NumPy)<a class="anchor-link" href="#Vektorlashgan-misol-(NumPy)">¶</a></h1>
+<h3 id="Vektorlashgan-misol-(NumPy)">Vektorlashgan misol (NumPy)<a class="anchor-link" href="#Vektorlashgan-misol-(NumPy)">¶</a></h3>
 </div>
 </div>
 </div>
@@ -7700,7 +7693,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [23]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [101]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
@@ -7714,7 +7707,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [24]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [92]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
@@ -7735,7 +7728,7 @@ a.anchor-link {
 → <strong>barcha elementlarga bir yo‘la</strong> ko‘paytirish bajaradi
 → <strong>juda tez ishlaydi</strong>.</p>
 <hr/>
-<h1 id="Vektorlashgan-hisoblashning-afzalliklari">Vektorlashgan hisoblashning afzalliklari<a class="anchor-link" href="#Vektorlashgan-hisoblashning-afzalliklari">¶</a></h1><table>
+<h3 id="Vektorlashgan-hisoblashning-afzalliklari">Vektorlashgan hisoblashning afzalliklari<a class="anchor-link" href="#Vektorlashgan-hisoblashning-afzalliklari">¶</a></h3><table>
 <thead>
 <tr>
 <th>Afzallik</th>
@@ -7748,12 +7741,12 @@ a.anchor-link {
 <td>Bir nechta elementni bir vaqtning o‘zida hisoblaydi</td>
 </tr>
 <tr>
-<td><strong>Kam xotira harakati</strong></td>
+<td><strong>Kam xotira sarfi</strong></td>
 <td>Loop overhead yo‘q, CPU keshlari yaxshi ishlaydi</td>
 </tr>
 <tr>
 <td><strong>GPUga mos</strong></td>
-<td>GPUlar minglab operatsiyani paralel bajaradi</td>
+<td>GPUlar minglab operatsiyani parallel bajaradi</td>
 </tr>
 <tr>
 <td><strong>Kod qisqa va chiroyli</strong></td>
@@ -7762,14 +7755,7 @@ a.anchor-link {
 </tbody>
 </table>
 <hr/>
-<h1 id="Qayerda-ishlatiladi?">Qayerda ishlatiladi?<a class="anchor-link" href="#Qayerda-ishlatiladi?">¶</a></h1><ul>
-<li>NumPy, Pandas</li>
-<li>Deep Learning kutubxonalari (PyTorch, TensorFlow)</li>
-<li>Matritsa amallari, statistik hisoblashlar</li>
-<li>GPU asosidagi hisoblashlar</li>
-</ul>
-<hr/>
-<h1 id="Xulosa">Xulosa<a class="anchor-link" href="#Xulosa">¶</a></h1><p><strong>Vektorlashgan hisoblash – bir xil operatsiyani ko‘p elementlarga bir vaqtning o‘zida bajarib, hisoblashni bir necha baravar tezlashtirish texnikasidir.</strong></p>
+<h3 id="Xulosa">Xulosa<a class="anchor-link" href="#Xulosa">¶</a></h3><p><strong>Vektorlashgan hisoblash – bir xil operatsiyani ko‘p elementlarga bir vaqtning o‘zida bajarib, hisoblashni bir necha baravar tezlashtirish texnikasidir.</strong></p>
 <p>Quyida, NumPy dagi <strong>vectorization vs loop</strong> bo‘yicha benchmark (tezlik solishtiruv) kodi keltirilgan.</p>
 </div>
 </div>
@@ -7782,7 +7768,7 @@ a.anchor-link {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <hr/>
-<h2 id="1-qism:-Oddiy-Python-ro%E2%80%98y%D1%85ati-bilan-hisoblash">1-qism: Oddiy Python ro‘yхati bilan hisoblash<a class="anchor-link" href="#1-qism:-Oddiy-Python-ro%E2%80%98y%D1%85ati-bilan-hisoblash">¶</a></h2>
+<h3 id="1-qism:-Oddiy-Python-ro%E2%80%98y%D1%85ati-bilan-hisoblash">1-qism: Oddiy Python ro‘yхati bilan hisoblash<a class="anchor-link" href="#1-qism:-Oddiy-Python-ro%E2%80%98y%D1%85ati-bilan-hisoblash">¶</a></h3>
 </div>
 </div>
 </div>
@@ -7791,7 +7777,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [25]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [93]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
@@ -7817,7 +7803,7 @@ a.anchor-link {
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Oddiy Python ro'yxati uchun vaqt: 0.5024054050445557 sekund
+<pre>Oddiy Python ro'yxati uchun vaqt: 0.33017683029174805 sekund
 </pre>
 </div>
 </div>
@@ -7837,7 +7823,7 @@ a.anchor-link {
 <li><code>time.time()</code> orqali qancha vaqt ketganini o‘lchayapmiz</li>
 </ul>
 <hr/>
-<h2 id="2-qism:-NumPy-vektorlashgan-hisoblash">2-qism: NumPy vektorlashgan hisoblash<a class="anchor-link" href="#2-qism:-NumPy-vektorlashgan-hisoblash">¶</a></h2>
+<h3 id="2-qism:-NumPy-vektorlashgan-hisoblash">2-qism: NumPy vektorlashgan hisoblash<a class="anchor-link" href="#2-qism:-NumPy-vektorlashgan-hisoblash">¶</a></h3>
 </div>
 </div>
 </div>
@@ -7846,7 +7832,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [95]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
@@ -7871,7 +7857,7 @@ a.anchor-link {
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>NumPy vektorlashgan hisoblash vaqti: 0.01718592643737793 sekund
+<pre>NumPy vektorlashgan hisoblash vaqti: 0.01820206642150879 sekund
 </pre>
 </div>
 </div>
@@ -7891,7 +7877,7 @@ a.anchor-link {
 <li>ichida C/Fortran darajasida optimallashtirilgan, SIMD va hokazo</li>
 </ul>
 <hr/>
-<h2 id="%E2%8F%B1-3-qism:-%25timeit-bilan-solishtirish-(Jupyter-uchun-maxsus)">⏱ 3-qism: %timeit bilan solishtirish (Jupyter uchun maxsus)<a class="anchor-link" href="#%E2%8F%B1-3-qism:-%25timeit-bilan-solishtirish-(Jupyter-uchun-maxsus)">¶</a></h2><p>Jupyter Notebook’da <code>timeit</code> “sehrli” komandasi bor, uni ishlatsak yanada aniqroq bo‘ladi.</p>
+<h2 id="%E2%8F%B1-3-qism:-%25timeit-bilan-solishtirish-(Jupyter-uchun-maxsus)">⏱ 3-qism: %timeit bilan solishtirish (Jupyter uchun maxsus)<a class="anchor-link" href="#%E2%8F%B1-3-qism:-%25timeit-bilan-solishtirish-(Jupyter-uchun-maxsus)">¶</a></h2><p>Jupyter Notebook’da <code>timeit</code> “sehrli” (magic) komandasi bor, uni ishlatsak yanada aniqroq bo‘ladi.</p>
 <h3 id="Python-ro%E2%80%98y%D1%85ati:">Python ro‘yхati:<a class="anchor-link" href="#Python-ro%E2%80%98y%D1%85ati:">¶</a></h3>
 </div>
 </div>
@@ -7901,7 +7887,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [96]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">py_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1_000_000</span><span class="p">))</span>
@@ -7919,7 +7905,7 @@ a.anchor-link {
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>36.7 ms ± 1.73 ms per loop (mean ± std. dev. of 7 runs, 10 loops each)
+<pre>37.8 ms ± 2.21 ms per loop (mean ± std. dev. of 7 runs, 10 loops each)
 </pre>
 </div>
 </div>
@@ -7941,7 +7927,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [102]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">np_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1_000_000</span><span class="p">)</span>
@@ -7959,7 +7945,7 @@ a.anchor-link {
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>2.07 ms ± 30.6 μs per loop (mean ± std. dev. of 7 runs, 1,000 loops each)
+<pre>1.45 ms ± 34.2 μs per loop (mean ± std. dev. of 7 runs, 1,000 loops each)
 </pre>
 </div>
 </div>
@@ -7989,8 +7975,8 @@ a.anchor-link {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p>Quyida <strong>list, tuple, dictionary</strong> kabi Python ma’lumot turlarini qanday qilib <strong>NumPy array</strong>ga aylantirish va ularning qanday farq qilishi tushuntirilgan:</p>
 <hr/>
-<h1 id="1.-List-%E2%86%92-NumPy-array"><strong>1. List → NumPy array</strong><a class="anchor-link" href="#1.-List-%E2%86%92-NumPy-array">¶</a></h1><p>Python ro‘yxatini (list) to‘g‘ridan-to‘g‘ri massivga aylantirish eng oson variant.</p>
-<h3 id="%E2%9C%94-Oddiy-list">✔ Oddiy list<a class="anchor-link" href="#%E2%9C%94-Oddiy-list">¶</a></h3>
+<h3 id="1.-List-%E2%86%92-NumPy-array"><strong>1. List → NumPy array</strong><a class="anchor-link" href="#1.-List-%E2%86%92-NumPy-array">¶</a></h3><p>Python ro‘yxatini (list) to‘g‘ridan-to‘g‘ri massivga aylantirish eng oson variant.</p>
+<h5 id="%E2%9C%94-Oddiy-list">✔ Oddiy list<a class="anchor-link" href="#%E2%9C%94-Oddiy-list">¶</a></h5>
 </div>
 </div>
 </div>
@@ -8029,7 +8015,7 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="%E2%9C%94-Ichma-ich-list-(2D-list)">✔ Ichma-ich list (2D list)<a class="anchor-link" href="#%E2%9C%94-Ichma-ich-list-(2D-list)">¶</a></h3>
+<h5 id="%E2%9C%94-Ichma-ich-list-(2D-list)">✔ Ichma-ich list (2D list)<a class="anchor-link" href="#%E2%9C%94-Ichma-ich-list-(2D-list)">¶</a></h5>
 </div>
 </div>
 </div>
@@ -8075,8 +8061,8 @@ a.anchor-link {
 <p><strong>Eslatma:</strong>
 Har bir ichki ro‘yxat uzunligi teng bo‘lishi kerak, aks holda NumPy <code>dtype=object</code> bo‘lgan “gibrid” massiv yaratadi.</p>
 <hr/>
-<h1 id="2.-Tuple-%E2%86%92-NumPy-array"><strong>2. Tuple → NumPy array</strong><a class="anchor-link" href="#2.-Tuple-%E2%86%92-NumPy-array">¶</a></h1><p>Tuple ham listga o‘xshaydi, faqat o‘zgarmas (immutable). NumPy uni ham 1×1 qabul qiladi:</p>
-<h3 id="%E2%9C%94-Oddiy-tuple">✔ Oddiy tuple<a class="anchor-link" href="#%E2%9C%94-Oddiy-tuple">¶</a></h3>
+<h3 id="2.-Tuple-%E2%86%92-NumPy-array"><strong>2. Tuple → NumPy array</strong><a class="anchor-link" href="#2.-Tuple-%E2%86%92-NumPy-array">¶</a></h3><p>Tuple ham listga o‘xshaydi, faqat o‘zgarmas (immutable). NumPy uni ham 1×1 qabul qiladi:</p>
+<h5 id="%E2%9C%94-Oddiy-tuple">✔ Oddiy tuple<a class="anchor-link" href="#%E2%9C%94-Oddiy-tuple">¶</a></h5>
 </div>
 </div>
 </div>
@@ -8115,7 +8101,7 @@ Har bir ichki ro‘yxat uzunligi teng bo‘lishi kerak, aks holda NumPy <code>dt
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="%E2%9C%94-Ichki-tuple">✔ Ichki tuple<a class="anchor-link" href="#%E2%9C%94-Ichki-tuple">¶</a></h3>
+<h5 id="%E2%9C%94-Ichki-tuple">✔ Ichki tuple<a class="anchor-link" href="#%E2%9C%94-Ichki-tuple">¶</a></h5>
 </div>
 </div>
 </div>
@@ -8158,9 +8144,9 @@ Har bir ichki ro‘yxat uzunligi teng bo‘lishi kerak, aks holda NumPy <code>dt
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p>NumPy buni 3×2 massiv deb oladi.</p>
 <hr/>
-<h1 id="3.-Dictionary-%E2%86%92-NumPy-array"><strong>3. Dictionary → NumPy array</strong><a class="anchor-link" href="#3.-Dictionary-%E2%86%92-NumPy-array">¶</a></h1><p><strong>3 xil turi</strong> mavjud.</p>
+<h3 id="3.-Dictionary-%E2%86%92-NumPy-array"><strong>3. Dictionary → NumPy array</strong><a class="anchor-link" href="#3.-Dictionary-%E2%86%92-NumPy-array">¶</a></h3><p><strong>3 xil turi</strong> mavjud.</p>
 <hr/>
-<h2 id="3.1.-Faqat-qiymatlar-(values)ni-arrayga-aylantirish"><strong>3.1. Faqat qiymatlar (values)ni arrayga aylantirish</strong><a class="anchor-link" href="#3.1.-Faqat-qiymatlar-(values)ni-arrayga-aylantirish">¶</a></h2><p>Eng keng tarqalgan amaliy yechim:</p>
+<h4 id="3.1.-Faqat-qiymatlar-(values)ni-arrayga-aylantirish"><strong>3.1. Faqat qiymatlar (values)ni arrayga aylantirish</strong><a class="anchor-link" href="#3.1.-Faqat-qiymatlar-(values)ni-arrayga-aylantirish">¶</a></h4><p>Eng keng tarqalgan amaliy yechim:</p>
 </div>
 </div>
 </div>
@@ -8200,7 +8186,7 @@ Har bir ichki ro‘yxat uzunligi teng bo‘lishi kerak, aks holda NumPy <code>dt
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <hr/>
-<h2 id="3.2.-Kalitlar-(keys)ni-arrayga-aylantirish"><strong>3.2. Kalitlar (keys)ni arrayga aylantirish</strong><a class="anchor-link" href="#3.2.-Kalitlar-(keys)ni-arrayga-aylantirish">¶</a></h2>
+<h4 id="3.2.-Kalitlar-(keys)ni-arrayga-aylantirish"><strong>3.2. Kalitlar (keys)ni arrayga aylantirish</strong><a class="anchor-link" href="#3.2.-Kalitlar-(keys)ni-arrayga-aylantirish">¶</a></h4>
 </div>
 </div>
 </div>
@@ -8238,7 +8224,7 @@ Har bir ichki ro‘yxat uzunligi teng bo‘lishi kerak, aks holda NumPy <code>dt
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <hr/>
-<h2 id="3.3.-Dictionary-elementlarini-juftlik-(key-value-pair)-sifatida-array-qilish"><strong>3.3. Dictionary elementlarini juftlik (key-value pair) sifatida array qilish</strong><a class="anchor-link" href="#3.3.-Dictionary-elementlarini-juftlik-(key-value-pair)-sifatida-array-qilish">¶</a></h2>
+<h4 id="3.3.-Dictionary-elementlarini-juftlik-(key-value-pair)-sifatida-array-qilish"><strong>3.3. Dictionary elementlarini juftlik (key-value pair) sifatida array qilish</strong><a class="anchor-link" href="#3.3.-Dictionary-elementlarini-juftlik-(key-value-pair)-sifatida-array-qilish">¶</a></h4>
 </div>
 </div>
 </div>
@@ -8280,7 +8266,7 @@ Har bir ichki ro‘yxat uzunligi teng bo‘lishi kerak, aks holda NumPy <code>dt
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p>Bu massiv <strong>2 ustunli</strong> bo‘ladi: key va value.</p>
 <hr/>
-<h1 id="Eslatma:-Dictionary-%E2%86%92-np.array()-bevosita-berilsa-nima-bo%E2%80%98ladi?"><strong>Eslatma: Dictionary → np.array() bevosita berilsa nima bo‘ladi?</strong><a class="anchor-link" href="#Eslatma:-Dictionary-%E2%86%92-np.array()-bevosita-berilsa-nima-bo%E2%80%98ladi?">¶</a></h1>
+<h3 id="Eslatma:-Dictionary-%E2%86%92-np.array()-bevosita-berilsa-nima-bo%E2%80%98ladi?"><strong>Eslatma: Dictionary → np.array() bevosita berilsa nima bo‘ladi?</strong><a class="anchor-link" href="#Eslatma:-Dictionary-%E2%86%92-np.array()-bevosita-berilsa-nima-bo%E2%80%98ladi?">¶</a></h3>
 </div>
 </div>
 </div>
@@ -8320,7 +8306,7 @@ Har bir ichki ro‘yxat uzunligi teng bo‘lishi kerak, aks holda NumPy <code>dt
 <p>Bu <strong>xato emas</strong>, lekin foydasiz, chunki <strong>object-type</strong> massiv boʻladi.
 Shuning uchun dictionaryni oldin <strong>list yoki tuple</strong> ko‘rinishga o‘tkazib olish kerak.</p>
 <hr/>
-<h1 id="4.-Aralash-ma%E2%80%99lumotlar-(mixed-types)"><strong>4. Aralash ma’lumotlar (mixed types)</strong><a class="anchor-link" href="#4.-Aralash-ma%E2%80%99lumotlar-(mixed-types)">¶</a></h1><p>Agar list, tuple yoki dict qiymatlari turli tipda bo‘lsa:</p>
+<h3 id="4.-Aralash-ma%E2%80%99lumotlar-(mixed-types)"><strong>4. Aralash ma’lumotlar (mixed types)</strong><a class="anchor-link" href="#4.-Aralash-ma%E2%80%99lumotlar-(mixed-types)">¶</a></h3><p>Agar list, tuple yoki dict qiymatlari turli tipda bo‘lsa:</p>
 </div>
 </div>
 </div>
@@ -8359,7 +8345,7 @@ Shuning uchun dictionaryni oldin <strong>list yoki tuple</strong> ko‘rinishga 
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p>NumPy <strong>hammasini string</strong>ga aylantiradi yoki <code>dtype=object</code> qiladi.</p>
 <hr/>
-<h1 id="Xulosa-jadvali"><strong>Xulosa jadvali</strong><a class="anchor-link" href="#Xulosa-jadvali">¶</a></h1><table>
+<h3 id="Xulosa-jadvali"><strong>Xulosa jadvali</strong><a class="anchor-link" href="#Xulosa-jadvali">¶</a></h3><table>
 <thead>
 <tr>
 <th>Python turi</th>
@@ -8637,7 +8623,7 @@ Shuning uchun dictionaryni oldin <strong>list yoki tuple</strong> ko‘rinishga 
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [17]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [103]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
