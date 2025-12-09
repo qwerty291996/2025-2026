@@ -1,0 +1,22 @@
+# Foydalanuvchidan n ni qabul qilish (oxirgi qo'shiluvchi)
+n = float(input("Oxirgi qo'shiluvchi n ni kiriting (n >= 1.1): "))
+a1 = 1.1
+d = 0.1
+# Qo'shiluvchilar sonini hisoblash
+k = int(round((n - a1) / d)) + 1  # Qo'shiluvchilar soni
+# Yig'indini hisoblash
+S = (k / 2) * (a1 + n)
+print(f"Yig'indi: {S}")
+
+ Classification: Personal
+
+ Classification: Personal
+
+Classification: Personal
+
+Classification: Personal
+
+ Classification: Personal
+
+Classification: Personal
+

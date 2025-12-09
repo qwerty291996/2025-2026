@@ -1,0 +1,4 @@
+Bu fayl sinov uchun yozilgan.
+Python yordamida biz 100-baytdan keyingi qismni o‘qimoqchimiz.
+Matnning uzunligi yetarli bo‘lishi uchun shu yerda bir oz qo‘shimcha yozuvlar bor.
+Endi dastur to‘g‘ri ishlaydi va 100-baytdan keyingi qismini chiqaradi.
