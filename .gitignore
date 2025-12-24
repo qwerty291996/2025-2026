@@ -1,1 +1,22 @@
-.ipynb_checkpoints/
+# Jupyter Notebook kesh fayllari (Bular juda ko'p joy egallaydi va kerak emas)
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# Python kesh fayllari
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Tizim fayllari (Windows va Mac)
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Virtual muhit (agar bor bo'lsa)
+venv/
+env/
+.env
+
+# Katta hajmli datasetlar (ixtiyoriy)
+# Agar csv fayllar 100MB dan katta bo'lsa, github qabul qilmaydi.
+# *.csv
