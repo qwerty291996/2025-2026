@@ -19,4 +19,4 @@ env/
 
 # Katta hajmli datasetlar (ixtiyoriy)
 # Agar csv fayllar 100MB dan katta bo'lsa, github qabul qilmaydi.
-# *.csv
+# *.csv*.mp4
