@@ -1,0 +1,63 @@
+Function SonniSozgaSom(ByVal n As Double) As String
+    Dim birliklar, onlar, darajalar
+    Dim natija As String
+    Dim i As Integer, g As Integer
+    
+    birliklar = Array("", "bir", "ikki", "uch", "to'rt", "besh", "olti", "yetti", "sakkiz", "to'qqiz")
+    onlar = Array("", "o'n", "yigirma", "o'ttiz", "qirq", "ellik", "oltmish", "yetmish", "sakson", "to'qson")
+    darajalar = Array("", "ming", "million", "milliard", "trillion")
+    
+    If n = 0 Then
+        SonniSozgaSom = "Nol so'm"
+        Exit Function
+    End If
+    
+    Dim manfiy As Boolean
+    If n < 0 Then
+        manfiy = True
+        n = Abs(n)
+    End If
+    
+    Dim s As String
+    s = Format(n, "0")
+    g = 0
+    
+    Do While Len(s) > 0
+        Dim uchlik As String
+        If Len(s) > 3 Then
+            uchlik = Right(s, 3)
+            s = Left(s, Len(s) - 3)
+        Else
+            uchlik = s
+            s = ""
+        End If
+        
+        Dim qism As String
+        Dim d1 As Integer, d2 As Integer, d3 As Integer
+        
+        d1 = Val(Right(uchlik, 1))
+        If Len(uchlik) >= 2 Then d2 = Val(Mid(uchlik, Len(uchlik) - 1, 1)) Else d2 = 0
+        If Len(uchlik) >= 3 Then d3 = Val(Mid(uchlik, Len(uchlik) - 2, 1)) Else d3 = 0
+        
+        qism = ""
+        If d3 > 0 Then qism = birliklar(d3) & " yuz "
+        If d2 > 0 Then qism = qism & onlar(d2) & " "
+        If d1 > 0 Then qism = qism & birliklar(d1) & " "
+        
+        If Trim(qism) <> "" Then
+            natija = qism & darajalar(g) & " " & natija
+        End If
+        
+        g = g + 1
+    Loop
+    
+    natija = Trim(natija) & " so'm"
+    If manfiy Then natija = "minus " & natija
+    
+    ' --- ASOSIY QISM: 1-harfni katta qilish ---
+    If Len(natija) > 0 Then
+        natija = UCase(Left(natija, 1)) & Mid(natija, 2)
+    End If
+    
+    SonniSozgaSom = natija
+End Function
