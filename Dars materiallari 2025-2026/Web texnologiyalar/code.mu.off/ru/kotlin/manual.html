@@ -1,0 +1,4709 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Справочник Kotlin</title>
+		
+		<link rel="stylesheet" href="../../tore/@/fonts/listΣ.css?v=1">
+<link rel="stylesheet" href="../../tore/layd/deff/&/aefb44b7dac371a3860e9079298a950e.ructΣ.css">
+<link rel="stylesheet" href="../../tore/&/d619cf2a52f5e2dd5479335d3ba58cae.apprΣ.css">
+
+<script src="../../tore/&/abc868ba468b8ea8384332d74f771367.apprΣ.js?v=1" defer></script>
+
+
+<meta name="yandex-verification" content="00eb45b7559e5c68">
+<meta name="google-site-verification" content="Af0TM2OrwIEtjoQXxYz2-1C-21E1m7DB23_kWpE9sLg">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">		
+		<meta name="description" content="Удобный справочник Kotlin, написанный простым языком, с хорошими примерами.">
+		<link rel="shortcut icon" type="image/x-icon" href="../../favicon.ico">
+		
+		 <link rel="canonical" href="https://code.mu/ru/kotlin/manual/"><link rel="alternate" hreflang="ru" href="https://code.mu/ru/kotlin/manual/">	</head>
+	<body id="top" data-gq="D" data-gv-lesh="">
+		<div data-r="ruct/wrap">
+			<header>
+				<div data-r="ruct/topp">
+	<div data-r="topp/left">
+		<div data-w="nict/logo">
+	<img data-e="img" data-x src="" alt="">
+</div>	</div>
+	<div data-r="topp/righ">
+		offline version v4	</div>
+	<div data-r="topp/cent">
+		<div data-w="nict/adv">
+	<a href="https://mentor.code.mu/?course=practic"><b>Стажировка на реальных проектах:</b><br>
+наполнение портфолио, помощь с работой и заказами, пробные собеседования.
+Жми для подробностей&rarr;
+</a></div>	</div>
+</div>								
+				<div data-r="ruct/navi">
+					<div data-w="nict/over">
+			</div>					<nav data-w="nict/mainmenu">
+	<section data-e="main" data-x data-gm-acte="T">
+		<span data-q-href="/ru/markup/" data-e="open" data-x data-m-targ="markup">Верстка</span>
+		<span data-q-href="/ru/javascript/" data-e="open" data-x data-m-targ="javascript">JavaScript</span>
+		<span data-q-href="/ru/php/" data-e="open" data-x data-m-targ="php">PHP</span>
+		<span data-q-href="/ru/javascript/typescript/" data-e="open" data-x data-m-targ="typescript">TypeScript</span>
+		
+			<span data-q-href="/ru/javascript/nodejs/" data-e="open" data-x data-m-targ="nodejs">NodeJS</span>
+			<span data-q-href="/ru/ajax/" data-e="open" data-x data-m-targ="ajax">AJAX</span>
+		
+		<span data-q-href="/ru/python/" data-e="open" data-x data-m-targ="python">Python</span>
+		<span data-q-href="/ru/java/" data-e="open" data-x data-m-targ="java">Java</span>
+		<span data-q-href="/ru/cpp/" data-e="open" data-x data-m-targ="cpp">C++</span>
+		<span data-q-href="/ru/rust/" data-e="open" data-x data-m-targ="rust">Rust</span>
+		
+			<span data-q-href="/ru/kotlin/" data-e="open" data-x data-m-targ="kotlin">Kotlin</span>
+		
+		
+			<span data-q-href="/ru/dart/" data-e="open" data-x data-m-targ="dart">Dart</span>
+		
+		
+			<span data-q-href="/ru/go/" data-e="open" data-x data-m-targ="go">Go</span>
+		
+		<span data-q-href="/ru/sql/" data-e="open" data-x data-m-targ="sql">SQL</span>
+		<span data-q-href="/ru/javascript/framework/vue/" data-e="open" data-x data-m-targ="vue">Vue</span>
+		<span data-q-href="/ru/javascript/framework/react/" data-e="open" data-x data-m-targ="react">React</span>
+		<span data-q-href="/ru/javascript/framework/angular/" data-e="open" data-x data-m-targ="angular">Angular</span>
+		<span data-q-href="/ru/javascript/framework/next/" data-e="open" data-x data-m-targ="next">Next</span>
+		<span data-q-href="/ru/javascript/lib/jquery/" data-e="open" data-x data-m-targ="jquery">jQuery</span>
+		
+		
+			<span data-q-href="/ru/php/framework/laravel/" data-e="open" data-x data-m-targ="laravel">Laravel</span>
+		
+			<span data-q-href="/ru/cms/opencart/" data-e="open" data-x data-m-targ="opencart">OpenCart</span>
+			<span data-q-href="/ru/cms/opencart/" data-e="open" data-x data-m-targ="wordpress">WordPress</span>
+			<span data-q-href="/ru/cms/drupal/" data-e="open" data-x data-m-targ="drupal">Drupal</span>
+		
+		
+		<span data-q-href="/ru/git/" data-e="open" data-x data-m-targ="git">Git</span>
+		
+		<span data-q-href="/ru/tool/webpack/" data-e="open" data-x data-m-targ="webpack">Webpack</span>
+		<span data-q-href="/ru/tool/gulp/" data-e="open" data-x data-m-targ="gulp">Gulp</span>
+		<span data-q-href="/ru/tool/terminal/" data-e="open" data-x data-m-targ="terminal">Terminal</span>
+		<span data-q-href="/ru/internet/" data-e="open" data-x data-m-targ="internet">Internet</span>
+		<span data-q-href="/ru/deploy/" data-e="open" data-x data-m-targ="deploy">Деплой</span>
+		<span data-q-href="/ru/theory/glossary/" data-e="open" data-x data-m-targ="glossary">Глоссарий</span>
+		
+			<span data-q-href="/ru/theory/slang/" data-e="open" data-x data-m-targ="slang">Сленг</span>
+			<span data-e="open" data-x data-m-targ="social">Соц. сети</span>
+		
+	</section>
+
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="markup">
+		<a href="../../ru/markup/book/prime.html">Основной учебник</a>
+		<a href="../../ru/markup/book/supreme.html">Высший учебник</a>
+		<a href="../../ru/markup/book/prep/less.html">Учебник LESS</a>
+		<a href="../../ru/markup/book/prep/sass.html">Учебник SASS</a>
+		<a href="../../ru/markup/manual/html.html">Справочник HTML</a>
+		<a href="../../ru/markup/manual/css.html">Справочник CSS</a>
+		<a href="../../ru/markup/tasker/stager.html">Задачник по уровням</a>
+	</section>
+
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="php">
+		<a href="../../ru/php/book/prime.html">Основной учебник</a>
+		<a href="../../ru/php/book/oop.html">Учебник ООП</a>
+		<a href="../../ru/php/book/mvc.html">Учебник MVC</a>
+		<a href="../../ru/php/book/supreme.html">Высший учебник</a>
+		<a href="../../ru/php/book/parsing.html">Учебник парсинга</a>
+		<a href="../../ru/php/tasker/stager.html">Задачник по уровням</a>
+		<a href="../../ru/php/manual.html">Справочник</a>
+		
+		<a href="../../ru/php/video/lesson.html">Видеоуроки</a>
+		<a href="../../ru/php/faq.html">FAQ</a>
+		
+	</section>
+
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="javascript">
+		<a href="../../ru/javascript/book/prime.html">Основной учебник</a>
+		<a href="../../ru/javascript/book/practice.html">Учебник практики</a>
+		<a href="../../ru/javascript/book/supreme.html">Высший учебник</a>
+		<a href="../../ru/javascript/book/oop.html">Учебник ООП</a>
+		<a href="../../ru/javascript/tasker/stager.html">Задачник по уровням</a>
+		<a href="../../ru/javascript/manual.html">Справочник</a>
+		
+		<a href="../../ru/javascript/video/lesson.html">Видеоуроки</a>
+		<a href="../../ru/javascript/mistake.html">Ошибки</a>
+		<a href="../../ru/javascript/faq.html">FAQ</a>
+		
+	</section>
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="nodejs">
+		<a href="../../ru/javascript/nodejs/book/prime.html">Основной учебник</a>
+		<a href="../../ru/javascript/nodejs/book/express.html">Express</a>
+		<a href="../../ru/javascript/nodejs/book/sql.html">SQL</a>
+		<a href="../../ru/javascript/nodejs/book/mongo.html">Mongo</a>
+		<a href="../../ru/javascript/nodejs/manual.html">Справочник</a>
+	</section>
+	
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="ajax">
+		<a href="../../ru/ajax/book/php.html">AJAX в PHP</a>
+	</section>
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="python">
+		<a href="../../ru/python/book/prime.html">Основной учебник</a>
+		<a href="../../ru/python/book/supreme.html">Высший учебник</a>
+		<a href="../../ru/python/manual.html">Справочник</a>
+		<a href="../../ru/python/tasker/stager.html">Задачник по уровням</a>
+		
+		<a href="../../ru/python/faq.html">FAQ</a>
+		
+	</section>
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="java">
+		<a href="../../ru/java/tasker/stager.html">Задачник по уровням</a>
+	</section>
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="cpp">
+		<a href="../../ru/cpp/tasker/stager.html">Задачник по уровням</a>
+	</section>
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="rust">
+		<a href="../../ru/rust/tasker/stager.html">Задачник по уровням</a>
+	</section>
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="kotlin">
+		<a href="../../ru/kotlin/tasker/stager.html">Задачник по уровням</a>
+		<a href="../../ru/kotlin/manual.html">Справочник</a>
+	</section>
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="dart">
+		<a href="../../ru/dart/tasker/stager.html">Задачник по уровням</a>
+	</section>
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="go">
+		<a href="../../ru/go/tasker/stager.html">Задачник по уровням</a>
+	</section>
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="sql">
+		<a href="../../ru/sql/book/pma.html">PhpMyAdmin</a>
+		
+		<a href="../../ru/sql/manual.html">Справочник</a>
+		
+		<a href="../../ru/sql/tasker/stager.html">Задачник по уровням</a>
+	</section>
+
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="typescript">
+		<a href="../../ru/javascript/typescript/book/prime.html">Основной учебник</a>
+		<a href="../../ru/javascript/typescript/book/supreme.html">Высший учебник</a>
+	</section>
+
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="vue">
+		<a href="../../ru/javascript/framework/vue/book/prime.html">Основной учебник</a>
+	</section>
+
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="react">
+		<a href="../../ru/javascript/framework/react/book/prime.html">Основной учебник</a>
+		<a href="../../ru/javascript/framework/react/book/supreme.html">Высший учебник</a>
+		<a href="../../ru/javascript/framework/react/book/redux.html">Учебник Redux</a>
+	</section>
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="angular">
+		<a href="../../ru/javascript/framework/angular/book/prime.html">Основной учебник</a>
+	</section>
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="next">
+		<a href="../../ru/javascript/framework/next/book/prime.html">Основной учебник</a>
+	</section>
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="jquery">
+		<a href="../../ru/javascript/lib/jquery/book/prime.html">Основной учебник</a>
+		<a href="../../ru/javascript/lib/jquery/manual.html">Справочник</a>
+	</section>
+	
+		<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="laravel">
+			<a href="../../ru/php/framework/laravel/book/prime.html">Основной учебник</a>
+		</section>
+		
+		<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="opencart">
+			<a href="../../ru/cms/opencart/manual/table.html">Справочник по таблицам</a>
+		</section>
+		
+		<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="wordpress">
+			<a href="../../ru/cms/wordpress/manual/table.html">Справочник по таблицам</a>
+		</section>
+		<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="drupal">
+			<a href="../../ru/cms/drupal/manual/table.html">Справочник по таблицам</a>
+		</section>
+	
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="git">
+		<a href="../../ru/git/book/prime.html">Основной учебник</a>
+	</section>
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="terminal">
+		<a href="../../ru/tool/terminal.html">Учебник по командной строке</a>
+	</section>
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="webpack">
+		<a href="../../ru/tool/webpack.html">Учебник Webpack</a>
+	</section>
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="gulp">
+		<a href="../../ru/tool/gulp.html">Учебник Gulp</a>
+	</section>
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="internet">
+		<a href="../../ru/internet/protocol/http.html">Протокол HTTP</a>
+	</section>
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="deploy">
+		<a href="../../ru/deploy/book/prime.html">Основной учебник</a>
+		<a href="../../ru/deploy/book/sql/hosting.html">SQL на хостинге</a>
+		<a href="../../ru/deploy/book/php/hosting.html">PHP на хостинге</a>
+		<a href="../../ru/deploy/book/react/hosting.html">React на хостинге</a>
+		<a href="../../ru/deploy/book/nodejs/server.html">NodeJS на сервере</a>
+	</section>
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="glossary">
+		<a href="../../ru/theory/glossary.html">Глоссарий программистских терминов</a>
+	</section>
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="slang">
+		<a href="../../ru/theory/slang.html">Сленг программиста</a>
+	</section>
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="social">
+		<a href="https://vk.com/codemu">Паблик сайта code.mu</a>
+		<a href="https://t.me/javascript_tricker">Занимательные задачи JavaScript</a>
+		<a href="https://t.me/php_tricker">Занимательные задачи PHP</a>
+		<a href="https://t.me/python_tricker">Занимательные задачи Python</a>
+	</section>
+	
+</nav>									</div>
+			</header>
+			<main>
+				<div data-w="nict/hett">
+	<h1>Справочник Kotlin</h1>
+</div>				<div data-w="menu/pane" data-m-mode="T">
+<section data-e="pane" data-x data-m-curr="F" data-m-type="P" data-m-tabb="язык">
+<h2>Управляющие конструкции</h2>
+<div>
+	<a href="../../ru/kotlin/manual/lang/if.html">
+		условный оператор
+	</a>
+	<a href="../../ru/kotlin/manual/lang/when.html">
+		условный выбор
+	</a>
+	<a href="../../ru/kotlin/manual/lang/for.html">
+		цикл for
+	</a>
+	<a href="../../ru/kotlin/manual/lang/while.html">
+		цикл while
+	</a>
+	<a href="../../ru/kotlin/manual/lang/do-while.html">
+		цикл do-while
+	</a>
+	<a href="../../ru/kotlin/manual/lang/repeat.html">
+		повторение блока кода
+	</a>
+	<a href="../../ru/kotlin/manual/lang/fun.html">
+		объявление функции
+	</a>
+</div>
+
+<h2>Специальные значения</h2>
+<div>
+	<a href="../../ru/kotlin/manual/lang/true.html">
+		логическая истина
+	</a>
+	<a href="../../ru/kotlin/manual/lang/false.html">
+		логическая ложь
+	</a>
+	<a href="../../ru/kotlin/manual/lang/null.html">
+		нулевое значение
+	</a>
+	<a href="../../ru/kotlin/manual/lang/NaN.html">
+		не число
+	</a>
+	<a href="../../ru/kotlin/manual/lang/Infinity.html">
+		бесконечность
+	</a>
+</div>
+
+<h2>Операторы</h2>
+<div>
+	<a href="../../ru/kotlin/manual/lang/in.html">
+		проверка вхождения
+	</a>
+	<a href="../../ru/kotlin/manual/lang/is.html">
+		проверка типа
+	</a>
+	<a href="../../ru/kotlin/manual/lang/as.html">
+		приведение типа
+	</a>
+</div>
+
+<h2>Объявление переменных</h2>
+<div>
+	<a href="../../ru/kotlin/manual/lang/var.html">
+		изменяемая переменная
+	</a>
+	<a href="../../ru/kotlin/manual/lang/val.html">
+		неизменяемая переменная
+	</a>
+	<a href="../../ru/kotlin/manual/lang/const.html">
+		константа времени компиляции
+	</a>
+</div>
+
+<h2>Вывод данных</h2>
+<div>
+	<a href="../../ru/kotlin/manual/lang/println.html">
+		вывод строки с переводом
+	</a>
+	<a href="../../ru/kotlin/manual/lang/print.html">
+		вывод строки без перевода
+	</a>
+</div>
+
+<h2>Управление потоком</h2>
+<div>
+	<a href="../../ru/kotlin/manual/lang/return.html">
+		возврат значения
+	</a>
+	<a href="../../ru/kotlin/manual/lang/break.html">
+		прерывание цикла
+	</a>
+	<a href="../../ru/kotlin/manual/lang/continue.html">
+		продолжение цикла
+	</a>
+	<a href="../../ru/kotlin/manual/lang/typealias.html">
+		псевдоним типа
+	</a>
+	<a href="../../ru/kotlin/manual/lang/TODO.html">
+		заглушка реализации
+	</a>
+</div>
+
+<h2>Модификаторы</h2>
+<div>
+	<a href="../../ru/kotlin/manual/lang/inline.html">
+		встраивание функций
+	</a>
+</div>
+
+<h2>Организация кода</h2>
+<div>
+	<a href="../../ru/kotlin/manual/lang/package.html">
+		объявление пакета
+	</a>
+	<a href="../../ru/kotlin/manual/lang/import.html">
+		импорт классов и функций
+	</a>
+</div>
+</section><section data-e="pane" data-x data-m-curr="F" data-m-type="P" data-m-tabb="преобразователи">
+<h2>Базовые типы данных</h2>
+<div>
+	<a href="../../ru/kotlin/manual/conv/toInt.html">
+		в целое число
+	</a>
+	<a href="../../ru/kotlin/manual/conv/toLong.html">
+		в длинное целое
+	</a>
+	<a href="../../ru/kotlin/manual/conv/toDouble.html">
+		в дробное число
+	</a>
+	<a href="../../ru/kotlin/manual/conv/toFloat.html">
+		в число float
+	</a>
+	<a href="../../ru/kotlin/manual/conv/toShort.html">
+		в короткое целое
+	</a>
+	<a href="../../ru/kotlin/manual/conv/toByte.html">
+		в байт
+	</a>
+	<a href="../../ru/kotlin/manual/conv/toChar.html">
+		в символ
+	</a>
+	<a href="../../ru/kotlin/manual/conv/toBoolean.html">
+		в булево значение
+	</a>
+	<a href="../../ru/kotlin/manual/conv/toUInt.html">
+		в беззнаковое целое
+	</a>
+	<a href="../../ru/kotlin/manual/conv/toULong.html">
+		в беззнаковое длинное
+	</a>
+	<a href="../../ru/kotlin/manual/conv/toUShort.html">
+		в беззнаковое короткое
+	</a>
+	<a href="../../ru/kotlin/manual/conv/toUDouble.html">
+		в UDouble
+	</a>
+	<a href="../../ru/kotlin/manual/conv/toUFloat.html">
+		в UFloat
+	</a>
+	<a href="../../ru/kotlin/manual/conv/toUByte.html">
+		в беззнаковый байт
+	</a>
+	<a href="../../ru/kotlin/manual/conv/toBigInteger.html">
+		в большое целое
+	</a>
+	<a href="../../ru/kotlin/manual/conv/toBigDecimal.html">
+		в десятичное число
+	</a>
+</div>
+
+<h2>Символы</h2>
+<div>
+	<a href="../../ru/kotlin/manual/conv/digitToInt.html">
+		цифру в целое число
+	</a>
+	<a href="../../ru/kotlin/manual/conv/digitToIntOrNull.html">
+		цифру в целое число (nullable)
+	</a>
+	<a href="../../ru/kotlin/manual/conv/digitToChar.html">
+		цифру в символ
+	</a>
+</div>
+
+<h2>Безопасные преобразования (Nullable)</h2>
+<div>
+	<a href="../../ru/kotlin/manual/conv/toIntOrNull.html">
+		в целое (nullable)
+	</a>
+	<a href="../../ru/kotlin/manual/conv/toLongOrNull.html">
+		в длинное целое (nullable)
+	</a>
+	<a href="../../ru/kotlin/manual/conv/toDoubleOrNull.html">
+		в дробное (nullable)
+	</a>
+	<a href="../../ru/kotlin/manual/conv/toFloatOrNull.html">
+		в float (nullable)
+	</a>
+	<a href="../../ru/kotlin/manual/conv/toByteOrNull.html">
+		в Byte
+	</a>
+	<a href="../../ru/kotlin/manual/conv/toShortOrNull.html">
+		в Short (nullable)
+	</a>
+	
+	<a href="../../ru/kotlin/manual/conv/toUIntOrNull.html">
+		в UInt (nullable)
+	</a>
+	<a href="../../ru/kotlin/manual/conv/toULongOrNull.html">
+		в ULong (nullable)
+	</a>
+	<a href="../../ru/kotlin/manual/conv/toUDoubleOrNull.html">
+		в UDouble (nullable)
+	</a>
+	<a href="../../ru/kotlin/manual/conv/toUFloatOrNull.html">
+		в UFloat (nullable)
+	</a>
+	<a href="../../ru/kotlin/manual/conv/toUByteOrNull.html">
+		в UByte (nullable)
+	</a>
+	<a href="../../ru/kotlin/manual/conv/toUShortOrNull.html">
+		в UShort (nullable)
+	</a>
+	
+	<a href="../../ru/kotlin/manual/conv/parseDoubleOrNull.html">
+		разбор строки в Double (nullable)
+	</a>
+	
+	<a href="../../ru/kotlin/manual/conv/toBooleanStrict.html">
+		в булево (строго)
+	</a>
+	<a href="../../ru/kotlin/manual/conv/toBooleanStrictOrNull.html">
+		в булево (строго, nullable)
+	</a>
+</div>
+
+<h2>Строковые преобразования</h2>
+<div>
+	<a href="../../ru/kotlin/manual/conv/toString.html">
+		в строку
+	</a>
+	<a href="../../ru/kotlin/manual/conv/toByteString.html">
+		в строку байтов
+	</a>
+	<a href="../../ru/kotlin/manual/conv/toHexString.html">
+		в HEX строку
+	</a>
+	<a href="../../ru/kotlin/manual/conv/toBinaryString.html">
+		в бинарную строку
+	</a>
+	<a href="../../ru/kotlin/manual/conv/toRadixString.html">
+		в строку с основанием
+	</a>
+	<a href="../../ru/kotlin/manual/conv/toDecimalString.html">
+		в десятичную строку
+	</a>
+</div>
+
+<h2>Коллекции</h2>
+<div>
+	<a href="../../ru/kotlin/manual/conv/toList.html">
+		в список
+	</a>
+	<a href="../../ru/kotlin/manual/conv/toSet.html">
+		в множество
+	</a>
+	<a href="../../ru/kotlin/manual/conv/toMap.html">
+		в словарь
+	</a>
+	<a href="../../ru/kotlin/manual/conv/toMutableList.html">
+		в изменяемый список
+	</a>
+	<a href="../../ru/kotlin/manual/conv/toMutableSet.html">
+		в изменяемое множество
+	</a>
+	<a href="../../ru/kotlin/manual/conv/toMutableMap.html">
+		в изменяемый словарь
+	</a>
+	<a href="../../ru/kotlin/manual/conv/toSortedSet.html">
+		в сортированное множество
+	</a>
+	<a href="../../ru/kotlin/manual/conv/toSortedMap.html">
+		в сортированный словарь
+	</a>
+	<a href="../../ru/kotlin/manual/conv/toHashSet.html">
+		в хэш-множество
+	</a>
+	<a href="../../ru/kotlin/manual/conv/toHashMap.html">
+		в хэш-словарь
+	</a>
+	<a href="../../ru/kotlin/manual/conv/toCollection.html">
+		в коллекцию
+	</a>
+</div>
+
+<h2>Массивы примитивных типов</h2>
+<div>
+	<a href="../../ru/kotlin/manual/conv/toArray.html">
+		в массив объектов
+	</a>
+	<a href="../../ru/kotlin/manual/conv/toTypedArray.html">
+		в типизированный массив
+	</a>
+	<a href="../../ru/kotlin/manual/conv/toIntArray.html">
+		в массив целых
+	</a>
+	<a href="../../ru/kotlin/manual/conv/toLongArray.html">
+		в массив длинных
+	</a>
+	<a href="../../ru/kotlin/manual/conv/toDoubleArray.html">
+		в массив дробных
+	</a>
+	<a href="../../ru/kotlin/manual/conv/toFloatArray.html">
+		в массив float
+	</a>
+	<a href="../../ru/kotlin/manual/conv/toShortArray.html">
+		в массив коротких
+	</a>
+	<a href="../../ru/kotlin/manual/conv/toByteArray.html">
+		в массив байтов
+	</a>
+	<a href="../../ru/kotlin/manual/conv/toCharArray.html">
+		в массив символов
+	</a>
+	<a href="../../ru/kotlin/manual/conv/toBooleanArray.html">
+		в массив булевых
+	</a>
+	<a href="../../ru/kotlin/manual/conv/toUByteArray.html">
+		в массив UByte
+	</a>
+	<a href="../../ru/kotlin/manual/conv/toUIntArray.html">
+		в массив UInt
+	</a>
+	<a href="../../ru/kotlin/manual/conv/toULongArray.html">
+		в массив ULong
+	</a>
+	<a href="../../ru/kotlin/manual/conv/toUShortArray.html">
+		в массив UShort
+	</a>
+</div>
+
+<h2>Альтернативные представления (as-функции)</h2>
+<div>
+	<a href="../../ru/kotlin/manual/conv/asByteArray.html">
+		как массив byte
+	</a>
+	<a href="../../ru/kotlin/manual/conv/asIntArray.html">
+		как массив int
+	</a>
+	<a href="../../ru/kotlin/manual/conv/asLongArray.html">
+		как массив long
+	</a>
+	<a href="../../ru/kotlin/manual/conv/asShortArray.html">
+		как массив short
+	</a>
+	<a href="../../ru/kotlin/manual/conv/asUByteArray.html">
+		как массив UByte
+	</a>
+	<a href="../../ru/kotlin/manual/conv/asUIntArray.html">
+		как массив UInt
+	</a>
+	<a href="../../ru/kotlin/manual/conv/asULongArray.html">
+		как массив ULong
+	</a>
+	<a href="../../ru/kotlin/manual/conv/asUShortArray.html">
+		как массив UShort
+	</a>
+	<a href="../../ru/kotlin/manual/conv/asIterable.html">
+		как Iterable
+	</a>
+	<a href="../../ru/kotlin/manual/conv/asList.html">
+		как список
+	</a>
+	<a href="../../ru/kotlin/manual/conv/asSequence.html">
+		как последовательность
+	</a>
+</div>
+
+<h2>Специальные преобразования</h2>
+<div>
+	<a href="../../ru/kotlin/manual/conv/toPair.html">
+		в пару значений
+	</a>
+	<a href="../../ru/kotlin/manual/conv/toProperties.html">
+		в Properties
+	</a>
+</div>
+</section><section data-e="pane" data-x data-m-curr="F" data-m-type="P" data-m-tabb="создатели">
+<h2>Создание списков</h2>
+<div>
+	<a href="../../ru/kotlin/manual/creator/listOf.html">
+		создать список
+	</a>
+	<a href="../../ru/kotlin/manual/creator/emptyList.html">
+		пустой список
+	</a>
+	<a href="../../ru/kotlin/manual/creator/listOfNotNull.html">
+		список не-null элементов
+	</a>
+	<a href="../../ru/kotlin/manual/creator/mutableListOf.html">
+		создать изменяемый список
+	</a>
+	<a href="../../ru/kotlin/manual/creator/arrayListOf.html">
+		создать ArrayList
+	</a>
+	<a href="../../ru/kotlin/manual/creator/buildList.html">
+		построить список
+	</a>
+</div>
+
+<h2>Создание множеств</h2>
+<div>
+	<a href="../../ru/kotlin/manual/creator/setOf.html">
+		создать множество
+	</a>
+	<a href="../../ru/kotlin/manual/creator/emptySet.html">
+		пустое множество
+	</a>
+	<a href="../../ru/kotlin/manual/creator/mutableSetOf.html">
+		создать изменяемое множество
+	</a>
+	<a href="../../ru/kotlin/manual/creator/hashSetOf.html">
+		создать HashSet
+	</a>
+	<a href="../../ru/kotlin/manual/creator/linkedSetOf.html">
+		создать LinkedHashSet
+	</a>
+	<a href="../../ru/kotlin/manual/creator/sortedSetOf.html">
+		создать TreeSet
+	</a>
+	<a href="../../ru/kotlin/manual/creator/buildSet.html">
+		построить множество
+	</a>
+</div>
+
+<h2>Создание словарей</h2>
+<div>
+	<a href="../../ru/kotlin/manual/creator/mapOf.html">
+		создать словарь
+	</a>
+	<a href="../../ru/kotlin/manual/creator/emptyMap.html">
+		пустой словарь
+	</a>
+	<a href="../../ru/kotlin/manual/creator/mutableMapOf.html">
+		создать изменяемый словарь
+	</a>
+	<a href="../../ru/kotlin/manual/creator/hashMapOf.html">
+		создать HashMap
+	</a>
+	<a href="../../ru/kotlin/manual/creator/linkedMapOf.html">
+		создать LinkedHashMap
+	</a>
+	<a href="../../ru/kotlin/manual/creator/sortedMapOf.html">
+		создать TreeMap
+	</a>
+	<a href="../../ru/kotlin/manual/creator/buildMap.html">
+		построить словарь
+	</a>
+</div>
+
+<h2>Создание последовательностей</h2>
+<div>
+	<a href="../../ru/kotlin/manual/creator/sequenceOf.html">
+		создать последовательность
+	</a>
+	<a href="../../ru/kotlin/manual/creator/emptySequence.html">
+		пустая последовательность
+	</a>
+	<a href="../../ru/kotlin/manual/creator/generateSequence.html">
+		генерируемая последовательность
+	</a>
+</div>
+
+<h2>Создание массивов</h2>
+<div>
+	<a href="../../ru/kotlin/manual/creator/arrayOf.html">
+		создать массив
+	</a>
+	<a href="../../ru/kotlin/manual/creator/booleanArrayOf.html">
+		массив boolean
+	</a>
+	<a href="../../ru/kotlin/manual/creator/byteArrayOf.html">
+		массив byte
+	</a>
+	<a href="../../ru/kotlin/manual/creator/charArrayOf.html">
+		массив char
+	</a>
+	<a href="../../ru/kotlin/manual/creator/shortArrayOf.html">
+		массив short
+	</a>
+	<a href="../../ru/kotlin/manual/creator/intArrayOf.html">
+		массив int
+	</a>
+	<a href="../../ru/kotlin/manual/creator/longArrayOf.html">
+		массив long
+	</a>
+	<a href="../../ru/kotlin/manual/creator/floatArrayOf.html">
+		массив float
+	</a>
+	<a href="../../ru/kotlin/manual/creator/doubleArrayOf.html">
+		массив double
+	</a>
+	<a href="../../ru/kotlin/manual/creator/stringArrayOf.html">
+		массив строк
+	</a>
+	<a href="../../ru/kotlin/manual/creator/emptyArray.html">
+		пустой массив
+	</a>
+	<a href="../../ru/kotlin/manual/creator/arrayOfNulls.html">
+		массив null-элементов
+	</a>
+</div>
+
+<h2>Другие структуры</h2>
+<div>
+	<a href="../../ru/kotlin/manual/creator/arrayDequeOf.html">
+		создать ArrayDeque
+	</a>
+</div>
+</section><section data-e="pane" data-x data-m-curr="F" data-m-type="P" data-m-tabb="типы">
+<h2>Основные</h2>
+<div>
+	<a href="../../ru/kotlin/manual/type/Int.html">
+		целое число
+	</a>
+	<a href="../../ru/kotlin/manual/type/String.html">
+		строка
+	</a>
+	<a href="../../ru/kotlin/manual/type/Double.html">
+		число с плавающей точкой
+	</a>
+	<a href="../../ru/kotlin/manual/type/Boolean.html">
+		логический тип
+	</a>
+	<a href="../../ru/kotlin/manual/type/Long.html">
+		длинное целое
+	</a>
+	<a href="../../ru/kotlin/manual/type/Float.html">
+		число float
+	</a>
+	<a href="../../ru/kotlin/manual/type/Char.html">
+		символ
+	</a>
+	<a href="../../ru/kotlin/manual/type/Short.html">
+		короткое целое
+	</a>
+	<a href="../../ru/kotlin/manual/type/Byte.html">
+		байт
+	</a>
+	<a href="../../ru/kotlin/manual/type/UInt.html">
+		беззнаковое целое
+	</a>
+	<a href="../../ru/kotlin/manual/type/ULong.html">
+		беззнаковое длинное
+	</a>
+	<a href="../../ru/kotlin/manual/type/UShort.html">
+		беззнаковое короткое
+	</a>
+	<a href="../../ru/kotlin/manual/type/UByte.html">
+		беззнаковый байт
+	</a>
+	<a href="../../ru/kotlin/manual/type/Any.html">
+		базовый тип
+	</a>
+	<a href="../../ru/kotlin/manual/type/Unit.html">
+		отсутствие значения
+	</a>
+	<a href="../../ru/kotlin/manual/type/Nothing.html">
+		отсутствие значения
+	</a>
+	<a href="../../ru/kotlin/manual/type/BigInteger.html">
+		большое целое
+	</a>
+	<a href="../../ru/kotlin/manual/type/BigDecimal.html">
+		десятичное число
+	</a>
+	<a href="../../ru/kotlin/manual/type/Number.html">
+		базовый числовой тип
+	</a>
+</div>
+
+<h2>Интерфейсы коллекций</h2>
+<div>
+	<a href="../../ru/kotlin/manual/type/Iterable.html">
+		Iterable
+	</a>
+	<a href="../../ru/kotlin/manual/type/Collection.html">
+		Collection
+	</a>
+	<a href="../../ru/kotlin/manual/type/List.html">
+		List
+	</a>
+	<a href="../../ru/kotlin/manual/type/Set.html">
+		Set
+	</a>
+	<a href="../../ru/kotlin/manual/type/Map.html">
+		Map
+	</a>
+	<a href="../../ru/kotlin/manual/type/MutableIterable.html">
+		MutableIterable
+	</a>
+	<a href="../../ru/kotlin/manual/type/MutableCollection.html">
+		MutableCollection
+	</a>
+	<a href="../../ru/kotlin/manual/type/MutableList.html">
+		MutableList
+	</a>
+	<a href="../../ru/kotlin/manual/type/MutableSet.html">
+		MutableSet
+	</a>
+	<a href="../../ru/kotlin/manual/type/MutableMap.html">
+		MutableMap
+	</a>
+	<a href="../../ru/kotlin/manual/type/MutableIterator.html">
+		MutableIterator
+	</a>
+	<a href="../../ru/kotlin/manual/type/Iterator.html">
+		Iterator
+	</a>
+	<a href="../../ru/kotlin/manual/type/ListIterator.html">
+		ListIterator
+	</a>
+	<a href="../../ru/kotlin/manual/type/MutableListIterator.html">
+		MutableListIterator
+	</a>
+</div>
+
+<h2>Специализированные коллекции</h2>
+<div>
+	<a href="../../ru/kotlin/manual/type/MapWithDefault.html">
+		MapWithDefault
+	</a>
+	<a href="../../ru/kotlin/manual/type/MutableMapWithDefault.html">
+		MutableMapWithDefault
+	</a>
+	<a href="../../ru/kotlin/manual/type/SortedSet.html">
+		SortedSet
+	</a>
+	<a href="../../ru/kotlin/manual/type/SortedMap.html">
+		SortedMap
+	</a>
+	<a href="../../ru/kotlin/manual/type/NavigableSet.html">
+		NavigableSet
+	</a>
+	<a href="../../ru/kotlin/manual/type/NavigableMap.html">
+		NavigableMap
+	</a>
+</div>
+
+<h2>Массивы</h2>
+<div>
+	<a href="../../ru/kotlin/manual/type/Array.html">
+		Array
+	</a>
+	<a href="../../ru/kotlin/manual/type/BooleanArray.html">
+		BooleanArray
+	</a>
+	<a href="../../ru/kotlin/manual/type/ByteArray.html">
+		ByteArray
+	</a>
+	<a href="../../ru/kotlin/manual/type/CharArray.html">
+		CharArray
+	</a>
+	<a href="../../ru/kotlin/manual/type/DoubleArray.html">
+		DoubleArray
+	</a>
+	<a href="../../ru/kotlin/manual/type/FloatArray.html">
+		FloatArray
+	</a>
+	<a href="../../ru/kotlin/manual/type/LongArray.html">
+		LongArray
+	</a>
+	<a href="../../ru/kotlin/manual/type/ShortArray.html">
+		ShortArray
+	</a>
+	<a href="../../ru/kotlin/manual/type/IntArray.html">
+		IntArray
+	</a>
+	<a href="../../ru/kotlin/manual/type/UByteArray.html">
+		UByteArray
+	</a>
+	<a href="../../ru/kotlin/manual/type/UShortArray.html">
+		UShortArray
+	</a>
+	<a href="../../ru/kotlin/manual/type/UIntArray.html">
+		UIntArray
+	</a>
+	<a href="../../ru/kotlin/manual/type/ULongArray.html">
+		ULongArray
+	</a>
+</div>
+
+<h2>Последовательности</h2>
+<div>
+	<a href="../../ru/kotlin/manual/type/Sequence.html">
+		Sequence
+	</a>
+	<a href="../../ru/kotlin/manual/type/MutableSequence.html">
+		MutableSequence
+	</a>
+	<a href="../../ru/kotlin/manual/type/CharSequence.html">
+		интерфейс символьных последовательностей
+	</a>
+</div>
+
+<h2>Конкретные реализации коллекций</h2>
+<div>
+	<a href="../../ru/kotlin/manual/type/ArrayDeque.html">
+		ArrayDeque
+	</a>
+	<a href="../../ru/kotlin/manual/type/HashMap.html">
+		HashMap
+	</a>
+	<a href="../../ru/kotlin/manual/type/LinkedHashMap.html">
+		LinkedHashMap
+	</a>
+	<a href="../../ru/kotlin/manual/type/TreeMap.html">
+		TreeMap
+	</a>
+	<a href="../../ru/kotlin/manual/type/HashSet.html">
+		HashSet
+	</a>
+	<a href="../../ru/kotlin/manual/type/LinkedHashSet.html">
+		LinkedHashSet
+	</a>
+	<a href="../../ru/kotlin/manual/type/TreeSet.html">
+		TreeSet
+	</a>
+	<a href="../../ru/kotlin/manual/type/ArrayList.html">
+		ArrayList
+	</a>
+	<a href="../../ru/kotlin/manual/type/LinkedList.html">
+		LinkedList
+	</a>
+</div>
+
+<h2>Специальные типы</h2>
+<div>
+	<a href="../../ru/kotlin/manual/type/Pair.html">
+		Тип Pair
+	</a>
+	<a href="../../ru/kotlin/manual/type/Triple.html">
+		Тип Triple
+	</a>
+	<a href="../../ru/kotlin/manual/type/Lazy.html">
+		Тип Lazy
+	</a>
+	<a href="../../ru/kotlin/manual/type/Observable.html">
+		Тип Observable
+	</a>
+	<a href="../../ru/kotlin/manual/type/Vetoable.html">
+		Тип Vetoable
+	</a>
+</div>
+</section><section data-e="pane" data-x data-m-curr="F" data-m-type="P" data-m-tabb="утверждения">
+<h2>Функции утверждений</h2>
+<div>
+	<a href="../../ru/kotlin/manual/assertion/require.html">
+		проверка аргументов
+	</a>
+	<a href="../../ru/kotlin/manual/assertion/requireNotNull.html">
+		проверка на не-null
+	</a>
+	<a href="../../ru/kotlin/manual/assertion/check.html">
+		проверка состояния
+	</a>
+	<a href="../../ru/kotlin/manual/assertion/assert.html">
+		проверка в тестах
+	</a>
+	<a href="../../ru/kotlin/manual/assertion/checkNotNull.html">
+		проверка на не-null
+	</a>
+	<a href="../../ru/kotlin/manual/assertion/assertNotNull.html">
+		проверка на не-null
+	</a>
+	<a href="../../ru/kotlin/manual/assertion/requireFinite.html">
+		проверка на конечность
+	</a>
+</div>
+</section><section data-e="pane" data-x data-m-curr="F" data-m-type="P" data-m-tabb="проверки">
+<h2>Математические</h2>
+<div>
+	<a href="../../ru/kotlin/manual/check/isInfinite.html">
+		проверка на бесконечность
+	</a>
+	<a href="../../ru/kotlin/manual/check/isFinite.html">
+		проверка на конечность
+	</a>
+	<a href="../../ru/kotlin/manual/check/isNaN.html">
+		проверка на NaN
+	</a>
+</div>
+
+<h2>Строковые</h2>
+<div>
+	<a href="../../ru/kotlin/manual/check/isBlank.html">
+		проверка на пробелы
+	</a>
+	<a href="../../ru/kotlin/manual/check/isEmpty.html">
+		проверка на пустоту
+	</a>
+	<a href="../../ru/kotlin/manual/check/isNotBlank.html">
+		проверка на не пробелы
+	</a>
+	<a href="../../ru/kotlin/manual/check/isNotEmpty.html">
+		проверка на непустоту
+	</a>
+	<a href="../../ru/kotlin/manual/check/isDigit.html">
+		является ли символ цифрой
+	</a>
+	<a href="../../ru/kotlin/manual/check/isLetter.html">
+		является ли символ буквой
+	</a>
+	<a href="../../ru/kotlin/manual/check/isLowerCase.html">
+		является ли символ строчной буквой
+	</a>
+	<a href="../../ru/kotlin/manual/check/isUpperCase.html">
+		является ли символ заглавной буквой
+	</a>
+	<a href="../../ru/kotlin/manual/check/isTitleCase.html">
+		является ли символ заглавной буквой
+	</a>
+	<a href="../../ru/kotlin/manual/check/isWhitespace.html">
+		является ли символ пробельным
+	</a>
+	<a href="../../ru/kotlin/manual/check/isLetterOrDigit.html">
+		является ли символ буквой или цифрой
+	</a>
+</div>
+
+<h2>Редкие</h2>
+<div>
+	<a href="../../ru/kotlin/manual/check/isDefined.html">
+		определен ли символ в Unicode
+	</a>
+	<a href="../../ru/kotlin/manual/check/isISOControl.html">
+		является ли символ управляющим символом ISO
+	</a>
+	<a href="../../ru/kotlin/manual/check/isIdentifierIgnorable.html">
+		можно ли игнорировать символ в идентификаторах
+	</a>
+	<a href="../../ru/kotlin/manual/check/isHighSurrogate.html">
+		является ли символ старшим суррогатом
+	</a>
+	<a href="../../ru/kotlin/manual/check/isLowSurrogate.html">
+		является ли символ младшим суррогатом
+	</a>
+	<a href="../../ru/kotlin/manual/check/isSurrogate.html">
+		является ли символ суррогатной парой
+	</a>
+</div>
+</section><section data-e="pane" data-x data-m-curr="F" data-m-type="P" data-m-tabb="математика">
+<h2>Математические функции</h2>
+<div>
+	<a href="../../ru/kotlin/manual/math/round.html">
+		округление числа
+	</a>
+	<a href="../../ru/kotlin/manual/math/roundToInt.html">
+		округление числа до Int
+	</a>
+	<a href="../../ru/kotlin/manual/math/roundToLong.html">
+		округление числа до Long
+	</a>
+	<a href="../../ru/kotlin/manual/math/ceil.html">
+		округление в большую сторону
+	</a>
+	<a href="../../ru/kotlin/manual/math/floor.html">
+		округление в меньшую сторону
+	</a>
+	
+	<a href="../../ru/kotlin/manual/math/sqrt.html">
+		квадратный корень числа
+	</a>
+	<a href="../../ru/kotlin/manual/math/pow.html">
+		степень числа
+	</a>
+	
+	<a href="../../ru/kotlin/manual/math/max.html">
+		максимальное число из пары
+	</a>
+	<a href="../../ru/kotlin/manual/math/min.html">
+		минимальное число из пары
+	</a>
+	<a href="../../ru/kotlin/manual/math/maxOf.html">
+		максимальное значение из группы
+	</a>
+	<a href="../../ru/kotlin/manual/math/minOf.html">
+		минимальное значение из группы
+	</a>
+	<a href="../../ru/kotlin/manual/math/abs.html">
+		модуль числа
+	</a>
+	<a href="../../ru/kotlin/manual/math/sumOf.html">
+		сумма по условию
+	</a>
+	<a href="../../ru/kotlin/manual/math/mod.html">
+		остаток от деления
+	</a>
+	<a href="../../ru/kotlin/manual/math/rem.html">
+		остаток от деления
+	</a>
+	<a href="../../ru/kotlin/manual/math/div.html">
+		целочисленное деление
+	</a>
+</div>
+
+<h2>Рандом</h2>
+<div>
+	<a href="../../ru/kotlin/manual/random/Random.html">
+		класс для случайных чисел
+	</a>
+	<a href="../../ru/kotlin/manual/random/nextInt.html">
+		случайное целое число
+	</a>
+	<a href="../../ru/kotlin/manual/random/nextDouble.html">
+		случайное дробное число
+	</a>
+	<a href="../../ru/kotlin/manual/random/nextBoolean.html">
+		случайное true/false
+	</a>
+	<a href="../../ru/kotlin/manual/random/nextBytes.html">
+		массив случайных байт
+	</a>
+	<a href="../../ru/kotlin/manual/random/nextLong.html">
+		случайное длинное число
+	</a>
+	<a href="../../ru/kotlin/manual/random/nextFloat.html">
+		случайное число float
+	</a>
+</div>
+
+<h2>Редкие</h2>
+<div>
+	<a href="../../ru/kotlin/manual/math/hypot.html">
+		гипотенуза чисел
+	</a>
+	<a href="../../ru/kotlin/manual/math/exp.html">
+		экспонента числа
+	</a>
+	<a href="../../ru/kotlin/manual/math/log.html">
+		натуральный логарифм
+	</a>
+	<a href="../../ru/kotlin/manual/math/log10.html">
+		логарифм по основанию 10
+	</a>
+	<a href="../../ru/kotlin/manual/math/ln.html">
+		натуральный логарифм (аналог log)
+	</a>
+	<a href="../../ru/kotlin/manual/math/sin.html">
+		синус угла
+	</a>
+	<a href="../../ru/kotlin/manual/math/cos.html">
+		косинус угла
+	</a>
+	<a href="../../ru/kotlin/manual/math/tan.html">
+		тангенс угла
+	</a>
+	<a href="../../ru/kotlin/manual/math/asin.html">
+		арксинус числа
+	</a>
+	<a href="../../ru/kotlin/manual/math/acos.html">
+		арккосинус числа
+	</a>
+	<a href="../../ru/kotlin/manual/math/atan.html">
+		арктангенс числа
+	</a>
+	<a href="../../ru/kotlin/manual/math/atan2.html">
+		арктангенс y/x
+	</a>
+	<a href="../../ru/kotlin/manual/math/sinh.html">
+		гиперболический синус
+	</a>
+	<a href="../../ru/kotlin/manual/math/cosh.html">
+		гиперболический косинус
+	</a>
+	<a href="../../ru/kotlin/manual/math/tanh.html">
+		гиперболический тангенс
+	</a>
+	<a href="../../ru/kotlin/manual/math/sign.html">
+		знак числа
+	</a>
+	<a href="../../ru/kotlin/manual/math/ulp.html">
+		величина ULP числа
+	</a>
+	<a href="../../ru/kotlin/manual/math/nextUp.html">
+		следующее число вверх
+	</a>
+	<a href="../../ru/kotlin/manual/math/nextDown.html">
+		следующее число вниз
+	</a>
+	<a href="../../ru/kotlin/manual/math/withSign.html">
+		число с изменённым знаком
+	</a>
+	<a href="../../ru/kotlin/manual/math/IEEErem.html">
+		остаток по IEEE 754
+	</a>
+	<a href="../../ru/kotlin/manual/math/toRadians.html">
+		градусы в радианы
+	</a>
+	<a href="../../ru/kotlin/manual/math/toDegrees.html">
+		радианы в градусы
+	</a>
+	<a href="../../ru/kotlin/manual/math/truncate.html">
+		усечение числа
+	</a>
+	<a href="../../ru/kotlin/manual/math/log2.html">
+		логарифм по основанию 2
+	</a>
+	<a href="../../ru/kotlin/manual/math/nextAfter.html">
+		следующее число после
+	</a>
+</div>
+
+<h2>Константы</h2>
+<div>
+	<a href="../../ru/kotlin/manual/math/PI.html">
+		число Пи
+	</a>
+	<a href="../../ru/kotlin/manual/math/E.html">
+		число Эйлера
+	</a>
+	<a href="../../ru/kotlin/manual/math/POSITIVE_INFINITY.html">
+		плюс бесконечность
+	</a>
+	<a href="../../ru/kotlin/manual/math/NEGATIVE_INFINITY.html">
+		минус бесконечность
+	</a>
+	<a href="../../ru/kotlin/manual/math/EPSILON.html">
+		константа эпсилон
+	</a>
+</div>
+</section><section data-e="pane" data-x data-m-curr="F" data-m-type="P" data-m-tabb="диапазоны">
+<h2>Функции</h2>
+<div>
+	<a href="../../ru/kotlin/manual/range/rangeTo.html">
+		создание диапазона
+	</a>
+	<a href="../../ru/kotlin/manual/range/rangeUntil.html">
+		создание диапазона до исключая
+	</a>
+	<a href="../../ru/kotlin/manual/range/downTo.html">
+		создание убывающего диапазона
+	</a>
+	<a href="../../ru/kotlin/manual/range/coerceIn.html">
+		ограничение значения диапазоном
+	</a>
+	<a href="../../ru/kotlin/manual/range/coerceAtLeast.html">
+		ограничение минимальным значением
+	</a>
+	<a href="../../ru/kotlin/manual/range/coerceAtMost.html">
+		ограничение максимальным значением
+	</a>
+	<a href="../../ru/kotlin/manual/range/inc.html">
+		увеличение значения на 1
+	</a>
+	<a href="../../ru/kotlin/manual/range/dec.html">
+		уменьшение значения на 1
+	</a>
+</div>
+
+<h2>Типы</h2>
+<div>
+	<div>
+	<a href="../../ru/kotlin/manual/type/IntRange.html">
+		диапазон целых чисел
+	</a>
+	<a href="../../ru/kotlin/manual/type/LongRange.html">
+		диапазон длинных целых чисел
+	</a>
+	<a href="../../ru/kotlin/manual/type/CharRange.html">
+		диапазон символов
+	</a>
+	<a href="../../ru/kotlin/manual/type/ClosedRange.html">
+		закрытый диапазон (общий интерфейс)
+	</a>
+	<a href="../../ru/kotlin/manual/type/UIntRange.html">
+		диапазон беззнаковых целых чисел
+	</a>
+	<a href="../../ru/kotlin/manual/type/ULongRange.html">
+		диапазон беззнаковых длинных целых
+	</a>
+	<a href="../../ru/kotlin/manual/type/OpenEndRange.html">
+		диапазон с открытым концом
+	</a>
+	<a href="../../ru/kotlin/manual/type/IntProgression.html">
+		арифметическая прогрессия целых чисел
+	</a>
+	<a href="../../ru/kotlin/manual/type/LongProgression.html">
+		арифметическая прогрессия длинных целых
+	</a>
+	<a href="../../ru/kotlin/manual/type/CharProgression.html">
+		прогрессия символов
+	</a>
+</div>
+</section><section data-e="pane" data-x data-m-curr="F" data-m-type="P" data-m-tabb="текст">
+<h2>Базовые операции</h2>
+<div>
+	<a href="../../ru/kotlin/manual/text/length.html">  
+		длина строки  
+	</a>
+	<a href="../../ru/kotlin/manual/text/isEmpty.html">  
+		проверка на пустоту  
+	</a>
+	<a href="../../ru/kotlin/manual/text/isNotEmpty.html">  
+		проверка на непустоту  
+	</a>
+	<a href="../../ru/kotlin/manual/text/isBlank.html">  
+		проверка на пробелы  
+	</a>
+	<a href="../../ru/kotlin/manual/text/isNotBlank.html">  
+		проверка на не пробелы  
+	</a>
+	<a href="../../ru/kotlin/manual/text/orEmpty.html">
+		или пустая строка
+	</a>
+</div>
+
+<h2>Поиск и сравнение</h2>
+<div>
+	<a href="../../ru/kotlin/manual/text/find.html">
+		найти первое вхождение
+	</a>
+	<a href="../../ru/kotlin/manual/text/findLast.html">
+		найти последнее вхождение
+	</a>
+	<a href="../../ru/kotlin/manual/text/contentEquals.html">
+		сравнение содержимого
+	</a>
+	<a href="../../ru/kotlin/manual/text/equals.html">
+		сравнение строк
+	</a>
+	<a href="../../ru/kotlin/manual/text/compareTo.html">  
+		сравнение строк  
+	</a>
+	<a href="../../ru/kotlin/manual/text/indexOf.html">  
+		поиск индекса подстроки  
+	</a>
+	<a href="../../ru/kotlin/manual/text/lastIndexOf.html">  
+		последний индекс подстроки  
+	</a>
+	<a href="../../ru/kotlin/manual/text/startsWith.html">  
+		проверка начала строки  
+	</a>
+	<a href="../../ru/kotlin/manual/text/endsWith.html">  
+		проверка конца строки  
+	</a>
+	<a href="../../ru/kotlin/manual/text/contains.html">  
+		проверка наличия подстроки  
+	</a>
+</div>
+
+<h2>Преобразование регистра</h2>
+<div>
+	<a href="../../ru/kotlin/manual/text/lowercase.html">  
+		в нижний регистр  
+	</a>
+	<a href="../../ru/kotlin/manual/text/uppercase.html">  
+		в верхний регистр  
+	</a>
+	<a href="../../ru/kotlin/manual/text/capitalize.html">  
+		первая буква заглавная  
+	</a>
+	<a href="../../ru/kotlin/manual/text/decapitalize.html">  
+		первая буква строчная  
+	</a>
+</div>
+
+<h2>Обрезка и очистка</h2>
+<div>
+	<a href="../../ru/kotlin/manual/text/trim.html">  
+		обрезка пробелов  
+	</a>
+	<a href="../../ru/kotlin/manual/text/trimStart.html">  
+		обрезка пробелов в начале  
+	</a>
+	<a href="../../ru/kotlin/manual/text/trimEnd.html">  
+		обрезка пробелов в конце  
+	</a>
+	<a href="../../ru/kotlin/manual/text/removePrefix.html">  
+		удалить префикс  
+	</a>
+	<a href="../../ru/kotlin/manual/text/removeSuffix.html">  
+		удалить суффикс  
+	</a>
+	<a href="../../ru/kotlin/manual/text/removeSurrounding.html">  
+		удалить окружение  
+	</a>
+</div>
+
+<h2>Извлечение подстрок</h2>
+<div>
+	<a href="../../ru/kotlin/manual/text/substring.html">  
+		подстрока  
+	</a>
+	<a href="../../ru/kotlin/manual/text/first.html">  
+		первый символ  
+	</a>
+	<a href="../../ru/kotlin/manual/text/last.html">  
+		последний символ  
+	</a>
+	<a href="../../ru/kotlin/manual/text/take.html">  
+		взять первые символы  
+	</a>
+	<a href="../../ru/kotlin/manual/text/takeLast.html">  
+		взять последние символы  
+	</a>
+	<a href="../../ru/kotlin/manual/text/drop.html">  
+		удалить первые символы  
+	</a>
+	<a href="../../ru/kotlin/manual/text/dropLast.html">  
+		удалить последние символы  
+	</a>
+</div>
+
+<h2>Замена и модификация</h2>
+<div>
+	<a href="../../ru/kotlin/manual/text/replace.html">  
+		замена подстроки  
+	</a>
+	<a href="../../ru/kotlin/manual/text/replaceFirst.html">  
+		замена первого вхождения  
+	</a>
+	<a href="../../ru/kotlin/manual/text/replaceFirstChar.html">  
+		замена первого символа по условию
+	</a>
+	<a href="../../ru/kotlin/manual/text/replaceAfter.html">  
+		замена после подстроки  
+	</a>
+	<a href="../../ru/kotlin/manual/text/replaceBefore.html">  
+		замена перед подстрокой  
+	</a>
+	<a href="../../ru/kotlin/manual/text/replaceRange.html">  
+		замена диапазона  
+	</a>
+	<a href="../../ru/kotlin/manual/text/plus.html">  
+		конкатенация строк  
+	</a>
+</div>
+
+<h2>Разделение и соединение</h2>
+<div>
+	<a href="../../ru/kotlin/manual/text/split.html">  
+		разделение строки  
+	</a>
+	<a href="../../ru/kotlin/manual/text/lines.html">  
+		разбиение на строки  
+	</a>
+	<a href="../../ru/kotlin/manual/text/zip.html">  
+		попарное объединение  
+	</a>
+</div>
+
+<h2>Форматирование и заполнение</h2>
+<div>
+	<a href="../../ru/kotlin/manual/text/format.html">  
+		форматирование строки  
+	</a>
+	<a href="../../ru/kotlin/manual/text/padStart.html">  
+		дополнение в начале  
+	</a>
+	<a href="../../ru/kotlin/manual/text/padEnd.html">  
+		дополнение в конце  
+	</a>
+</div>
+
+<h2>Фильтрация и преобразование</h2>
+<div>
+	<a href="../../ru/kotlin/manual/text/filter.html">  
+		фильтрация символов  
+	</a>
+	<a href="../../ru/kotlin/manual/text/map.html">  
+		преобразование символов  
+	</a>
+</div>
+
+<h2>Повторение и реверс</h2>
+<div>
+	<a href="../../ru/kotlin/manual/text/repeat.html">  
+		повторение строки  
+	</a>
+	<a href="../../ru/kotlin/manual/text/reversed.html">  
+		перевернуть строку  
+	</a>
+</div>
+
+<h2>Условные операции</h2>
+<div>
+	<a href="../../ru/kotlin/manual/text/ifEmpty.html">  
+		проверка с заменой  
+	</a>
+	<a href="../../ru/kotlin/manual/text/ifBlank.html">  
+		проверка пробелов с заменой  
+	</a>
+</div>
+
+<h2>Анализ строк</h2>
+<div>
+	<a href="../../ru/kotlin/manual/text/commonPrefixWith.html">  
+		общий префикс  
+	</a>
+	<a href="../../ru/kotlin/manual/text/commonSuffixWith.html">  
+		общий суффикс  
+	</a>
+	<a href="../../ru/kotlin/manual/text/chunked.html">  
+		разбить на блоки  
+	</a>
+	<a href="../../ru/kotlin/manual/text/windowed.html">  
+		скользящее окно  
+	</a>
+</div>
+</section><section data-e="pane" data-x data-m-curr="F" data-m-type="P" data-m-tabb="коллекции">
+<h2>Размер и проверки</h2>
+<div>
+	<a href="../../ru/kotlin/manual/collection/size.html">
+		размер коллекции
+	</a>
+	<a href="../../ru/kotlin/manual/collection/isEmpty.html">
+		проверка пустоты
+	</a>
+	<a href="../../ru/kotlin/manual/collection/isNotEmpty.html">
+		проверка непустоты
+	</a>
+	<a href="../../ru/kotlin/manual/collection/isNullOrEmpty.html">
+		проверка на null или пустоту
+	</a>
+	<a href="../../ru/kotlin/manual/collection/lastIndex.html">
+		последний индекс
+	</a>
+</div>
+
+<h2>Проверки содержания</h2>
+<div>
+	<a href="../../ru/kotlin/manual/collection/contains.html">
+		содержит элемент
+	</a>
+	<a href="../../ru/kotlin/manual/collection/containsAll.html">
+		содержит все элементы
+	</a>
+	<a href="../../ru/kotlin/manual/collection/containsKey.html">
+		проверка ключа
+	</a>
+	<a href="../../ru/kotlin/manual/collection/containsValue.html">
+		проверка значения
+	</a>
+</div>
+
+<h2>Поиск элементов</h2>
+<div>
+	<a href="../../ru/kotlin/manual/collection/get.html">
+		получить элемент
+	</a>
+	<a href="../../ru/kotlin/manual/collection/getOrElse.html">
+		значение или лямбда
+	</a>
+	<a href="../../ru/kotlin/manual/collection/getOrNull.html">
+		значение или null
+	</a>
+	<a href="../../ru/kotlin/manual/collection/getOrDefault.html">
+		значение или default
+	</a>
+	<a href="../../ru/kotlin/manual/collection/getValue.html">
+		получить значение (строго)
+	</a>
+	<a href="../../ru/kotlin/manual/collection/getOrPut.html">
+		получить или добавить
+	</a>
+	<a href="../../ru/kotlin/manual/collection/first.html">
+		первый элемент
+	</a>
+	<a href="../../ru/kotlin/manual/collection/firstOrNull.html">
+		первый элемент или null
+	</a>
+	<a href="../../ru/kotlin/manual/collection/last.html">
+		последний элемент
+	</a>
+	<a href="../../ru/kotlin/manual/collection/lastOrNull.html">
+		последний элемент или null
+	</a>
+	<a href="../../ru/kotlin/manual/collection/elementAt.html">
+		элемент по индексу
+	</a>
+	<a href="../../ru/kotlin/manual/collection/elementAtOrElse.html">
+		элемент или лямбда
+	</a>
+	<a href="../../ru/kotlin/manual/collection/elementAtOrNull.html">
+		элемент или null
+	</a>
+	<a href="../../ru/kotlin/manual/collection/indexOf.html">
+		индекс элемента
+	</a>
+	<a href="../../ru/kotlin/manual/collection/indexOfFirst.html">
+		первый индекс по условию
+	</a>
+	<a href="../../ru/kotlin/manual/collection/indexOfLast.html">
+		последний индекс по условию
+	</a>
+	<a href="../../ru/kotlin/manual/collection/find.html">
+		найти элемент
+	</a>
+	<a href="../../ru/kotlin/manual/collection/findLast.html">
+		найти последний элемент
+	</a>
+	<a href="../../ru/kotlin/manual/collection/single.html">
+		единственный элемент
+	</a>
+	<a href="../../ru/kotlin/manual/collection/singleOrNull.html">
+		единственный элемент или null
+	</a>
+	<a href="../../ru/kotlin/manual/collection/random.html">
+		случайный элемент
+	</a>
+	<a href="../../ru/kotlin/manual/collection/randomOrNull.html">
+		случайный элемент или null
+	</a>
+</div>
+
+<h2>Фильтрация</h2>
+<div>
+	<a href="../../ru/kotlin/manual/collection/filter.html">
+		фильтрация элементов
+	</a>
+	<a href="../../ru/kotlin/manual/collection/filterNot.html">
+		исключение элементов
+	</a>
+	<a href="../../ru/kotlin/manual/collection/filterNotNull.html">
+		фильтрация не-null
+	</a>
+	<a href="../../ru/kotlin/manual/collection/filterIndexed.html">
+		фильтрация с индексом
+	</a>
+	<a href="../../ru/kotlin/manual/collection/filterIsInstance.html">
+		фильтрация по типу
+	</a>
+	<a href="../../ru/kotlin/manual/collection/filterKeys.html">
+		фильтрация ключей
+	</a>
+	<a href="../../ru/kotlin/manual/collection/filterValues.html">
+		фильтрация значений
+	</a>
+	<a href="../../ru/kotlin/manual/collection/partition.html">
+		разделение коллекции
+	</a>
+</div>
+
+<h2>Преобразование</h2>
+<div>
+	<a href="../../ru/kotlin/manual/collection/map.html">
+		преобразование элементов
+	</a>
+	<a href="../../ru/kotlin/manual/collection/mapIndexed.html">
+		преобразование с индексом
+	</a>
+	<a href="../../ru/kotlin/manual/collection/mapNotNull.html">
+		преобразование не-null
+	</a>
+	<a href="../../ru/kotlin/manual/collection/mapKeys.html">
+		преобразование ключей
+	</a>
+	<a href="../../ru/kotlin/manual/collection/mapValues.html">
+		преобразование значений
+	</a>
+	<a href="../../ru/kotlin/manual/collection/flatMap.html">
+		преобразовать и сгладить
+	</a>
+	<a href="../../ru/kotlin/manual/collection/flatten.html">
+		сгладить коллекцию
+	</a>
+	<a href="../../ru/kotlin/manual/collection/associate.html">
+		создать ассоциацию
+	</a>
+	<a href="../../ru/kotlin/manual/collection/associateBy.html">
+		ассоциация по ключу
+	</a>
+	<a href="../../ru/kotlin/manual/collection/associateWith.html">
+		ассоциация по значению
+	</a>
+	<a href="../../ru/kotlin/manual/collection/distinct.html">
+		уникальные элементы
+	</a>
+	<a href="../../ru/kotlin/manual/collection/distinctBy.html">
+		уникальность по ключу
+	</a>
+	<a href="../../ru/kotlin/manual/collection/groupBy.html">
+		группировка элементов
+	</a>
+	<a href="../../ru/kotlin/manual/collection/zip.html">
+		попарное объединение
+	</a>
+	<a href="../../ru/kotlin/manual/collection/unzip.html">
+		разделение пар
+	</a>
+	<a href="../../ru/kotlin/manual/collection/withIndex.html">
+		элементы с индексами
+	</a>
+	<a href="../../ru/kotlin/manual/collection/asReversed.html">
+		в обратном порядке
+	</a>
+	<a href="../../ru/kotlin/manual/collection/transform.html">
+		преобразование коллекции
+	</a>
+	<a href="../../ru/kotlin/manual/collection/sequence.html">
+		преобразовать в последовательность
+	</a>
+</div>
+
+<h2>Агрегация и статистика</h2>
+<div>
+	<a href="../../ru/kotlin/manual/collection/count.html">
+		подсчет элементов
+	</a>
+	<a href="../../ru/kotlin/manual/collection/sum.html">
+		сумма элементов
+	</a>
+	<a href="../../ru/kotlin/manual/collection/sumOf.html">
+		сумма по условию
+	</a>
+	<a href="../../ru/kotlin/manual/collection/average.html">
+		среднее значение
+	</a>
+	<a href="../../ru/kotlin/manual/collection/min.html">
+		минимальный элемент
+	</a>
+	<a href="../../ru/kotlin/manual/collection/minOrNull.html">
+		минимальный элемент или null
+	</a>
+	<a href="../../ru/kotlin/manual/collection/max.html">
+		максимальный элемент
+	</a>
+	<a href="../../ru/kotlin/manual/collection/maxOrNull.html">
+		максимальный элемент или null
+	</a>
+	<a href="../../ru/kotlin/manual/collection/minBy.html">
+		минимум по ключу
+	</a>
+	<a href="../../ru/kotlin/manual/collection/maxBy.html">
+		максимум по ключу
+	</a>
+	<a href="../../ru/kotlin/manual/collection/minOf.html">
+		минимальное значение
+	</a>
+	<a href="../../ru/kotlin/manual/collection/maxOf.html">
+		максимальное значение
+	</a>
+	<a href="../../ru/kotlin/manual/collection/reduce.html">
+		уменьшение коллекции
+	</a>
+	<a href="../../ru/kotlin/manual/collection/fold.html">
+		свертка коллекции
+	</a>
+	<a href="../../ru/kotlin/manual/collection/aggregate.html">
+		агрегация элементов
+	</a>
+</div>
+
+<h2>Проверки условий</h2>
+<div>
+	<a href="../../ru/kotlin/manual/collection/all.html">
+		проверка всех элементов
+	</a>
+	<a href="../../ru/kotlin/manual/collection/any.html">
+		проверка условия
+	</a>
+	<a href="../../ru/kotlin/manual/collection/none.html">
+		проверка отсутствия
+	</a>
+	<a href="../../ru/kotlin/manual/collection/equals.html">
+		сравнение коллекций
+	</a>
+	<a href="../../ru/kotlin/manual/collection/compareTo.html">
+		сравнение коллекций
+	</a>
+</div>
+
+<h2>Работа с подмножествами</h2>
+<div>
+	<a href="../../ru/kotlin/manual/collection/take.html">
+		взять первые элементы
+	</a>
+	<a href="../../ru/kotlin/manual/collection/takeLast.html">
+		взять последние элементы
+	</a>
+	<a href="../../ru/kotlin/manual/collection/takeWhile.html">
+		взять пока условие
+	</a>
+	<a href="../../ru/kotlin/manual/collection/takeLastWhile.html">
+		взять с конца пока условие
+	</a>
+	<a href="../../ru/kotlin/manual/collection/drop.html">
+		удалить первые элементы
+	</a>
+	<a href="../../ru/kotlin/manual/collection/dropLast.html">
+		удалить последние элементы
+	</a>
+	<a href="../../ru/kotlin/manual/collection/dropWhile.html">
+		удалить пока условие
+	</a>
+	<a href="../../ru/kotlin/manual/collection/dropLastWhile.html">
+		удалить с конца пока условие
+	</a>
+	<a href="../../ru/kotlin/manual/collection/slice.html">
+		выбрать диапазон
+	</a>
+	<a href="../../ru/kotlin/manual/collection/windowed.html">
+		скользящее окно
+	</a>
+	<a href="../../ru/kotlin/manual/collection/chunked.html">
+		разбить на блоки
+	</a>
+	<a href="../../ru/kotlin/manual/collection/indices.html">
+		индексы коллекции
+	</a>
+	<a href="../../ru/kotlin/manual/collection/subList.html">
+		подсписок
+	</a>
+	<a href="../../ru/kotlin/manual/collection/slidingWindow.html">
+		скользящее окно
+	</a>
+	<a href="../../ru/kotlin/manual/collection/sliding.html">
+		скользящее окно (синоним)
+	</a>
+</div>
+
+<h2>Сортировка</h2>
+<div>
+	<a href="../../ru/kotlin/manual/collection/sorted.html">
+		сортировка коллекции
+	</a>
+	<a href="../../ru/kotlin/manual/collection/sortedBy.html">
+		сортировка по ключу
+	</a>
+	<a href="../../ru/kotlin/manual/collection/sortedDescending.html">
+		сортировка по убыванию
+	</a>
+	<a href="../../ru/kotlin/manual/collection/sortedWith.html">
+		сортировка с компаратором
+	</a>
+	<a href="../../ru/kotlin/manual/collection/reverse.html">
+		обратный порядок
+	</a>
+	<a href="../../ru/kotlin/manual/collection/reversed.html">
+		перевернутая коллекция
+	</a>
+	<a href="../../ru/kotlin/manual/collection/shuffle.html">
+		перемешать элементы
+	</a>
+	<a href="../../ru/kotlin/manual/collection/shuffled.html">
+		перемешанная коллекция
+	</a>
+</div>
+
+<h2>Итерация</h2>
+<div>
+	<a href="../../ru/kotlin/manual/collection/forEach.html">
+		перебор элементов
+	</a>
+	<a href="../../ru/kotlin/manual/collection/forEachIndexed.html">
+		перебор с индексом
+	</a>
+	<a href="../../ru/kotlin/manual/collection/onEach.html">
+		побочный эффект для каждого
+	</a>
+	<a href="../../ru/kotlin/manual/collection/iterator.html">
+		итератор коллекции
+	</a>
+</div>
+
+<h2>Операции с множествами</h2>
+<div>
+	<a href="../../ru/kotlin/manual/collection/union.html">
+		объединение множеств
+	</a>
+	<a href="../../ru/kotlin/manual/collection/intersect.html">
+		пересечение множеств
+	</a>
+	<a href="../../ru/kotlin/manual/collection/subtract.html">
+		разность множеств
+	</a>
+</div>
+
+<h2>Модификация коллекций</h2>
+<div>
+	<a href="../../ru/kotlin/manual/collection/plus.html">
+		добавление элементов
+	</a>
+	<a href="../../ru/kotlin/manual/collection/plusElement.html">
+		добавление элемента
+	</a>
+	<a href="../../ru/kotlin/manual/collection/minus.html">
+		удаление элементов
+	</a>
+	<a href="../../ru/kotlin/manual/collection/minusElement.html">
+		удаление элемента
+	</a>
+	<a href="../../ru/kotlin/manual/collection/addAll.html">
+		добавить все элементы
+	</a>
+	<a href="../../ru/kotlin/manual/collection/putAll.html">
+		добавить все элементы в Map
+	</a>
+	<a href="../../ru/kotlin/manual/collection/put.html">
+		добавить элемент в Map
+	</a>
+	<a href="../../ru/kotlin/manual/collection/putIfAbsent.html">
+		добавить если отсутствует
+	</a>
+	<a href="../../ru/kotlin/manual/collection/remove.html">
+		удалить элемент
+	</a>
+	<a href="../../ru/kotlin/manual/collection/removeAll.html">
+		удалить все элементы
+	</a>
+	<a href="../../ru/kotlin/manual/collection/retainAll.html">
+		оставить только
+	</a>
+	<a href="../../ru/kotlin/manual/collection/removeFirst.html">
+		удалить первый
+	</a>
+	<a href="../../ru/kotlin/manual/collection/removeFirstOrNull.html">
+		удалить первый или null
+	</a>
+	<a href="../../ru/kotlin/manual/collection/removeLast.html">
+		удалить последний
+	</a>
+	<a href="../../ru/kotlin/manual/collection/removeLastOrNull.html">
+		удалить последний или null
+	</a>
+	<a href="../../ru/kotlin/manual/collection/clear.html">
+		очистить коллекцию
+	</a>
+	<a href="../../ru/kotlin/manual/collection/fill.html">
+		заполнить значениями
+	</a>
+	<a href="../../ru/kotlin/manual/collection/replaceAll.html">
+		заменить все значения
+	</a>
+	<a href="../../ru/kotlin/manual/collection/removeIf.html">
+		удалить элементы по условию
+	</a>
+</div>
+
+<h2>Работа с массивами</h2>
+<div>
+	<a href="../../ru/kotlin/manual/collection/copyOf.html">
+		копия массива
+	</a>
+	<a href="../../ru/kotlin/manual/collection/copyOfRange.html">
+		копия диапазона
+	</a>
+	<a href="../../ru/kotlin/manual/collection/copyInto.html">
+		копировать в массив
+	</a>
+	<a href="../../ru/kotlin/manual/collection/contentEquals.html">
+		сравнение массивов
+	</a>
+	<a href="../../ru/kotlin/manual/collection/contentDeepEquals.html">
+		глубокое сравнение массивов
+	</a>
+	<a href="../../ru/kotlin/manual/collection/contentToString.html">
+		строковое представление
+	</a>
+	<a href="../../ru/kotlin/manual/collection/contentDeepToString.html">
+		глубокое строковое представление
+	</a>
+	<a href="../../ru/kotlin/manual/collection/contentHashCode.html">
+		хэш-код массива
+	</a>
+	<a href="../../ru/kotlin/manual/collection/contentDeepHashCode.html">
+		глубокий хэш-код массива
+	</a>
+	<a href="../../ru/kotlin/manual/collection/binarySearch.html">
+		бинарный поиск
+	</a>
+	<a href="../../ru/kotlin/manual/collection/sort.html">
+		сортировка массива
+	</a>
+</div>
+
+<h2>Строковые операции</h2>
+<div>
+	<a href="../../ru/kotlin/manual/collection/joinToString.html">
+		объединить в строку
+	</a>
+	<a href="../../ru/kotlin/manual/collection/joinTo.html">
+		объединить в Appendable
+	</a>
+	<a href="../../ru/kotlin/manual/collection/orEmpty.html">
+		или пустая коллекция
+	</a>
+	<a href="../../ru/kotlin/manual/collection/ifEmpty.html">
+		если пусто то значение
+	</a>
+	<a href="../../ru/kotlin/manual/collection/toString.html">
+		строковое представление
+	</a>
+	<a href="../../ru/kotlin/manual/collection/defaultIfEmpty.html">
+		значение по умолчанию если пусто
+	</a>
+</div>
+</section><section data-e="pane" data-x data-m-curr="F" data-m-type="P" data-m-tabb="перечисления">
+<h2>Перечисления</h2>
+<div>
+	<a href="../../ru/kotlin/manual/enum/values.html">
+		все значения enum
+	</a>
+	<a href="../../ru/kotlin/manual/enum/valueOf.html">
+		получить по имени
+	</a>
+	<a href="../../ru/kotlin/manual/enum/name.html">
+		имя элемента
+	</a>
+	<a href="../../ru/kotlin/manual/enum/ordinal.html">
+		порядковый номер
+	</a>
+	<a href="../../ru/kotlin/manual/enum/entries.html">
+		список элементов
+	</a>
+	<a href="../../ru/kotlin/manual/enum/valueOfOrNull.html">
+		безопасное получение
+	</a>
+	<a href="../../ru/kotlin/manual/enum/enumValues.html">
+		значения enum (generic)
+	</a>
+	<a href="../../ru/kotlin/manual/enum/enumValueOf.html">
+		получить элемент (generic)
+	</a>
+	<a href="../../ru/kotlin/manual/enum/enumValuesOf.html">
+		типизированные значения
+	</a>
+	<a href="../../ru/kotlin/manual/enum/enumEntries.html">
+		типизированные элементы
+	</a>
+	<a href="../../ru/kotlin/manual/enum/compareTo.html">
+		сравнение элементов
+	</a>
+	<a href="../../ru/kotlin/manual/enum/equals.html">
+		проверка равенства
+	</a>
+	<a href="../../ru/kotlin/manual/enum/hashCode.html">
+		хэш-код элемента
+	</a>
+	<a href="../../ru/kotlin/manual/enum/toString.html">
+		строковое представление
+	</a>
+	<a href="../../ru/kotlin/manual/enum/clone.html">
+		клонирование элемента
+	</a>
+	<a href="../../ru/kotlin/manual/enum/fromOrNull.html">
+		получить элемент по значению (nullable)
+	</a>
+</div>
+</section><section data-e="pane" data-x data-m-curr="F" data-m-type="P" data-m-tabb="регулярки">
+<h2>Регулярные выражения</h2>
+<div>
+	<a href="../../ru/kotlin/manual/regular/Regex.html">
+		класс для регулярок
+	</a>
+	<a href="../../ru/kotlin/manual/regular/MatchResult.html">
+		результат совпадения регулярного выражения
+	</a>
+	<a href="../../ru/kotlin/manual/regular/MatchGroup.html">
+		группа захвата регулярного выражения
+	</a>
+	<a href="../../ru/kotlin/manual/regular/MatchGroupCollection.html">
+		коллекция групп захвата
+	</a>
+	<a href="../../ru/kotlin/manual/regular/RegexOption.html">
+		флаги и опции регулярных выражений
+	</a>
+	<a href="../../ru/kotlin/manual/regular/toRegex.html">
+		создать регулярку
+	</a>
+	<a href="../../ru/kotlin/manual/regular/matches.html">
+		полное совпадение
+	</a>
+	<a href="../../ru/kotlin/manual/regular/containsMatchIn.html">
+		содержит совпадение
+	</a>
+	<a href="../../ru/kotlin/manual/regular/find.html">
+		найти совпадение
+	</a>
+	<a href="../../ru/kotlin/manual/regular/findAll.html">
+		все совпадения
+	</a>
+	<a href="../../ru/kotlin/manual/regular/replace.html">
+		заменить совпадения
+	</a>
+	<a href="../../ru/kotlin/manual/regular/replaceFirst.html">
+		заменить первое
+	</a>
+	<a href="../../ru/kotlin/manual/regular/replaceAll.html">
+		замена всех вхождений
+	</a>
+	<a href="../../ru/kotlin/manual/regular/split.html">
+		разделить по шаблону
+	</a>
+	<a href="../../ru/kotlin/manual/regular/matchEntire.html">
+		полное соответствие
+	</a>
+	<a href="../../ru/kotlin/manual/regular/groupValues.html">
+		группы совпадений
+	</a>
+	<a href="../../ru/kotlin/manual/regular/groups.html">
+		группы захвата
+	</a>
+	<a href="../../ru/kotlin/manual/regular/options.html">
+		флаги регулярки
+	</a>
+	<a href="../../ru/kotlin/manual/regular/escape.html">
+		экранирование строки
+	</a>
+	<a href="../../ru/kotlin/manual/regular/escapeReplacement.html">
+		экранирование строки замены
+	</a>
+	<a href="../../ru/kotlin/manual/regular/fromLiteral.html">
+		из литерала
+	</a>
+</div>
+</section><section data-e="pane" data-x data-m-curr="F" data-m-type="P" data-m-tabb="StringBuilder">
+<h2>Построитель строк</h2>
+<div>
+	<a href="../../ru/kotlin/manual/sb/StringBuilder.html">
+		создание StringBuilder
+	</a>
+	<a href="../../ru/kotlin/manual/sb/append.html">
+		добавление содержимого
+	</a>
+	<a href="../../ru/kotlin/manual/sb/appendLine.html">
+		добавление строки с переводом
+	</a>
+	<a href="../../ru/kotlin/manual/sb/toString.html">
+		преобразование в строку
+	</a>
+	<a href="../../ru/kotlin/manual/sb/insert.html">
+		вставка содержимого
+	</a>
+	<a href="../../ru/kotlin/manual/sb/replace.html">
+		замена содержимого
+	</a>
+	<a href="../../ru/kotlin/manual/sb/delete.html">
+		удаление символов
+	</a>
+	<a href="../../ru/kotlin/manual/sb/deleteRange.html">
+		удаление диапазона
+	</a>
+	<a href="../../ru/kotlin/manual/sb/substring.html">
+		получение подстроки
+	</a>
+	<a href="../../ru/kotlin/manual/sb/reverse.html">
+		обращение строки
+	</a>
+	<a href="../../ru/kotlin/manual/sb/clear.html">
+		очистка содержимого
+	</a>
+	<a href="../../ru/kotlin/manual/sb/length.html">
+		получение длины
+	</a>
+	<a href="../../ru/kotlin/manual/sb/indexOf.html">
+		поиск подстроки
+	</a>
+	<a href="../../ru/kotlin/manual/sb/setCharAt.html">
+		установка символа
+	</a>
+	<a href="../../ru/kotlin/manual/sb/get.html">
+		получение символа
+	</a>
+	<a href="../../ru/kotlin/manual/sb/capacity.html">
+		получение ёмкости
+	</a>
+	<a href="../../ru/kotlin/manual/sb/ensureCapacity.html">
+		обеспечение ёмкости
+	</a>
+	<a href="../../ru/kotlin/manual/sb/trimToSize.html">
+		оптимизация размера
+	</a>
+	<a href="../../ru/kotlin/manual/sb/setLength.html">
+		установка длины
+	</a>
+	<a href="../../ru/kotlin/manual/sb/deleteAt.html">
+		удаление по индексу
+	</a>
+	<a href="../../ru/kotlin/manual/sb/appendRange.html">
+		добавление диапазона
+	</a>
+	<a href="../../ru/kotlin/manual/sb/lastIndexOf.html">
+		последнее вхождение
+	</a>
+	<a href="../../ru/kotlin/manual/sb/subSequence.html">
+		получение последовательности
+	</a>
+	<a href="../../ru/kotlin/manual/sb/chars.html">
+		получение потока символов
+	</a>
+	<a href="../../ru/kotlin/manual/sb/codePoints.html">
+		получение кодовых точек
+	</a>
+	<a href="../../ru/kotlin/manual/sb/toCharArray.html">
+		преобразование в массив
+	</a>
+	<a href="../../ru/kotlin/manual/sb/equals.html">
+		сравнение объектов
+	</a>
+	<a href="../../ru/kotlin/manual/sb/hashCode.html">
+		хэш-код объекта
+	</a>
+	<a href="../../ru/kotlin/manual/sb/compareTo.html">
+		сравнение строк
+	</a>
+</div>
+</section><section data-e="pane" data-x data-m-curr="F" data-m-type="P" data-m-tabb="файловая система">
+<h2>Создание и базовые операции</h2>
+<div>
+	<a href="../../ru/kotlin/manual/fs/File.html">
+		создать файл
+	</a>
+	<a href="../../ru/kotlin/manual/fs/exists.html">
+		проверить существование
+	</a>
+	<a href="../../ru/kotlin/manual/fs/createNewFile.html">
+		создать файл
+	</a>
+	<a href="../../ru/kotlin/manual/fs/mkdir.html">
+		создать директорию
+	</a>
+	<a href="../../ru/kotlin/manual/fs/mkdirs.html">
+		создать директории
+	</a>
+	<a href="../../ru/kotlin/manual/fs/renameTo.html">
+		переименовать файл
+	</a>
+	<a href="../../ru/kotlin/manual/fs/delete.html">
+		удалить файл
+	</a>
+	<a href="../../ru/kotlin/manual/fs/deleteRecursively.html">
+		удалить рекурсивно
+	</a>
+	<a href="../../ru/kotlin/manual/fs/createTempFile.html">
+		создать временный файл
+	</a>
+	<a href="../../ru/kotlin/manual/fs/deleteOnExit.html">
+		удалить при завершении
+	</a>
+</div>
+
+<h2>Чтение данных</h2>
+<div>
+	<a href="../../ru/kotlin/manual/fs/readText.html">
+		прочитать текст
+	</a>
+	<a href="../../ru/kotlin/manual/fs/readLines.html">
+		прочитать строки
+	</a>
+	<a href="../../ru/kotlin/manual/fs/readBytes.html">
+		прочитать байты
+	</a>
+	<a href="../../ru/kotlin/manual/fs/forEachLine.html">
+		обработка строк
+	</a>
+	<a href="../../ru/kotlin/manual/fs/useLines.html">
+		использовать строки
+	</a>
+</div>
+
+<h2>Запись данных</h2>
+<div>
+	<a href="../../ru/kotlin/manual/fs/writeText.html">
+		записать текст
+	</a>
+	<a href="../../ru/kotlin/manual/fs/appendText.html">
+		добавить текст
+	</a>
+	<a href="../../ru/kotlin/manual/fs/writeBytes.html">
+		записать байты
+	</a>
+	<a href="../../ru/kotlin/manual/fs/appendBytes.html">
+		добавить байты
+	</a>
+	<a href="../../ru/kotlin/manual/fs/writeLines.html">
+		записать строки
+	</a>
+</div>
+
+<h2>Потоки ввода-вывода</h2>
+<div>
+	<a href="../../ru/kotlin/manual/fs/bufferedReader.html">
+		буферизованное чтение
+	</a>
+	<a href="../../ru/kotlin/manual/fs/bufferedWriter.html">
+		буферизованная запись
+	</a>
+	<a href="../../ru/kotlin/manual/fs/printWriter.html">
+		поток вывода
+	</a>
+	<a href="../../ru/kotlin/manual/fs/inputStream.html">
+		входной поток
+	</a>
+	<a href="../../ru/kotlin/manual/fs/outputStream.html">
+		выходной поток
+	</a>
+</div>
+
+<h2>Копирование файлов</h2>
+<div>
+	<a href="../../ru/kotlin/manual/fs/copyTo.html">
+		копировать файл
+	</a>
+	<a href="../../ru/kotlin/manual/fs/copyRecursively.html">
+		копировать рекурсивно
+	</a>
+</div>
+
+<h2>Информация о файлах</h2>
+<div>
+	<a href="../../ru/kotlin/manual/fs/isFile.html">
+		это файл
+	</a>
+	<a href="../../ru/kotlin/manual/fs/isDirectory.html">
+		это директория
+	</a>
+	<a href="../../ru/kotlin/manual/fs/name.html">
+		имя файла
+	</a>
+	<a href="../../ru/kotlin/manual/fs/length.html">
+		размер файла
+	</a>
+	<a href="../../ru/kotlin/manual/fs/lastModified.html">
+		время изменения
+	</a>
+	<a href="../../ru/kotlin/manual/fs/extension.html">
+		расширение файла
+	</a>
+	<a href="../../ru/kotlin/manual/fs/nameWithoutExtension.html">
+		имя без расширения
+	</a>
+</div>
+
+<h2>Права доступа</h2>
+<div>
+	<a href="../../ru/kotlin/manual/fs/canRead.html">
+		доступен для чтения
+	</a>
+	<a href="../../ru/kotlin/manual/fs/canWrite.html">
+		доступен для записи
+	</a>
+	<a href="../../ru/kotlin/manual/fs/canExecute.html">
+		доступен для выполнения
+	</a>
+</div>
+
+<h2>Работа с директориями</h2>
+<div>
+	<a href="../../ru/kotlin/manual/fs/listFiles.html">
+		список файлов
+	</a>
+	<a href="../../ru/kotlin/manual/fs/walk.html">
+		обход файлов
+	</a>
+	<a href="../../ru/kotlin/manual/fs/parent.html">
+		родительская директория
+	</a>
+</div>
+
+<h2>Работа с путями</h2>
+<div>
+	<a href="../../ru/kotlin/manual/fs/path.html">
+		путь файла
+	</a>
+	<a href="../../ru/kotlin/manual/fs/absolutePath.html">
+		абсолютный путь
+	</a>
+	<a href="../../ru/kotlin/manual/fs/canonicalPath.html">
+		канонический путь
+	</a>
+	<a href="../../ru/kotlin/manual/fs/resolve.html">
+		объединить пути
+	</a>
+	<a href="../../ru/kotlin/manual/fs/resolveSibling.html">
+		путь соседнего файла
+	</a>
+	<a href="../../ru/kotlin/manual/fs/normalize.html">
+		нормализовать путь
+	</a>
+	<a href="../../ru/kotlin/manual/fs/relativeTo.html">
+		относительный путь
+	</a>
+	<a href="../../ru/kotlin/manual/fs/toRelativeString.html">
+		относительный путь (строка)
+	</a>
+</div>
+</section><section data-e="pane" data-x data-m-curr="F" data-m-type="P" data-m-tabb="время">
+<h2>LocalDate</h2>
+<div>
+	<a href="../../ru/kotlin/manual/time/LocalDate.html">
+		класс LocalDate
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalDate/now.html">
+		текущая дата
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalDate/of.html">
+		создание даты
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalDate/parse.html">
+		разбор строки
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalDate/getYear.html">
+		получить год
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalDate/getMonth.html">
+		получить месяц
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalDate/getMonthValue.html">
+		получить номер месяца
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalDate/getDayOfMonth.html">
+		получить день месяца
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalDate/getDayOfYear.html">
+		получить день года
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalDate/getDayOfWeek.html">
+		получить день недели
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalDate/isLeapYear.html">
+		проверка високосного года
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalDate/plusYears.html">
+		добавить годы
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalDate/plusMonths.html">
+		добавить месяцы
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalDate/plusWeeks.html">
+		добавить недели
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalDate/plusDays.html">
+		добавить дни
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalDate/minusYears.html">
+		вычесть годы
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalDate/minusMonths.html">
+		вычесть месяцы
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalDate/minusWeeks.html">
+		вычесть недели
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalDate/minusDays.html">
+		вычесть дни
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalDate/withYear.html">
+		установить год
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalDate/withMonth.html">
+		установить месяц
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalDate/withDayOfMonth.html">
+		установить день месяца
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalDate/withDayOfYear.html">
+		установить день года
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalDate/atStartOfDay.html">
+		начало дня
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalDate/atTime.html">
+		создать LocalDateTime
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalDate/until.html">
+		период до даты
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalDate/isBefore.html">
+		проверка "до"
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalDate/isAfter.html">
+		проверка "после"
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalDate/isEqual.html">
+		проверка равенства
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalDate/range.html">
+		диапазон поля
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalDate/lengthOfMonth.html">
+		длина месяца
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalDate/lengthOfYear.html">
+		длина года
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalDate/toEpochDay.html">
+		преобразовать в дни эпохи
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalDate/from.html">
+		получить из TemporalAccessor
+	</a>
+</div>
+
+<h2>LocalTime</h2>
+<div>
+	<a href="../../ru/kotlin/manual/time/LocalTime.html">
+		класс LocalTime
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalTime/now.html">
+		текущее время
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalTime/of.html">
+		создание времени
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalTime/parse.html">
+		разбор строки
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalTime/getHour.html">
+		получить часы
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalTime/getMinute.html">
+		получить минуты
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalTime/getSecond.html">
+		получить секунды
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalTime/getNano.html">
+		получить наносекунды
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalTime/plusHours.html">
+		добавить часы
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalTime/plusMinutes.html">
+		добавить минуты
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalTime/plusSeconds.html">
+		добавить секунды
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalTime/plusNanos.html">
+		добавить наносекунды
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalTime/minusHours.html">
+		вычесть часы
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalTime/minusMinutes.html">
+		вычесть минуты
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalTime/minusSeconds.html">
+		вычесть секунды
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalTime/minusNanos.html">
+		вычесть наносекунды
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalTime/withHour.html">
+		установить часы
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalTime/withMinute.html">
+		установить минуты
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalTime/withSecond.html">
+		установить секунды
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalTime/withNano.html">
+		установить наносекунды
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalTime/truncatedTo.html">
+		усечение времени
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalTime/isBefore.html">
+		проверка "до"
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalTime/isAfter.html">
+		проверка "после"
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalTime/toSecondOfDay.html">
+		секунды с начала дня
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalTime/toNanoOfDay.html">
+		наносекунды с начала дня
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalTime/atDate.html">
+		создать LocalDateTime
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalTime/range.html">
+		диапазон поля
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalTime/from.html">
+		получить из TemporalAccessor
+	</a>
+</div>
+
+<h2>LocalDateTime</h2>
+<div>
+	<a href="../../ru/kotlin/manual/time/LocalDateTime.html">
+		класс LocalDateTime
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalDateTime/now.html">
+		текущая дата и время
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalDateTime/of.html">
+		создание даты и времени
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalDateTime/parse.html">
+		разбор строки
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalDateTime/toLocalDate.html">
+		получить дату
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalDateTime/toLocalTime.html">
+		получить время
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalDateTime/getYear.html">
+		получить год
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalDateTime/getMonth.html">
+		получить месяц
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalDateTime/getMonthValue.html">
+		получить номер месяца
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalDateTime/getDayOfMonth.html">
+		получить день месяца
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalDateTime/getDayOfYear.html">
+		получить день года
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalDateTime/getDayOfWeek.html">
+		получить день недели
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalDateTime/getHour.html">
+		получить часы
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalDateTime/getMinute.html">
+		получить минуты
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalDateTime/getSecond.html">
+		получить секунды
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalDateTime/getNano.html">
+		получить наносекунды
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalDateTime/plusYears.html">
+		добавить годы
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalDateTime/plusMonths.html">
+		добавить месяцы
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalDateTime/plusWeeks.html">
+		добавить недели
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalDateTime/plusDays.html">
+		добавить дни
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalDateTime/plusHours.html">
+		добавить часы
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalDateTime/plusMinutes.html">
+		добавить минуты
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalDateTime/plusSeconds.html">
+		добавить секунды
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalDateTime/plusNanos.html">
+		добавить наносекунды
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalDateTime/minusYears.html">
+		вычесть годы
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalDateTime/minusMonths.html">
+		вычесть месяцы
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalDateTime/minusWeeks.html">
+		вычесть недели
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalDateTime/minusDays.html">
+		вычесть дни
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalDateTime/minusHours.html">
+		вычесть часы
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalDateTime/minusMinutes.html">
+		вычесть минуты
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalDateTime/minusSeconds.html">
+		вычесть секунды
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalDateTime/minusNanos.html">
+		вычесть наносекунды
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalDateTime/withYear.html">
+		установить год
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalDateTime/withMonth.html">
+		установить месяц
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalDateTime/withDayOfMonth.html">
+		установить день месяца
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalDateTime/withDayOfYear.html">
+		установить день года
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalDateTime/withHour.html">
+		установить часы
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalDateTime/withMinute.html">
+		установить минуты
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalDateTime/withSecond.html">
+		установить секунды
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalDateTime/withNano.html">
+		установить наносекунды
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalDateTime/atZone.html">
+		создать ZonedDateTime
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalDateTime/atOffset.html">
+		создать OffsetDateTime
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalDateTime/toInstant.html">
+		преобразовать в Instant
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalDateTime/isBefore.html">
+		проверка "до"
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalDateTime/isAfter.html">
+		проверка "после"
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalDateTime/isEqual.html">
+		проверка равенства
+	</a>
+	<a href="../../ru/kotlin/manual/time/LocalDateTime/from.html">
+		получить из TemporalAccessor
+	</a>
+</div>
+
+<h2>DayOfWeek</h2>
+<div>
+	<a href="../../ru/kotlin/manual/time/DayOfWeek.html">
+		класс DayOfWeek
+	</a>
+	<a href="../../ru/kotlin/manual/time/DayOfWeek/MONDAY.html">
+		понедельник
+	</a>
+	<a href="../../ru/kotlin/manual/time/DayOfWeek/TUESDAY.html">
+		вторник
+	</a>
+	<a href="../../ru/kotlin/manual/time/DayOfWeek/WEDNESDAY.html">
+		среда
+	</a>
+	<a href="../../ru/kotlin/manual/time/DayOfWeek/THURSDAY.html">
+		четверг
+	</a>
+	<a href="../../ru/kotlin/manual/time/DayOfWeek/FRIDAY.html">
+		пятница
+	</a>
+	<a href="../../ru/kotlin/manual/time/DayOfWeek/SATURDAY.html">
+		суббота
+	</a>
+	<a href="../../ru/kotlin/manual/time/DayOfWeek/SUNDAY.html">
+		воскресенье
+	</a>
+	<a href="../../ru/kotlin/manual/time/DayOfWeek/values.html">
+		все значения
+	</a>
+	<a href="../../ru/kotlin/manual/time/DayOfWeek/valueOf.html">
+		получить по имени
+	</a>
+	<a href="../../ru/kotlin/manual/time/DayOfWeek/getValue.html">
+		получить числовое значение
+	</a>
+	<a href="../../ru/kotlin/manual/time/DayOfWeek/plus.html">
+		добавить дни
+	</a>
+	<a href="../../ru/kotlin/manual/time/DayOfWeek/minus.html">
+		вычесть дни
+	</a>
+	<a href="../../ru/kotlin/manual/time/DayOfWeek/from.html">
+		получить из TemporalAccessor
+	</a>
+</div>
+
+<h2>Month</h2>
+<div>
+	<a href="../../ru/kotlin/manual/time/Month.html">
+		класс Month
+	</a>
+	<a href="../../ru/kotlin/manual/time/Month/JANUARY.html">
+		январь
+	</a>
+	<a href="../../ru/kotlin/manual/time/Month/FEBRUARY.html">
+		февраль
+	</a>
+	<a href="../../ru/kotlin/manual/time/Month/MARCH.html">
+		март
+	</a>
+	<a href="../../ru/kotlin/manual/time/Month/APRIL.html">
+		апрель
+	</a>
+	<a href="../../ru/kotlin/manual/time/Month/MAY.html">
+		май
+	</a>
+	<a href="../../ru/kotlin/manual/time/Month/JUNE.html">
+		июнь
+	</a>
+	<a href="../../ru/kotlin/manual/time/Month/JULY.html">
+		июль
+	</a>
+	<a href="../../ru/kotlin/manual/time/Month/AUGUST.html">
+		август
+	</a>
+	<a href="../../ru/kotlin/manual/time/Month/SEPTEMBER.html">
+		сентябрь
+	</a>
+	<a href="../../ru/kotlin/manual/time/Month/OCTOBER.html">
+		октябрь
+	</a>
+	<a href="../../ru/kotlin/manual/time/Month/NOVEMBER.html">
+		ноябрь
+	</a>
+	<a href="../../ru/kotlin/manual/time/Month/DECEMBER.html">
+		декабрь
+	</a>
+	<a href="../../ru/kotlin/manual/time/Month/values.html">
+		все значения
+	</a>
+	<a href="../../ru/kotlin/manual/time/Month/valueOf.html">
+		получить по имени
+	</a>
+	<a href="../../ru/kotlin/manual/time/Month/getValue.html">
+		получить числовое значение
+	</a>
+	<a href="../../ru/kotlin/manual/time/Month/firstMonthOfQuarter.html">
+		первый месяц квартала
+	</a>
+	<a href="../../ru/kotlin/manual/time/Month/firstDayOfYear.html">
+		первый день года
+	</a>
+	<a href="../../ru/kotlin/manual/time/Month/length.html">
+		длина месяца
+	</a>
+	<a href="../../ru/kotlin/manual/time/Month/minLength.html">
+		минимальная длина
+	</a>
+	<a href="../../ru/kotlin/manual/time/Month/maxLength.html">
+		максимальная длина
+	</a>
+	<a href="../../ru/kotlin/manual/time/Month/plus.html">
+		добавить месяцы
+	</a>
+	<a href="../../ru/kotlin/manual/time/Month/minus.html">
+		вычесть месяцы
+	</a>
+	<a href="../../ru/kotlin/manual/time/Month/from.html">
+		получить из TemporalAccessor
+	</a>
+</div>
+
+<h2>Year</h2>
+<div>
+	<a href="../../ru/kotlin/manual/time/Year.html">
+		класс Year
+	</a>
+	<a href="../../ru/kotlin/manual/time/Year/now.html">
+		текущий год
+	</a>
+	<a href="../../ru/kotlin/manual/time/Year/of.html">
+		создание года
+	</a>
+	<a href="../../ru/kotlin/manual/time/Year/parse.html">
+		разбор строки
+	</a>
+	<a href="../../ru/kotlin/manual/time/Year/getValue.html">
+		получить значение
+	</a>
+	<a href="../../ru/kotlin/manual/time/Year/isLeap.html">
+		проверка високосного года
+	</a>
+	<a href="../../ru/kotlin/manual/time/Year/length.html">
+		длина года
+	</a>
+	<a href="../../ru/kotlin/manual/time/Year/plusYears.html">
+		добавить годы
+	</a>
+	<a href="../../ru/kotlin/manual/time/Year/minusYears.html">
+		вычесть годы
+	</a>
+	<a href="../../ru/kotlin/manual/time/Year/atDay.html">
+		создать LocalDate
+	</a>
+	<a href="../../ru/kotlin/manual/time/Year/atMonth.html">
+		создать YearMonth
+	</a>
+	<a href="../../ru/kotlin/manual/time/Year/atMonthDay.html">
+		создать LocalDate
+	</a>
+	<a href="../../ru/kotlin/manual/time/Year/isAfter.html">
+		проверка "после"
+	</a>
+	<a href="../../ru/kotlin/manual/time/Year/isBefore.html">
+		проверка "до"
+	</a>
+	<a href="../../ru/kotlin/manual/time/Year/range.html">
+		диапазон поля
+	</a>
+	<a href="../../ru/kotlin/manual/time/Year/from.html">
+		получить из TemporalAccessor
+	</a>
+</div>
+
+<h2>YearMonth</h2>
+<div>
+	<a href="../../ru/kotlin/manual/time/YearMonth.html">
+		класс YearMonth
+	</a>
+	<a href="../../ru/kotlin/manual/time/YearMonth/now.html">
+		текущий год и месяц
+	</a>
+	<a href="../../ru/kotlin/manual/time/YearMonth/of.html">
+		создание года и месяца
+	</a>
+	<a href="../../ru/kotlin/manual/time/YearMonth/parse.html">
+		разбор строки
+	</a>
+	<a href="../../ru/kotlin/manual/time/YearMonth/getYear.html">
+		получить год
+	</a>
+	<a href="../../ru/kotlin/manual/time/YearMonth/getMonth.html">
+		получить месяц
+	</a>
+	<a href="../../ru/kotlin/manual/time/YearMonth/getMonthValue.html">
+		получить номер месяца
+	</a>
+	<a href="../../ru/kotlin/manual/time/YearMonth/isLeapYear.html">
+		проверка високосного года
+	</a>
+	<a href="../../ru/kotlin/manual/time/YearMonth/lengthOfMonth.html">
+		длина месяца
+	</a>
+	<a href="../../ru/kotlin/manual/time/YearMonth/lengthOfYear.html">
+		длина года
+	</a>
+	<a href="../../ru/kotlin/manual/time/YearMonth/plusYears.html">
+		добавить годы
+	</a>
+	<a href="../../ru/kotlin/manual/time/YearMonth/plusMonths.html">
+		добавить месяцы
+	</a>
+	<a href="../../ru/kotlin/manual/time/YearMonth/minusYears.html">
+		вычесть годы
+	</a>
+	<a href="../../ru/kotlin/manual/time/YearMonth/minusMonths.html">
+		вычесть месяцы
+	</a>
+	<a href="../../ru/kotlin/manual/time/YearMonth/withYear.html">
+		установить год
+	</a>
+	<a href="../../ru/kotlin/manual/time/YearMonth/withMonth.html">
+		установить месяц
+	</a>
+	<a href="../../ru/kotlin/manual/time/YearMonth/atEndOfMonth.html">
+		конец месяца
+	</a>
+	<a href="../../ru/kotlin/manual/time/YearMonth/atDay.html">
+		создать LocalDate
+	</a>
+	<a href="../../ru/kotlin/manual/time/YearMonth/isAfter.html">
+		проверка "после"
+	</a>
+	<a href="../../ru/kotlin/manual/time/YearMonth/isBefore.html">
+		проверка "до"
+	</a>
+	<a href="../../ru/kotlin/manual/time/YearMonth/range.html">
+		диапазон поля
+	</a>
+	<a href="../../ru/kotlin/manual/time/YearMonth/from.html">
+		получить из TemporalAccessor
+	</a>
+</div>
+
+<h2>MonthDay</h2>
+<div>
+	<a href="../../ru/kotlin/manual/time/MonthDay.html">
+		класс MonthDay
+	</a>
+	<a href="../../ru/kotlin/manual/time/MonthDay/now.html">
+		текущий месяц и день
+	</a>
+	<a href="../../ru/kotlin/manual/time/MonthDay/of.html">
+		создание месяца и дня
+	</a>
+	<a href="../../ru/kotlin/manual/time/MonthDay/parse.html">
+		разбор строки
+	</a>
+	<a href="../../ru/kotlin/manual/time/MonthDay/getMonth.html">
+		получить месяц
+	</a>
+	<a href="../../ru/kotlin/manual/time/MonthDay/getMonthValue.html">
+		получить номер месяца
+	</a>
+	<a href="../../ru/kotlin/manual/time/MonthDay/getDayOfMonth.html">
+		получить день месяца
+	</a>
+	<a href="../../ru/kotlin/manual/time/MonthDay/withMonth.html">
+		установить месяц
+	</a>
+	<a href="../../ru/kotlin/manual/time/MonthDay/withDayOfMonth.html">
+		установить день месяца
+	</a>
+	<a href="../../ru/kotlin/manual/time/MonthDay/isValidYear.html">
+		проверка валидности года
+	</a>
+	<a href="../../ru/kotlin/manual/time/MonthDay/atYear.html">
+		создать LocalDate
+	</a>
+	<a href="../../ru/kotlin/manual/time/MonthDay/range.html">
+		диапазон поля
+	</a>
+	<a href="../../ru/kotlin/manual/time/MonthDay/from.html">
+		получить из TemporalAccessor
+	</a>
+</div>
+
+<h2>ZonedDateTime</h2>
+<div>
+	<a href="../../ru/kotlin/manual/time/ZonedDateTime.html">
+		класс ZonedDateTime
+	</a>
+	<a href="../../ru/kotlin/manual/time/ZonedDateTime/now.html">
+		текущее время с часовым поясом
+	</a>
+	<a href="../../ru/kotlin/manual/time/ZonedDateTime/of.html">
+		создание времени с поясом
+	</a>
+	<a href="../../ru/kotlin/manual/time/ZonedDateTime/parse.html">
+		разбор строки
+	</a>
+	<a href="../../ru/kotlin/manual/time/ZonedDateTime/getZone.html">
+		получить часовой пояс
+	</a>
+	<a href="../../ru/kotlin/manual/time/ZonedDateTime/getOffset.html">
+		получить смещение
+	</a>
+	<a href="../../ru/kotlin/manual/time/ZonedDateTime/withZoneSameInstant.html">
+		сменить пояс с сохранением момента
+	</a>
+	<a href="../../ru/kotlin/manual/time/ZonedDateTime/withZoneSameLocal.html">
+		сменить пояс с сохранением локального времени
+	</a>
+	<a href="../../ru/kotlin/manual/time/ZonedDateTime/toLocalDateTime.html">
+		преобразовать в LocalDateTime
+	</a>
+	<a href="../../ru/kotlin/manual/time/ZonedDateTime/toLocalDate.html">
+		преобразовать в LocalDate
+	</a>
+	<a href="../../ru/kotlin/manual/time/ZonedDateTime/toLocalTime.html">
+		преобразовать в LocalTime
+	</a>
+	<a href="../../ru/kotlin/manual/time/ZonedDateTime/toOffsetDateTime.html">
+		преобразовать в OffsetDateTime
+	</a>
+	<a href="../../ru/kotlin/manual/time/ZonedDateTime/toInstant.html">
+		преобразовать в Instant
+	</a>
+	<a href="../../ru/kotlin/manual/time/ZonedDateTime/withEarlierOffsetAtOverlap.html">
+		раннее смещение при перекрытии
+	</a>
+	<a href="../../ru/kotlin/manual/time/ZonedDateTime/withLaterOffsetAtOverlap.html">
+		позднее смещение при перекрытии
+	</a>
+	<a href="../../ru/kotlin/manual/time/ZonedDateTime/isBefore.html">
+		проверка "до"
+	</a>
+	<a href="../../ru/kotlin/manual/time/ZonedDateTime/isAfter.html">
+		проверка "после"
+	</a>
+	<a href="../../ru/kotlin/manual/time/ZonedDateTime/isEqual.html">
+		проверка равенства
+	</a>
+	<a href="../../ru/kotlin/manual/time/ZonedDateTime/plus.html">
+		добавить период
+	</a>
+	<a href="../../ru/kotlin/manual/time/ZonedDateTime/minus.html">
+		вычесть период
+	</a>
+	<a href="../../ru/kotlin/manual/time/ZonedDateTime/with.html">
+		установить значение
+	</a>
+	<a href="../../ru/kotlin/manual/time/ZonedDateTime/range.html">
+		диапазон поля
+	</a>
+</div>
+
+<h2>OffsetDateTime</h2>
+<div>
+	<a href="../../ru/kotlin/manual/time/OffsetDateTime.html">
+		класс OffsetDateTime
+	</a>
+	<a href="../../ru/kotlin/manual/time/OffsetDateTime/now.html">
+		текущее время со смещением
+	</a>
+	<a href="../../ru/kotlin/manual/time/OffsetDateTime/of.html">
+		создание времени со смещением
+	</a>
+	<a href="../../ru/kotlin/manual/time/OffsetDateTime/parse.html">
+		разбор строки
+	</a>
+	<a href="../../ru/kotlin/manual/time/OffsetDateTime/getOffset.html">
+		получить смещение
+	</a>
+	<a href="../../ru/kotlin/manual/time/OffsetDateTime/getYear.html">
+		получить год
+	</a>
+	<a href="../../ru/kotlin/manual/time/OffsetDateTime/getMonth.html">
+		получить месяц
+	</a>
+	<a href="../../ru/kotlin/manual/time/OffsetDateTime/getDayOfMonth.html">
+		получить день месяца
+	</a>
+	<a href="../../ru/kotlin/manual/time/OffsetDateTime/getHour.html">
+		получить часы
+	</a>
+	<a href="../../ru/kotlin/manual/time/OffsetDateTime/getMinute.html">
+		получить минуты
+	</a>
+	<a href="../../ru/kotlin/manual/time/OffsetDateTime/getSecond.html">
+		получить секунды
+	</a>
+	<a href="../../ru/kotlin/manual/time/OffsetDateTime/getNano.html">
+		получить наносекунды
+	</a>
+	<a href="../../ru/kotlin/manual/time/OffsetDateTime/toLocalDateTime.html">
+		преобразовать в LocalDateTime
+	</a>
+	<a href="../../ru/kotlin/manual/time/OffsetDateTime/toLocalDate.html">
+		преобразовать в LocalDate
+	</a>
+	<a href="../../ru/kotlin/manual/time/OffsetDateTime/toLocalTime.html">
+		преобразовать в LocalTime
+	</a>
+	<a href="../../ru/kotlin/manual/time/OffsetDateTime/toZonedDateTime.html">
+		преобразовать в ZonedDateTime
+	</a>
+	<a href="../../ru/kotlin/manual/time/OffsetDateTime/toInstant.html">
+		преобразовать в Instant
+	</a>
+	<a href="../../ru/kotlin/manual/time/OffsetDateTime/withOffsetSameInstant.html">
+		сменить смещение с сохранением момента
+	</a>
+	<a href="../../ru/kotlin/manual/time/OffsetDateTime/withOffsetSameLocal.html">
+		сменить смещение с сохранением локального времени
+	</a>
+	<a href="../../ru/kotlin/manual/time/OffsetDateTime/isBefore.html">
+		проверка "до"
+	</a>
+	<a href="../../ru/kotlin/manual/time/OffsetDateTime/isAfter.html">
+		проверка "после"
+	</a>
+	<a href="../../ru/kotlin/manual/time/OffsetDateTime/isEqual.html">
+		проверка равенства
+	</a>
+	<a href="../../ru/kotlin/manual/time/OffsetDateTime/plus.html">
+		добавить период
+	</a>
+	<a href="../../ru/kotlin/manual/time/OffsetDateTime/minus.html">
+		вычесть период
+	</a>
+	<a href="../../ru/kotlin/manual/time/OffsetDateTime/with.html">
+		установить значение
+	</a>
+</div>
+
+	<h2>Instant</h2>
+<div>
+	<a href="../../ru/kotlin/manual/time/Instant.html">
+		класс Instant
+	</a>
+	<a href="../../ru/kotlin/manual/time/Instant/now.html">
+		текущий момент
+	</a>
+	<a href="../../ru/kotlin/manual/time/Instant/ofEpochSecond.html">
+		создание из секунд эпохи
+	</a>
+	<a href="../../ru/kotlin/manual/time/Instant/ofEpochMilli.html">
+		создание из миллисекунд эпохи
+	</a>
+	<a href="../../ru/kotlin/manual/time/Instant/parse.html">
+		разбор строки
+	</a>
+	<a href="../../ru/kotlin/manual/time/Instant/getEpochSecond.html">
+		получить секунды эпохи
+	</a>
+	<a href="../../ru/kotlin/manual/time/Instant/getNano.html">
+		получить наносекунды
+	</a>
+	<a href="../../ru/kotlin/manual/time/Instant/plusSeconds.html">
+		добавить секунды
+	</a>
+	<a href="../../ru/kotlin/manual/time/Instant/plusMillis.html">
+		добавить миллисекунды
+	</a>
+	<a href="../../ru/kotlin/manual/time/Instant/plusNanos.html">
+		добавить наносекунды
+	</a>
+	<a href="../../ru/kotlin/manual/time/Instant/minusSeconds.html">
+		вычесть секунды
+	</a>
+	<a href="../../ru/kotlin/manual/time/Instant/minusMillis.html">
+		вычесть миллисекунды
+	</a>
+	<a href="../../ru/kotlin/manual/time/Instant/minusNanos.html">
+		вычесть наносекунды
+	</a>
+	<a href="../../ru/kotlin/manual/time/Instant/isBefore.html">
+		проверка "до"
+	</a>
+	<a href="../../ru/kotlin/manual/time/Instant/isAfter.html">
+		проверка "после"
+	</a>
+	<a href="../../ru/kotlin/manual/time/Instant/compareTo.html">
+		сравнение
+	</a>
+	<a href="../../ru/kotlin/manual/time/Instant/atZone.html">
+		создать ZonedDateTime
+	</a>
+	<a href="../../ru/kotlin/manual/time/Instant/atOffset.html">
+		создать OffsetDateTime
+	</a>
+	<a href="../../ru/kotlin/manual/time/Instant/toEpochMilli.html">
+		преобразовать в миллисекунды
+	</a>
+	<a href="../../ru/kotlin/manual/time/Instant/truncatedTo.html">
+		усечение времени
+	</a>
+	<a href="../../ru/kotlin/manual/time/Instant/from.html">
+		получить из TemporalAccessor
+	</a>
+</div>
+
+<h2>ZoneId</h2>
+<div>
+	<a href="../../ru/kotlin/manual/time/ZoneId.html">
+		класс ZoneId
+	</a>
+	<a href="../../ru/kotlin/manual/time/ZoneId/systemDefault.html">
+		системный часовой пояс
+	</a>
+	<a href="../../ru/kotlin/manual/time/ZoneId/of.html">
+		создание часового пояса
+	</a>
+	<a href="../../ru/kotlin/manual/time/ZoneId/getAvailableZoneIds.html">
+		доступные часовые пояса
+	</a>
+	<a href="../../ru/kotlin/manual/time/ZoneId/getId.html">
+		получить идентификатор
+	</a>
+	<a href="../../ru/kotlin/manual/time/ZoneId/getRules.html">
+		получить правила
+	</a>
+	<a href="../../ru/kotlin/manual/time/ZoneId/normalized.html">
+		нормализованный часовой пояс
+	</a>
+	<a href="../../ru/kotlin/manual/time/ZoneId/from.html">
+		получить из TemporalAccessor
+	</a>
+</div>
+
+<h2>Period</h2>
+<div>
+	<a href="../../ru/kotlin/manual/time/Period.html">
+		класс Period
+	</a>
+	<a href="../../ru/kotlin/manual/time/Period/of.html">
+		создание периода
+	</a>
+	<a href="../../ru/kotlin/manual/time/Period/ofYears.html">
+		период в годах
+	</a>
+	<a href="../../ru/kotlin/manual/time/Period/ofMonths.html">
+		период в месяцах
+	</a>
+	<a href="../../ru/kotlin/manual/time/Period/ofWeeks.html">
+		период в неделях
+	</a>
+	<a href="../../ru/kotlin/manual/time/Period/ofDays.html">
+		период в днях
+	</a>
+	<a href="../../ru/kotlin/manual/time/Period/parse.html">
+		разбор строки
+	</a>
+	<a href="../../ru/kotlin/manual/time/Period/between.html">
+		период между датами
+	</a>
+	<a href="../../ru/kotlin/manual/time/Period/getYears.html">
+		получить годы
+	</a>
+	<a href="../../ru/kotlin/manual/time/Period/getMonths.html">
+		получить месяцы
+	</a>
+	<a href="../../ru/kotlin/manual/time/Period/getDays.html">
+		получить дни
+	</a>
+	<a href="../../ru/kotlin/manual/time/Period/plus.html">
+		добавить период
+	</a>
+	<a href="../../ru/kotlin/manual/time/Period/minus.html">
+		вычесть период
+	</a>
+	<a href="../../ru/kotlin/manual/time/Period/multipliedBy.html">
+		умножить период
+	</a>
+	<a href="../../ru/kotlin/manual/time/Period/negated.html">
+		отрицательный период
+	</a>
+	<a href="../../ru/kotlin/manual/time/Period/normalized.html">
+		нормализованный период
+	</a>
+	<a href="../../ru/kotlin/manual/time/Period/isZero.html">
+		проверка нулевого периода
+	</a>
+	<a href="../../ru/kotlin/manual/time/Period/isNegative.html">
+		проверка отрицательного периода
+	</a>
+	<a href="../../ru/kotlin/manual/time/Period/withYears.html">
+		установить годы
+	</a>
+	<a href="../../ru/kotlin/manual/time/Period/withMonths.html">
+		установить месяцы
+	</a>
+	<a href="../../ru/kotlin/manual/time/Period/withDays.html">
+		установить дни
+	</a>
+	<a href="../../ru/kotlin/manual/time/Period/addTo.html">
+		добавить к временному объекту
+	</a>
+	<a href="../../ru/kotlin/manual/time/Period/subtractFrom.html">
+		вычесть из временного объекта
+	</a>
+	<a href="../../ru/kotlin/manual/time/Period/from.html">
+		получить из TemporalAmount
+	</a>
+</div>
+
+<h2>Duration</h2>
+<div>
+	<a href="../../ru/kotlin/manual/time/Duration.html">
+		класс Duration
+	</a>
+	<a href="../../ru/kotlin/manual/time/Duration/of.html">
+		создание длительности
+	</a>
+	<a href="../../ru/kotlin/manual/time/Duration/ofDays.html">
+		длительность в днях
+	</a>
+	<a href="../../ru/kotlin/manual/time/Duration/ofHours.html">
+		длительность в часах
+	</a>
+	<a href="../../ru/kotlin/manual/time/Duration/ofMinutes.html">
+		длительность в минутах
+	</a>
+	<a href="../../ru/kotlin/manual/time/Duration/ofSeconds.html">
+		длительность в секундах
+	</a>
+	<a href="../../ru/kotlin/manual/time/Duration/ofMillis.html">
+		длительность в миллисекундах
+	</a>
+	<a href="../../ru/kotlin/manual/time/Duration/ofNanos.html">
+		длительность в наносекундах
+	</a>
+	<a href="../../ru/kotlin/manual/time/Duration/parse.html">
+		разбор строки
+	</a>
+	<a href="../../ru/kotlin/manual/time/Duration/between.html">
+		длительность между моментами
+	</a>
+	<a href="../../ru/kotlin/manual/time/Duration/getSeconds.html">
+		получить секунды
+	</a>
+	<a href="../../ru/kotlin/manual/time/Duration/getNano.html">
+		получить наносекунды
+	</a>
+	<a href="../../ru/kotlin/manual/time/Duration/toDays.html">
+		преобразовать в дни
+	</a>
+	<a href="../../ru/kotlin/manual/time/Duration/toHours.html">
+		преобразовать в часы
+	</a>
+	<a href="../../ru/kotlin/manual/time/Duration/toMinutes.html">
+		преобразовать в минуты
+	</a>
+	<a href="../../ru/kotlin/manual/time/Duration/toMillis.html">
+		преобразовать в миллисекунды
+	</a>
+	<a href="../../ru/kotlin/manual/time/Duration/toNanos.html">
+		преобразовать в наносекунды
+	</a>
+	<a href="../../ru/kotlin/manual/time/Duration/plus.html">
+		добавить длительность
+	</a>
+	<a href="../../ru/kotlin/manual/time/Duration/minus.html">
+		вычесть длительность
+	</a>
+	<a href="../../ru/kotlin/manual/time/Duration/multipliedBy.html">
+		умножить длительность
+	</a>
+	<a href="../../ru/kotlin/manual/time/Duration/dividedBy.html">
+		разделить длительность
+	</a>
+	<a href="../../ru/kotlin/manual/time/Duration/negated.html">
+		отрицательная длительность
+	</a>
+	<a href="../../ru/kotlin/manual/time/Duration/abs.html">
+		абсолютная длительность
+	</a>
+	<a href="../../ru/kotlin/manual/time/Duration/isZero.html">
+		проверка нулевой длительности
+	</a>
+	<a href="../../ru/kotlin/manual/time/Duration/isNegative.html">
+		проверка отрицательной длительности
+	</a>
+	<a href="../../ru/kotlin/manual/time/Duration/addTo.html">
+		добавить к временному объекту
+	</a>
+	<a href="../../ru/kotlin/manual/time/Duration/subtractFrom.html">
+		вычесть из временного объекта
+	</a>
+	<a href="../../ru/kotlin/manual/time/Duration/from.html">
+		получить из TemporalAmount
+	</a>
+</div>
+
+<h2>OffsetTime</h2>
+<div>
+	<a href="../../ru/kotlin/manual/time/OffsetTime.html">
+		класс OffsetTime
+	</a>
+	<a href="../../ru/kotlin/manual/time/OffsetTime/now.html">
+		текущее время со смещением
+	</a>
+	<a href="../../ru/kotlin/manual/time/OffsetTime/of.html">
+		создание времени со смещением
+	</a>
+	<a href="../../ru/kotlin/manual/time/OffsetTime/parse.html">
+		разбор строки
+	</a>
+	<a href="../../ru/kotlin/manual/time/OffsetTime/getHour.html">
+		получить часы
+	</a>
+	<a href="../../ru/kotlin/manual/time/OffsetTime/getMinute.html">
+		получить минуты
+	</a>
+	<a href="../../ru/kotlin/manual/time/OffsetTime/getSecond.html">
+		получить секунды
+	</a>
+	<a href="../../ru/kotlin/manual/time/OffsetTime/getNano.html">
+		получить наносекунды
+	</a>
+	<a href="../../ru/kotlin/manual/time/OffsetTime/getOffset.html">
+		получить смещение
+	</a>
+	<a href="../../ru/kotlin/manual/time/OffsetTime/toLocalTime.html">
+		преобразовать в LocalTime
+	</a>
+	<a href="../../ru/kotlin/manual/time/OffsetTime/withOffsetSameInstant.html">
+		сменить смещение с сохранением момента
+	</a>
+	<a href="../../ru/kotlin/manual/time/OffsetTime/withOffsetSameLocal.html">
+		сменить смещение с сохранением локального времени
+	</a>
+	<a href="../../ru/kotlin/manual/time/OffsetTime/plus.html">
+		добавить период
+	</a>
+	<a href="../../ru/kotlin/manual/time/OffsetTime/minus.html">
+		вычесть период
+	</a>
+	<a href="../../ru/kotlin/manual/time/OffsetTime/with.html">
+		установить значение
+	</a>
+	<a href="../../ru/kotlin/manual/time/OffsetTime/isBefore.html">
+		проверка "до"
+	</a>
+	<a href="../../ru/kotlin/manual/time/OffsetTime/isAfter.html">
+		проверка "после"
+	</a>
+	<a href="../../ru/kotlin/manual/time/OffsetTime/isEqual.html">
+		проверка равенства
+	</a>
+	<a href="../../ru/kotlin/manual/time/OffsetTime/range.html">
+		диапазон поля
+	</a>
+	<a href="../../ru/kotlin/manual/time/OffsetTime/from.html">
+		получить из TemporalAccessor
+	</a>
+</div>
+
+<h2>Clock</h2>
+<div>
+	<a href="../../ru/kotlin/manual/time/Clock.html">
+		класс Clock
+	</a>
+	<a href="../../ru/kotlin/manual/time/Clock/systemDefaultZone.html">
+		системные часы с часовым поясом
+	</a>
+	<a href="../../ru/kotlin/manual/time/Clock/systemUTC.html">
+		системные часы UTC
+	</a>
+	<a href="../../ru/kotlin/manual/time/Clock/system.html">
+		системные часы
+	</a>
+	<a href="../../ru/kotlin/manual/time/Clock/fixed.html">
+		фиксированные часы
+	</a>
+	<a href="../../ru/kotlin/manual/time/Clock/offset.html">
+		часы со смещением
+	</a>
+	<a href="../../ru/kotlin/manual/time/Clock/tick.html">
+		часы с тиками
+	</a>
+	<a href="../../ru/kotlin/manual/time/Clock/withZone.html">
+		сменить часовой пояс
+	</a>
+	<a href="../../ru/kotlin/manual/time/Clock/getZone.html">
+		получить часовой пояс
+	</a>
+	<a href="../../ru/kotlin/manual/time/Clock/instant.html">
+		текущий момент
+	</a>
+	<a href="../../ru/kotlin/manual/time/Clock/millis.html">
+		текущие миллисекунды
+	</a>
+</div>
+
+<h2>DateTimeFormatter</h2>
+<div>
+	<a href="../../ru/kotlin/manual/time/DateTimeFormatter.html">
+		класс DateTimeFormatter
+	</a>
+	<a href="../../ru/kotlin/manual/time/DateTimeFormatter/ofPattern.html">
+		создание по шаблону
+	</a>
+	<a href="../../ru/kotlin/manual/time/DateTimeFormatter/ISO_LOCAL_DATE.html">
+		форматер ISO_LOCAL_DATE
+	</a>
+	<a href="../../ru/kotlin/manual/time/DateTimeFormatter/ISO_LOCAL_TIME.html">
+		форматер ISO_LOCAL_TIME
+	</a>
+	<a href="../../ru/kotlin/manual/time/DateTimeFormatter/ISO_LOCAL_DATE_TIME.html">
+		форматер ISO_LOCAL_DATE_TIME
+	</a>
+	<a href="../../ru/kotlin/manual/time/DateTimeFormatter/ISO_ZONED_DATE_TIME.html">
+		форматер ISO_ZONED_DATE_TIME
+	</a>
+	<a href="../../ru/kotlin/manual/time/DateTimeFormatter/ISO_INSTANT.html">
+		форматер ISO_INSTANT
+	</a>
+	<a href="../../ru/kotlin/manual/time/DateTimeFormatter/ISO_OFFSET_DATE_TIME.html">
+		форматер ISO_OFFSET_DATE_TIME
+	</a>
+	<a href="../../ru/kotlin/manual/time/DateTimeFormatter/ISO_DATE.html">
+		форматер ISO_DATE
+	</a>
+	<a href="../../ru/kotlin/manual/time/DateTimeFormatter/ISO_TIME.html">
+		форматер ISO_TIME
+	</a>
+	<a href="../../ru/kotlin/manual/time/DateTimeFormatter/ISO_DATE_TIME.html">
+		форматер ISO_DATE_TIME
+	</a>
+	<a href="../../ru/kotlin/manual/time/DateTimeFormatter/BASIC_ISO_DATE.html">
+		форматер BASIC_ISO_DATE
+	</a>
+	<a href="../../ru/kotlin/manual/time/DateTimeFormatter/RFC_1123_DATE_TIME.html">
+		форматер RFC_1123_DATE_TIME
+	</a>
+	<a href="../../ru/kotlin/manual/time/DateTimeFormatter/format.html">
+		форматирование
+	</a>
+	<a href="../../ru/kotlin/manual/time/DateTimeFormatter/parse.html">
+		разбор
+	</a>
+	<a href="../../ru/kotlin/manual/time/DateTimeFormatter/withLocale.html">
+		сменить локаль
+	</a>
+	<a href="../../ru/kotlin/manual/time/DateTimeFormatter/getLocale.html">
+		получить локаль
+	</a>
+	<a href="../../ru/kotlin/manual/time/DateTimeFormatter/getZone.html">
+		получить часовой пояс
+	</a>
+	<a href="../../ru/kotlin/manual/time/DateTimeFormatter/withZone.html">
+		сменить часовой пояс
+	</a>
+	<a href="../../ru/kotlin/manual/time/DateTimeFormatter/getChronology.html">
+		получить хронологию
+	</a>
+	<a href="../../ru/kotlin/manual/time/DateTimeFormatter/withChronology.html">
+		сменить хронологию
+	</a>
+	<a href="../../ru/kotlin/manual/time/DateTimeFormatter/getResolverStyle.html">
+		получить стиль разрешения
+	</a>
+	<a href="../../ru/kotlin/manual/time/DateTimeFormatter/withResolverStyle.html">
+		сменить стиль разрешения
+	</a>
+	<a href="../../ru/kotlin/manual/time/DateTimeFormatter/toFormat.html">
+		преобразовать в Format
+	</a>
+	<a href="../../ru/kotlin/manual/time/DateTimeFormatter/from.html">
+		получить из Format
+	</a>
+</div>
+
+<h2>DateTimeFormatterBuilder</h2>
+<div>
+	<a href="../../ru/kotlin/manual/time/DateTimeFormatterBuilder.html">
+		класс DateTimeFormatterBuilder
+	</a>
+	<a href="../../ru/kotlin/manual/time/DateTimeFormatterBuilder/appendPattern.html">
+		добавить шаблон
+	</a>
+	<a href="../../ru/kotlin/manual/time/DateTimeFormatterBuilder/appendValue.html">
+		добавить значение
+	</a>
+	<a href="../../ru/kotlin/manual/time/DateTimeFormatterBuilder/appendText.html">
+		добавить текст
+	</a>
+	<a href="../../ru/kotlin/manual/time/DateTimeFormatterBuilder/appendOffset.html">
+		добавить смещение
+	</a>
+	<a href="../../ru/kotlin/manual/time/DateTimeFormatterBuilder/appendZoneId.html">
+		добавить часовой пояс
+	</a>
+	<a href="../../ru/kotlin/manual/time/DateTimeFormatterBuilder/appendChronology.html">
+		добавить хронологию
+	</a>
+	<a href="../../ru/kotlin/manual/time/DateTimeFormatterBuilder/appendLiteral.html">
+		добавить литерал
+	</a>
+	<a href="../../ru/kotlin/manual/time/DateTimeFormatterBuilder/appendFraction.html">
+		добавить дробную часть
+	</a>
+	<a href="../../ru/kotlin/manual/time/DateTimeFormatterBuilder/appendInstant.html">
+		добавить момент
+	</a>
+	<a href="../../ru/kotlin/manual/time/DateTimeFormatterBuilder/appendZoneOrOffsetId.html">
+		добавить часовой пояс или смещение
+	</a>
+	<a href="../../ru/kotlin/manual/time/DateTimeFormatterBuilder/parseCaseInsensitive.html">
+		нечувствительный к регистру разбор
+	</a>
+	<a href="../../ru/kotlin/manual/time/DateTimeFormatterBuilder/parseCaseSensitive.html">
+		чувствительный к регистру разбор
+	</a>
+	<a href="../../ru/kotlin/manual/time/DateTimeFormatterBuilder/parseStrict.html">
+		строгий разбор
+	</a>
+	<a href="../../ru/kotlin/manual/time/DateTimeFormatterBuilder/parseLenient.html">
+		мягкий разбор
+	</a>
+	<a href="../../ru/kotlin/manual/time/DateTimeFormatterBuilder/optionalStart.html">
+		начало опциональной части
+	</a>
+	<a href="../../ru/kotlin/manual/time/DateTimeFormatterBuilder/optionalEnd.html">
+		конец опциональной части
+	</a>
+	<a href="../../ru/kotlin/manual/time/DateTimeFormatterBuilder/toFormatter.html">
+		создать форматтер
+	</a>
+	<a href="../../ru/kotlin/manual/time/DateTimeFormatterBuilder/toFormatter.html">
+		создать форматтер с локалью
+	</a>
+</div>
+
+<h2>TemporalAdjusters</h2>
+<div>
+	<a href="../../ru/kotlin/manual/time/TemporalAdjusters.html">
+		класс TemporalAdjusters
+	</a>
+	<a href="../../ru/kotlin/manual/time/TemporalAdjusters/firstDayOfMonth.html">
+		первый день месяца
+	</a>
+	<a href="../../ru/kotlin/manual/time/TemporalAdjusters/lastDayOfMonth.html">
+		последний день месяца
+	</a>
+	<a href="../../ru/kotlin/manual/time/TemporalAdjusters/firstDayOfNextMonth.html">
+		первый день следующего месяца
+	</a>
+	<a href="../../ru/kotlin/manual/time/TemporalAdjusters/firstDayOfYear.html">
+		первый день года
+	</a>
+	<a href="../../ru/kotlin/manual/time/TemporalAdjusters/lastDayOfYear.html">
+		последний день года
+	</a>
+	<a href="../../ru/kotlin/manual/time/TemporalAdjusters/firstDayOfNextYear.html">
+		первый день следующего года
+	</a>
+	<a href="../../ru/kotlin/manual/time/TemporalAdjusters/firstInMonth.html">
+		первый указанный день в месяце
+	</a>
+	<a href="../../ru/kotlin/manual/time/TemporalAdjusters/lastInMonth.html">
+		последний указанный день в месяце
+	</a>
+	<a href="../../ru/kotlin/manual/time/TemporalAdjusters/dayOfWeekInMonth.html">
+		день недели в месяце
+	</a>
+	<a href="../../ru/kotlin/manual/time/TemporalAdjusters/next.html">
+		следующий указанный день
+	</a>
+	<a href="../../ru/kotlin/manual/time/TemporalAdjusters/nextOrSame.html">
+		следующий или текущий указанный день
+	</a>
+	<a href="../../ru/kotlin/manual/time/TemporalAdjusters/previous.html">
+		предыдущий указанный день
+	</a>
+	<a href="../../ru/kotlin/manual/time/TemporalAdjusters/previousOrSame.html">
+		предыдущий или текущий указанный день
+	</a>
+	<a href="../../ru/kotlin/manual/time/TemporalAdjusters/ofDateAdjuster.html">
+		настройщик даты
+	</a>
+</div>
+
+	<h2>ChronoUnit</h2>
+<div>
+	<a href="../../ru/kotlin/manual/time/ChronoUnit.html">
+		класс ChronoUnit
+	</a>
+	<a href="../../ru/kotlin/manual/time/ChronoUnit/NANOS.html">
+		наносекунды
+	</a>
+	<a href="../../ru/kotlin/manual/time/ChronoUnit/MICROS.html">
+		микросекунды
+	</a>
+	<a href="../../ru/kotlin/manual/time/ChronoUnit/MILLIS.html">
+		миллисекунды
+	</a>
+	<a href="../../ru/kotlin/manual/time/ChronoUnit/SECONDS.html">
+		секунды
+	</a>
+	<a href="../../ru/kotlin/manual/time/ChronoUnit/MINUTES.html">
+		минуты
+	</a>
+	<a href="../../ru/kotlin/manual/time/ChronoUnit/HOURS.html">
+		часы
+	</a>
+	<a href="../../ru/kotlin/manual/time/ChronoUnit/HALF_DAYS.html">
+		полдня
+	</a>
+	<a href="../../ru/kotlin/manual/time/ChronoUnit/DAYS.html">
+		дни
+	</a>
+	<a href="../../ru/kotlin/manual/time/ChronoUnit/WEEKS.html">
+		недели
+	</a>
+	<a href="../../ru/kotlin/manual/time/ChronoUnit/MONTHS.html">
+		месяцы
+	</a>
+	<a href="../../ru/kotlin/manual/time/ChronoUnit/YEARS.html">
+		годы
+	</a>
+	<a href="../../ru/kotlin/manual/time/ChronoUnit/DECADES.html">
+		десятилетия
+	</a>
+	<a href="../../ru/kotlin/manual/time/ChronoUnit/CENTURIES.html">
+		века
+	</a>
+	<a href="../../ru/kotlin/manual/time/ChronoUnit/MILLENNIA.html">
+		тысячелетия
+	</a>
+	<a href="../../ru/kotlin/manual/time/ChronoUnit/ERAS.html">
+		эры
+	</a>
+	<a href="../../ru/kotlin/manual/time/ChronoUnit/FOREVER.html">
+		вечность
+	</a>
+	<a href="../../ru/kotlin/manual/time/ChronoUnit/values.html">
+		все значения
+	</a>
+	<a href="../../ru/kotlin/manual/time/ChronoUnit/valueOf.html">
+		получить по имени
+	</a>
+	<a href="../../ru/kotlin/manual/time/ChronoUnit/getDuration.html">
+		получить длительность
+	</a>
+	<a href="../../ru/kotlin/manual/time/ChronoUnit/isDateBased.html">
+		проверка основанности на дате
+	</a>
+	<a href="../../ru/kotlin/manual/time/ChronoUnit/isTimeBased.html">
+		проверка основанности на времени
+	</a>
+	<a href="../../ru/kotlin/manual/time/ChronoUnit/addTo.html">
+		добавить к временному объекту
+	</a>
+	<a href="../../ru/kotlin/manual/time/ChronoUnit/between.html">
+		разница между временными объектами
+	</a>
+</div>
+
+<h2>ChronoField</h2>
+<div>
+	<a href="../../ru/kotlin/manual/time/ChronoField.html">
+		класс ChronoField
+	</a>
+	<a href="../../ru/kotlin/manual/time/ChronoField/NANO_OF_SECOND.html">
+		наносекунды в секунде
+	</a>
+	<a href="../../ru/kotlin/manual/time/ChronoField/NANO_OF_DAY.html">
+		наносекунды в дне
+	</a>
+	<a href="../../ru/kotlin/manual/time/ChronoField/MICRO_OF_SECOND.html">
+		микросекунды в секунде
+	</a>
+	<a href="../../ru/kotlin/manual/time/ChronoField/MICRO_OF_DAY.html">
+		микросекунды в дне
+	</a>
+	<a href="../../ru/kotlin/manual/time/ChronoField/MILLI_OF_SECOND.html">
+		миллисекунды в секунде
+	</a>
+	<a href="../../ru/kotlin/manual/time/ChronoField/MILLI_OF_DAY.html">
+		миллисекунды в дне
+	</a>
+	<a href="../../ru/kotlin/manual/time/ChronoField/SECOND_OF_MINUTE.html">
+		секунды в минуте
+	</a>
+	<a href="../../ru/kotlin/manual/time/ChronoField/SECOND_OF_DAY.html">
+		секунды в дне
+	</a>
+	<a href="../../ru/kotlin/manual/time/ChronoField/MINUTE_OF_HOUR.html">
+		минуты в часе
+	</a>
+	<a href="../../ru/kotlin/manual/time/ChronoField/MINUTE_OF_DAY.html">
+		минуты в дне
+	</a>
+	<a href="../../ru/kotlin/manual/time/ChronoField/HOUR_OF_AMPM.html">
+		часы в AM/PM
+	</a>
+	<a href="../../ru/kotlin/manual/time/ChronoField/CLOCK_HOUR_OF_AMPM.html">
+		часы на циферблате в AM/PM
+	</a>
+	<a href="../../ru/kotlin/manual/time/ChronoField/HOUR_OF_DAY.html">
+		часы в дне
+	</a>
+	<a href="../../ru/kotlin/manual/time/ChronoField/CLOCK_HOUR_OF_DAY.html">
+		часы на циферблате в дне
+	</a>
+	<a href="../../ru/kotlin/manual/time/ChronoField/AMPM_OF_DAY.html">
+		AM/PM в дне
+	</a>
+	<a href="../../ru/kotlin/manual/time/ChronoField/DAY_OF_WEEK.html">
+		день недели
+	</a>
+	<a href="../../ru/kotlin/manual/time/ChronoField/ALIGNED_DAY_OF_WEEK_IN_MONTH.html">
+		выровненный день недели в месяце
+	</a>
+	<a href="../../ru/kotlin/manual/time/ChronoField/ALIGNED_DAY_OF_WEEK_IN_YEAR.html">
+		выровненный день недели в году
+	</a>
+	<a href="../../ru/kotlin/manual/time/ChronoField/DAY_OF_MONTH.html">
+		день месяца
+	</a>
+	<a href="../../ru/kotlin/manual/time/ChronoField/DAY_OF_YEAR.html">
+		день года
+	</a>
+	<a href="../../ru/kotlin/manual/time/ChronoField/EPOCH_DAY.html">
+		день эпохи
+	</a>
+	<a href="../../ru/kotlin/manual/time/ChronoField/ALIGNED_WEEK_OF_MONTH.html">
+		выровненная неделя в месяце
+	</a>
+	<a href="../../ru/kotlin/manual/time/ChronoField/ALIGNED_WEEK_OF_YEAR.html">
+		выровненная неделя в году
+	</a>
+	<a href="../../ru/kotlin/manual/time/ChronoField/MONTH_OF_YEAR.html">
+		месяц года
+	</a>
+	<a href="../../ru/kotlin/manual/time/ChronoField/PROLEPTIC_MONTH.html">
+		пролептический месяц
+	</a>
+	<a href="../../ru/kotlin/manual/time/ChronoField/YEAR_OF_ERA.html">
+		год эры
+	</a>
+	<a href="../../ru/kotlin/manual/time/ChronoField/YEAR.html">
+		год
+	</a>
+	<a href="../../ru/kotlin/manual/time/ChronoField/ERA.html">
+		эра
+	</a>
+	<a href="../../ru/kotlin/manual/time/ChronoField/INSTANT_SECONDS.html">
+		секунды момента
+	</a>
+	<a href="../../ru/kotlin/manual/time/ChronoField/OFFSET_SECONDS.html">
+		секунды смещения
+	</a>
+	<a href="../../ru/kotlin/manual/time/ChronoField/values.html">
+		все значения
+	</a>
+	<a href="../../ru/kotlin/manual/time/ChronoField/valueOf.html">
+		получить по имени
+	</a>
+	<a href="../../ru/kotlin/manual/time/ChronoField/getBaseUnit.html">
+		получить базовую единицу
+	</a>
+	<a href="../../ru/kotlin/manual/time/ChronoField/getRangeUnit.html">
+		получить единицу диапазона
+	</a>
+	<a href="../../ru/kotlin/manual/time/ChronoField/range.html">
+		диапазон значений
+	</a>
+	<a href="../../ru/kotlin/manual/time/ChronoField/getFrom.html">
+		получить из временного объекта
+	</a>
+	<a href="../../ru/kotlin/manual/time/ChronoField/checkValidValue.html">
+		проверить значение
+	</a>
+	<a href="../../ru/kotlin/manual/time/ChronoField/checkValidIntValue.html">
+		проверить целочисленное значение
+	</a>
+	<a href="../../ru/kotlin/manual/time/ChronoField/displayName.html">
+		отображаемое имя
+	</a>
+	<a href="../../ru/kotlin/manual/time/ChronoField/isDateBased.html">
+		проверка основанности на дате
+	</a>
+	<a href="../../ru/kotlin/manual/time/ChronoField/isTimeBased.html">
+		проверка основанности на времени
+	</a>
+	<a href="../../ru/kotlin/manual/time/ChronoField/rangeRefinedBy.html">
+		уточненный диапазон
+	</a>
+</div>
+
+<h2>ZoneOffset</h2>
+<div>
+	<a href="../../ru/kotlin/manual/time/ZoneOffset.html">
+		класс ZoneOffset
+	</a>
+	<a href="../../ru/kotlin/manual/time/ZoneOffset/UTC.html">
+		смещение UTC
+	</a>
+	<a href="../../ru/kotlin/manual/time/ZoneOffset/MIN.html">
+		минимальное смещение
+	</a>
+	<a href="../../ru/kotlin/manual/time/ZoneOffset/MAX.html">
+		максимальное смещение
+	</a>
+	<a href="../../ru/kotlin/manual/time/ZoneOffset/of.html">
+		создание смещения
+	</a>
+	<a href="../../ru/kotlin/manual/time/ZoneOffset/ofHours.html">
+		создание смещения в часах
+	</a>
+	<a href="../../ru/kotlin/manual/time/ZoneOffset/ofHoursMinutes.html">
+		создание смещения в часах и минутах
+	</a>
+	<a href="../../ru/kotlin/manual/time/ZoneOffset/ofHoursMinutesSeconds.html">
+		создание смещения в часах, минутах и секундах
+	</a>
+	<a href="../../ru/kotlin/manual/time/ZoneOffset/ofTotalSeconds.html">
+		создание смещения в секундах
+	</a>
+	<a href="../../ru/kotlin/manual/time/ZoneOffset/getTotalSeconds.html">
+		получить общее количество секунд
+	</a>
+	<a href="../../ru/kotlin/manual/time/ZoneOffset/getId.html">
+		получить идентификатор
+	</a>
+	<a href="../../ru/kotlin/manual/time/ZoneOffset/getRules.html">
+		получить правила
+	</a>
+	<a href="../../ru/kotlin/manual/time/ZoneOffset/getAvailableZoneIds.html">
+		доступные идентификаторы зон
+	</a>
+	<a href="../../ru/kotlin/manual/time/ZoneOffset/compareTo.html">
+		сравнение смещений
+	</a>
+	<a href="../../ru/kotlin/manual/time/ZoneOffset/from.html">
+		получить из TemporalAccessor
+	</a>
+</div>
+
+<h2>TemporalQueries</h2>
+<div>
+	<a href="../../ru/kotlin/manual/time/TemporalQueries.html">
+		класс TemporalQueries
+	</a>
+	<a href="../../ru/kotlin/manual/time/TemporalQueries/zoneId.html">
+		запрос часового пояса
+	</a>
+	<a href="../../ru/kotlin/manual/time/TemporalQueries/chronology.html">
+		запрос хронологии
+	</a>
+	<a href="../../ru/kotlin/manual/time/TemporalQueries/precision.html">
+		запрос точности
+	</a>
+	<a href="../../ru/kotlin/manual/time/TemporalQueries/offset.html">
+		запрос смещения
+	</a>
+	<a href="../../ru/kotlin/manual/time/TemporalQueries/zone.html">
+		запрос зоны
+	</a>
+	<a href="../../ru/kotlin/manual/time/TemporalQueries/localDate.html">
+		запрос локальной даты
+	</a>
+	<a href="../../ru/kotlin/manual/time/TemporalQueries/localTime.html">
+		запрос локального времени
+	</a>
+	<a href="../../ru/kotlin/manual/time/TemporalQueries/queryFrom.html">
+		выполнить запрос
+	</a>
+</div>
+
+<h2>TemporalAmount</h2>
+<div>
+	<a href="../../ru/kotlin/manual/time/TemporalAmount.html">
+		класс TemporalAmount
+	</a>
+	<a href="../../ru/kotlin/manual/time/TemporalAmount/get.html">
+		получить значение
+	</a>
+	<a href="../../ru/kotlin/manual/time/TemporalAmount/getUnits.html">
+		получить единицы измерения
+	</a>
+	<a href="../../ru/kotlin/manual/time/TemporalAmount/addTo.html">
+		добавить к временному объекту
+	</a>
+	<a href="../../ru/kotlin/manual/time/TemporalAmount/subtractFrom.html">
+		вычесть из временного объекта
+	</a>
+</div>
+
+<h2>TemporalUnit</h2>
+<div>
+	<a href="../../ru/kotlin/manual/time/TemporalUnit.html">
+		класс TemporalUnit
+	</a>
+	<a href="../../ru/kotlin/manual/time/TemporalUnit/getDuration.html">
+		получить длительность
+	</a>
+	<a href="../../ru/kotlin/manual/time/TemporalUnit/isDurationEstimated.html">
+		проверка оценки длительности
+	</a>
+	<a href="../../ru/kotlin/manual/time/TemporalUnit/isDateBased.html">
+		проверка основанности на дате
+	</a>
+	<a href="../../ru/kotlin/manual/time/TemporalUnit/isTimeBased.html">
+		проверка основанности на времени
+	</a>
+	<a href="../../ru/kotlin/manual/time/TemporalUnit/addTo.html">
+		добавить к временному объекту
+	</a>
+	<a href="../../ru/kotlin/manual/time/TemporalUnit/between.html">
+		разница между временными объектами
+	</a>
+</div>
+
+<h2>TemporalField</h2>
+<div>
+	<a href="../../ru/kotlin/manual/time/TemporalField.html">
+		класс TemporalField
+	</a>
+	<a href="../../ru/kotlin/manual/time/TemporalField/getBaseUnit.html">
+		получить базовую единицу
+	</a>
+	<a href="../../ru/kotlin/manual/time/TemporalField/getRangeUnit.html">
+		получить единицу диапазона
+	</a>
+	<a href="../../ru/kotlin/manual/time/TemporalField/range.html">
+		диапазон значений
+	</a>
+	<a href="../../ru/kotlin/manual/time/TemporalField/getFrom.html">
+		получить из временного объекта
+	</a>
+	<a href="../../ru/kotlin/manual/time/TemporalField/isDateBased.html">
+		проверка основанности на дате
+	</a>
+	<a href="../../ru/kotlin/manual/time/TemporalField/isTimeBased.html">
+		проверка основанности на времени
+	</a>
+	<a href="../../ru/kotlin/manual/time/TemporalField/rangeRefinedBy.html">
+		уточненный диапазон
+	</a>
+	<a href="../../ru/kotlin/manual/time/TemporalField/getDisplayName.html">
+		получить отображаемое имя
+	</a>
+	<a href="../../ru/kotlin/manual/time/TemporalField/adjustInto.html">
+		настроить временной объект
+	</a>
+	<a href="../../ru/kotlin/manual/time/TemporalField/checkValidValue.html">
+		проверить значение
+	</a>
+	<a href="../../ru/kotlin/manual/time/TemporalField/checkValidIntValue.html">
+		проверить целочисленное значение
+	</a>
+</div>
+
+<h2>ValueRange</h2>
+<div>
+	<a href="../../ru/kotlin/manual/time/ValueRange.html">
+		класс ValueRange
+	</a>
+	<a href="../../ru/kotlin/manual/time/ValueRange/of.html">
+		создание диапазона
+	</a>
+	<a href="../../ru/kotlin/manual/time/ValueRange/isFixed.html">
+		проверка фиксированности
+	</a>
+	<a href="../../ru/kotlin/manual/time/ValueRange/getMinimum.html">
+		получить минимальное значение
+	</a>
+	<a href="../../ru/kotlin/manual/time/ValueRange/getLargestMinimum.html">
+		получить наибольший минимум
+	</a>
+	<a href="../../ru/kotlin/manual/time/ValueRange/getSmallestMaximum.html">
+		получить наименьший максимум
+	</a>
+	<a href="../../ru/kotlin/manual/time/ValueRange/getMaximum.html">
+		получить максимальное значение
+	</a>
+	<a href="../../ru/kotlin/manual/time/ValueRange/isValidValue.html">
+		проверка валидности значения
+	</a>
+	<a href="../../ru/kotlin/manual/time/ValueRange/isValidIntValue.html">
+		проверка валидности целого значения
+	</a>
+	<a href="../../ru/kotlin/manual/time/ValueRange/checkValidValue.html">
+		проверить значение
+	</a>
+	<a href="../../ru/kotlin/manual/time/ValueRange/checkValidIntValue.html">
+		проверить целочисленное значение
+	</a>
+</div>
+
+<h2>IsoChronology</h2>
+<div>
+	<a href="../../ru/kotlin/manual/time/IsoChronology.html">
+		класс IsoChronology
+	</a>
+	<a href="../../ru/kotlin/manual/time/IsoChronology/INSTANCE.html">
+		экземпляр ISO хронологии
+	</a>
+	<a href="../../ru/kotlin/manual/time/IsoChronology/isLeapYear.html">
+		проверка високосного года
+	</a>
+	<a href="../../ru/kotlin/manual/time/IsoChronology/date.html">
+		создание даты
+	</a>
+	<a href="../../ru/kotlin/manual/time/IsoChronology/dateYearDay.html">
+		создание даты по году и дню
+	</a>
+	<a href="../../ru/kotlin/manual/time/IsoChronology/dateNow.html">
+		текущая дата
+	</a>
+	<a href="../../ru/kotlin/manual/time/IsoChronology/range.html">
+		диапазон поля
+	</a>
+	<a href="../../ru/kotlin/manual/time/IsoChronology/getCalendarType.html">
+		получить тип календаря
+	</a>
+	<a href="../../ru/kotlin/manual/time/IsoChronology/getId.html">
+		получить идентификатор
+	</a>
+	<a href="../../ru/kotlin/manual/time/IsoChronology/resolveDate.html">
+		разрешить дату
+	</a>
+</div>
+
+<h2>ZoneRules</h2>
+<div>
+	<a href="../../ru/kotlin/manual/time/ZoneRules.html">
+		класс ZoneRules
+	</a>
+	<a href="../../ru/kotlin/manual/time/ZoneRules/isFixedOffset.html">
+		проверка фиксированного смещения
+	</a>
+	<a href="../../ru/kotlin/manual/time/ZoneRules/getOffset.html">
+		получить смещение
+	</a>
+	<a href="../../ru/kotlin/manual/time/ZoneRules/getStandardOffset.html">
+		получить стандартное смещение
+	</a>
+	<a href="../../ru/kotlin/manual/time/ZoneRules/getDaylightSavings.html">
+		получить летнее время
+	</a>
+	<a href="../../ru/kotlin/manual/time/ZoneRules/isDaylightSavings.html">
+		проверка летнего времени
+	</a>
+	<a href="../../ru/kotlin/manual/time/ZoneRules/isValidOffset.html">
+		проверка валидности смещения
+	</a>
+	<a href="../../ru/kotlin/manual/time/ZoneRules/getTransition.html">
+		получить переход
+	</a>
+	<a href="../../ru/kotlin/manual/time/ZoneRules/getTransitions.html">
+		получить переходы
+	</a>
+	<a href="../../ru/kotlin/manual/time/ZoneRules/getTransitionRules.html">
+		получить правила переходов
+	</a>
+	<a href="../../ru/kotlin/manual/time/ZoneRules/nextTransition.html">
+		следующий переход
+	</a>
+	<a href="../../ru/kotlin/manual/time/ZoneRules/previousTransition.html">
+		предыдущий переход
+	</a>
+</div>
+
+<h2>ZoneRulesProvider</h2>
+<div>
+	<a href="../../ru/kotlin/manual/time/ZoneRulesProvider.html">
+		класс ZoneRulesProvider
+	</a>
+	<a href="../../ru/kotlin/manual/time/ZoneRulesProvider/getAvailableZoneIds.html">
+		доступные идентификаторы зон
+	</a>
+	<a href="../../ru/kotlin/manual/time/ZoneRulesProvider/getRules.html">
+		получить правила
+	</a>
+	<a href="../../ru/kotlin/manual/time/ZoneRulesProvider/getVersions.html">
+		получить версии
+	</a>
+	<a href="../../ru/kotlin/manual/time/ZoneRulesProvider/refresh.html">
+		обновить провайдер
+	</a>
+</div>
+
+<h2>JapaneseDate</h2>
+<div>
+	<a href="../../ru/kotlin/manual/time/JapaneseDate.html">
+		класс JapaneseDate
+	</a>
+	<a href="../../ru/kotlin/manual/time/JapaneseDate/now.html">
+		текущая японская дата
+	</a>
+	<a href="../../ru/kotlin/manual/time/JapaneseDate/of.html">
+		создание японской даты
+	</a>
+	<a href="../../ru/kotlin/manual/time/JapaneseDate/from.html">
+		получить из TemporalAccessor
+	</a>
+	<a href="../../ru/kotlin/manual/time/JapaneseDate/getEra.html">
+		получить эру
+	</a>
+	<a href="../../ru/kotlin/manual/time/JapaneseDate/getChronology.html">
+		получить хронологию
+	</a>
+	<a href="../../ru/kotlin/manual/time/JapaneseDate/range.html">
+		диапазон поля
+	</a>
+	<a href="../../ru/kotlin/manual/time/JapaneseDate/with.html">
+		установить значение
+	</a>
+	<a href="../../ru/kotlin/manual/time/JapaneseDate/plus.html">
+		добавить период
+	</a>
+	<a href="../../ru/kotlin/manual/time/JapaneseDate/minus.html">
+		вычесть период
+	</a>
+	<a href="../../ru/kotlin/manual/time/JapaneseDate/until.html">
+		период до даты
+	</a>
+	<a href="../../ru/kotlin/manual/time/JapaneseDate/atTime.html">
+		создать японскую дату-время
+	</a>
+</div>
+
+<h2>ThaiBuddhistDate</h2>
+<div>
+	<a href="../../ru/kotlin/manual/time/ThaiBuddhistDate.html">
+		класс ThaiBuddhistDate
+	</a>
+	<a href="../../ru/kotlin/manual/time/ThaiBuddhistDate/now.html">
+		текущая тайская буддийская дата
+	</a>
+	<a href="../../ru/kotlin/manual/time/ThaiBuddhistDate/of.html">
+		создание тайской буддийской даты
+	</a>
+	<a href="../../ru/kotlin/manual/time/ThaiBuddhistDate/from.html">
+		получить из TemporalAccessor
+	</a>
+	<a href="../../ru/kotlin/manual/time/ThaiBuddhistDate/getEra.html">
+		получить эру
+	</a>
+	<a href="../../ru/kotlin/manual/time/ThaiBuddhistDate/getChronology.html">
+		получить хронологию
+	</a>
+	<a href="../../ru/kotlin/manual/time/ThaiBuddhistDate/range.html">
+		диапазон поля
+	</a>
+	<a href="../../ru/kotlin/manual/time/ThaiBuddhistDate/with.html">
+		установить значение
+	</a>
+	<a href="../../ru/kotlin/manual/time/ThaiBuddhistDate/plus.html">
+		добавить период
+	</a>
+	<a href="../../ru/kotlin/manual/time/ThaiBuddhistDate/minus.html">
+		вычесть период
+	</a>
+	<a href="../../ru/kotlin/manual/time/ThaiBuddhistDate/until.html">
+		период до даты
+	</a>
+	<a href="../../ru/kotlin/manual/time/ThaiBuddhistDate/atTime.html">
+		создать тайскую буддийскую дату-время
+	</a>
+</div>
+
+<h2>HijrahDate</h2>
+<div>
+	<a href="../../ru/kotlin/manual/time/HijrahDate.html">
+		класс HijrahDate
+	</a>
+	<a href="../../ru/kotlin/manual/time/HijrahDate/now.html">
+		текущая исламская дата
+	</a>
+	<a href="../../ru/kotlin/manual/time/HijrahDate/of.html">
+		создание исламской даты
+	</a>
+	<a href="../../ru/kotlin/manual/time/HijrahDate/from.html">
+		получить из TemporalAccessor
+	</a>
+	<a href="../../ru/kotlin/manual/time/HijrahDate/getEra.html">
+		получить эру
+	</a>
+	<a href="../../ru/kotlin/manual/time/HijrahDate/getChronology.html">
+		получить хронологию
+	</a>
+	<a href="../../ru/kotlin/manual/time/HijrahDate/range.html">
+		диапазон поля
+	</a>
+	<a href="../../ru/kotlin/manual/time/HijrahDate/with.html">
+		установить значение
+	</a>
+	<a href="../../ru/kotlin/manual/time/HijrahDate/plus.html">
+		добавить период
+	</a>
+	<a href="../../ru/kotlin/manual/time/HijrahDate/minus.html">
+		вычесть период
+	</a>
+	<a href="../../ru/kotlin/manual/time/HijrahDate/until.html">
+		период до даты
+	</a>
+	<a href="../../ru/kotlin/manual/time/HijrahDate/atTime.html">
+		создать исламскую дату-время
+	</a>
+	<a href="../../ru/kotlin/manual/time/HijrahDate/lengthOfMonth.html">
+		длина месяца
+	</a>
+	<a href="../../ru/kotlin/manual/time/HijrahDate/lengthOfYear.html">
+		длина года
+	</a>
+</div>
+
+<h2>MinguoDate</h2>
+<div>
+	<a href="../../ru/kotlin/manual/time/MinguoDate.html">
+		класс MinguoDate
+	</a>
+	<a href="../../ru/kotlin/manual/time/MinguoDate/now.html">
+		текущая дата Миньго
+	</a>
+	<a href="../../ru/kotlin/manual/time/MinguoDate/of.html">
+		создание даты Миньго
+	</a>
+	<a href="../../ru/kotlin/manual/time/MinguoDate/from.html">
+		получить из TemporalAccessor
+	</a>
+	<a href="../../ru/kotlin/manual/time/MinguoDate/getEra.html">
+		получить эру
+	</a>
+	<a href="../../ru/kotlin/manual/time/MinguoDate/getChronology.html">
+		получить хронологию
+	</a>
+	<a href="../../ru/kotlin/manual/time/MinguoDate/range.html">
+		диапазон поля
+	</a>
+	<a href="../../ru/kotlin/manual/time/MinguoDate/with.html">
+		установить значение
+	</a>
+	<a href="../../ru/kotlin/manual/time/MinguoDate/plus.html">
+		добавить период
+	</a>
+	<a href="../../ru/kotlin/manual/time/MinguoDate/minus.html">
+		вычесть период
+	</a>
+	<a href="../../ru/kotlin/manual/time/MinguoDate/until.html">
+		период до даты
+	</a>
+	<a href="../../ru/kotlin/manual/time/MinguoDate/atTime.html">
+		создать дату-время Миньго
+	</a>
+</div>
+</section><section data-e="pane" data-x data-m-curr="F" data-m-type="P" data-m-tabb="ООП">
+<h2>Основные ООП концепции</h2>
+<div>
+	<a href="../../ru/kotlin/manual/oop/class.html">
+		создание класса
+	</a>
+	<a href="../../ru/kotlin/manual/oop/interface.html">
+		определение интерфейса
+	</a>
+	<a href="../../ru/kotlin/manual/oop/abstract.html">
+		абстрактный класс
+	</a>
+	<a href="../../ru/kotlin/manual/oop/open.html">
+		открытый для наследования класс
+	</a>
+	<a href="../../ru/kotlin/manual/oop/data.html">
+		класс данных
+	</a>
+	<a href="../../ru/kotlin/manual/oop/sealed.html">
+		sealed класс
+	</a>
+	<a href="../../ru/kotlin/manual/oop/enum.html">
+		перечисление значений
+	</a>
+	<a href="../../ru/kotlin/manual/oop/object.html">
+		объект-синглтон
+	</a>
+	<a href="../../ru/kotlin/manual/oop/companion.html">
+		companion объект
+	</a>
+	<a href="../../ru/kotlin/manual/oop/inner.html">
+		внутренний класс
+	</a>
+	<a href="../../ru/kotlin/manual/oop/final.html">
+		окончательный
+	</a>
+	<a href="../../ru/kotlin/manual/oop/static.html">
+		статический член
+	</a>
+	<a href="../../ru/kotlin/manual/oop/nested.html">
+		вложенный класс
+	</a>
+	<a href="../../ru/kotlin/manual/oop/copy.html">
+		копирование объекта
+	</a>
+	<a href="../../ru/kotlin/manual/oop/equals.html">
+		сравнение объектов
+	</a>
+	<a href="../../ru/kotlin/manual/oop/toString.html">
+		строковое представление объекта
+	</a>
+	<a href="../../ru/kotlin/manual/oop/hashCode.html">
+		хэш-код объекта
+	</a>
+	<a href="../../ru/kotlin/manual/oop/equals.html">
+		сравнение объектов
+	</a>
+	<a href="../../ru/kotlin/manual/oop/toString.html">
+		строковое представление объекта
+	</a>
+	<a href="../../ru/kotlin/manual/oop/isInstance.html">
+		проверка типа объекта
+	</a>
+	<a href="../../ru/kotlin/manual/oop/companion.html">
+		companion объект
+	</a>
+	<a href="../../ru/kotlin/manual/oop/reified.html">
+		параметр типа с информацией о классе
+	</a>
+</div>
+
+<h2>Модификаторы доступа</h2>
+<div>
+	<a href="../../ru/kotlin/manual/oop/public.html">
+		публичный доступ
+	</a>
+	<a href="../../ru/kotlin/manual/oop/private.html">
+		приватный доступ
+	</a>
+	<a href="../../ru/kotlin/manual/oop/protected.html">
+		защищенный доступ
+	</a>
+	<a href="../../ru/kotlin/manual/oop/internal.html">
+		внутренний доступ
+	</a>
+</div>
+
+<h2>Наследование</h2>
+<div>
+	<a href="../../ru/kotlin/manual/oop/extends.html">
+		наследование класса
+	</a>
+	<a href="../../ru/kotlin/manual/oop/implements.html">
+		реализация интерфейса
+	</a>
+	<a href="../../ru/kotlin/manual/oop/super.html">
+		вызов родительского класса
+	</a>
+	<a href="../../ru/kotlin/manual/oop/override.html">
+		переопределение члена
+	</a>
+</div>
+
+<h2>Конструкторы</h2>
+<div>
+	<a href="../../ru/kotlin/manual/oop/init.html">
+		блок инициализации
+	</a>
+	<a href="../../ru/kotlin/manual/oop/constructor.html">
+		объявление конструктора
+	</a>
+	<a href="../../ru/kotlin/manual/oop/this.html">
+		ссылка на текущий объект
+	</a>
+</div>
+
+<h2>Свойства</h2>
+<div>
+	<a href="../../ru/kotlin/manual/oop/val.html">
+		неизменяемое свойство
+	</a>
+	<a href="../../ru/kotlin/manual/oop/var.html">
+		изменяемое свойство
+	</a>
+	<a href="../../ru/kotlin/manual/oop/get.html">
+		геттер свойства
+	</a>
+	<a href="../../ru/kotlin/manual/oop/set.html">
+		сеттер свойства
+	</a>
+	<a href="../../ru/kotlin/manual/oop/field.html">
+		поле свойства
+	</a>
+	<a href="../../ru/kotlin/manual/oop/lateinit.html">
+		отложенная инициализация
+	</a>
+	<a href="../../ru/kotlin/manual/oop/lazy.html">
+		ленивая инициализация
+	</a>
+	<a href="../../ru/kotlin/manual/oop/const.html">
+		константа времени компиляции
+	</a>
+</div>
+
+<h2>Аннотации</h2>
+<div>
+	<a href="../../ru/kotlin/manual/oop/annotation.html">
+		объявление аннотации
+	</a>
+	<a href="../../ru/kotlin/manual/oop/target.html">
+		цель аннотации
+	</a>
+	<a href="../../ru/kotlin/manual/oop/retention.html">
+		retention аннотации
+	</a>
+	<a href="../../ru/kotlin/manual/oop/repeatable.html">
+		повторяемая аннотация
+	</a>
+	<a href="../../ru/kotlin/manual/oop/jvmfield.html">
+		аннотация JvmField
+	</a>
+	<a href="../../ru/kotlin/manual/oop/javaClass.html">
+		Java-класс объекта
+	</a>
+	<a href="../../ru/kotlin/manual/oop/jvmstatic.html">
+		аннотация JvmStatic
+	</a>
+</div>
+</section><section data-e="pane" data-x data-m-curr="F" data-m-type="P" data-m-tabb="исключения">
+<h2>Исключения</h2>
+<div>
+	<a href="../../ru/kotlin/manual/lang/try.html">
+		обработка исключений
+	</a>
+	<a href="../../ru/kotlin/manual/lang/catch.html">
+		перехват исключения
+	</a>
+	<a href="../../ru/kotlin/manual/lang/finally.html">
+		блок finally
+	</a>
+	<a href="../../ru/kotlin/manual/lang/throw.html">
+		генерация исключения
+	</a>
+</div>
+</section><section data-e="pane" data-x data-m-curr="F" data-m-type="P" data-m-tabb="асинхронность">
+<h2>Потоки (Threads)</h2>
+<div>
+	<a href="../../ru/kotlin/manual/asynchrony/thread.html">
+		создание и управление потоками
+	</a>
+</div>
+
+<h2>Корутины</h2>
+<div>
+	<a href="../../ru/kotlin/manual/asynchrony/suspend.html">
+		suspend-функция
+	</a>
+	<a href="../../ru/kotlin/manual/asynchrony/async.html">
+		асинхронное выполнение
+	</a>
+	<a href="../../ru/kotlin/manual/asynchrony/await.html">
+		ожидание результата
+	</a>
+	<a href="../../ru/kotlin/manual/asynchrony/launch.html">
+		запуск корутины
+	</a>
+	<a href="../../ru/kotlin/manual/asynchrony/yield.html">
+		приостановка корутины с возвратом значения
+	</a>
+	<a href="../../ru/kotlin/manual/asynchrony/delay.html">
+		приостановка корутины
+	</a>
+	<a href="../../ru/kotlin/manual/asynchrony/runBlocking.html">
+		блокирующий контекст корутины
+	</a>
+	<a href="../../ru/kotlin/manual/asynchrony/withContext.html">
+		переключение контекста корутины
+	</a>
+	<a href="../../ru/kotlin/manual/asynchrony/coroutineScope.html">
+		область видимости для корутин
+	</a>
+</div>
+</section><section data-e="pane" data-x data-m-curr="F" data-m-type="P" data-m-tabb="расширения">
+<h2>Функции-расширения</h2>
+<div>
+	<a href="../../ru/kotlin/manual/scope/let.html">
+		выполнение блока
+	</a>
+	<a href="../../ru/kotlin/manual/scope/run.html">
+		вызов с контекстом
+	</a>
+	<a href="../../ru/kotlin/manual/scope/with.html">
+		работа с объектом
+	</a>
+	<a href="../../ru/kotlin/manual/scope/apply.html">
+		инициализация объекта
+	</a>
+	<a href="../../ru/kotlin/manual/scope/also.html">
+		дополнительное действие
+	</a>
+</div>
+</section>
+</div>			</main>
+						<footer data-w="ruct/foot">
+				<div data-w="nict/finf">
+	<span data-e="text" data-x>
+		Трепачёв Дмитрий &copy; 2012-2025	</span>
+	<br>
+	<a data-e="link" data-x href="https://t.me/trepachev_dmitry">t.me/trepachev_dmitry</a>
+</div>							</footer>
+			<div data-w="nict/jump">
+	<a href="#top"><span>&uarr;</span></a>
+</div>			<div data-w="nict/lagr">
+	</div>					</div>
+		
+		<script src="../../tore/@/metrikaΣ.js?v=1"></script>	</body>
+</html>

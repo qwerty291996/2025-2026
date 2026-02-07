@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Учебник Laravel 9 для новичков по-русски</title>
+		
+		<link rel="stylesheet" href="../../../../../tore/@/fonts/listΣ.css?v=1">
+<link rel="stylesheet" href="../../../../../tore/layd/deff/&/aefb44b7dac371a3860e9079298a950e.ructΣ.css">
+<link rel="stylesheet" href="../../../../../tore/&/d619cf2a52f5e2dd5479335d3ba58cae.apprΣ.css">
+
+<script src="../../../../../tore/&/abc868ba468b8ea8384332d74f771367.apprΣ.js?v=1" defer></script>
+
+
+<meta name="yandex-verification" content="00eb45b7559e5c68">
+<meta name="google-site-verification" content="Af0TM2OrwIEtjoQXxYz2-1C-21E1m7DB23_kWpE9sLg">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">		
+		<meta name="description" content="Учебник по PHP фреймворку Laravel 9 от Трепачёва Дмитрия.">
+		<link rel="shortcut icon" type="image/x-icon" href="../../../../../favicon.ico">
+		
+		 <link rel="canonical" href="https://code.mu/ru/php/framework/laravel/book/prime/"><link rel="alternate" hreflang="ru" href="https://code.mu/ru/php/framework/laravel/book/prime/">	</head>
+	<body id="top" data-gq="D" data-gv-lesh="">
+		<div data-r="ruct/wrap">
+			<header>
+				<div data-r="ruct/topp">
+	<div data-r="topp/left">
+		<div data-w="nict/logo">
+	<img data-e="img" data-x src="" alt="">
+</div>	</div>
+	<div data-r="topp/righ">
+		offline version v4	</div>
+	<div data-r="topp/cent">
+		<div data-w="nict/adv">
+	<a href="https://mentor.code.mu/?course=Laravel"><b>Курсы по Laravel</b><br>
+Менторство: 200$ за курс. Репетиторство: 20$ за занятие. Жми для подробностей!
+
+</a></div>	</div>
+</div>								
+				<div data-r="ruct/navi">
+					<div data-w="nict/over">
+			</div>					<nav data-w="nict/mainmenu">
+	<section data-e="main" data-x data-gm-acte="T">
+		<span data-q-href="/ru/markup/" data-e="open" data-x data-m-targ="markup">Верстка</span>
+		<span data-q-href="/ru/javascript/" data-e="open" data-x data-m-targ="javascript">JavaScript</span>
+		<span data-q-href="/ru/php/" data-e="open" data-x data-m-targ="php">PHP</span>
+		<span data-q-href="/ru/javascript/typescript/" data-e="open" data-x data-m-targ="typescript">TypeScript</span>
+		
+			<span data-q-href="/ru/javascript/nodejs/" data-e="open" data-x data-m-targ="nodejs">NodeJS</span>
+			<span data-q-href="/ru/ajax/" data-e="open" data-x data-m-targ="ajax">AJAX</span>
+		
+		<span data-q-href="/ru/python/" data-e="open" data-x data-m-targ="python">Python</span>
+		<span data-q-href="/ru/java/" data-e="open" data-x data-m-targ="java">Java</span>
+		<span data-q-href="/ru/cpp/" data-e="open" data-x data-m-targ="cpp">C++</span>
+		<span data-q-href="/ru/rust/" data-e="open" data-x data-m-targ="rust">Rust</span>
+		
+			<span data-q-href="/ru/kotlin/" data-e="open" data-x data-m-targ="kotlin">Kotlin</span>
+		
+		
+			<span data-q-href="/ru/dart/" data-e="open" data-x data-m-targ="dart">Dart</span>
+		
+		
+			<span data-q-href="/ru/go/" data-e="open" data-x data-m-targ="go">Go</span>
+		
+		<span data-q-href="/ru/sql/" data-e="open" data-x data-m-targ="sql">SQL</span>
+		<span data-q-href="/ru/javascript/framework/vue/" data-e="open" data-x data-m-targ="vue">Vue</span>
+		<span data-q-href="/ru/javascript/framework/react/" data-e="open" data-x data-m-targ="react">React</span>
+		<span data-q-href="/ru/javascript/framework/angular/" data-e="open" data-x data-m-targ="angular">Angular</span>
+		<span data-q-href="/ru/javascript/framework/next/" data-e="open" data-x data-m-targ="next">Next</span>
+		<span data-q-href="/ru/javascript/lib/jquery/" data-e="open" data-x data-m-targ="jquery">jQuery</span>
+		
+		
+			<span data-q-href="/ru/php/framework/laravel/" data-e="open" data-x data-m-targ="laravel">Laravel</span>
+		
+			<span data-q-href="/ru/cms/opencart/" data-e="open" data-x data-m-targ="opencart">OpenCart</span>
+			<span data-q-href="/ru/cms/opencart/" data-e="open" data-x data-m-targ="wordpress">WordPress</span>
+			<span data-q-href="/ru/cms/drupal/" data-e="open" data-x data-m-targ="drupal">Drupal</span>
+		
+		
+		<span data-q-href="/ru/git/" data-e="open" data-x data-m-targ="git">Git</span>
+		
+		<span data-q-href="/ru/tool/webpack/" data-e="open" data-x data-m-targ="webpack">Webpack</span>
+		<span data-q-href="/ru/tool/gulp/" data-e="open" data-x data-m-targ="gulp">Gulp</span>
+		<span data-q-href="/ru/tool/terminal/" data-e="open" data-x data-m-targ="terminal">Terminal</span>
+		<span data-q-href="/ru/internet/" data-e="open" data-x data-m-targ="internet">Internet</span>
+		<span data-q-href="/ru/deploy/" data-e="open" data-x data-m-targ="deploy">Деплой</span>
+		<span data-q-href="/ru/theory/glossary/" data-e="open" data-x data-m-targ="glossary">Глоссарий</span>
+		
+			<span data-q-href="/ru/theory/slang/" data-e="open" data-x data-m-targ="slang">Сленг</span>
+			<span data-e="open" data-x data-m-targ="social">Соц. сети</span>
+		
+	</section>
+
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="markup">
+		<a href="../../../../../ru/markup/book/prime.html">Основной учебник</a>
+		<a href="../../../../../ru/markup/book/supreme.html">Высший учебник</a>
+		<a href="../../../../../ru/markup/book/prep/less.html">Учебник LESS</a>
+		<a href="../../../../../ru/markup/book/prep/sass.html">Учебник SASS</a>
+		<a href="../../../../../ru/markup/manual/html.html">Справочник HTML</a>
+		<a href="../../../../../ru/markup/manual/css.html">Справочник CSS</a>
+		<a href="../../../../../ru/markup/tasker/stager.html">Задачник по уровням</a>
+	</section>
+
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="php">
+		<a href="../../../../../ru/php/book/prime.html">Основной учебник</a>
+		<a href="../../../../../ru/php/book/oop.html">Учебник ООП</a>
+		<a href="../../../../../ru/php/book/mvc.html">Учебник MVC</a>
+		<a href="../../../../../ru/php/book/supreme.html">Высший учебник</a>
+		<a href="../../../../../ru/php/book/parsing.html">Учебник парсинга</a>
+		<a href="../../../../../ru/php/tasker/stager.html">Задачник по уровням</a>
+		<a href="../../../../../ru/php/manual.html">Справочник</a>
+		
+		<a href="../../../../../ru/php/video/lesson.html">Видеоуроки</a>
+		<a href="../../../../../ru/php/faq.html">FAQ</a>
+		
+	</section>
+
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="javascript">
+		<a href="../../../../../ru/javascript/book/prime.html">Основной учебник</a>
+		<a href="../../../../../ru/javascript/book/practice.html">Учебник практики</a>
+		<a href="../../../../../ru/javascript/book/supreme.html">Высший учебник</a>
+		<a href="../../../../../ru/javascript/book/oop.html">Учебник ООП</a>
+		<a href="../../../../../ru/javascript/tasker/stager.html">Задачник по уровням</a>
+		<a href="../../../../../ru/javascript/manual.html">Справочник</a>
+		
+		<a href="../../../../../ru/javascript/video/lesson.html">Видеоуроки</a>
+		<a href="../../../../../ru/javascript/mistake.html">Ошибки</a>
+		<a href="../../../../../ru/javascript/faq.html">FAQ</a>
+		
+	</section>
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="nodejs">
+		<a href="../../../../../ru/javascript/nodejs/book/prime.html">Основной учебник</a>
+		<a href="../../../../../ru/javascript/nodejs/book/express.html">Express</a>
+		<a href="../../../../../ru/javascript/nodejs/book/sql.html">SQL</a>
+		<a href="../../../../../ru/javascript/nodejs/book/mongo.html">Mongo</a>
+		<a href="../../../../../ru/javascript/nodejs/manual.html">Справочник</a>
+	</section>
+	
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="ajax">
+		<a href="../../../../../ru/ajax/book/php.html">AJAX в PHP</a>
+	</section>
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="python">
+		<a href="../../../../../ru/python/book/prime.html">Основной учебник</a>
+		<a href="../../../../../ru/python/book/supreme.html">Высший учебник</a>
+		<a href="../../../../../ru/python/manual.html">Справочник</a>
+		<a href="../../../../../ru/python/tasker/stager.html">Задачник по уровням</a>
+		
+		<a href="../../../../../ru/python/faq.html">FAQ</a>
+		
+	</section>
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="java">
+		<a href="../../../../../ru/java/tasker/stager.html">Задачник по уровням</a>
+	</section>
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="cpp">
+		<a href="../../../../../ru/cpp/tasker/stager.html">Задачник по уровням</a>
+	</section>
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="rust">
+		<a href="../../../../../ru/rust/tasker/stager.html">Задачник по уровням</a>
+	</section>
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="kotlin">
+		<a href="../../../../../ru/kotlin/tasker/stager.html">Задачник по уровням</a>
+		<a href="../../../../../ru/kotlin/manual.html">Справочник</a>
+	</section>
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="dart">
+		<a href="../../../../../ru/dart/tasker/stager.html">Задачник по уровням</a>
+	</section>
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="go">
+		<a href="../../../../../ru/go/tasker/stager.html">Задачник по уровням</a>
+	</section>
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="sql">
+		<a href="../../../../../ru/sql/book/pma.html">PhpMyAdmin</a>
+		
+		<a href="../../../../../ru/sql/manual.html">Справочник</a>
+		
+		<a href="../../../../../ru/sql/tasker/stager.html">Задачник по уровням</a>
+	</section>
+
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="typescript">
+		<a href="../../../../../ru/javascript/typescript/book/prime.html">Основной учебник</a>
+		<a href="../../../../../ru/javascript/typescript/book/supreme.html">Высший учебник</a>
+	</section>
+
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="vue">
+		<a href="../../../../../ru/javascript/framework/vue/book/prime.html">Основной учебник</a>
+	</section>
+
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="react">
+		<a href="../../../../../ru/javascript/framework/react/book/prime.html">Основной учебник</a>
+		<a href="../../../../../ru/javascript/framework/react/book/supreme.html">Высший учебник</a>
+		<a href="../../../../../ru/javascript/framework/react/book/redux.html">Учебник Redux</a>
+	</section>
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="angular">
+		<a href="../../../../../ru/javascript/framework/angular/book/prime.html">Основной учебник</a>
+	</section>
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="next">
+		<a href="../../../../../ru/javascript/framework/next/book/prime.html">Основной учебник</a>
+	</section>
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="jquery">
+		<a href="../../../../../ru/javascript/lib/jquery/book/prime.html">Основной учебник</a>
+		<a href="../../../../../ru/javascript/lib/jquery/manual.html">Справочник</a>
+	</section>
+	
+		<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="laravel">
+			<a href="../../../../../ru/php/framework/laravel/book/prime.html">Основной учебник</a>
+		</section>
+		
+		<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="opencart">
+			<a href="../../../../../ru/cms/opencart/manual/table.html">Справочник по таблицам</a>
+		</section>
+		
+		<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="wordpress">
+			<a href="../../../../../ru/cms/wordpress/manual/table.html">Справочник по таблицам</a>
+		</section>
+		<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="drupal">
+			<a href="../../../../../ru/cms/drupal/manual/table.html">Справочник по таблицам</a>
+		</section>
+	
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="git">
+		<a href="../../../../../ru/git/book/prime.html">Основной учебник</a>
+	</section>
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="terminal">
+		<a href="../../../../../ru/tool/terminal.html">Учебник по командной строке</a>
+	</section>
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="webpack">
+		<a href="../../../../../ru/tool/webpack.html">Учебник Webpack</a>
+	</section>
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="gulp">
+		<a href="../../../../../ru/tool/gulp.html">Учебник Gulp</a>
+	</section>
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="internet">
+		<a href="../../../../../ru/internet/protocol/http.html">Протокол HTTP</a>
+	</section>
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="deploy">
+		<a href="../../../../../ru/deploy/book/prime.html">Основной учебник</a>
+		<a href="../../../../../ru/deploy/book/sql/hosting.html">SQL на хостинге</a>
+		<a href="../../../../../ru/deploy/book/php/hosting.html">PHP на хостинге</a>
+		<a href="../../../../../ru/deploy/book/react/hosting.html">React на хостинге</a>
+		<a href="../../../../../ru/deploy/book/nodejs/server.html">NodeJS на сервере</a>
+	</section>
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="glossary">
+		<a href="../../../../../ru/theory/glossary.html">Глоссарий программистских терминов</a>
+	</section>
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="slang">
+		<a href="../../../../../ru/theory/slang.html">Сленг программиста</a>
+	</section>
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="social">
+		<a href="https://vk.com/codemu">Паблик сайта code.mu</a>
+		<a href="https://t.me/javascript_tricker">Занимательные задачи JavaScript</a>
+		<a href="https://t.me/php_tricker">Занимательные задачи PHP</a>
+		<a href="https://t.me/python_tricker">Занимательные задачи Python</a>
+	</section>
+	
+</nav>									</div>
+			</header>
+			<main>
+				<div data-w="nict/hett">
+	<h1>Учебник Laravel 9</h1>
+</div>				<div data-w="menu/pane" data-m-mode="H" data-m-book="pplrPm">
+<div data-m-sect="Bs">
+<a data-m-less="Inr" href="../../../../../ru/php/framework/laravel/book/prime/basis/intro.html">
+	Введение
+</a>
+<a data-m-less="Dc" href="../../../../../ru/php/framework/laravel/book/prime/basis/docs.html">
+	Документация
+</a>
+<a data-m-less="In" href="../../../../../ru/php/framework/laravel/book/prime/basis/install.html">
+	Установка
+</a>
+<a data-m-less="FS" href="../../../../../ru/php/framework/laravel/book/prime/basis/file-structure.html">
+	Файловая структура
+	
+</a>
+<a data-m-less="Cn" href="../../../../../ru/php/framework/laravel/book/prime/basis/configuration.html">
+	Конфигурирование
+	
+</a>
+<a data-m-less="Dt" href="../../../../../ru/php/framework/laravel/book/prime/basis/database.html">
+	Конфигурация базы данных
+</a>
+<a data-m-less="DF" href="../../../../../ru/php/framework/laravel/book/prime/basis/dump-functions.html">
+	Отладочные функции
+</a>
+<a data-m-less="Db" href="../../../../../ru/php/framework/laravel/book/prime/basis/debugbar.html">
+	Панель debugbar
+</a>
+</div><h2>Маршруты</h2>
+<div data-m-sect="Rt">
+<a data-m-less="Inr" href="../../../../../ru/php/framework/laravel/book/prime/routing/intro.html">
+	Введение в маршруты
+</a>
+<a data-m-less="Pr" href="../../../../../ru/php/framework/laravel/book/prime/routing/parameters.html">
+	Параметры маршрутов
+</a>
+<a data-m-less="SP" href="../../../../../ru/php/framework/laravel/book/prime/routing/several-parameters.html">
+	Несколько параметров
+</a>
+<a data-m-less="OP" href="../../../../../ru/php/framework/laravel/book/prime/routing/optional-parameters.html">
+	Необязательные параметры
+</a>
+<a data-m-less="PC" href="../../../../../ru/php/framework/laravel/book/prime/routing/parameter-constraints.html">
+	Ограничения параметра
+</a>
+<a data-m-less="SPC" href="../../../../../ru/php/framework/laravel/book/prime/routing/several-parameters-constraints.html">
+	Ограничения нескольких параметров
+</a>
+<a data-m-less="PPC" href="../../../../../ru/php/framework/laravel/book/prime/routing/pattern-parameters-constraints.html">
+	Шаблонные ограничения параметров
+</a>
+<a data-m-less="GPC" href="../../../../../ru/php/framework/laravel/book/prime/routing/global-parameters-constraints.html">
+	Глобальные ограничения параметров
+</a>
+<a data-m-less="RC" href="../../../../../ru/php/framework/laravel/book/prime/routing/resolving-conflicts.html">
+	Разрешение конфликтов маршрутов
+</a>
+<a data-m-less="RG" href="../../../../../ru/php/framework/laravel/book/prime/routing/route-groups.html">
+	Группировка маршрутов
+</a>
+<a data-m-less="NR" href="../../../../../ru/php/framework/laravel/book/prime/routing/named-routes.html">
+	Именованные маршруты
+</a>
+</div><h2>Контроллеры</h2>
+<div data-m-sect="Cn">
+<a data-m-less="Inr" href="../../../../../ru/php/framework/laravel/book/prime/controllers/intro.html">
+	Введение в контроллеры
+</a>
+<a data-m-less="Rt" href="../../../../../ru/php/framework/laravel/book/prime/controllers/routes.html">
+	Маршруты для контроллеров
+</a>
+<a data-m-less="Gn" href="../../../../../ru/php/framework/laravel/book/prime/controllers/generation.html">
+	Генерация контроллеров
+</a>
+<a data-m-less="Pr" href="../../../../../ru/php/framework/laravel/book/prime/controllers/parameters.html">
+	Параметры маршрутов
+</a>
+<a data-m-less="AP" href="../../../../../ru/php/framework/laravel/book/prime/controllers/applying-parameters.html">
+	Применение параметров маршрутов
+</a>
+</div><h2>Представления</h2>
+<div data-m-sect="Vw">
+<a data-m-less="Inr" href="../../../../../ru/php/framework/laravel/book/prime/views/intro.html">
+	Введение в представления
+</a>
+<a data-m-less="DP" href="../../../../../ru/php/framework/laravel/book/prime/views/data-passing.html">
+	Передача данных
+</a>
+<a data-m-less="FS" href="../../../../../ru/php/framework/laravel/book/prime/views/files-structure.html">
+	Структура файлов
+</a>
+<a data-m-less="SL" href="../../../../../ru/php/framework/laravel/book/prime/views/site-layout.html">
+	Макет сайта
+</a>
+<a data-m-less="SLC" href="../../../../../ru/php/framework/laravel/book/prime/views/site-layout-content.html">
+	Контент в макете сайта
+</a>
+<a data-m-less="SLT" href="../../../../../ru/php/framework/laravel/book/prime/views/site-layout-title.html">
+	Тайтл в макете сайта
+</a>
+<a data-m-less="CV" href="../../../../../ru/php/framework/laravel/book/prime/views/content-variable.html">
+	Контент из переменной
+</a>
+<a data-m-less="TV" href="../../../../../ru/php/framework/laravel/book/prime/views/title-variable.html">
+	Тайтл из переменной
+</a>
+</div><h2>Blade</h2>
+<div data-m-sect="Bl">
+<a data-m-less="Inr" href="../../../../../ru/php/framework/laravel/book/prime/blade/intro.html">
+	Введение
+</a>
+<a data-m-less="VT" href="../../../../../ru/php/framework/laravel/book/prime/blade/variables-tags.html">
+	Вывод переменных в тегах
+</a>
+<a data-m-less="VA" href="../../../../../ru/php/framework/laravel/book/prime/blade/variables-attributes.html">
+	Вывод переменных в атрибуты
+</a>
+<a data-m-less="AC" href="../../../../../ru/php/framework/laravel/book/prime/blade/arbitrary-code.html">
+	Произвольный код
+</a>
+<a data-m-less="Ar" href="../../../../../ru/php/framework/laravel/book/prime/blade/arrays.html">
+	Работа с массивами
+</a>
+<a data-m-less="VCh" href="../../../../../ru/php/framework/laravel/book/prime/blade/variables-checking.html">
+	Проверка переменных
+</a>
+<a data-m-less="UDO" href="../../../../../ru/php/framework/laravel/book/prime/blade/unescaped-data-output.html">
+	Вывод неэкранированных данных
+</a>
+<a data-m-less="Cm" href="../../../../../ru/php/framework/laravel/book/prime/blade/comments.html">
+	Комментарии
+</a>
+<a data-m-less="Cn" href="../../../../../ru/php/framework/laravel/book/prime/blade/conditions.html">
+	Условия
+</a>
+<a data-m-less="ED" href="../../../../../ru/php/framework/laravel/book/prime/blade/else-directive.html">
+	Директива @else
+</a>
+<a data-m-less="EiD" href="../../../../../ru/php/framework/laravel/book/prime/blade/elseif-directive.html">
+	Директива @elseif
+</a>
+<a data-m-less="UD" href="../../../../../ru/php/framework/laravel/book/prime/blade/unless-directive.html">
+	Директива @unless
+</a>
+<a data-m-less="CC" href="../../../../../ru/php/framework/laravel/book/prime/blade/complex-conditions.html">
+	Сложные условия
+</a>
+<a data-m-less="FeD" href="../../../../../ru/php/framework/laravel/book/prime/blade/foreach-directive.html">
+	Директива @foreach
+</a>
+<a data-m-less="FeK" href="../../../../../ru/php/framework/laravel/book/prime/blade/foreach-keys.html">
+	Ключи массива в цикле @foreach
+</a>
+<a data-m-less="FeC" href="../../../../../ru/php/framework/laravel/book/prime/blade/foreach-conditions.html">
+	Условия и циклы @foreach
+</a>
+<a data-m-less="FeN" href="../../../../../ru/php/framework/laravel/book/prime/blade/foreach-nested.html">
+	Вложенные циклы @foreach
+</a>
+<a data-m-less="FeMA" href="../../../../../ru/php/framework/laravel/book/prime/blade/foreach-multi-arrays.html">
+	Перебор многомерных массивов
+</a>
+<a data-m-less="FsD" href="../../../../../ru/php/framework/laravel/book/prime/blade/forelse-directive.html">
+	Цикл @forelse
+</a>
+<a data-m-less="VL" href="../../../../../ru/php/framework/laravel/book/prime/blade/variable-loop.html">
+	Переменная $loop
+</a>
+<a data-m-less="BD" href="../../../../../ru/php/framework/laravel/book/prime/blade/break-directive.html">
+	Директива @break
+</a>
+<a data-m-less="CD" href="../../../../../ru/php/framework/laravel/book/prime/blade/continue-directive.html">
+	Директива @continue
+</a>
+<a data-m-less="FrD" href="../../../../../ru/php/framework/laravel/book/prime/blade/for-directive.html">
+	Цикл @for
+</a>
+<a data-m-less="PCB" href="../../../../../ru/php/framework/laravel/book/prime/blade/php-code-block.html">
+	Блок PHP кода
+</a>
+<a data-m-less="Prm" href="../../../../../ru/php/framework/laravel/book/prime/blade/practicum.html">
+	Практика по шаблонизатору Blade
+</a>
+</div><h2>Коллекции</h2>
+<div data-m-sect="Cl">
+<a data-m-less="Cl" href="../../../../../ru/php/framework/laravel/book/prime/collections.html">
+	Работа с коллекциями
+	
+</a>
+</div><h2>Миграции</h2>
+<div data-m-sect="Mg">
+<a data-m-less="Inr" href="../../../../../ru/php/framework/laravel/book/prime/database/migrations/intro.html">
+	Введение в миграции
+</a>
+<a data-m-less="FS" href="../../../../../ru/php/framework/laravel/book/prime/database/migrations/file-structure.html">
+	Структура файлов миграций
+</a>
+<a data-m-less="Rn" href="../../../../../ru/php/framework/laravel/book/prime/database/migrations/running.html">
+	Запуск миграций
+</a>
+<a data-m-less="TF" href="../../../../../ru/php/framework/laravel/book/prime/database/migrations/tables-fields.html">
+	Поля таблиц
+</a>
+<a data-m-less="FA" href="../../../../../ru/php/framework/laravel/book/prime/database/migrations/fields-adding.html">
+	Добавление полей
+</a>
+<a data-m-less="PFCh" href="../../../../../ru/php/framework/laravel/book/prime/database/migrations/preparing-fields-changing.html">
+	Подготовка к изменению полей
+</a>
+<a data-m-less="UFA" href="../../../../../ru/php/framework/laravel/book/prime/database/migrations/updating-fields-attributes.html">
+	Изменение атрибутов полей
+</a>
+<a data-m-less="FRm" href="../../../../../ru/php/framework/laravel/book/prime/database/migrations/fields-removing.html">
+	Удаление полей
+</a>
+<a data-m-less="FRn" href="../../../../../ru/php/framework/laravel/book/prime/database/migrations/fields-renaming.html">
+	Переименование полей
+</a>
+<a data-m-less="FM" href="../../../../../ru/php/framework/laravel/book/prime/database/migrations/fields-modifiers.html">
+	Модификаторы полей
+</a>
+<a data-m-less="FO" href="../../../../../ru/php/framework/laravel/book/prime/database/migrations/fields-order.html">
+	Порядок полей
+</a>
+<a data-m-less="TRm" href="../../../../../ru/php/framework/laravel/book/prime/database/migrations/tables-removing.html">
+	Удаление таблиц
+</a>
+<a data-m-less="TRn" href="../../../../../ru/php/framework/laravel/book/prime/database/migrations/tables-renaming.html">
+	Переименование таблиц
+</a>
+<a data-m-less="RBP" href="../../../../../ru/php/framework/laravel/book/prime/database/migrations/rolling-back-preparing.html">
+	Подготовка к откату миграций
+</a>
+<a data-m-less="RB" href="../../../../../ru/php/framework/laravel/book/prime/database/migrations/rolling-back.html">
+	Откат миграций
+</a>
+<a data-m-less="IC" href="../../../../../ru/php/framework/laravel/book/prime/database/migrations/indexes-creating.html">
+	Создание индексов
+	
+</a>
+<a data-m-less="PF" href="../../../../../ru/php/framework/laravel/book/prime/database/migrations/production-force.html">
+	Принудительные миграции в продакшне
+</a>
+</div><h2>Сидеры</h2>
+<div data-m-sect="Sd">
+<a data-m-less="Inr" href="../../../../../ru/php/framework/laravel/book/prime/database/seeders/intro.html">
+	Введение
+</a>
+<a data-m-less="TF" href="../../../../../ru/php/framework/laravel/book/prime/database/seeders/tables-filling.html">
+	Заполнение таблиц
+</a>
+<a data-m-less="RSG" href="../../../../../ru/php/framework/laravel/book/prime/database/seeders/random-strings-generation.html">
+	Генерация случайных строк
+</a>
+<a data-m-less="SPG" href="../../../../../ru/php/framework/laravel/book/prime/database/seeders/string-part-generation.html">
+	Генерация части строки
+</a>
+<a data-m-less="PH" href="../../../../../ru/php/framework/laravel/book/prime/database/seeders/passwords-hashes.html">
+	Хеширование паролей
+</a>
+<a data-m-less="DC" href="../../../../../ru/php/framework/laravel/book/prime/database/seeders/distinct-classes.html">
+	Отдельные классы сидеров
+</a>
+<a data-m-less="CC" href="../../../../../ru/php/framework/laravel/book/prime/database/seeders/common-calling.html">
+	Общий вызов отдельных сидеров
+</a>
+<a data-m-less="FR" href="../../../../../ru/php/framework/laravel/book/prime/database/seeders/full-rebuilding.html">
+	Полное перестроение БД
+</a>
+<a data-m-less="TT" href="../../../../../ru/php/framework/laravel/book/prime/database/seeders/test-tables.html">
+	Тестовые таблицы
+</a>
+</div><h2>Построитель запросов</h2>
+<div data-m-sect="QB">
+<a data-m-less="Inr" href="../../../../../ru/php/framework/laravel/book/prime/database/builder/intro.html">
+	Введение
+</a>
+<a data-m-less="GAN" href="../../../../../ru/php/framework/laravel/book/prime/database/builder/getting-all-notes.html">
+	Получение всех записей
+</a>
+<a data-m-less="RVO" href="../../../../../ru/php/framework/laravel/book/prime/database/builder/records-view-output.html">
+	Вывод полученных записей в представлении
+</a>
+<a data-m-less="VSQ" href="../../../../../ru/php/framework/laravel/book/prime/database/builder/viewing-sql-queries.html">
+	Просмотр SQL запросов
+</a>
+<a data-m-less="SF" href="../../../../../ru/php/framework/laravel/book/prime/database/builder/selection-fields.html">
+	Поля выборки
+</a>
+<a data-m-less="CW" href="../../../../../ru/php/framework/laravel/book/prime/database/builder/condition-where.html">
+	Условия where при выборке
+</a>
+<a data-m-less="SCW" href="../../../../../ru/php/framework/laravel/book/prime/database/builder/several-conditions-where.html">
+	Несколько условий where при выборке
+</a>
+<a data-m-less="CO" href="../../../../../ru/php/framework/laravel/book/prime/database/builder/condition-orWhere.html">
+	Условия orWhere при выборке
+</a>
+<a data-m-less="CC" href="../../../../../ru/php/framework/laravel/book/prime/database/builder/complex-conditions.html">
+	Сложные условия при выборке
+</a>
+<a data-m-less="GOR" href="../../../../../ru/php/framework/laravel/book/prime/database/builder/getting-one-row.html">
+	Получение одной строки
+</a>
+<a data-m-less="GCV" href="../../../../../ru/php/framework/laravel/book/prime/database/builder/getting-column-value.html">
+	Получение значения столбца
+</a>
+<a data-m-less="GCC" href="../../../../../ru/php/framework/laravel/book/prime/database/builder/getting-column-collection.html">
+	Получение коллекции значений столбца
+	
+</a>
+<a data-m-less="CWB" href="../../../../../ru/php/framework/laravel/book/prime/database/builder/condition-whereBetween.html">
+	Условие whereBetween
+</a>
+<a data-m-less="CWI" href="../../../../../ru/php/framework/laravel/book/prime/database/builder/condition-whereIn.html">
+	Условие whereIn
+</a>
+<a data-m-less="NCh" href="../../../../../ru/php/framework/laravel/book/prime/database/builder/null-checking.html">
+	Проверка на NULL
+</a>
+<a data-m-less="DC" href="../../../../../ru/php/framework/laravel/book/prime/database/builder/dynamic-conditions.html">
+	Динамические условия
+</a>
+<a data-m-less="DCC" href="../../../../../ru/php/framework/laravel/book/prime/database/builder/dynamic-conditions-combinations.html">
+	Комбинации динамических условий
+</a>
+<a data-m-less="DS" href="../../../../../ru/php/framework/laravel/book/prime/database/builder/data-sorting.html">
+	Сортировка данных
+</a>
+<a data-m-less="SBD" href="../../../../../ru/php/framework/laravel/book/prime/database/builder/sorting-by-date.html">
+	Сортировка по дате
+</a>
+<a data-m-less="RS" href="../../../../../ru/php/framework/laravel/book/prime/database/builder/random-sorting.html">
+	Случайная сортировка
+</a>
+<a data-m-less="RA" href="../../../../../ru/php/framework/laravel/book/prime/database/builder/rows-amount.html">
+	Количество записей в выборке
+</a>
+<a data-m-less="SO" href="../../../../../ru/php/framework/laravel/book/prime/database/builder/selection-offset.html">
+	Сдвиг при выборке
+</a>
+<a data-m-less="DI" href="../../../../../ru/php/framework/laravel/book/prime/database/builder/data-inserting.html">
+	Вставка данных
+</a>
+<a data-m-less="DU" href="../../../../../ru/php/framework/laravel/book/prime/database/builder/data-updating.html">
+	Обновление данных
+</a>
+<a data-m-less="ID" href="../../../../../ru/php/framework/laravel/book/prime/database/builder/increment-decrement.html">
+	Инкремент и декремент данных
+</a>
+<a data-m-less="DR" href="../../../../../ru/php/framework/laravel/book/prime/database/builder/data-removing.html">
+	Удаление данных
+</a>
+<a data-m-less="TJ" href="../../../../../ru/php/framework/laravel/book/prime/database/builder/tables-joining.html">
+	Соединение таблиц
+</a>
+</div><h2>Eloquent</h2>
+<div data-m-sect="Eq">
+<a data-m-less="Inr" href="../../../../../ru/php/framework/laravel/book/prime/database/eloquent/intro.html">
+	Введение в Eloquent
+</a>
+<a data-m-less="MG" href="../../../../../ru/php/framework/laravel/book/prime/database/eloquent/models-generation.html">
+	Генерация моделей
+</a>
+<a data-m-less="CUM" href="../../../../../ru/php/framework/laravel/book/prime/database/eloquent/controller-use-models.html">
+	Подключение модели к контроллеру
+</a>
+<a data-m-less="MGD" href="../../../../../ru/php/framework/laravel/book/prime/database/eloquent/models-getting-data.html">
+	Получение данных из моделей
+</a>
+<a data-m-less="MQB" href="../../../../../ru/php/framework/laravel/book/prime/database/eloquent/models-query-builder.html">
+	Конструктор запросов в моделях
+</a>
+<a data-m-less="GOR" href="../../../../../ru/php/framework/laravel/book/prime/database/eloquent/getting-one-record.html">
+	Получение одной записи в моделях
+</a>
+<a data-m-less="GORBI" href="../../../../../ru/php/framework/laravel/book/prime/database/eloquent/getting-one-record-by-id.html">
+	Получение одной записи по id
+</a>
+<a data-m-less="RC" href="../../../../../ru/php/framework/laravel/book/prime/database/eloquent/records-creating.html">
+	Создание новой записи
+</a>
+<a data-m-less="RCh" href="../../../../../ru/php/framework/laravel/book/prime/database/eloquent/records-changing.html">
+	Изменение записи
+</a>
+<a data-m-less="RR" href="../../../../../ru/php/framework/laravel/book/prime/database/eloquent/records-removing.html">
+	Удаление записей
+</a>
+<a data-m-less="RRBI" href="../../../../../ru/php/framework/laravel/book/prime/database/eloquent/records-removing-by-id.html">
+	Удаление записей по id
+</a>
+<a data-m-less="SR" href="../../../../../ru/php/framework/laravel/book/prime/database/eloquent/soft-removing.html">
+	Мягкое удаление
+	
+</a>
+</div><h2>Связывание моделей</h2>
+<div data-m-sect="MR">
+<a data-m-less="Inr" href="../../../../../ru/php/framework/laravel/book/prime/database/eloquent/relationships/intro.html">
+	Введение
+</a>
+<a data-m-less="OTO" href="../../../../../ru/php/framework/laravel/book/prime/database/eloquent/relationships/one-to-one.html">
+	Связь один к одному
+</a>
+<a data-m-less="GDOTO" href="../../../../../ru/php/framework/laravel/book/prime/database/eloquent/relationships/getting-data-one-to-one.html">
+	Получение данных связь один к одному
+</a>
+<a data-m-less="OTOL" href="../../../../../ru/php/framework/laravel/book/prime/database/eloquent/relationships/one-to-one-loop.html">
+	Перебор записей со связью один к одному
+</a>
+<a data-m-less="IOTO" href="../../../../../ru/php/framework/laravel/book/prime/database/eloquent/relationships/inverse-one-to-one.html">
+	Обратная связь один к одному
+</a>
+<a data-m-less="OTM" href="../../../../../ru/php/framework/laravel/book/prime/database/eloquent/relationships/one-to-many.html">
+	Связь один ко многим
+</a>
+<a data-m-less="GDOTM" href="../../../../../ru/php/framework/laravel/book/prime/database/eloquent/relationships/getting-data-one-to-many.html">
+	Получение данных связь один ко многим
+</a>
+<a data-m-less="COTM" href="../../../../../ru/php/framework/laravel/book/prime/database/eloquent/relationships/conditions-one-to-many.html">
+	Условия в связи один ко многим
+</a>
+<a data-m-less="IOTM" href="../../../../../ru/php/framework/laravel/book/prime/database/eloquent/relationships/inverse-one-to-many.html">
+	Обратная связь один ко многим
+</a>
+<a data-m-less="SIOTM" href="../../../../../ru/php/framework/laravel/book/prime/database/eloquent/relationships/several-inverse-one-to-many.html">
+	Несколько обратных связей один ко многим
+</a>
+<a data-m-less="MTM" href="../../../../../ru/php/framework/laravel/book/prime/database/eloquent/relationships/many-to-many.html">
+	Связь многие ко многим
+</a>
+<a data-m-less="EL" href="../../../../../ru/php/framework/laravel/book/prime/database/eloquent/relationships/eager-loading.html">
+	Ленивая и жадная загрузка
+	
+</a>
+<a data-m-less="ELM" href="../../../../../ru/php/framework/laravel/book/prime/database/eloquent/relationships/eager-loading-many.html">
+	Жадная загрузка множественных отношений
+	
+</a>
+<a data-m-less="DEL" href="../../../../../ru/php/framework/laravel/book/prime/database/eloquent/relationships/default-eager-loading.html">
+	Жадная загрузка по умолчанию
+	
+</a>
+<a data-m-less="Dc" href="../../../../../ru/php/framework/laravel/book/prime/database/eloquent/relationships/docs.html">
+	Документация
+	
+</a>
+
+
+</div><h2>Формы</h2>
+<div data-m-sect="Fr">
+<a data-m-less="OR" href="../../../../../ru/php/framework/laravel/book/prime/forms/object-request.html">
+	Объект Request
+</a>
+<a data-m-less="SMG" href="../../../../../ru/php/framework/laravel/book/prime/forms/submitting-method-get.html">
+	Отправка форм методом GET
+</a>
+<a data-m-less="SMP" href="../../../../../ru/php/framework/laravel/book/prime/forms/submitting-method-post.html">
+	Отправка форм методом POST
+</a>
+<a data-m-less="HOA" href="../../../../../ru/php/framework/laravel/book/prime/forms/handling-one-action.html">
+	Форма и ее обработка в одном действии
+</a>
+<a data-m-less="DA" href="../../../../../ru/php/framework/laravel/book/prime/forms/data-array.html">
+	Данные формы в виде массива
+</a>
+<a data-m-less="GPD" href="../../../../../ru/php/framework/laravel/book/prime/forms/getting-part-data.html">
+	Получение части данных формы
+</a>
+<a data-m-less="EPD" href="../../../../../ru/php/framework/laravel/book/prime/forms/excluding-part-data.html">
+	Исключение части данных формы
+</a>
+<a data-m-less="CFN" href="../../../../../ru/php/framework/laravel/book/prime/forms/complex-fileds-names.html">
+	Сложные имена полей в формах
+	
+</a>
+<a data-m-less="DIRP" href="../../../../../ru/php/framework/laravel/book/prime/forms/dependency-injection-route-parameters.html">
+	Внедрение зависимости и параметры маршрута
+</a>
+<a data-m-less="ORM" href="../../../../../ru/php/framework/laravel/book/prime/forms/object-request-methods.html">
+	Методы объекта Request
+</a>
+
+</div><h2>Пагинация</h2>
+<div data-m-sect="Pg">
+<a data-m-less="Pg" href="../../../../../ru/php/framework/laravel/book/prime/pagination.html">
+	Пагинация
+	
+</a>
+</div><h2>CRUD операции</h2>
+<div data-m-sect="CO">
+<a data-m-less="Cr" href="../../../../../ru/php/framework/laravel/book/prime/crud.html">
+	Практика на CRUD
+	
+</a>
+</div><h2>URL</h2>
+<div data-m-sect="Url">
+<a data-m-less="Ur" href="../../../../../ru/php/framework/laravel/book/prime/url.html">
+	Генерация URL
+	
+</a>
+</div><h2>Компоненты</h2>
+<div data-m-sect="Cm">
+<a data-m-less="SLD" href="../../../../../ru/php/framework/laravel/book/prime/components/site-layout-division.html">
+	Компоненты в макете сайта
+</a>
+<a data-m-less="Fl" href="../../../../../ru/php/framework/laravel/book/prime/components/files.html">
+	Вынесение компонентов в файлы
+</a>
+<a data-m-less="Sb" href="../../../../../ru/php/framework/laravel/book/prime/components/subdirs.html">
+	Размещение компонентов в подпапках
+</a>
+<a data-m-less="SWN" href="../../../../../ru/php/framework/laravel/book/prime/components/several-words-names.html">
+	Имена компонентов из нескольких слов
+</a>
+<a data-m-less="Ns" href="../../../../../ru/php/framework/laravel/book/prime/components/nested.html">
+	Подключение компонентов к компонентам
+</a>
+<a data-m-less="BS" href="../../../../../ru/php/framework/laravel/book/prime/components/basic-slots.html">
+	Слоты компонентов
+</a>
+<a data-m-less="AS" href="../../../../../ru/php/framework/laravel/book/prime/components/additional-slots.html">
+	Дополнительные слоты компонентов
+</a>
+<a data-m-less="SLC" href="../../../../../ru/php/framework/laravel/book/prime/components/site-layout-component.html">
+	Макет сайта как компонент
+</a>
+<a data-m-less="Cl" href="../../../../../ru/php/framework/laravel/book/prime/components/classes.html">
+	Класс компонента
+</a>
+<a data-m-less="PVD" href="../../../../../ru/php/framework/laravel/book/prime/components/passing-view-data.html">
+	Передача данных в представление компонента
+</a>
+<a data-m-less="GDD" href="../../../../../ru/php/framework/laravel/book/prime/components/getting-db-data.html">
+	Получение данных из БД в компоненте
+</a>
+<a data-m-less="Gn" href="../../../../../ru/php/framework/laravel/book/prime/components/generation.html">
+	Генерация компонентов
+</a>
+<a data-m-less="PCD" href="../../../../../ru/php/framework/laravel/book/prime/components/passing-class-data.html">
+	Передача данных в классы компонентов
+</a>
+<a data-m-less="PCV" href="../../../../../ru/php/framework/laravel/book/prime/components/passing-class-variables.html">
+	Передача значений переменных в классы компонентов
+</a>
+<a data-m-less="PCA" href="../../../../../ru/php/framework/laravel/book/prime/components/passing-class-attributes.html">
+	Передача обычных атрибутов в компоненты
+</a>
+</div><h2>Сессии</h2>
+<div data-m-sect="Ss">
+<a data-m-less="Inr" href="../../../../../ru/php/framework/laravel/book/prime/sessions/intro.html">
+	Введение в сессии
+</a>
+<a data-m-less="Vr" href="../../../../../ru/php/framework/laravel/book/prime/sessions/variables.html">
+	Установка и получение переменных сессии
+</a>
+<a data-m-less="DV" href="../../../../../ru/php/framework/laravel/book/prime/sessions/default-values.html">
+	Значения по умолчанию переменных сессии
+</a>
+<a data-m-less="DR" href="../../../../../ru/php/framework/laravel/book/prime/sessions/data-removing.html">
+	Удаление данных из сессии
+</a>
+<a data-m-less="GAD" href="../../../../../ru/php/framework/laravel/book/prime/sessions/getting-all-data.html">
+	Получение всех данных сессии
+</a>
+<a data-m-less="ChV" href="../../../../../ru/php/framework/laravel/book/prime/sessions/checking-variables.html">
+	Существование переменной сессии
+</a>
+<a data-m-less="WA" href="../../../../../ru/php/framework/laravel/book/prime/sessions/writing-arrays.html">
+	Запись массивов в сессии
+</a>
+<a data-m-less="GF" href="../../../../../ru/php/framework/laravel/book/prime/sessions/global-function.html">
+	Работа с сессиями через глобальную функцию
+</a>
+</div><h2>Редиректы</h2>
+<div data-m-sect="Rd">
+<a data-m-less="Inr" href="../../../../../ru/php/framework/laravel/book/prime/redirect/intro.html">
+	Введение в редиректы
+</a>
+<a data-m-less="CA" href="../../../../../ru/php/framework/laravel/book/prime/redirect/controller-action.html">
+	Редирект на заданное действие контроллера
+</a>
+<a data-m-less="NR" href="../../../../../ru/php/framework/laravel/book/prime/redirect/named-routes.html">
+	Редирект на именованные маршруты
+</a>
+<a data-m-less="NRP" href="../../../../../ru/php/framework/laravel/book/prime/redirect/named-routes-parameters.html">
+	Редирект на именованные маршруты с параметрами
+</a>
+</div><h2>Объект ответа</h2>
+<div data-m-sect="ORs">
+<a data-m-less="Inr" href="../../../../../ru/php/framework/laravel/book/prime/response/intro.html">
+	Введение в объект ответа
+</a>
+<a data-m-less="HF" href="../../../../../ru/php/framework/laravel/book/prime/response/helper-function.html">
+	Вспомогательная функция для ответа
+</a>
+<a data-m-less="HH" href="../../../../../ru/php/framework/laravel/book/prime/response/http-headers.html">
+	Заголовки ответа
+	
+</a>
+<a data-m-less="RV" href="../../../../../ru/php/framework/laravel/book/prime/response/returning-view.html">
+	Отдача представления в качестве отклика
+</a>
+
+
+</div><h2>Куки</h2>
+<div data-m-sect="Ck">
+<a data-m-less="Inr" href="../../../../../ru/php/framework/laravel/book/prime/cookies/intro.html">
+	Работа с куками
+</a>
+<a data-m-less="Q" href="../../../../../ru/php/framework/laravel/book/prime/cookies/queue.html">
+	Добавление куки в очередь
+</a>
+<a data-m-less="VH" href="../../../../../ru/php/framework/laravel/book/prime/cookies/view-headers.html">
+	Куки, представления и заголовки
+	
+</a>
+</div><h2>Flash</h2>
+<div data-m-sect="Fl">
+<a data-m-less="Ms" href="../../../../../ru/php/framework/laravel/book/prime/flash/messages.html">
+	Флеш сообщения
+	
+</a>
+<a data-m-less="OR" href="../../../../../ru/php/framework/laravel/book/prime/flash/old-request.html">
+	Данные предыдущего запроса
+	
+</a>
+</div><h2>Валидация</h2>
+<div data-m-sect="Vd">
+<a data-m-less="Vl" href="../../../../../ru/php/framework/laravel/book/prime/validation.html">
+	Валидация форм
+	
+</a>
+</div><h2>Посредники</h2>
+<div data-m-sect="Md">
+<a data-m-less="Md" href="../../../../../ru/php/framework/laravel/book/prime/middlewares.html">
+	Посредники
+</a>
+</div><h2>Локализация</h2>
+<div data-m-sect="Lc">
+<a data-m-less="Lc" href="../../../../../ru/php/framework/laravel/book/prime/localization.html">
+	Локализация
+	
+</a>
+</div><h2>Авторизация</h2>
+<div data-m-sect="Au">
+<a data-m-less="At" href="../../../../../ru/php/framework/laravel/book/prime/auth.html">
+	Авторизация
+	
+</a>
+</div><h2>Проекты</h2>
+<div data-m-sect="Prj">
+<a data-m-less="IS" href="../../../../../ru/php/framework/laravel/book/prime/project/interesting-stories.html">
+	Интересные истории
+</a>
+<a data-m-less="BuB" href="../../../../../ru/php/framework/laravel/book/prime/project/bulletin-board.html">
+	Доска объявлений
+</a>
+<a data-m-less="Fo" href="../../../../../ru/php/framework/laravel/book/prime/project/forum.html">
+	Форум
+</a>
+</div>
+</div>			</main>
+						<footer data-w="ruct/foot">
+				<div data-w="nict/finf">
+	<span data-e="text" data-x>
+		Трепачёв Дмитрий &copy; 2012-2025	</span>
+	<br>
+	<a data-e="link" data-x href="https://t.me/trepachev_dmitry">t.me/trepachev_dmitry</a>
+</div>							</footer>
+			<div data-w="nict/jump">
+	<a href="#top"><span>&uarr;</span></a>
+</div>			<div data-w="nict/lagr">
+	</div>					</div>
+		
+		<script src="../../../../../tore/@/metrikaΣ.js?v=1"></script>	</body>
+</html>
