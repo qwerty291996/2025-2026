@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Таблица wp_posts - записи, страницы и другие типы записей в WordPress</title>
+		
+		<link rel="stylesheet" href="../../../../../tore/@/fonts/listΣ.css?v=1">
+<link rel="stylesheet" href="../../../../../tore/layd/deff/&/aefb44b7dac371a3860e9079298a950e.ructΣ.css">
+<link rel="stylesheet" href="../../../../../tore/&/d619cf2a52f5e2dd5479335d3ba58cae.apprΣ.css">
+
+<script src="../../../../../tore/&/abc868ba468b8ea8384332d74f771367.apprΣ.js?v=1" defer></script>
+
+
+<meta name="yandex-verification" content="00eb45b7559e5c68">
+<meta name="google-site-verification" content="Af0TM2OrwIEtjoQXxYz2-1C-21E1m7DB23_kWpE9sLg">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">		
+		<meta name="description" content="Таблица wp_posts является центральной и одной из самых важных таблиц в базе данных WordPress. В ней хранятся все основные типы контента: записи, страницы, элементы меню, вложения (медиафайлы) и пользовательские типы записей.">
+		<link rel="shortcut icon" type="image/x-icon" href="../../../../../favicon.ico">
+		
+		 <link rel="canonical" href="https://code.mu/ru/cms/wordpress/manual/table/wp_posts/"><link rel="alternate" hreflang="ru" href="https://code.mu/ru/cms/wordpress/manual/table/wp_posts/">	</head>
+	<body id="top" data-gq="D" data-gv-lesh="">
+		<div data-r="ruct/wrap">
+			<header>
+				<div data-r="ruct/topp">
+	<div data-r="topp/left">
+		<div data-w="nict/logo">
+	<img data-e="img" data-x src="" alt="">
+</div>	</div>
+	<div data-r="topp/righ">
+		offline version v4	</div>
+	<div data-r="topp/cent">
+		<div data-w="nict/adv">
+	<a href="https://mentor.code.mu/?course=practic"><b>Стажировка на реальных проектах:</b><br>
+наполнение портфолио, помощь с работой и заказами, пробные собеседования.
+Жми для подробностей&rarr;
+</a></div>	</div>
+</div>								
+				<div data-r="ruct/navi">
+					<div data-w="nict/over">
+				<span data-e="lofo" data-x>1 of 21</span>
+				<a href="../../../../../ru/cms/wordpress/manual/table.html" data-e="link" data-x>menu</a>
+	</div>					<nav data-w="nict/mainmenu">
+	<section data-e="main" data-x data-gm-acte="T">
+		<span data-q-href="/ru/markup/" data-e="open" data-x data-m-targ="markup">Верстка</span>
+		<span data-q-href="/ru/javascript/" data-e="open" data-x data-m-targ="javascript">JavaScript</span>
+		<span data-q-href="/ru/php/" data-e="open" data-x data-m-targ="php">PHP</span>
+		<span data-q-href="/ru/javascript/typescript/" data-e="open" data-x data-m-targ="typescript">TypeScript</span>
+		
+			<span data-q-href="/ru/javascript/nodejs/" data-e="open" data-x data-m-targ="nodejs">NodeJS</span>
+			<span data-q-href="/ru/ajax/" data-e="open" data-x data-m-targ="ajax">AJAX</span>
+		
+		<span data-q-href="/ru/python/" data-e="open" data-x data-m-targ="python">Python</span>
+		<span data-q-href="/ru/java/" data-e="open" data-x data-m-targ="java">Java</span>
+		<span data-q-href="/ru/cpp/" data-e="open" data-x data-m-targ="cpp">C++</span>
+		<span data-q-href="/ru/rust/" data-e="open" data-x data-m-targ="rust">Rust</span>
+		
+			<span data-q-href="/ru/kotlin/" data-e="open" data-x data-m-targ="kotlin">Kotlin</span>
+		
+		
+			<span data-q-href="/ru/dart/" data-e="open" data-x data-m-targ="dart">Dart</span>
+		
+		
+			<span data-q-href="/ru/go/" data-e="open" data-x data-m-targ="go">Go</span>
+		
+		<span data-q-href="/ru/sql/" data-e="open" data-x data-m-targ="sql">SQL</span>
+		<span data-q-href="/ru/javascript/framework/vue/" data-e="open" data-x data-m-targ="vue">Vue</span>
+		<span data-q-href="/ru/javascript/framework/react/" data-e="open" data-x data-m-targ="react">React</span>
+		<span data-q-href="/ru/javascript/framework/angular/" data-e="open" data-x data-m-targ="angular">Angular</span>
+		<span data-q-href="/ru/javascript/framework/next/" data-e="open" data-x data-m-targ="next">Next</span>
+		<span data-q-href="/ru/javascript/lib/jquery/" data-e="open" data-x data-m-targ="jquery">jQuery</span>
+		
+		
+			<span data-q-href="/ru/php/framework/laravel/" data-e="open" data-x data-m-targ="laravel">Laravel</span>
+		
+			<span data-q-href="/ru/cms/opencart/" data-e="open" data-x data-m-targ="opencart">OpenCart</span>
+			<span data-q-href="/ru/cms/opencart/" data-e="open" data-x data-m-targ="wordpress">WordPress</span>
+			<span data-q-href="/ru/cms/drupal/" data-e="open" data-x data-m-targ="drupal">Drupal</span>
+		
+		
+		<span data-q-href="/ru/git/" data-e="open" data-x data-m-targ="git">Git</span>
+		
+		<span data-q-href="/ru/tool/webpack/" data-e="open" data-x data-m-targ="webpack">Webpack</span>
+		<span data-q-href="/ru/tool/gulp/" data-e="open" data-x data-m-targ="gulp">Gulp</span>
+		<span data-q-href="/ru/tool/terminal/" data-e="open" data-x data-m-targ="terminal">Terminal</span>
+		<span data-q-href="/ru/internet/" data-e="open" data-x data-m-targ="internet">Internet</span>
+		<span data-q-href="/ru/deploy/" data-e="open" data-x data-m-targ="deploy">Деплой</span>
+		<span data-q-href="/ru/theory/glossary/" data-e="open" data-x data-m-targ="glossary">Глоссарий</span>
+		
+			<span data-q-href="/ru/theory/slang/" data-e="open" data-x data-m-targ="slang">Сленг</span>
+			<span data-e="open" data-x data-m-targ="social">Соц. сети</span>
+		
+	</section>
+
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="markup">
+		<a href="../../../../../ru/markup/book/prime.html">Основной учебник</a>
+		<a href="../../../../../ru/markup/book/supreme.html">Высший учебник</a>
+		<a href="../../../../../ru/markup/book/prep/less.html">Учебник LESS</a>
+		<a href="../../../../../ru/markup/book/prep/sass.html">Учебник SASS</a>
+		<a href="../../../../../ru/markup/manual/html.html">Справочник HTML</a>
+		<a href="../../../../../ru/markup/manual/css.html">Справочник CSS</a>
+		<a href="../../../../../ru/markup/tasker/stager.html">Задачник по уровням</a>
+	</section>
+
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="php">
+		<a href="../../../../../ru/php/book/prime.html">Основной учебник</a>
+		<a href="../../../../../ru/php/book/oop.html">Учебник ООП</a>
+		<a href="../../../../../ru/php/book/mvc.html">Учебник MVC</a>
+		<a href="../../../../../ru/php/book/supreme.html">Высший учебник</a>
+		<a href="../../../../../ru/php/book/parsing.html">Учебник парсинга</a>
+		<a href="../../../../../ru/php/tasker/stager.html">Задачник по уровням</a>
+		<a href="../../../../../ru/php/manual.html">Справочник</a>
+		
+		<a href="../../../../../ru/php/video/lesson.html">Видеоуроки</a>
+		<a href="../../../../../ru/php/faq.html">FAQ</a>
+		
+	</section>
+
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="javascript">
+		<a href="../../../../../ru/javascript/book/prime.html">Основной учебник</a>
+		<a href="../../../../../ru/javascript/book/practice.html">Учебник практики</a>
+		<a href="../../../../../ru/javascript/book/supreme.html">Высший учебник</a>
+		<a href="../../../../../ru/javascript/book/oop.html">Учебник ООП</a>
+		<a href="../../../../../ru/javascript/tasker/stager.html">Задачник по уровням</a>
+		<a href="../../../../../ru/javascript/manual.html">Справочник</a>
+		
+		<a href="../../../../../ru/javascript/video/lesson.html">Видеоуроки</a>
+		<a href="../../../../../ru/javascript/mistake.html">Ошибки</a>
+		<a href="../../../../../ru/javascript/faq.html">FAQ</a>
+		
+	</section>
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="nodejs">
+		<a href="../../../../../ru/javascript/nodejs/book/prime.html">Основной учебник</a>
+		<a href="../../../../../ru/javascript/nodejs/book/express.html">Express</a>
+		<a href="../../../../../ru/javascript/nodejs/book/sql.html">SQL</a>
+		<a href="../../../../../ru/javascript/nodejs/book/mongo.html">Mongo</a>
+		<a href="../../../../../ru/javascript/nodejs/manual.html">Справочник</a>
+	</section>
+	
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="ajax">
+		<a href="../../../../../ru/ajax/book/php.html">AJAX в PHP</a>
+	</section>
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="python">
+		<a href="../../../../../ru/python/book/prime.html">Основной учебник</a>
+		<a href="../../../../../ru/python/book/supreme.html">Высший учебник</a>
+		<a href="../../../../../ru/python/manual.html">Справочник</a>
+		<a href="../../../../../ru/python/tasker/stager.html">Задачник по уровням</a>
+		
+		<a href="../../../../../ru/python/faq.html">FAQ</a>
+		
+	</section>
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="java">
+		<a href="../../../../../ru/java/tasker/stager.html">Задачник по уровням</a>
+	</section>
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="cpp">
+		<a href="../../../../../ru/cpp/tasker/stager.html">Задачник по уровням</a>
+	</section>
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="rust">
+		<a href="../../../../../ru/rust/tasker/stager.html">Задачник по уровням</a>
+	</section>
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="kotlin">
+		<a href="../../../../../ru/kotlin/tasker/stager.html">Задачник по уровням</a>
+		<a href="../../../../../ru/kotlin/manual.html">Справочник</a>
+	</section>
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="dart">
+		<a href="../../../../../ru/dart/tasker/stager.html">Задачник по уровням</a>
+	</section>
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="go">
+		<a href="../../../../../ru/go/tasker/stager.html">Задачник по уровням</a>
+	</section>
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="sql">
+		<a href="../../../../../ru/sql/book/pma.html">PhpMyAdmin</a>
+		
+		<a href="../../../../../ru/sql/manual.html">Справочник</a>
+		
+		<a href="../../../../../ru/sql/tasker/stager.html">Задачник по уровням</a>
+	</section>
+
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="typescript">
+		<a href="../../../../../ru/javascript/typescript/book/prime.html">Основной учебник</a>
+		<a href="../../../../../ru/javascript/typescript/book/supreme.html">Высший учебник</a>
+	</section>
+
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="vue">
+		<a href="../../../../../ru/javascript/framework/vue/book/prime.html">Основной учебник</a>
+	</section>
+
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="react">
+		<a href="../../../../../ru/javascript/framework/react/book/prime.html">Основной учебник</a>
+		<a href="../../../../../ru/javascript/framework/react/book/supreme.html">Высший учебник</a>
+		<a href="../../../../../ru/javascript/framework/react/book/redux.html">Учебник Redux</a>
+	</section>
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="angular">
+		<a href="../../../../../ru/javascript/framework/angular/book/prime.html">Основной учебник</a>
+	</section>
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="next">
+		<a href="../../../../../ru/javascript/framework/next/book/prime.html">Основной учебник</a>
+	</section>
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="jquery">
+		<a href="../../../../../ru/javascript/lib/jquery/book/prime.html">Основной учебник</a>
+		<a href="../../../../../ru/javascript/lib/jquery/manual.html">Справочник</a>
+	</section>
+	
+		<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="laravel">
+			<a href="../../../../../ru/php/framework/laravel/book/prime.html">Основной учебник</a>
+		</section>
+		
+		<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="opencart">
+			<a href="../../../../../ru/cms/opencart/manual/table.html">Справочник по таблицам</a>
+		</section>
+		
+		<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="wordpress">
+			<a href="../../../../../ru/cms/wordpress/manual/table.html">Справочник по таблицам</a>
+		</section>
+		<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="drupal">
+			<a href="../../../../../ru/cms/drupal/manual/table.html">Справочник по таблицам</a>
+		</section>
+	
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="git">
+		<a href="../../../../../ru/git/book/prime.html">Основной учебник</a>
+	</section>
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="terminal">
+		<a href="../../../../../ru/tool/terminal.html">Учебник по командной строке</a>
+	</section>
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="webpack">
+		<a href="../../../../../ru/tool/webpack.html">Учебник Webpack</a>
+	</section>
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="gulp">
+		<a href="../../../../../ru/tool/gulp.html">Учебник Gulp</a>
+	</section>
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="internet">
+		<a href="../../../../../ru/internet/protocol/http.html">Протокол HTTP</a>
+	</section>
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="deploy">
+		<a href="../../../../../ru/deploy/book/prime.html">Основной учебник</a>
+		<a href="../../../../../ru/deploy/book/sql/hosting.html">SQL на хостинге</a>
+		<a href="../../../../../ru/deploy/book/php/hosting.html">PHP на хостинге</a>
+		<a href="../../../../../ru/deploy/book/react/hosting.html">React на хостинге</a>
+		<a href="../../../../../ru/deploy/book/nodejs/server.html">NodeJS на сервере</a>
+	</section>
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="glossary">
+		<a href="../../../../../ru/theory/glossary.html">Глоссарий программистских терминов</a>
+	</section>
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="slang">
+		<a href="../../../../../ru/theory/slang.html">Сленг программиста</a>
+	</section>
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="social">
+		<a href="https://vk.com/codemu">Паблик сайта code.mu</a>
+		<a href="https://t.me/javascript_tricker">Занимательные задачи JavaScript</a>
+		<a href="https://t.me/php_tricker">Занимательные задачи PHP</a>
+		<a href="https://t.me/python_tricker">Занимательные задачи Python</a>
+	</section>
+	
+</nav>									</div>
+			</header>
+			<main>
+				<div data-w="nict/hett">
+	<h1>Таблица wp_posts</h1>
+</div>				<div data-p="cont/pane">
+<p>
+	Таблица <code data-gs="comd/s" data-x>wp_posts</code> - это ядро системы управления контентом WordPress. Практически всё, что отображается на сайте, так или иначе связано с этой таблицей. Каждая запись в ней представляет собой единицу контента с определённым типом (<code data-gs="comd/s" data-x>post_type</code>) и статусом (<code data-gs="comd/s" data-x>post_status</code>).
+</p>
+
+<h2>Поля</h2>
+<table data-w="cont/desc">
+	<tr>
+		<th>Поле</th>
+		<th>Тип данных</th>
+		<th>Описание</th>
+	</tr>
+	<tr>
+		<th><code data-gs="comd/s" data-x>ID</code></th>
+		<td><code data-gs="comd/s" data-x>bigint(20) unsigned</code></td>
+		<td>
+			Уникальный числовой идентификатор записи (<code data-gs="comd/s" data-x>post</code>). Автоинкрементное поле, является первичным ключом таблицы.
+		</td>
+	</tr>
+	<tr>
+		<th><code data-gs="comd/s" data-x>post_author</code></th>
+		<td><code data-gs="comd/s" data-x>bigint(20) unsigned</code></td>
+		<td>
+			ID пользователя, создавшего запись. Внешний ключ, связывающий запись с таблицей <a href="../../../../../ru/cms/wordpress/manual/table/wp_users.html"><code data-gs="comd/s" data-x>wp_users</code></a>.
+		</td>
+	</tr>
+	<tr>
+		<th><code data-gs="comd/s" data-x>post_date</code></th>
+		<td><code data-gs="comd/s" data-x>datetime</code></td>
+		<td>
+			Дата и время создания записи в часовом поясе сайта.
+		</td>
+	</tr>
+	<tr>
+		<th><code data-gs="comd/s" data-x>post_date_gmt</code></th>
+		<td><code data-gs="comd/s" data-x>datetime</code></td>
+		<td>
+			Дата и время создания записи по Гринвичу (GMT).
+		</td>
+	</tr>
+	<tr>
+		<th><code data-gs="comd/s" data-x>post_content</code></th>
+		<td><code data-gs="comd/s" data-x>longtext</code></td>
+		<td>
+			Основное содержимое записи (контент). Для записей и страниц здесь хранится текст, HTML-разметка, шорткоды. Для вложений это поле часто пустое.
+		</td>
+	</tr>
+	<tr>
+		<th><code data-gs="comd/s" data-x>post_title</code></th>
+		<td><code data-gs="comd/s" data-x>text</code></td>
+		<td>
+			Заголовок записи.
+		</td>
+	</tr>
+	<tr>
+		<th><code data-gs="comd/s" data-x>post_excerpt</code></th>
+		<td><code data-gs="comd/s" data-x>text</code></td>
+		<td>
+			Краткое описание (цитата) записи. Используется как анонс в архивах, RSS-ленте и при поиске.
+		</td>
+	</tr>
+	<tr>
+		<th><code data-gs="comd/s" data-x>post_status</code></th>
+		<td><code data-gs="comd/s" data-x>varchar(20)</code></td>
+		<td>
+			Статус записи. Определяет её видимость и доступность. Основные статусы: <code data-gs="comd/s" data-x>publish</code> (опубликовано), <code data-gs="comd/s" data-x>draft</code> (черновик), <code data-gs="comd/s" data-x>pending</code> (на утверждении), <code data-gs="comd/s" data-x>private</code> (приватная), <code data-gs="comd/s" data-x>trash</code> (в корзине), <code data-gs="comd/s" data-x>inherit</code> (для ревизий и вложений).
+		</td>
+	</tr>
+	<tr>
+		<th><code data-gs="comd/s" data-x>comment_status</code></th>
+		<td><code data-gs="comd/s" data-x>varchar(20)</code></td>
+		<td>
+			Статус комментариев: <code data-gs="comd/s" data-x>open</code> (комментирование разрешено) или <code data-gs="comd/s" data-x>closed</code> (закрыто).
+		</td>
+	</tr>
+	<tr>
+		<th><code data-gs="comd/s" data-x>ping_status</code></th>
+		<td><code data-gs="comd/s" data-x>varchar(20)</code></td>
+		<td>
+			Статус пингов и уведомлений: <code data-gs="comd/s" data-x>open</code> (разрешено) или <code data-gs="comd/s" data-x>closed</code> (запрещено). Определяет, может ли запись принимать пингики и трекбэки.
+		</td>
+	</tr>
+	<tr>
+		<th><code data-gs="comd/s" data-x>post_name</code></th>
+		<td><code data-gs="comd/s" data-x>varchar(200)</code></td>
+		<td>
+			"Слаг" (slug) записи - её адресная часть в URL. Обычно генерируется автоматически из заголовка, но может быть задан вручную. Должен быть уникальным.
+		</td>
+	</tr>
+	<tr>
+		<th><code data-gs="comd/s" data-x>post_modified</code></th>
+		<td><code data-gs="comd/s" data-x>datetime</code></td>
+		<td>
+			Дата и время последнего изменения записи в часовом поясе сайта.
+		</td>
+	</tr>
+	<tr>
+		<th><code data-gs="comd/s" data-x>post_modified_gmt</code></th>
+		<td><code data-gs="comd/s" data-x>datetime</code></td>
+		<td>
+			Дата и время последнего изменения записи по Гринвичу (GMT).
+		</td>
+	</tr>
+	<tr>
+		<th><code data-gs="comd/s" data-x>post_parent</code></th>
+		<td><code data-gs="comd/s" data-x>bigint(20) unsigned</code></td>
+		<td>
+			ID родительской записи. Используется для создания иерархической структуры. Например, для страниц это поле указывает на родительскую страницу, а для вложений (медиафайлов) - на запись, к которой этот файл прикреплён.
+		</td>
+	</tr>
+	<tr>
+		<th><code data-gs="comd/s" data-x>guid</code></th>
+		<td><code data-gs="comd/s" data-x>varchar(255)</code></td>
+		<td>
+			Глобально уникальный идентификатор (Globally Unique Identifier). Для записей и страниц обычно содержит полный URL до постоянной ссылки на момент создания. Для медиафайлов - полный URL до файла. Не рекомендуется использовать для построения ссылок, так как значение может меняться при переносе сайта.
+		</td>
+	</tr>
+	<tr>
+		<th><code data-gs="comd/s" data-x>menu_order</code></th>
+		<td><code data-gs="comd/s" data-x>int(11)</code></td>
+		<td>
+			Порядок записи в списке. В основном используется для сортировки страниц и элементов меню.
+		</td>
+	</tr>
+	<tr>
+		<th><code data-gs="comd/s" data-x>post_type</code></th>
+		<td><code data-gs="comd/s" data-x>varchar(20)</code></td>
+		<td>
+			Тип записи. Определяет, чем является объект. Основные типы: <code data-gs="comd/s" data-x>post</code> (запись), <code data-gs="comd/s" data-x>page</code> (страница), <code data-gs="comd/s" data-x>attachment</code> (вложение/медиафайл), <code data-gs="comd/s" data-x>revision</code> (ревизия), <code data-gs="comd/s" data-x>nav_menu_item</code> (элемент меню). Плагины и темы могут регистрировать свои собственные типы записей (Custom Post Types).
+		</td>
+	</tr>
+	<tr>
+		<th><code data-gs="comd/s" data-x>post_mime_type</code></th>
+		<td><code data-gs="comd/s" data-x>varchar(100)</code></td>
+		<td>
+			MIME-тип для вложений. Для записей и страниц это поле пустое. Для медиафайлов содержит их тип, например: <code data-gs="comd/s" data-x>image/jpeg</code>, <code data-gs="comd/s" data-x>application/pdf</code>.
+		</td>
+	</tr>
+	<tr>
+		<th><code data-gs="comd/s" data-x>comment_count</code></th>
+		<td><code data-gs="comd/s" data-x>bigint(20)</code></td>
+		<td>
+			Общее количество комментариев, оставленных к данной записи. Значение кэшируется здесь для производительности.
+		</td>
+	</tr>
+</table>
+
+<h2>Как это работает</h2>
+<p>
+	Когда вы создаёте новую запись, страницу или загружаете медиафайл, WordPress создаёт новую строку в таблице <code data-gs="comd/s" data-x>wp_posts</code>. Поле <code data-gs="comd/s" data-x>post_type</code> определяет, как система должна обрабатывать этот объект. Записи типа <code data-gs="comd/s" data-x>post</code> обычно выводятся в блоге в обратном хронологическом порядке, страницы (<code data-gs="comd/s" data-x>page</code>) образуют статическую иерархическую структуру, а вложения (<code data-gs="comd/s" data-x>attachment</code>) привязываются к другим записям через поле <code data-gs="comd/s" data-x>post_parent</code>.
+</p>
+<p>
+	При каждом изменении записи WordPress может создавать её ревизию (<code data-gs="comd/s" data-x>post_type = 'revision'</code>), которая сохраняет предыдущее состояние контента. Это позволяет откатить изменения, если это потребуется.
+</p>
+<p>
+	Поля <code data-gs="comd/s" data-x>post_date</code> и <code data-gs="comd/s" data-x>post_date_gmt</code> критически важны для корректного отображения записей в ленте, RSS-каналах и для функций, зависящих от времени. Поле <code data-gs="comd/s" data-x>post_name</code> (слаг) формирует ЧПУ (человеко-понятные урлы) для постоянных ссылок.
+</p>
+<p>
+	Связь с другими таблицами осуществляется через ID:
+</p>
+<ul>
+	<li><code data-gs="comd/s" data-x>post_author</code> → <a href="../../../../../ru/cms/wordpress/manual/table/wp_users.html"><code data-gs="comd/s" data-x>wp_users.ID</code></a></li>
+	<li><code data-gs="comd/s" data-x>ID</code> → <a href="../../../../../ru/cms/wordpress/manual/table/wp_postmeta.html"><code data-gs="comd/s" data-x>wp_postmeta.post_id</code></a> (дополнительные мета-поля)</li>
+	<li><code data-gs="comd/s" data-x>ID</code> → <a href="../../../../../ru/cms/wordpress/manual/table/wp_term_relationships.html"><code data-gs="comd/s" data-x>wp_term_relationships.object_id</code></a> (связь с рубриками и метками)</li>
+	<li><code data-gs="comd/s" data-x>ID</code> → <a href="../../../../../ru/cms/wordpress/manual/table/wp_comments.html"><code data-gs="comd/s" data-x>wp_comments.comment_post_ID</code></a> (комментарии)</li>
+</ul>
+
+<h2>Пример SQL-запроса</h2>
+<p>
+	Выбрать 10 последних опубликованных записей блога с именем автора:
+</p>
+<div data-p="bock/pane">
+	<code data-w="bock/code" data-lo="high" data-m-lang="sql">SELECT p.*, u.user_login, u.display_name
+FROM wp_posts p
+LEFT JOIN wp_users u ON (p.post_author = u.ID)
+WHERE p.post_type = 'post'
+	AND p.post_status = 'publish'
+ORDER BY p.post_date DESC
+LIMIT 10;</code>
+</div>
+<p>
+	Найти все вложения (изображения), прикреплённые к конкретной записи:
+</p>
+<div data-p="bock/pane">
+	<code data-w="bock/code" data-lo="high" data-m-lang="sql">SELECT *
+FROM wp_posts
+WHERE post_type = 'attachment'
+	AND post_parent = 157
+ORDER BY menu_order ASC;</code>
+</div>
+
+<h2>Смотрите также</h2>
+<div data-w="cont/also">
+	<ul>
+		<li>
+			таблицу <a href="../../../../../ru/cms/wordpress/manual/table/wp_postmeta.html"><code data-gs="comd/s" data-x>wp_postmeta</code></a>, <br>
+			которая хранит произвольные дополнительные данные (метаполя) для записей
+		</li>
+		<li>
+			таблицу <a href="../../../../../ru/cms/wordpress/manual/table/wp_term_relationships.html"><code data-gs="comd/s" data-x>wp_term_relationships</code></a>, <br>
+			которая связывает записи с рубриками и метками
+		</li>
+		<li>
+			таблицу <a href="../../../../../ru/cms/wordpress/manual/table/wp_users.html"><code data-gs="comd/s" data-x>wp_users</code></a>, <br>
+			которая хранит данные пользователей-авторов
+		</li>
+		<li>
+			таблицу <a href="../../../../../ru/cms/wordpress/manual/table/wp_comments.html"><code data-gs="comd/s" data-x>wp_comments</code></a>, <br>
+			которая хранит комментарии к записям
+		</li>
+	</ul>
+</div>
+</div>			</main>
+				<div data-w="nict/nebr">
+							<a href="../../../../../ru/cms/wordpress/manual/table/wp_postmeta.html" data-e="next" data-x>
+				<span data-e="arow" data-x>&rarr;</span>
+			</a>
+			</div>
+			<footer data-w="ruct/foot">
+				<div data-w="nict/finf">
+	<span data-e="text" data-x>
+		Трепачёв Дмитрий &copy; 2012-2025	</span>
+	<br>
+	<a data-e="link" data-x href="https://t.me/trepachev_dmitry">t.me/trepachev_dmitry</a>
+</div>							</footer>
+			<div data-w="nict/jump">
+	<a href="#top"><span>&uarr;</span></a>
+</div>			<div data-w="nict/lagr">
+	</div>					</div>
+		
+		<script src="../../../../../tore/@/metrikaΣ.js?v=1"></script>	</body>
+</html>

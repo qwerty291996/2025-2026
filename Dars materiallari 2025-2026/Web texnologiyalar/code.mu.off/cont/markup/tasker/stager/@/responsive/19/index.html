@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="styles.css">
+		<title>Urban Decor</title>
+	</head>
+	<body>
+		<div class="container">
+			<header class="main-header">
+				<div class="logo">Urban Decor</div>
+				<div class="header-actions">
+					<button class="search-btn">Search</button>
+					<button class="account-btn">Account</button>
+					<button class="cart-btn">Cart (0)</button>
+				</div>
+			</header>
+			
+			<nav class="main-menu">
+				<ul>
+					<li><a href="#" class="active">All Items</a></li>
+					<li><a href="#">Furniture</a></li>
+					<li><a href="#">Lighting</a></li>
+					<li><a href="#">Textiles</a></li>
+					<li><a href="#">Decor</a></li>
+					<li><a href="#">Sale</a></li>
+				</ul>
+			</nav>
+			
+			<div class="content-wrapper">
+				<button class="filter-toggle">Show Filters</button>
+				
+				<main class="products">
+					<div class="product-card">
+						<div class="product-badge">-20%</div>
+						<div class="product-image" style="background-color: #f5f5f5"></div>
+						<div class="product-category">Furniture</div>
+						<h3>Industrial Coffee Table</h3>
+						<div class="price-container">
+							<span class="old-price">$299</span>
+							<span class="price">$239</span>
+						</div>
+						<div class="product-rating">★★★★☆ (24)</div>
+						<button class="add-to-cart">Add to Cart</button>
+					</div>
+					
+					<div class="product-card">
+						<div class="product-image" style="background-color: #eeeeee"></div>
+						<div class="product-category">Lighting</div>
+						<h3>Minimalist Floor Lamp</h3>
+						<div class="price-container">
+							<span class="price">$149</span>
+						</div>
+						<div class="product-rating">★★★★★ (18)</div>
+						<button class="add-to-cart">Add to Cart</button>
+					</div>
+					
+					<div class="product-card">
+						<div class="product-badge">New</div>
+						<div class="product-image" style="background-color: #f5f5f5"></div>
+						<div class="product-category">Textiles</div>
+						<h3>Wool Blend Throw</h3>
+						<div class="price-container">
+							<span class="price">$89</span>
+						</div>
+						<div class="product-rating">★★★★☆ (12)</div>
+						<button class="add-to-cart">Add to Cart</button>
+					</div>
+					
+					<div class="product-card">
+						<div class="product-badge">-15%</div>
+						<div class="product-image" style="background-color: #eeeeee"></div>
+						<div class="product-category">Furniture</div>
+						<h3>Modern Bookshelf</h3>
+						<div class="price-container">
+							<span class="old-price">$199</span>
+							<span class="price">$169</span>
+						</div>
+						<div class="product-rating">★★★☆☆ (8)</div>
+						<button class="add-to-cart">Add to Cart</button>
+					</div>
+					
+					<div class="product-card">
+						<div class="product-image" style="background-color: #f5f5f5"></div>
+						<div class="product-category">Decor</div>
+						<h3>Ceramic Vase Set</h3>
+						<div class="price-container">
+							<span class="price">$59</span>
+						</div>
+						<div class="product-rating">★★★★★ (31)</div>
+						<button class="add-to-cart">Add to Cart</button>
+					</div>
+					
+					<div class="product-card">
+						<div class="product-badge">Sale</div>
+						<div class="product-image" style="background-color: #eeeeee"></div>
+						<div class="product-category">Furniture</div>
+						<h3>Leather Armchair</h3>
+						<div class="price-container">
+							<span class="old-price">$599</span>
+							<span class="price">$499</span>
+						</div>
+						<div class="product-rating">★★★★☆ (27)</div>
+						<button class="add-to-cart">Add to Cart</button>
+					</div>
+
+					<div class="product-card">
+						<div class="product-image" style="background-color: #f5f5f5"></div>
+						<div class="product-category">Lighting</div>
+						<h3>Brass Table Lamp</h3>
+						<div class="price-container">
+							<span class="price">$129</span>
+						</div>
+						<div class="product-rating">★★★★★ (15)</div>
+						<button class="add-to-cart">Add to Cart</button>
+					</div>
+
+					<div class="product-card">
+						<div class="product-badge">-10%</div>
+						<div class="product-image" style="background-color: #eeeeee"></div>
+						<div class="product-category">Textiles</div>
+						<h3>Linen Curtains</h3>
+						<div class="price-container">
+							<span class="old-price">$129</span>
+							<span class="price">$116</span>
+						</div>
+						<div class="product-rating">★★★★☆ (22)</div>
+						<button class="add-to-cart">Add to Cart</button>
+					</div>
+					
+					<div class="product-card">
+						<div class="product-badge">-5%</div>
+						<div class="product-image" style="background-color: #eeeeee"></div>
+						<div class="product-category">Textiles</div>
+						<h3>Super Curtains</h3>
+						<div class="price-container">
+							<span class="old-price">$200</span>
+							<span class="price">$150</span>
+						</div>
+						<div class="product-rating">★★★★★ (28)</div>
+						<button class="add-to-cart">Add to Cart</button>
+					</div>
+				</main>
+				
+				<aside class="filters-sidebar">
+					<div class="filters-header">
+						<h3>Filters</h3>
+						<button class="close-filters">&times;</button>
+					</div>
+					
+					<div class="filter-section">
+						<div class="filter-title">Categories</div>
+						<div class="filter-options">
+							<label class="filter-option">
+								<input type="checkbox"> Furniture
+							</label>
+							<label class="filter-option">
+								<input type="checkbox"> Lighting
+							</label>
+							<label class="filter-option">
+								<input type="checkbox"> Textiles
+							</label>
+							<label class="filter-option">
+								<input type="checkbox"> Decor
+							</label>
+						</div>
+					</div>
+					
+					<div class="filter-section">
+						<div class="filter-title">Price Range</div>
+						<div class="price-range">
+							<input type="range" min="0" max="1000" value="500">
+							<div class="range-values">
+								<span>$0</span>
+								<span>$1000</span>
+							</div>
+						</div>
+					</div>
+					
+					<div class="filter-section">
+						<div class="filter-title">Special Offers</div>
+						<div class="filter-options">
+							<label class="filter-option">
+								<input type="checkbox"> Sale Items
+							</label>
+							<label class="filter-option">
+								<input type="checkbox"> New Arrivals
+							</label>
+						</div>
+					</div>
+					
+					<div class="filter-actions">
+						<button class="apply-filters">Apply</button>
+						<button class="reset-filters">Reset</button>
+					</div>
+				</aside>
+			</div>
+
+			<footer class="footer">
+				<div class="footer-content">
+					<div class="footer-section">
+						<h4>Shop</h4>
+						<ul>
+							<li><a href="#">New Arrivals</a></li>
+							<li><a href="#">Best Sellers</a></li>
+							<li><a href="#">Gift Cards</a></li>
+						</ul>
+					</div>
+					
+					<div class="footer-section">
+						<h4>Customer Service</h4>
+						<ul>
+							<li><a href="#">Shipping Info</a></li>
+							<li><a href="#">Returns</a></li>
+							<li><a href="#">Contact Us</a></li>
+						</ul>
+					</div>
+					
+					<div class="footer-section">
+						<h4>About Us</h4>
+						<ul>
+							<li><a href="#">Our Story</a></li>
+							<li><a href="#">Sustainability</a></li>
+							<li><a href="#">Careers</a></li>
+						</ul>
+					</div>
+				</div>
+				
+				<div class="footer-bottom">
+					<p>2025 &copy; Urban Decor. All rights reserved.</p>
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>

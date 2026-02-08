@@ -1,0 +1,1682 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Основной учебник PHP для новичков</title>
+		
+		<link rel="stylesheet" href="../../../tore/@/fonts/listΣ.css?v=1">
+<link rel="stylesheet" href="../../../tore/layd/deff/&/aefb44b7dac371a3860e9079298a950e.ructΣ.css">
+<link rel="stylesheet" href="../../../tore/&/d619cf2a52f5e2dd5479335d3ba58cae.apprΣ.css">
+
+<script src="../../../tore/&/abc868ba468b8ea8384332d74f771367.apprΣ.js?v=1" defer></script>
+
+
+<meta name="yandex-verification" content="00eb45b7559e5c68">
+<meta name="google-site-verification" content="Af0TM2OrwIEtjoQXxYz2-1C-21E1m7DB23_kWpE9sLg">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">		
+		<meta name="description" content="Простой учебник PHP для новичков с задачником и примерами решения задач.">
+		<link rel="shortcut icon" type="image/x-icon" href="../../../favicon.ico">
+		
+		<link rel="alternate" hreflang="az" href="https://code.mu/az/php/book/prime/"><link rel="alternate" hreflang="bn" href="https://code.mu/bn/php/book/prime/"><link rel="alternate" hreflang="by" href="https://code.mu/by/php/book/prime/"><link rel="alternate" hreflang="cs" href="https://code.mu/cs/php/book/prime/"><link rel="alternate" hreflang="da" href="https://code.mu/da/php/book/prime/"><link rel="alternate" hreflang="de" href="https://code.mu/de/php/book/prime/"><link rel="alternate" hreflang="en" href="https://code.mu/en/php/book/prime/"><link rel="alternate" hreflang="es" href="https://code.mu/es/php/book/prime/"><link rel="alternate" hreflang="fr" href="https://code.mu/fr/php/book/prime/"><link rel="alternate" hreflang="hi" href="https://code.mu/hi/php/book/prime/"><link rel="alternate" hreflang="hu" href="https://code.mu/hu/php/book/prime/"><link rel="alternate" hreflang="hy" href="https://code.mu/hy/php/book/prime/"><link rel="alternate" hreflang="id" href="https://code.mu/id/php/book/prime/"><link rel="alternate" hreflang="it" href="https://code.mu/it/php/book/prime/"><link rel="alternate" hreflang="ka" href="https://code.mu/ka/php/book/prime/"><link rel="alternate" hreflang="kk" href="https://code.mu/kk/php/book/prime/"><link rel="alternate" hreflang="ms" href="https://code.mu/ms/php/book/prime/"><link rel="alternate" hreflang="nl" href="https://code.mu/nl/php/book/prime/"><link rel="alternate" hreflang="pl" href="https://code.mu/pl/php/book/prime/"><link rel="alternate" hreflang="pt" href="https://code.mu/pt/php/book/prime/"><link rel="alternate" hreflang="ro" href="https://code.mu/ro/php/book/prime/"> <link rel="canonical" href="https://code.mu/ru/php/book/prime/"><link rel="alternate" hreflang="ru" href="https://code.mu/ru/php/book/prime/"><link rel="alternate" hreflang="sv" href="https://code.mu/sv/php/book/prime/"><link rel="alternate" hreflang="sw" href="https://code.mu/sw/php/book/prime/"><link rel="alternate" hreflang="tr" href="https://code.mu/tr/php/book/prime/"><link rel="alternate" hreflang="uz-Cyrl" href="https://code.mu/uzc/php/book/prime/"><link rel="alternate" hreflang="uz-Latn" href="https://code.mu/uzl/php/book/prime/">	</head>
+	<body id="top" data-gq="D" data-gv-lesh="">
+		<div data-r="ruct/wrap">
+			<header>
+				<div data-r="ruct/topp">
+	<div data-r="topp/left">
+		<div data-w="nict/logo">
+	<img data-e="img" data-x src="" alt="">
+</div>	</div>
+	<div data-r="topp/righ">
+		offline version v4	</div>
+	<div data-r="topp/cent">
+		<div data-w="nict/adv">
+	<a href="https://mentor.code.mu/?course=practic"><b>Стажировка на реальных проектах:</b><br>
+наполнение портфолио, помощь с работой и заказами, пробные собеседования.
+Жми для подробностей&rarr;
+</a></div>	</div>
+</div>								
+				<div data-r="ruct/navi">
+					<div data-w="nict/over">
+			</div>					<nav data-w="nict/mainmenu">
+	<section data-e="main" data-x data-gm-acte="T">
+		<span data-q-href="/ru/markup/" data-e="open" data-x data-m-targ="markup">Верстка</span>
+		<span data-q-href="/ru/javascript/" data-e="open" data-x data-m-targ="javascript">JavaScript</span>
+		<span data-q-href="/ru/php/" data-e="open" data-x data-m-targ="php">PHP</span>
+		<span data-q-href="/ru/javascript/typescript/" data-e="open" data-x data-m-targ="typescript">TypeScript</span>
+		
+			<span data-q-href="/ru/javascript/nodejs/" data-e="open" data-x data-m-targ="nodejs">NodeJS</span>
+			<span data-q-href="/ru/ajax/" data-e="open" data-x data-m-targ="ajax">AJAX</span>
+		
+		<span data-q-href="/ru/python/" data-e="open" data-x data-m-targ="python">Python</span>
+		<span data-q-href="/ru/java/" data-e="open" data-x data-m-targ="java">Java</span>
+		<span data-q-href="/ru/cpp/" data-e="open" data-x data-m-targ="cpp">C++</span>
+		<span data-q-href="/ru/rust/" data-e="open" data-x data-m-targ="rust">Rust</span>
+		
+			<span data-q-href="/ru/kotlin/" data-e="open" data-x data-m-targ="kotlin">Kotlin</span>
+		
+		
+			<span data-q-href="/ru/dart/" data-e="open" data-x data-m-targ="dart">Dart</span>
+		
+		
+			<span data-q-href="/ru/go/" data-e="open" data-x data-m-targ="go">Go</span>
+		
+		<span data-q-href="/ru/sql/" data-e="open" data-x data-m-targ="sql">SQL</span>
+		<span data-q-href="/ru/javascript/framework/vue/" data-e="open" data-x data-m-targ="vue">Vue</span>
+		<span data-q-href="/ru/javascript/framework/react/" data-e="open" data-x data-m-targ="react">React</span>
+		<span data-q-href="/ru/javascript/framework/angular/" data-e="open" data-x data-m-targ="angular">Angular</span>
+		<span data-q-href="/ru/javascript/framework/next/" data-e="open" data-x data-m-targ="next">Next</span>
+		<span data-q-href="/ru/javascript/lib/jquery/" data-e="open" data-x data-m-targ="jquery">jQuery</span>
+		
+		
+			<span data-q-href="/ru/php/framework/laravel/" data-e="open" data-x data-m-targ="laravel">Laravel</span>
+		
+			<span data-q-href="/ru/cms/opencart/" data-e="open" data-x data-m-targ="opencart">OpenCart</span>
+			<span data-q-href="/ru/cms/opencart/" data-e="open" data-x data-m-targ="wordpress">WordPress</span>
+			<span data-q-href="/ru/cms/drupal/" data-e="open" data-x data-m-targ="drupal">Drupal</span>
+		
+		
+		<span data-q-href="/ru/git/" data-e="open" data-x data-m-targ="git">Git</span>
+		
+		<span data-q-href="/ru/tool/webpack/" data-e="open" data-x data-m-targ="webpack">Webpack</span>
+		<span data-q-href="/ru/tool/gulp/" data-e="open" data-x data-m-targ="gulp">Gulp</span>
+		<span data-q-href="/ru/tool/terminal/" data-e="open" data-x data-m-targ="terminal">Terminal</span>
+		<span data-q-href="/ru/internet/" data-e="open" data-x data-m-targ="internet">Internet</span>
+		<span data-q-href="/ru/deploy/" data-e="open" data-x data-m-targ="deploy">Деплой</span>
+		<span data-q-href="/ru/theory/glossary/" data-e="open" data-x data-m-targ="glossary">Глоссарий</span>
+		
+			<span data-q-href="/ru/theory/slang/" data-e="open" data-x data-m-targ="slang">Сленг</span>
+			<span data-e="open" data-x data-m-targ="social">Соц. сети</span>
+		
+	</section>
+
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="markup">
+		<a href="../../../ru/markup/book/prime.html">Основной учебник</a>
+		<a href="../../../ru/markup/book/supreme.html">Высший учебник</a>
+		<a href="../../../ru/markup/book/prep/less.html">Учебник LESS</a>
+		<a href="../../../ru/markup/book/prep/sass.html">Учебник SASS</a>
+		<a href="../../../ru/markup/manual/html.html">Справочник HTML</a>
+		<a href="../../../ru/markup/manual/css.html">Справочник CSS</a>
+		<a href="../../../ru/markup/tasker/stager.html">Задачник по уровням</a>
+	</section>
+
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="php">
+		<a href="../../../ru/php/book/prime.html">Основной учебник</a>
+		<a href="../../../ru/php/book/oop.html">Учебник ООП</a>
+		<a href="../../../ru/php/book/mvc.html">Учебник MVC</a>
+		<a href="../../../ru/php/book/supreme.html">Высший учебник</a>
+		<a href="../../../ru/php/book/parsing.html">Учебник парсинга</a>
+		<a href="../../../ru/php/tasker/stager.html">Задачник по уровням</a>
+		<a href="../../../ru/php/manual.html">Справочник</a>
+		
+		<a href="../../../ru/php/video/lesson.html">Видеоуроки</a>
+		<a href="../../../ru/php/faq.html">FAQ</a>
+		
+	</section>
+
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="javascript">
+		<a href="../../../ru/javascript/book/prime.html">Основной учебник</a>
+		<a href="../../../ru/javascript/book/practice.html">Учебник практики</a>
+		<a href="../../../ru/javascript/book/supreme.html">Высший учебник</a>
+		<a href="../../../ru/javascript/book/oop.html">Учебник ООП</a>
+		<a href="../../../ru/javascript/tasker/stager.html">Задачник по уровням</a>
+		<a href="../../../ru/javascript/manual.html">Справочник</a>
+		
+		<a href="../../../ru/javascript/video/lesson.html">Видеоуроки</a>
+		<a href="../../../ru/javascript/mistake.html">Ошибки</a>
+		<a href="../../../ru/javascript/faq.html">FAQ</a>
+		
+	</section>
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="nodejs">
+		<a href="../../../ru/javascript/nodejs/book/prime.html">Основной учебник</a>
+		<a href="../../../ru/javascript/nodejs/book/express.html">Express</a>
+		<a href="../../../ru/javascript/nodejs/book/sql.html">SQL</a>
+		<a href="../../../ru/javascript/nodejs/book/mongo.html">Mongo</a>
+		<a href="../../../ru/javascript/nodejs/manual.html">Справочник</a>
+	</section>
+	
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="ajax">
+		<a href="../../../ru/ajax/book/php.html">AJAX в PHP</a>
+	</section>
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="python">
+		<a href="../../../ru/python/book/prime.html">Основной учебник</a>
+		<a href="../../../ru/python/book/supreme.html">Высший учебник</a>
+		<a href="../../../ru/python/manual.html">Справочник</a>
+		<a href="../../../ru/python/tasker/stager.html">Задачник по уровням</a>
+		
+		<a href="../../../ru/python/faq.html">FAQ</a>
+		
+	</section>
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="java">
+		<a href="../../../ru/java/tasker/stager.html">Задачник по уровням</a>
+	</section>
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="cpp">
+		<a href="../../../ru/cpp/tasker/stager.html">Задачник по уровням</a>
+	</section>
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="rust">
+		<a href="../../../ru/rust/tasker/stager.html">Задачник по уровням</a>
+	</section>
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="kotlin">
+		<a href="../../../ru/kotlin/tasker/stager.html">Задачник по уровням</a>
+		<a href="../../../ru/kotlin/manual.html">Справочник</a>
+	</section>
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="dart">
+		<a href="../../../ru/dart/tasker/stager.html">Задачник по уровням</a>
+	</section>
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="go">
+		<a href="../../../ru/go/tasker/stager.html">Задачник по уровням</a>
+	</section>
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="sql">
+		<a href="../../../ru/sql/book/pma.html">PhpMyAdmin</a>
+		
+		<a href="../../../ru/sql/manual.html">Справочник</a>
+		
+		<a href="../../../ru/sql/tasker/stager.html">Задачник по уровням</a>
+	</section>
+
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="typescript">
+		<a href="../../../ru/javascript/typescript/book/prime.html">Основной учебник</a>
+		<a href="../../../ru/javascript/typescript/book/supreme.html">Высший учебник</a>
+	</section>
+
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="vue">
+		<a href="../../../ru/javascript/framework/vue/book/prime.html">Основной учебник</a>
+	</section>
+
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="react">
+		<a href="../../../ru/javascript/framework/react/book/prime.html">Основной учебник</a>
+		<a href="../../../ru/javascript/framework/react/book/supreme.html">Высший учебник</a>
+		<a href="../../../ru/javascript/framework/react/book/redux.html">Учебник Redux</a>
+	</section>
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="angular">
+		<a href="../../../ru/javascript/framework/angular/book/prime.html">Основной учебник</a>
+	</section>
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="next">
+		<a href="../../../ru/javascript/framework/next/book/prime.html">Основной учебник</a>
+	</section>
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="jquery">
+		<a href="../../../ru/javascript/lib/jquery/book/prime.html">Основной учебник</a>
+		<a href="../../../ru/javascript/lib/jquery/manual.html">Справочник</a>
+	</section>
+	
+		<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="laravel">
+			<a href="../../../ru/php/framework/laravel/book/prime.html">Основной учебник</a>
+		</section>
+		
+		<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="opencart">
+			<a href="../../../ru/cms/opencart/manual/table.html">Справочник по таблицам</a>
+		</section>
+		
+		<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="wordpress">
+			<a href="../../../ru/cms/wordpress/manual/table.html">Справочник по таблицам</a>
+		</section>
+		<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="drupal">
+			<a href="../../../ru/cms/drupal/manual/table.html">Справочник по таблицам</a>
+		</section>
+	
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="git">
+		<a href="../../../ru/git/book/prime.html">Основной учебник</a>
+	</section>
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="terminal">
+		<a href="../../../ru/tool/terminal.html">Учебник по командной строке</a>
+	</section>
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="webpack">
+		<a href="../../../ru/tool/webpack.html">Учебник Webpack</a>
+	</section>
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="gulp">
+		<a href="../../../ru/tool/gulp.html">Учебник Gulp</a>
+	</section>
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="internet">
+		<a href="../../../ru/internet/protocol/http.html">Протокол HTTP</a>
+	</section>
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="deploy">
+		<a href="../../../ru/deploy/book/prime.html">Основной учебник</a>
+		<a href="../../../ru/deploy/book/sql/hosting.html">SQL на хостинге</a>
+		<a href="../../../ru/deploy/book/php/hosting.html">PHP на хостинге</a>
+		<a href="../../../ru/deploy/book/react/hosting.html">React на хостинге</a>
+		<a href="../../../ru/deploy/book/nodejs/server.html">NodeJS на сервере</a>
+	</section>
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="glossary">
+		<a href="../../../ru/theory/glossary.html">Глоссарий программистских терминов</a>
+	</section>
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="slang">
+		<a href="../../../ru/theory/slang.html">Сленг программиста</a>
+	</section>
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="social">
+		<a href="https://vk.com/codemu">Паблик сайта code.mu</a>
+		<a href="https://t.me/javascript_tricker">Занимательные задачи JavaScript</a>
+		<a href="https://t.me/php_tricker">Занимательные задачи PHP</a>
+		<a href="https://t.me/python_tricker">Занимательные задачи Python</a>
+	</section>
+	
+</nav>									</div>
+			</header>
+			<main>
+				<div data-w="nict/hett">
+	<h1>Основной учебник PHP8+</h1>
+</div>				<div data-w="menu/pane" data-m-mode="H" data-m-book="ppPm">
+<h2>Основы</h2>
+<div data-m-sect="Bs">
+<a data-m-less="Inr" href="../../../ru/php/book/prime/basis/intro.html">
+	Введение в язык PHP
+</a>
+<a data-m-less="St" href="../../../ru/php/book/prime/basis/start.html">
+	Начало работы
+</a>
+<a data-m-less="Rn" href="../../../ru/php/book/prime/basis/run.html">
+	Выполнение кода PHP
+</a>
+<a data-m-less="EP" href="../../../ru/php/book/prime/basis/encoding-problem.html">
+	Проблема с кодировками
+</a>
+<a data-m-less="ErO" href="../../../ru/php/book/prime/basis/errors-output.html">
+	Вывод ошибок PHP
+</a>
+<a data-m-less="FLC" href="../../../ru/php/book/prime/basis/full-launching-code.html">
+	Полный код для запуска PHP
+</a>
+<a data-m-less="ILC" href="../../../ru/php/book/prime/basis/improved-launching-code.html">
+	Улучшенный код для запуска
+</a>
+<a data-m-less="Ov" href="../../../ru/php/book/prime/basis/overview.html">
+	Обзор начальных PHP команд
+</a>
+<a data-m-less="Cm" href="../../../ru/php/book/prime/basis/comments.html">
+	Комментарии в PHP
+</a>
+<a data-m-less="BC" href="../../../ru/php/book/prime/basis/book-comments.html">
+	Комментарии в учебнике
+</a>
+<a data-m-less="Dm" href="../../../ru/php/book/prime/basis/dumping.html">
+	Дампинг переменных
+</a>
+<a data-m-less="Fc" href="../../../ru/php/book/prime/basis/functions.html">
+	Функции в PHP
+</a>
+<a data-m-less="Vr" href="../../../ru/php/book/prime/basis/variables.html">
+	Переменные
+</a>
+<a data-m-less="VU" href="../../../ru/php/book/prime/basis/variables-usage.html">
+	Использование переменных
+</a>
+<a data-m-less="VVCh" href="../../../ru/php/book/prime/basis/variables-values-changing.html">
+	Изменения значений переменных
+</a>
+<a data-m-less="MONu" href="../../../ru/php/book/prime/basis/math-operations-numbers.html">
+	Математические операции с числами
+</a>
+<a data-m-less="MOV" href="../../../ru/php/book/prime/basis/math-operations-variables.html">
+	Математические операции с переменными
+</a>
+<a data-m-less="MOP" href="../../../ru/php/book/prime/basis/math-operations-priority.html">
+	Приоритет математических операций
+</a>
+<a data-m-less="MOE" href="../../../ru/php/book/prime/basis/math-operations-equal.html">
+	Равный приоритет
+</a>
+ <a data-m-less="MOPa" href="../../../ru/php/book/prime/basis/math-operations-parentheses.html">
+	Группирующие скобки
+</a> 
+<a data-m-less="MONua" href="../../../ru/php/book/prime/basis/math-operations-nuances.html">
+	Нюансы группировки
+</a>  
+<a data-m-less="Fr" href="../../../ru/php/book/prime/basis/fractions.html">
+	Дроби
+</a>
+<a data-m-less="NN" href="../../../ru/php/book/prime/basis/negative-numbers.html">
+	Отрицательные числа
+</a>
+<a data-m-less="DR" href="../../../ru/php/book/prime/basis/division-remainder.html">
+	Остаток от деления
+</a>
+<a data-m-less="NP" href="../../../ru/php/book/prime/basis/numbers-powering.html">
+	Возведение в степень
+</a>
+<a data-m-less="NPP" href="../../../ru/php/book/prime/basis/numbers-powering-priority.html">
+	Приоритет возведения в степень
+</a>
+<a data-m-less="St" href="../../../ru/php/book/prime/basis/strings.html">
+	Строки
+</a>
+<a data-m-less="SC" href="../../../ru/php/book/prime/basis/strings-concatenation.html">
+	Сложение строк
+</a>
+<a data-m-less="SCS" href="../../../ru/php/book/prime/basis/strings-concatenation-spaces.html">
+	Пробелы при сложении строк
+</a>
+<a data-m-less="SL" href="../../../ru/php/book/prime/basis/strings-length.html">
+	Длина строки
+</a> 
+<a data-m-less="CyP" href="../../../ru/php/book/prime/basis/cyrillic-problem.html">
+	Проблема с кириллицей
+</a> 
+<a data-m-less="Tg" href="../../../ru/php/book/prime/basis/tags.html">
+	Теги
+</a>
+<a data-m-less="TgA" href="../../../ru/php/book/prime/basis/tags-attributes.html">
+	Атрибуты тегов
+</a> 
+<a data-m-less="BV" href="../../../ru/php/book/prime/basis/boolean-values.html">
+	Логические значения
+</a>
+<a data-m-less="Nl" href="../../../ru/php/book/prime/basis/null.html">
+	Значение null
+</a>
+<a data-m-less="ATC" href="../../../ru/php/book/prime/basis/automatic-types-conversion.html">
+	Автоматическое преобразование типов
+</a>
+<a data-m-less="CTS" href="../../../ru/php/book/prime/basis/conversion-to-string.html">
+	Автоматическое преобразование к строке
+</a>
+<a data-m-less="NTS" href="../../../ru/php/book/prime/basis/nuances-to-string.html">
+	Нюансы преобразования к строке
+</a>
+<a data-m-less="CTN" href="../../../ru/php/book/prime/basis/conversion-to-number.html">
+	Преобразование к числу
+</a>
+<a data-m-less="CTF" href="../../../ru/php/book/prime/basis/conversion-to-fraction.html">
+	Преобразование к дроби
+</a>
+<a data-m-less="FTI" href="../../../ru/php/book/prime/basis/fraction-to-integer.html">
+	Преобразование дроби к целому
+</a>
+<a data-m-less="NTS" href="../../../ru/php/book/prime/basis/number-to-string.html">
+	Преобразование числа к строке
+</a>
+<a data-m-less="SCh" href="../../../ru/php/book/prime/basis/string-characters.html">
+	Символы строки
+</a>
+<a data-m-less="DS" href="../../../ru/php/book/prime/basis/digits-strings.html">
+	Цифры в строке
+</a>
+<a data-m-less="ND" href="../../../ru/php/book/prime/basis/number-digits.html">
+	Обращение к цифрам числа
+</a> 
+ <a data-m-less="AON" href="../../../ru/php/book/prime/basis/assignment-operations-nuances.html">
+	Нюансы работы с операцией присваивания
+</a>
+<a data-m-less="ShO" href="../../../ru/php/book/prime/basis/short-operations.html">
+	Сокращенные операции
+</a>
+<a data-m-less="Ic" href="../../../ru/php/book/prime/basis/incrementation.html">
+	Инкременация
+</a>
+<a data-m-less="PPT" href="../../../ru/php/book/prime/basis/prefix-postfix-type.html">
+	Префиксный и постфиксный тип 
+</a> 
+<a data-m-less="Mst" href="../../../ru/php/book/prime/basis/mistakes.html">
+	Практика на поиск ошибок
+</a>
+<a data-m-less="PrmO" href="../../../ru/php/book/prime/basis/practicum/operations.html">
+	Практика на операции
+</a>
+<a data-m-less="PrmF" href="../../../ru/php/book/prime/basis/practicum/formulas.html">
+	Практика на формулы
+</a>
+</div><h2>Массивы</h2>
+<div data-m-sect="Ar">
+<a data-m-less="Inr" href="../../../ru/php/book/prime/arrays/intro.html">
+	Введение в массивы
+</a>
+<a data-m-less="Dm" href="../../../ru/php/book/prime/arrays/dumping.html">
+	Просмотр содержимого массива
+</a>
+<a data-m-less="El" href="../../../ru/php/book/prime/arrays/element.html">
+	Отдельный элемент массива
+</a>
+<a data-m-less="As" href="../../../ru/php/book/prime/arrays/associative.html">
+	Ассоциативные массивы
+</a>
+<a data-m-less="KT" href="../../../ru/php/book/prime/arrays/keys-trick.html">
+	Хитрость с ключами
+</a>
+<a data-m-less="EO" href="../../../ru/php/book/prime/arrays/elements-order.html">
+	Порядок элементов
+</a>
+<a data-m-less="Ln" href="../../../ru/php/book/prime/arrays/length.html">
+	Длина массива
+</a>
+<a data-m-less="ECh" href="../../../ru/php/book/prime/arrays/elements-changing.html">
+	Изменение элементов
+</a>
+<a data-m-less="ERe" href="../../../ru/php/book/prime/arrays/elements-rewriting.html">
+	Перезапись элементов массива
+</a>
+<a data-m-less="EI" href="../../../ru/php/book/prime/arrays/elements-incrementation.html">
+	Инкрементация элементов
+</a>
+<a data-m-less="Fl" href="../../../ru/php/book/prime/arrays/filling.html">
+	Заполнение массивов
+</a>
+<a data-m-less="EAK" href="../../../ru/php/book/prime/arrays/explicit-assign-keys.html">
+	Явное указание ключей
+</a>
+<a data-m-less="VK" href="../../../ru/php/book/prime/arrays/vars-keys.html">
+	Ключи из переменных
+</a>
+<a data-m-less="Mst" href="../../../ru/php/book/prime/arrays/mistakes.html">
+	Практика на поиск ошибок
+</a>
+</div><h2>Условия</h2>
+<div data-m-sect="Cd">
+<a data-m-less="IE" href="../../../ru/php/book/prime/conditions/if-else.html">
+	Конструкция if-else
+</a>
+<a data-m-less="LME" href="../../../ru/php/book/prime/conditions/less-more-operators.html">
+	Операторы больше и меньше 
+</a>
+<a data-m-less="ECh" href="../../../ru/php/book/prime/conditions/equality-checking.html">
+	Проверка на равенство 
+</a>
+<a data-m-less="IeCh" href="../../../ru/php/book/prime/conditions/inequality-checking.html">
+	Проверка на неравенство 
+</a>
+<a data-m-less="VC" href="../../../ru/php/book/prime/conditions/variables-comparison.html">
+	Сравнение переменных 
+</a>
+<a data-m-less="DT" href="../../../ru/php/book/prime/conditions/data-types.html">
+	Типы данных и конструкция if-else
+</a>
+<a data-m-less="NQ" href="../../../ru/php/book/prime/conditions/numbers-in-quotes.html">
+	Числа в кавычках
+</a>
+<a data-m-less="VTE" href="../../../ru/php/book/prime/conditions/values-types-equality.html">
+	Равенство по значению и типу
+</a>
+<a data-m-less="VTI" href="../../../ru/php/book/prime/conditions/values-types-inequality.html">
+	Неравенство по значению и типу
+</a>
+<a data-m-less="CN" href="../../../ru/php/book/prime/conditions/comparison-nuances.html">
+	Нюансы при сравнении типов данных
+</a>
+<a data-m-less="CS" href="../../../ru/php/book/prime/conditions/compound-statements.html">
+	Сложные условия в if-else
+</a>
+<a data-m-less="LA" href="../../../ru/php/book/prime/conditions/logical-and.html">
+	Логическое И 
+</a>
+<a data-m-less="LOr" href="../../../ru/php/book/prime/conditions/logical-or.html">
+	Логическое ИЛИ 
+</a>
+<a data-m-less="COP" href="../../../ru/php/book/prime/conditions/comparison-operations-priority.html">
+	Приоритет операций сравнения
+</a>
+<a data-m-less="CG" href="../../../ru/php/book/prime/conditions/conditions-grouping.html">
+	Группировка условий 
+</a>
+<a data-m-less="SI" href="../../../ru/php/book/prime/conditions/statements-inverting.html">
+	Инвертирование высказываний
+</a>
+<a data-m-less="BT" href="../../../ru/php/book/prime/conditions/boolean-types.html">
+	Конструкция if-else и булевы значения
+</a>
+<a data-m-less="WBC" href="../../../ru/php/book/prime/conditions/weak-boolean-comparison.html">
+	Нестрогое сравнение логических значений
+</a>
+<a data-m-less="BShI" href="../../../ru/php/book/prime/conditions/booleans-shorted-if.html">
+	Сокращенный if
+</a>
+<a data-m-less="BN" href="../../../ru/php/book/prime/conditions/booleans-nuance.html">
+	Нюанс сокращенных операций
+</a>
+<a data-m-less="Is" href="../../../ru/php/book/prime/conditions/isset.html">
+	Команда isset
+</a>
+<a data-m-less="WSu" href="../../../ru/php/book/prime/conditions/warining-supression.html">
+	Подавление ворнинга
+</a>
+<a data-m-less="AEC" href="../../../ru/php/book/prime/conditions/array-elements-checking.html">
+	Проверка элементов массива
+</a>
+<a data-m-less="Em" href="../../../ru/php/book/prime/conditions/empty.html">
+	Команда empty
+</a>
+<a data-m-less="ShS" href="../../../ru/php/book/prime/conditions/else-optionality.html">
+	Необязательность команды else
+</a>
+<a data-m-less="BO" href="../../../ru/php/book/prime/conditions/braces-optionality.html">
+	Необязательность фигурных скобок
+</a>
+<a data-m-less="BOP" href="../../../ru/php/book/prime/conditions/braces-optionality-problem.html">
+	Проблема необязательности скобок
+</a>
+<a data-m-less="Cm" href="../../../ru/php/book/prime/conditions/combinations.html">
+	Комбинации if-else
+</a>
+<a data-m-less="EI" href="../../../ru/php/book/prime/conditions/elseif.html">
+	Конструкция elseif
+</a>
+<a data-m-less="NIf" href="../../../ru/php/book/prime/conditions/nested-if.html">
+	Вложенные if
+</a>
+<a data-m-less="Sch" href="../../../ru/php/book/prime/conditions/switch.html">
+	Конструкция switch
+</a>
+<a data-m-less="DNM" href="../../../ru/php/book/prime/conditions/default-optionality.html">
+	Необязательность default 
+</a>
+<a data-m-less="Mch" href="../../../ru/php/book/prime/conditions/match.html">
+	Конструкция match
+</a>
+<a data-m-less="BNM" href="../../../ru/php/book/prime/conditions/break-optionality.html">
+	Необязательность break 
+</a>
+<a data-m-less="TO" href="../../../ru/php/book/prime/conditions/ternary-operator.html">
+	Тернарный оператор
+</a>
+<a data-m-less="NC" href="../../../ru/php/book/prime/conditions/null-coalescing.html">
+	Оператор объединения с null
+</a>
+<a data-m-less="NCCh" href="../../../ru/php/book/prime/conditions/null-coalescing-chaining.html">
+	Цепочки операторов объединения с null
+</a>
+<a data-m-less="LO" href="../../../ru/php/book/prime/conditions/logical-operations.html">
+	Логические операции
+</a>
+<a data-m-less="ExHP" href="../../../ru/php/book/prime/conditions/examples/hour-part.html">
+	Определение части часа 
+</a>
+<a data-m-less="ExSAL" href="../../../ru/php/book/prime/conditions/examples/string-arrays-length.html">
+	Проверка длины строк и массивов
+</a>
+<a data-m-less="ExSCC" href="../../../ru/php/book/prime/conditions/examples/string-character-checking.html">
+	Проверка символа строки
+</a>
+<a data-m-less="ExRC" href="../../../ru/php/book/prime/conditions/examples/remainder-checking.html">
+	Проверка остатка от деления
+</a>
+<a data-m-less="Mst" href="../../../ru/php/book/prime/conditions/mistakes.html">
+	Практика на поиск ошибок 
+</a>
+<a data-m-less="Prm" href="../../../ru/php/book/prime/conditions/practicum.html">
+	Практика if else
+</a>
+</div><h2>Циклы</h2>
+<div data-m-sect="Lp">
+<a data-m-less="Inr" href="../../../ru/php/book/prime/loops/intro.html">
+	Введение
+</a>
+<a data-m-less="Fe" href="../../../ru/php/book/prime/loops/foreach.html">
+	Цикл foreach
+</a>
+<a data-m-less="FeK" href="../../../ru/php/book/prime/loops/foreach-keys.html">
+	Цикл foreach с ключами
+</a>
+<a data-m-less="Wl" href="../../../ru/php/book/prime/loops/while.html">
+	Цикл while
+</a>
+<a data-m-less="FrI" href="../../../ru/php/book/prime/loops/for.html">
+	Цикл for
+</a>
+<a data-m-less="FI" href="../../../ru/php/book/prime/loops/conditions.html">
+	Условия в циклах
+</a>
+<a data-m-less="NA" href="../../../ru/php/book/prime/loops/numbers-accumulation.html">
+	Накопление суммы чисел
+</a>
+<a data-m-less="AEA" href="../../../ru/php/book/prime/loops/array-elements-accumulation.html"> 
+	Накопление суммы элементов
+</a>
+<a data-m-less="SF" href="../../../ru/php/book/prime/loops/string-forming.html">
+	Формирование строк в цикле
+</a>
+<a data-m-less="BO" href="../../../ru/php/book/prime/loops/braces-optionality.html">
+	Необязательность фигурных скобок
+</a>
+<a data-m-less="BOP" href="../../../ru/php/book/prime/loops/braces-optionality-problem.html">
+	Проблема необязательности скобок
+</a>
+<a data-m-less="Br" href="../../../ru/php/book/prime/loops/break.html">
+	Инструкция break
+</a>
+<a data-m-less="Cn" href="../../../ru/php/book/prime/loops/continue.html">
+	Инструкция continue
+</a>
+<a data-m-less="Fl" href="../../../ru/php/book/prime/loops/flags.html">
+	Работа с флагами
+</a>
+<a data-m-less="Nsd" href="../../../ru/php/book/prime/loops/nested.html">
+	Вложенные циклы
+</a>
+<a data-m-less="ALF" href="../../../ru/php/book/prime/loops/array-loop-for.html">
+	Цикл for для массивов
+</a>
+<a data-m-less="ALF" href="../../../ru/php/book/prime/loops/array-loop-filling.html">
+	Заполнение массивов в цикле
+</a>
+<a data-m-less="ALC" href="../../../ru/php/book/prime/loops/array-loop-changing.html">
+	Изменение массивов в цикле
+</a>
+<a data-m-less="Cdg" href="../../../ru/php/book/prime/loops/coding.html">
+	Советы по написанию кода 
+</a>
+<a data-m-less="Mst" href="../../../ru/php/book/prime/loops/mistakes.html">
+	Практика на поиск ошибок 
+</a>
+<a data-m-less="Prm" href="../../../ru/php/book/prime/loops/practicum.html">
+	Практика на циклы
+</a>
+</div><h2>Многомерность</h2>
+<div data-m-sect="Md">
+<a data-m-less="Inr" href="../../../ru/php/book/prime/multi/intro.html">
+	Введение
+</a>
+<a data-m-less="TD" href="../../../ru/php/book/prime/multi/three-dimensional.html">
+	Трехмерный массив 
+</a>
+<a data-m-less="As" href="../../../ru/php/book/prime/multi/associative.html">
+	Ассоциативные массивы
+</a>
+<a data-m-less="Ar" href="../../../ru/php/book/prime/multi/arbitrary.html">
+	Произвольные массивы 
+</a>
+<a data-m-less="It" href="../../../ru/php/book/prime/multi/iteration.html">
+	Перебор многомерных массивов
+</a>
+<a data-m-less="TDI" href="../../../ru/php/book/prime/multi/three-dimensional-iteration.html">
+	Перебор трехмерного массива
+</a>
+<a data-m-less="IK" href="../../../ru/php/book/prime/multi/iteration-keys.html">
+	Работа с ключами
+</a>
+<a data-m-less="Fl" href="../../../ru/php/book/prime/multi/filling.html">
+	Заполнение многомерных массивов
+</a>
+<a data-m-less="NF" href="../../../ru/php/book/prime/multi/numbers-filling.html">
+	Заполнение числами по порядку
+</a>
+<a data-m-less="AOA" href="../../../ru/php/book/prime/multi/array-of-associative.html">
+	Массив ассоциативных массивов
+</a>
+<a data-m-less="Cn" href="../../../ru/php/book/prime/multi/conversion.html">
+	Конвертация многомерных массивов
+</a>
+</div><h2>Математические функции</h2>
+<div data-m-sect="MF">
+<a data-m-less="Pw" href="../../../ru/php/book/prime/inbuilt/math/powering.html">
+	Степени
+</a>
+<a data-m-less="Rd" href="../../../ru/php/book/prime/inbuilt/math/rounding.html">
+	Округление
+</a>
+<a data-m-less="Ex" href="../../../ru/php/book/prime/inbuilt/math/extremum.html">
+	Экстремумы
+</a>
+<a data-m-less="Ab" href="../../../ru/php/book/prime/inbuilt/math/abs.html">
+	Модули
+</a>
+<a data-m-less="Ar" href="../../../ru/php/book/prime/inbuilt/math/arrays.html">
+	Операции с массивами
+</a>
+</div><h2>Строковые функции</h2>
+<div data-m-sect="SF">
+<a data-m-less="Ln" href="../../../ru/php/book/prime/inbuilt/string/length.html">
+	Длина строки
+</a>
+<a data-m-less="Cs" href="../../../ru/php/book/prime/inbuilt/string/case.html">
+	Регистр символов
+</a>
+<a data-m-less="Ct" href="../../../ru/php/book/prime/inbuilt/string/cutting.html">
+	Вырезание строк
+</a>
+<a data-m-less="Ch" href="../../../ru/php/book/prime/inbuilt/string/checking.html">
+	Проверка строк
+</a>
+<a data-m-less="Sch" href="../../../ru/php/book/prime/inbuilt/string/searching.html">
+	Поиск по строкам
+</a>
+<a data-m-less="Sp" href="../../../ru/php/book/prime/inbuilt/string/splitting.html">
+	Разбиение строк
+</a>
+<a data-m-less="Tr" href="../../../ru/php/book/prime/inbuilt/string/trimming.html">
+	Очистка концов строки
+</a>
+<a data-m-less="IP" href="../../../ru/php/book/prime/inbuilt/string/insert-printing.html">
+	Вывод строки со вставкой
+</a>
+<a data-m-less="NF" href="../../../ru/php/book/prime/inbuilt/string/numbers-formatting.html">
+	Форматирование представления чисел
+</a>
+<a data-m-less="Rv" href="../../../ru/php/book/prime/inbuilt/string/reversing.html">
+	Переворот строки
+</a>
+<a data-m-less="Fl" href="../../../ru/php/book/prime/inbuilt/string/filling.html">
+	Заполнение строки
+</a>
+<a data-m-less="Tg" href="../../../ru/php/book/prime/inbuilt/string/tags.html">
+	Работа с тегами
+</a>
+<a data-m-less="CC" href="../../../ru/php/book/prime/inbuilt/string/char-codes.html">
+	Коды символов
+</a>
+<a data-m-less="Cn" href="../../../ru/php/book/prime/inbuilt/string/counting.html">
+	Подсчет подстрок
+</a>
+<a data-m-less="Pr" href="../../../ru/php/book/prime/inbuilt/string/parts.html">
+	Части строк
+</a>
+</div><h2>Функции массивов</h2>
+<div data-m-sect="AF">
+<a data-m-less="Sch" href="../../../ru/php/book/prime/inbuilt/array/searching.html">
+	Поиск по массивам
+</a>
+<a data-m-less="Br" href="../../../ru/php/book/prime/inbuilt/array/boundary.html">
+	Концевые элементы
+</a>
+<a data-m-less="Sl" href="../../../ru/php/book/prime/inbuilt/array/slicing.html">
+	Слайсинг массивов
+</a>
+<a data-m-less="Sp" href="../../../ru/php/book/prime/inbuilt/array/splicing.html">
+	Сплайсинг массивов
+</a>
+<a data-m-less="Rg" href="../../../ru/php/book/prime/inbuilt/array/ranging.html">
+	Диапазон в массиве
+</a>
+<a data-m-less="Fl" href="../../../ru/php/book/prime/inbuilt/array/filling.html">
+	Заполнение массивов
+</a>
+<a data-m-less="Mr" href="../../../ru/php/book/prime/inbuilt/array/merging.html">
+	Слияние массивов
+</a>
+<a data-m-less="KV" href="../../../ru/php/book/prime/inbuilt/array/keys-values.html">
+	Ключи-значения
+</a>
+<a data-m-less="Rv" href="../../../ru/php/book/prime/inbuilt/array/reversing.html">
+	Переворот
+</a>
+<a data-m-less="Rp" href="../../../ru/php/book/prime/inbuilt/array/replacing.html">
+	Замена
+</a>
+<a data-m-less="Dd" href="../../../ru/php/book/prime/inbuilt/array/deduplication.html">
+	Удаление дублей
+</a>
+<a data-m-less="Cn" href="../../../ru/php/book/prime/inbuilt/array/counting.html">
+	Подсчет элементов
+</a>
+<a data-m-less="Ch" href="../../../ru/php/book/prime/inbuilt/array/chunking.html">
+	Разбиение на подмассивы
+</a>
+<a data-m-less="St" href="../../../ru/php/book/prime/inbuilt/array/sorting.html">
+	Сортировка
+</a>
+<a data-m-less="SO" href="../../../ru/php/book/prime/inbuilt/array/set-operations.html">
+	Множественные операции
+</a>
+</div><h2>Рандом</h2>
+<div data-m-sect="Rd">
+<a data-m-less="Nb" href="../../../ru/php/book/prime/inbuilt/random/number.html">
+	Случайное число
+</a>
+<a data-m-less="AE" href="../../../ru/php/book/prime/inbuilt/random/array-elem.html">
+	Случайный элемент массива
+</a>
+<a data-m-less="AS" href="../../../ru/php/book/prime/inbuilt/random/array-shuffle.html">
+	Перемешивание массивов
+</a>
+<a data-m-less="SS" href="../../../ru/php/book/prime/inbuilt/random/string-shuffle.html">
+	Перемешивание строк
+</a>
+</div><h2>Время</h2>
+<div data-m-sect="Tm">
+<a data-m-less="Ts" href="../../../ru/php/book/prime/time/timestamp.html">
+	Работа с timestamp
+</a>
+<a data-m-less="Fm" href="../../../ru/php/book/prime/time/formatting.html">
+	Форматирование
+</a>
+<a data-m-less="Ps" href="../../../ru/php/book/prime/time/parsing.html">
+	Разбор дат в свободном формате
+</a>
+<a data-m-less="Cr" href="../../../ru/php/book/prime/time/correctness.html">
+	Проверка корректности
+</a>
+<a data-m-less="Tz" href="../../../ru/php/book/prime/time/timezone.html">
+	Часовой пояс
+</a>
+<a data-m-less="Md" href="../../../ru/php/book/prime/time/modifying.html">
+	Изменение
+</a>
+<a data-m-less="SC" href="../../../ru/php/book/prime/time/string-comparison.html">
+	Строковое сравнение
+</a>
+<a data-m-less="CWY" href="../../../ru/php/book/prime/time/comparison-without-year.html">
+	Сравнение даты без года
+</a>
+<a data-m-less="IH" href="../../../ru/php/book/prime/time/interval-hitting.html">
+	Попадание даты в промежуток
+</a>
+<a data-m-less="TC" href="../../../ru/php/book/prime/time/timestamp-comparison.html">
+	Сравнение timestamp
+</a>
+</div><h2>Пользовательские функции</h2>
+<div data-m-sect="UF">
+<a data-m-less="Inr" href="../../../ru/php/book/prime/functions/intro.html">
+	Введение
+</a>
+<a data-m-less="Pr" href="../../../ru/php/book/prime/functions/parameters.html">
+	Параметры функции
+</a>
+<a data-m-less="SP" href="../../../ru/php/book/prime/functions/several-parameters.html">
+	Несколько параметров 
+</a>
+<a data-m-less="PV" href="../../../ru/php/book/prime/functions/parameters-variables.html">
+	Параметры-переменные 
+</a>
+<a data-m-less="OP" href="../../../ru/php/book/prime/functions/optional-parameters.html">
+	Необязательные параметры 
+</a>
+<a data-m-less="Rt" href="../../../ru/php/book/prime/functions/return.html">
+	Инструкция return
+</a>
+<a data-m-less="SC" href="../../../ru/php/book/prime/functions/sequential-calling.html">
+	Последовательный вызов функций 
+</a>
+<a data-m-less="RN" href="../../../ru/php/book/prime/functions/return-nuance.html">
+	Toнкое место return 
+</a>
+<a data-m-less="RL" href="../../../ru/php/book/prime/functions/return-loop.html">
+	Цикл и return 
+</a>
+<a data-m-less="RLA" href="../../../ru/php/book/prime/functions/return-loop-applying.html">
+	Применение return в циклах 
+</a>
+<a data-m-less="RD" href="../../../ru/php/book/prime/functions/return-trick.html">
+	Прием работы с return 
+</a>
+<a data-m-less="Fl" href="../../../ru/php/book/prime/functions/flags.html">
+	Флаги в функциях
+</a>
+<a data-m-less="LO" href="../../../ru/php/book/prime/functions/logical-operators.html">
+	Логические операторы в функциях
+</a>
+<a data-m-less="Adv" href="../../../ru/php/book/prime/functions/advices.html">
+	Советы по функциям 
+</a>
+<a data-m-less="Mst" href="../../../ru/php/book/prime/functions/mistakes.html">
+	Практика на поиск ошибок 
+</a>
+<a data-m-less="Prm" href="../../../ru/php/book/prime/functions/practicum.html">
+	Практика на функции
+</a>
+</div><h2>Область видимости</h2>
+<div data-m-sect="Sc">
+<a data-m-less="RP" href="../../../ru/php/book/prime/scope/references-primitive.html">
+	Ссылки-примитивы
+</a>
+<a data-m-less="RA" href="../../../ru/php/book/prime/scope/references-arrays.html">
+	Ссылки-массивы
+</a>
+<a data-m-less="RF" href="../../../ru/php/book/prime/scope/references-foreach.html">
+	Ссылки в foreach
+</a>
+<a data-m-less="IV" href="../../../ru/php/book/prime/scope/inner-variables.html">
+	Внутренние переменные
+</a>
+<a data-m-less="OV" href="../../../ru/php/book/prime/scope/outer-variables.html">
+	Внешние переменные
+</a>
+<a data-m-less="SV" href="../../../ru/php/book/prime/scope/same-variables.html">
+	Одноименные переменные
+</a>
+<a data-m-less="GV" href="../../../ru/php/book/prime/scope/global-variables.html">
+	Глобальные переменные
+</a>
+<a data-m-less="PC" href="../../../ru/php/book/prime/scope/parameters-changing.html">
+	Изменение параметров
+</a>
+<a data-m-less="PR" href="../../../ru/php/book/prime/scope/parameters-references.html">
+	Параметры-ссылки
+</a>
+</div><h2>Рекурсия</h2>
+<div data-m-sect="Rc">
+<a data-m-less="Inr" href="../../../ru/php/book/prime/functions/recursion/intro.html">
+	Рекурсия
+</a>
+<a data-m-less="EP" href="../../../ru/php/book/prime/functions/recursion/example-parameter.html">
+	Пример с параметром
+</a>
+<a data-m-less="AS" href="../../../ru/php/book/prime/functions/recursion/array-sum.html">
+	Сумма элементов массива
+</a>
+<a data-m-less="MA" href="../../../ru/php/book/prime/functions/recursion/multi-arrays.html">
+	Рекурсия и многомерные массивы
+</a>
+<a data-m-less="MAS" href="../../../ru/php/book/prime/functions/recursion/multi-arrays-sum.html">
+	Сумма многомерного массива
+</a>
+<a data-m-less="MAM" href="../../../ru/php/book/prime/functions/recursion/multi-arrays-manipulations.html">
+	Манипуляции с элементами
+</a>
+</div><h2>Регулярные выражения</h2>
+<div data-m-sect="Rg">
+<a data-m-less="Inr" href="../../../ru/php/book/prime/regular/intro.html">
+	Введение
+</a>
+<a data-m-less="RO" href="../../../ru/php/book/prime/regular/repeat-operators.html">
+	Операторы повторения
+</a>
+<a data-m-less="GB" href="../../../ru/php/book/prime/regular/grouping-brackets.html">
+	Группирующие скобки
+</a>
+<a data-m-less="ESCh" href="../../../ru/php/book/prime/regular/escaping-special-characters.html">
+	Экранировка спецсимволов
+</a>
+<a data-m-less="LSRCh" href="../../../ru/php/book/prime/regular/special-characters-list.html">
+	Список специальных символов
+</a>
+<a data-m-less="CB" href="../../../ru/php/book/prime/regular/curly-braces.html">
+	Фигурные скобки
+</a>
+<a data-m-less="GL" href="../../../ru/php/book/prime/regular/greediness-limitation.html">
+	Ограничение жадности
+</a>
+<a data-m-less="ChG" href="../../../ru/php/book/prime/regular/characters-groups.html">
+	Группы символов
+</a>
+<a data-m-less="ChS" href="../../../ru/php/book/prime/regular/characters-sets.html">
+	Наборы символов
+</a>
+<a data-m-less="ChSI" href="../../../ru/php/book/prime/regular/characters-sets-invertion.html">
+	Инвертирование наборов символов
+</a>
+<a data-m-less="CF" href="../../../ru/php/book/prime/regular/cyrillic-features.html">
+	Особенности кириллицы
+</a>
+<a data-m-less="SS" href="../../../ru/php/book/prime/regular/sets-special.html">
+	Спецсимволы внутри наборов
+</a>
+<a data-m-less="SG" href="../../../ru/php/book/prime/regular/sets-groups.html">
+	Группы символов внутри наборов
+</a>
+<a data-m-less="SSE" href="../../../ru/php/book/prime/regular/sets-special-exclusion.html">
+	Спецсимволы-исключения внутри наборов
+</a>
+<a data-m-less="SHt" href="../../../ru/php/book/prime/regular/sets-hat.html">
+	Символ шляпки внутри наборов
+</a>
+<a data-m-less="SHy" href="../../../ru/php/book/prime/regular/sets-hyphen.html">
+	Особенности дефиса внутри наборов
+</a>
+<a data-m-less="LB" href="../../../ru/php/book/prime/regular/line-boundary.html">
+	Начало и конец строки
+</a>
+<a data-m-less="WB" href="../../../ru/php/book/prime/regular/words-boundary.html">
+	Конец или начало слова
+</a>
+<a data-m-less="OC" href="../../../ru/php/book/prime/regular/or-command.html">
+	Команда 'или'
+</a>
+<a data-m-less="Lm" href="../../../ru/php/book/prime/regular/limiters.html">
+	Ограничители
+</a>
+<a data-m-less="LE" href="../../../ru/php/book/prime/regular/limiters-escaping.html">
+	Экранировка ограничителей
+</a>
+<a data-m-less="Bc" href="../../../ru/php/book/prime/regular/backslash.html">
+	Обратный слеш
+</a>
+<a data-m-less="SCh" href="../../../ru/php/book/prime/regular/string-checking.html">
+	Проверка строки
+</a>
+<a data-m-less="AT" href="../../../ru/php/book/prime/regular/auto-testing.html">
+	Автоматическое тестирование регулярок
+</a>
+<a data-m-less="WSCh" href="../../../ru/php/book/prime/regular/whole-string-checking.html">
+	Проверка всей строки
+</a>
+<a data-m-less="SP" href="../../../ru/php/book/prime/regular/searching-pockets.html">
+	Карманы при поиске
+</a>
+<a data-m-less="AM" href="../../../ru/php/book/prime/regular/all-matches.html">
+	Поиск всех совпадений
+</a>
+<a data-m-less="AMP" href="../../../ru/php/book/prime/regular/all-matches-pockets.html">
+	Все совпадения на карманы
+</a>
+<a data-m-less="SBh" href="../../../ru/php/book/prime/regular/searching-behavior.html">
+	Изменение поведения поиска
+</a>
+<a data-m-less="NPB" href="../../../ru/php/book/prime/regular/non-preserving-brackets.html">
+	Несохраняющие скобки
+</a>
+<a data-m-less="RP" href="../../../ru/php/book/prime/regular/replace-pockets.html">
+	Карманы при замене
+</a>
+<a data-m-less="EP" href="../../../ru/php/book/prime/regular/expression-pockets.html">
+	Карманы в выражении
+</a>
+<a data-m-less="NP" href="../../../ru/php/book/prime/regular/named-pockets.html">
+	Именованные карманы
+</a>
+<a data-m-less="ENP" href="../../../ru/php/book/prime/regular/expression-named-pockets.html">
+	Именованные карманы внутри выражения
+</a>
+<a data-m-less="CPN" href="../../../ru/php/book/prime/regular/common-pockets-number.html">
+	Общий номер карманов
+</a>
+<a data-m-less="VA" href="../../../ru/php/book/prime/regular/viewing-ahead.html">
+	Просмотр вперед
+</a>
+<a data-m-less="VB" href="../../../ru/php/book/prime/regular/viewing-back.html">
+	Просмотр назад
+</a>
+<a data-m-less="RCb" href="../../../ru/php/book/prime/regular/replace-callback.html">
+	Замена с коллбэком
+</a>
+<a data-m-less="MdIn" href="../../../ru/php/book/prime/regular/modifiers/intro.html">
+	Модификаторы
+</a>
+<a data-m-less="MdIC" href="../../../ru/php/book/prime/regular/modifiers/ignore-case.html">
+	Игнорирование регистра регулярок
+</a>
+<a data-m-less="MdRC" href="../../../ru/php/book/prime/regular/modifiers/regular-comments.html">
+	Комментарии в регулярке
+</a>
+<a data-m-less="MdUn" href="../../../ru/php/book/prime/regular/modifiers/unicode.html">
+	Работа с юникодом в регулярках
+</a>
+<a data-m-less="MdChG" href="../../../ru/php/book/prime/regular/modifiers/greed-change.html">
+	Изменение жадности регулярок
+</a>
+<a data-m-less="MdERCh" href="../../../ru/php/book/prime/regular/modifiers/escaping-regular-characters.html">
+	Экранировка обычных символов в регулярках
+</a>
+<a data-m-less="MdMu" href="../../../ru/php/book/prime/regular/modifiers/multiple.html">
+	Несколько модификаторов регулярок
+</a>
+<a data-m-less="ASE" href="../../../ru/php/book/prime/regular/auto-special-escaping.html">
+	Автоматическая экранировка спецсимволов
+</a>
+<a data-m-less="AF" href="../../../ru/php/book/prime/regular/array-filtering.html">
+	Фильтрация массива
+</a>
+<a data-m-less="ASE" href="../../../ru/php/book/prime/regular/string-splitting.html">
+	Разбиение строки в массив
+</a>
+</div><h2>Формирование строк</h2>
+<div data-m-sect="SF">
+<a data-m-less="VSI" href="../../../ru/php/book/prime/forming/variables-string-insertion.html">
+	Вставка переменных
+</a>
+<a data-m-less="AEI" href="../../../ru/php/book/prime/forming/array-elements-insertion.html">
+	Вставка элементов массива
+</a>
+<a data-m-less="AArEI" href="../../../ru/php/book/prime/forming/associative-array-elements-insertion.html">
+	Вставка элементов ассоциативных массивов
+</a>
+<a data-m-less="LVI" href="../../../ru/php/book/prime/forming/loop-variables-insertion.html">
+	Цикл и вставка переменных
+</a>
+<a data-m-less="LArI" href="../../../ru/php/book/prime/forming/loop-arrays-insertion.html">
+	Вставка элементов массивов в цикле
+</a>
+<a data-m-less="LMArI" href="../../../ru/php/book/prime/forming/loop-multidimensional-arrays-insertion.html">
+	Вставка элементов многомерных массивов в цикле
+</a>
+<a data-m-less="Tg" href="../../../ru/php/book/prime/forming/tags.html">
+	Генерация тегов
+</a>
+<a data-m-less="TA" href="../../../ru/php/book/prime/forming/tags-attributes.html">
+	Генерация тегов с атрибутами
+</a>
+<a data-m-less="LTG" href="../../../ru/php/book/prime/forming/loop-tags.html">
+	Цикл и генерация тегов
+</a>
+<a data-m-less="LTAr" href="../../../ru/php/book/prime/forming/loop-tags-array.html">
+	Цикл и генерация тегов из массивов
+</a>
+<a data-m-less="LTAt" href="../../../ru/php/book/prime/forming/loop-tags-attributes.html">
+	Цикл и генерация тегов и атрибутов
+</a>
+<a data-m-less="LT" href="../../../ru/php/book/prime/forming/loop-table.html">
+	Цикл и генерация HTML таблиц
+</a>
+<a data-m-less="SLT" href="../../../ru/php/book/prime/forming/single-loop-table.html">
+	Генерация HTML таблицы с помощью одного цикла
+</a>
+<a data-m-less="NLT" href="../../../ru/php/book/prime/forming/nested-loops-table.html">
+	Генерация HTML таблицы с помощью двух вложенных циклов
+</a>
+<a data-m-less="PO" href="../../../ru/php/book/prime/forming/php-output.html">
+	Вставка PHP кода в HTML
+</a>
+<a data-m-less="ShET" href="../../../ru/php/book/prime/forming/short-echo-tag.html">
+	Короткая команда echo
+</a>
+<a data-m-less="VO" href="../../../ru/php/book/prime/forming/variable-output.html">
+	Вывод переменной в HTML
+</a>
+<a data-m-less="AEO" href="../../../ru/php/book/prime/forming/array-element-output.html">
+	Вывод элементов массива в HTML
+</a>
+<a data-m-less="IB" href="../../../ru/php/book/prime/forming/if-breaking.html">
+	Условия и разрыв PHP кода
+</a>
+<a data-m-less="EB" href="../../../ru/php/book/prime/forming/else-breaking.html">
+	Блок else в разрыве PHP кода
+</a>
+<a data-m-less="EIB" href="../../../ru/php/book/prime/forming/elseif-breaking.html">
+	Блок elseif в разрыве PHP кода
+</a>
+<a data-m-less="LB" href="../../../ru/php/book/prime/forming/loops-breaking.html">
+	Циклы и разрыв PHP кода 
+</a>
+<a data-m-less="LAB" href="../../../ru/php/book/prime/forming/loops-array-breaking.html">
+	Массив в цикле в разрыв PHP кода 
+</a>
+</div><h2>Формы</h2>
+<div data-m-sect="Fm">
+<a data-m-less="Inr" href="../../../ru/php/book/prime/forms/intro.html">
+	Введение в формы
+</a>
+<a data-m-less="FSM" href="../../../ru/php/book/prime/forms/form-submission-method.html">
+	Метод отправки формы
+</a>
+<a data-m-less="DG" href="../../../ru/php/book/prime/forms/data-getting.html">
+	Получение данных форм
+</a>
+<a data-m-less="DGEG" href="../../../ru/php/book/prime/forms/data-getting-exemple-get.html">
+	Получение данных форм методом GET
+</a>
+<a data-m-less="DGEP" href="../../../ru/php/book/prime/forms//data-getting-exemple-post.html">
+	Получение данных форм методом POST
+</a>
+<a data-m-less="OFH" href="../../../ru/php/book/prime/forms/one-file-handling.html">
+	Обработка формы в одном файле
+</a>
+<a data-m-less="HAS" href="../../../ru/php/book/prime/forms/hiding-after-submit.html">
+	Скрытие формы после отправки
+</a>
+<a data-m-less="VR" href="../../../ru/php/book/prime/forms/values-remaining.html">
+	Сохранение значений формы
+</a>
+<a data-m-less="VRDV" href="../../../ru/php/book/prime/forms/values-remaining-default-value.html">
+	Сохранение значения по умолчанию формы
+</a>
+<a data-m-less="VRShC" href="../../../ru/php/book/prime/forms/values-remaining-shorten-code.html">
+	Сокращенный код для сохранения значений по умолчанию
+</a>
+<a data-m-less="Tx" href="../../../ru/php/book/prime/forms/textarea.html">
+	Элемент textarea
+</a>
+<a data-m-less="TxSV" href="../../../ru/php/book/prime/forms/textarea-save-value.html">
+	Сохранение значения textarea после отправки
+</a>
+<a data-m-less="Chc" href="../../../ru/php/book/prime/forms/checkbox.html">
+	Чекбокс
+</a>
+<a data-m-less="ChcN" href="../../../ru/php/book/prime/forms/checkbox-nuances.html">
+	Нюансы использования чекбоксов
+</a>
+<a data-m-less="ChcSV" href="../../../ru/php/book/prime/forms/checkbox-save-value.html">
+	Сохранение значения в чекбоксе
+</a>
+<a data-m-less="Rd" href="../../../ru/php/book/prime/forms/radio.html">
+	Радиокнопки
+</a>
+<a data-m-less="RdSV" href="../../../ru/php/book/prime/forms/radio-save-value.html">
+	Сохранение значения в радиокнопках
+</a>
+<a data-m-less="Sl" href="../../../ru/php/book/prime/forms/select.html">
+	Селекты
+</a>
+<a data-m-less="SlAV" href="../../../ru/php/book/prime/forms/select-attribute-value.html">
+	Атрибут value в селектах
+</a>
+<a data-m-less="SSV" href="../../../ru/php/book/prime/forms/select-save-value.html">
+	Сохранение значения в селектах
+</a>
+<a data-m-less="GQ" href="../../../ru/php/book/prime/forms/get-queries.html">
+	GET-запросы
+</a>
+<a data-m-less="GQL" href="../../../ru/php/book/prime/forms/get-queries-links.html">
+	GET-запросы с помощью ссылок
+</a>
+<a data-m-less="Prm" href="../../../ru/php/book/prime/forms/practicum.html">
+	Практика
+</a>
+</div><h2>Сессии</h2>
+<div data-m-sect="Ss">
+<a data-m-less="Inr" href="../../../ru/php/book/prime/session/intro.html">
+	Введение в сессии
+</a>
+<a data-m-less="Pb" href="../../../ru/php/book/prime/session/problems.html">
+	Возможные проблемы
+</a>
+<a data-m-less="OP" href="../../../ru/php/book/prime/session/one-page.html">
+	Использование сессий на одной странице
+</a>
+<a data-m-less="Rm" href="../../../ru/php/book/prime/session/removing.html">
+	Удаление сессий
+</a>
+<a data-m-less="Ds" href="../../../ru/php/book/prime/session/destroying.html">
+	Завершение всей сессии
+</a>
+<a data-m-less="Fr" href="../../../ru/php/book/prime/session/forms.html">
+	Сессии и формы
+</a>
+<a data-m-less="Ar" href="../../../ru/php/book/prime/session/arrays.html">
+	Запись массивов в сессии
+</a>
+</div><h2>Cookies</h2>
+<div data-m-sect="Ck">
+<a data-m-less="Inr" href="../../../ru/php/book/prime/cookie/intro.html">
+	Введение в куки
+</a>
+<a data-m-less="SP" href="../../../ru/php/book/prime/cookie/setting-problem.html">
+	Проблема установки кук
+</a>
+<a data-m-less="IS" href="../../../ru/php/book/prime/cookie/instant-setting.html">
+	Мгновенная установка кук
+</a>
+<a data-m-less="PRC" href="../../../ru/php/book/prime/cookie/page-reloading-counter.html">
+	Счетчик обновления страницы
+</a>
+<a data-m-less="LT" href="../../../ru/php/book/prime/cookie/living-time.html">
+	Время жизни куки
+</a>
+<a data-m-less="Rm" href="../../../ru/php/book/prime/cookie/removing.html">
+	Удаление кук
+</a>
+<a data-m-less="IR" href="../../../ru/php/book/prime/cookie/instant-removing.html">
+	Мгновенное удаление кук
+</a>
+</div><h2>Файловая система</h2>
+<div data-m-sect="FS">
+<a data-m-less="FRe" href="../../../ru/php/book/prime/fs/file-reading.html">
+	Чтение файлов
+</a>
+<a data-m-less="FWr" href="../../../ru/php/book/prime/fs/file-writing.html">
+	Запись файлов
+</a>
+<a data-m-less="OC" href="../../../ru/php/book/prime/fs/operations-combination.html">
+	Комбинация операций
+</a>
+<a data-m-less="RP" href="../../../ru/php/book/prime/fs/relative-paths.html">
+	Относительные пути
+</a>
+<a data-m-less="AP" href="../../../ru/php/book/prime/fs/absolute-paths.html">
+	Абсолютные пути
+</a>
+<a data-m-less="APA" href="../../../ru/php/book/prime/fs/absolute-paths-advantages.html">
+	Преимущества абсолютного пути
+</a>
+<a data-m-less="SAP" href="../../../ru/php/book/prime/fs/script-absolute-path.html">
+	Абсолютные пути к скрипту
+</a>
+<a data-m-less="FRn" href="../../../ru/php/book/prime/fs/file-renaming.html">
+	Переименовывание файлов
+</a>
+<a data-m-less="FMv" href="../../../ru/php/book/prime/fs/file-moving.html">
+	Перемещение файлов
+</a>
+<a data-m-less="FC" href="../../../ru/php/book/prime/fs/file-copying.html">
+	Копирование файлов
+</a>
+<a data-m-less="FRm" href="../../../ru/php/book/prime/fs/file-removing.html">
+	Удаление файлов
+</a>
+<a data-m-less="FOFS" href="../../../ru/php/book/prime/fs/file-size.html">
+	Определение размера файлов
+</a>
+<a data-m-less="FOECh" href="../../../ru/php/book/prime/fs/file-existence.html">
+	Проверка существования файлов
+</a>
+<a data-m-less="DC" href="../../../ru/php/book/prime/fs/dir-creating.html">
+	Создание папок
+</a>
+<a data-m-less="DRm" href="../../../ru/php/book/prime/fs/dir-removing.html">
+	Удаление папок
+</a>
+<a data-m-less="DRn" href="../../../ru/php/book/prime/fs/dir-renaming.html">
+	Переименование папок
+</a>
+<a data-m-less="DMv" href="../../../ru/php/book/prime/fs/dir-moving.html">
+	Перемещение папок
+</a>
+<a data-m-less="DR" href="../../../ru/php/book/prime/fs/dir-reading.html">
+	Чтение содержимого папки
+</a>
+<a data-m-less="FDD" href="../../../ru/php/book/prime/fs/file-dir-distinguishing.html">
+	Отличаем папку от файла
+</a>
+<a data-m-less="DPC" href="../../../ru/php/book/prime/fs/dir-parse-contents.html">
+	Разбираем содержимое папки
+</a>
+<a data-m-less="Ic" href="../../../ru/php/book/prime/fs/include.html">
+	Вставка файлов
+</a>
+<a data-m-less="IM" href="../../../ru/php/book/prime/fs/include-markup.html">
+	Деление верстки на элементы
+</a>
+<a data-m-less="IV" href="../../../ru/php/book/prime/fs/include-variable.html">
+	Запись вставки в переменную
+</a>
+<a data-m-less="Rq" href="../../../ru/php/book/prime/fs/require.html">
+	Подключение файлов
+</a>
+<a data-m-less="RO" href="../../../ru/php/book/prime/fs/require-once.html">
+	Однократное подключение файлов
+</a>
+<a data-m-less="RV" href="../../../ru/php/book/prime/fs/require-variable.html">
+	Запись подключения в переменную
+</a>
+</div><h2>Базы данных</h2>
+<div data-m-sect="DB">
+<a data-m-less="Inr" href="../../../ru/php/book/prime/database/intro.html">
+	Введение в базы данных
+</a>
+<a data-m-less="Pma" href="../../../ru/php/book/prime/database/phpmyadmin.html">
+	PhpMyAdmin
+</a>
+<a data-m-less="TTU" href="../../../ru/php/book/prime/database/test-table-users.html">
+	Тестовая таблица users
+</a>
+<a data-m-less="PM" href="../../../ru/php/book/prime/database/preparatory-manipulations.html">
+	Подготовительные манипуляции
+</a>
+<a data-m-less="SQ" href="../../../ru/php/book/prime/database/sending-queries.html">
+	Отправка запросов к базе данных
+</a>
+<a data-m-less="CM" href="../../../ru/php/book/prime/database/catching-mistakes.html">
+	Поиск ошибок в базе данных
+</a>
+<a data-m-less="MT" href="../../../ru/php/book/prime/database/manipulations-testing.html">
+	Тестирование работоспособности
+</a>
+<a data-m-less="EP" href="../../../ru/php/book/prime/database/encoding-problems.html">
+	Проблемы с кодировками
+</a>
+<a data-m-less="FTC" href="../../../ru/php/book/prime/database/full-test-code.html">
+	Полный тестовый код
+</a>
+<a data-m-less="RGet" href="../../../ru/php/book/prime/database/result-getting.html">
+	Получение результата
+</a>
+<a data-m-less="RAG" href="../../../ru/php/book/prime/database/result-array-getting.html">
+	Получение результата в виде массива
+</a>
+<a data-m-less="LAR" href="../../../ru/php/book/prime/database/loop-array-result.html">
+	Формирование массива в цикле
+</a>
+<a data-m-less="NSl" href="../../../ru/php/book/prime/database/notes-selection.html">
+	Выборка записей
+</a>
+<a data-m-less="LO" href="../../../ru/php/book/prime/database/logical-operations.html">
+	Логические операции
+</a>
+<a data-m-less="SF" href="../../../ru/php/book/prime/database/selection-fields.html">
+	Поля выборки
+</a>
+<a data-m-less="NI" href="../../../ru/php/book/prime/database/notes-insertion.html">
+	Вставка записей
+</a>
+<a data-m-less="IMC" href="../../../ru/php/book/prime/database/insertion-missing-columns.html">
+	Вставка записей при отсутствующих столбцах
+</a>
+<a data-m-less="NU" href="../../../ru/php/book/prime/database/notes-updation.html">
+	Обновление записей
+</a>
+<a data-m-less="ND" href="../../../ru/php/book/prime/database/notes-deletion.html">
+	Удаление записей
+</a>
+<a data-m-less="NSr" href="../../../ru/php/book/prime/database/notes-sorting.html">
+	Сортировка записей
+</a>
+<a data-m-less="QL" href="../../../ru/php/book/prime/database/quantity-limitation.html">
+	Ограничение количества
+</a>
+<a data-m-less="QC" href="../../../ru/php/book/prime/database/quantity-counting.html">
+	Подсчет количества
+</a>
+<a data-m-less="GC" href="../../../ru/php/book/prime/database/getting-counting.html">
+	Получение количества
+</a>
+<a data-m-less="AQ" href="../../../ru/php/book/prime/database/advanced-queries.html"> 
+	Продвинутые запросы
+</a>
+</div><h2>Организация БД</h2>
+<div data-m-sect="DO">
+<a data-m-less="LT" href="../../../ru/php/book/prime/database/organization/linking-tables.html">
+	Связывание таблиц
+</a>
+<a data-m-less="GD" href="../../../ru/php/book/prime/database/organization/getting-data.html">
+	Получении данных из связанных таблиц
+</a>
+<a data-m-less="ChLT" href="../../../ru/php/book/prime/database/organization/chain-linked-tabled.html">
+	Цепочка связанных таблиц
+</a>
+<a data-m-less="LVT" href="../../../ru/php/book/prime/database/organization/linking-via-table.html">
+	Связывание через таблицу связи
+</a>
+<a data-m-less="FR" href="../../../ru/php/book/prime/database/organization/family-relations.html">
+	Родственные связи
+</a>
+<a data-m-less="SD" href="../../../ru/php/book/prime/database/organization/several-descendants.html">
+	Несколько потомков
+</a>
+<a data-m-less="DR" href="../../../ru/php/book/prime/database/organization/double-relation.html">
+	Двойная связь
+</a>
+<a data-m-less="Prm" href="../../../ru/php/book/prime/database/organization/practicum.html">
+	Практика
+</a>
+</div><h2>Практика БД</h2>
+<div data-m-sect="DP">
+<a data-m-less="TTU" href="../../../ru/php/book/prime/database/practice/test-table-users.html">
+	Тестовая таблица users
+</a>
+<a data-m-less="OF" href="../../../ru/php/book/prime/database/practice/output-formation.html">
+	Оформление вывода
+</a>
+<a data-m-less="DR" href="../../../ru/php/book/prime/database/practice/data-removing.html">
+	Удаление данных
+</a>
+<a data-m-less="DV" href="../../../ru/php/book/prime/database/practice/data-viewing.html">
+	Просмотр данных
+</a>
+<a data-m-less="DA" href="../../../ru/php/book/prime/database/practice/data-adding.html">
+	Добавление данных
+</a>
+<a data-m-less="DE" href="../../../ru/php/book/prime/database/practice/data-editing.html">
+	Редактирование данных
+</a>
+</div><h2>Работа с HTTP</h2>
+<div data-m-sect="Hp">
+<a data-m-less="Bk" href="../../../ru/php/book/prime/http/book.html">
+	Учебник HTTP
+</a>
+<a data-m-less="RM" href="../../../ru/php/book/prime/http/request-method.html">
+	Метод HTTP запроса
+</a>
+<a data-m-less="RH" href="../../../ru/php/book/prime/http/request-headers.html">
+	HTTP заголовки запроса
+</a>
+<a data-m-less="RHA" href="../../../ru/php/book/prime/http/request-headers-array.html">
+	Массив заголовков HTTP запроса
+</a>
+<a data-m-less="RHe" href="../../../ru/php/book/prime/http/response-headers.html">
+	Заголовки HTTP ответа
+</a>
+<a data-m-less="RHP" href="../../../ru/php/book/prime/http/response-headers-problem.html">
+	Проблема с заголовками HTTP ответа
+</a>
+<a data-m-less="IP" href="../../../ru/php/book/prime/http/include-problem.html">
+	Проблема с include
+</a>
+<a data-m-less="SL" href="../../../ru/php/book/prime/http/starting-line.html">
+	Отдача стартовой строки HTTP ответа
+</a>
+<a data-m-less="SC" href="../../../ru/php/book/prime/http/status-code.html">
+	Отдача статуса HTTP ответа
+</a>
+</div><h2>Редиректы</h2>
+<div data-m-sect="Rd">
+<a data-m-less="Inr" href="../../../ru/php/book/prime/http/redirect/intro.html">
+	Введение в редиректы
+</a>
+<a data-m-less="Ins" href="../../../ru/php/book/prime/http/redirect/instant.html">
+	Мгновенный редирект
+</a>
+<a data-m-less="GQ" href="../../../ru/php/book/prime/http/redirect/get-queries.html">
+	GET запросы и редирект
+</a>
+<a data-m-less="SWP" href="../../../ru/php/book/prime/http/redirect/self-with-parameters.html">
+	Саморедирект с добавлением параметров
+</a>
+<a data-m-less="FM" href="../../../ru/php/book/prime/http/redirect/flash-message.html">
+	Флеш сообщения
+</a>
+<a data-m-less="FMA" href="../../../ru/php/book/prime/http/redirect/flash-message-array.html">
+	Массив флеш сообщений
+</a>
+<a data-m-less="FS" href="../../../ru/php/book/prime/http/redirect/form-submit.html">
+	Сохранение форм
+</a>
+<a data-m-less="FSS" href="../../../ru/php/book/prime/http/redirect/form-submit-success.html">
+	Сообщения об успехе отправки
+</a>
+<a data-m-less="FV" href="../../../ru/php/book/prime/http/redirect/form-validation.html">
+	Редирект при валидация формы
+</a>
+</div><h2>Аутентификация</h2>
+<div data-m-sect="Au">
+<a data-m-less="Inr" href="../../../ru/php/book/prime/auth/intro.html">
+	Введение
+</a>
+<a data-m-less="At" href="../../../ru/php/book/prime/auth/authorization.html">
+	Авторизация
+</a>
+<a data-m-less="Ss" href="../../../ru/php/book/prime/auth/session.html">
+	Сессии
+</a>
+<a data-m-less="SL" href="../../../ru/php/book/prime/auth/session-logout.html">
+	Выход из сессии
+</a>
+<a data-m-less="Reg" href="../../../ru/php/book/prime/auth/registration.html">
+	Регистрация
+</a>
+<a data-m-less="IA" href="../../../ru/php/book/prime/auth/immediate-authorization.html">
+	Авторизация сразу при регистрации
+</a>
+<a data-m-less="SUI" href="../../../ru/php/book/prime/auth/session-user-id.html">
+	Добавление id в сессию
+</a>
+<a data-m-less="PHi" href="../../../ru/php/book/prime/auth/password-hide.html">
+	Скрытие пароля
+</a>
+<a data-m-less="LCh" href="../../../ru/php/book/prime/auth/login-checking.html">
+	Проверка логина на занятость
+</a>
+<a data-m-less="Vld" href="../../../ru/php/book/prime/auth/validation.html">
+	Валидация
+</a>
+<a data-m-less="Hs" href="../../../ru/php/book/prime/auth/hashing.html">
+	Хеширование
+</a>
+<a data-m-less="RHS" href="../../../ru/php/book/prime/auth/register-hashing-salt.html">
+	Добавление соли в регистрацию
+</a>
+<a data-m-less="AHS" href="../../../ru/php/book/prime/auth/auth-hashing-salt.html">
+	Добавление соли в авторизацию
+</a>
+<a data-m-less="HFP" href="../../../ru/php/book/prime/auth/hashing-function-password_hash.html">
+	Функция password_hash
+</a>
+<a data-m-less="Pf" href="../../../ru/php/book/prime/auth/profile.html">
+	Профиль
+</a>
+<a data-m-less="Ac" href="../../../ru/php/book/prime/auth/account.html">
+	Аккаунт
+</a>
+<a data-m-less="PCh" href="../../../ru/php/book/prime/auth/password-changing.html">
+	Смена пароля
+</a>
+<a data-m-less="PCo" href="../../../ru/php/book/prime/auth/password-confirmation.html">
+	Подтверждение пароля
+</a>
+<a data-m-less="AR" href="../../../ru/php/book/prime/auth/account-removing.html">
+	Удаление аккаунта
+</a>
+<a data-m-less="Rg" href="../../../ru/php/book/prime/auth/rights.html">
+	Права
+</a>
+<a data-m-less="RR" href="../../../ru/php/book/prime/auth/rights-registration.html">
+	Регистрация с разделением прав
+</a>
+<a data-m-less="RgtD" href="../../../ru/php/book/prime/auth/rights-normalizing-database.html">
+	Права и нормализация базы данных
+</a>
+</div><h2>Движок сайта</h2>
+<div data-m-sect="SD">
+<a data-m-less="Inr" href="../../../ru/php/book/prime/driver/intro.html">
+	Введение
+</a>
+<a data-m-less="Ht" href="../../../ru/php/book/prime/driver/htaccess.html">
+	Использование htaccess
+</a>
+<a data-m-less="Fl" href="../../../ru/php/book/prime/driver/files.html">
+	Движок на файлах
+</a>
+<a data-m-less="FT" href="../../../ru/php/book/prime/driver/files-title.html">
+	Тайтл в движке на файлах
+</a>
+<a data-m-less="FArT" href="../../../ru/php/book/prime/driver/files-array-title.html">
+	Тайтлы в массиве
+</a>
+<a data-m-less="FCT" href="../../../ru/php/book/prime/driver/files-context-title.html">
+	Тайтлы в контенте
+</a>
+<a data-m-less="EP" href="../../../ru/php/book/prime/driver/error-page.html">
+	Страница 404 в движке на файлах
+</a>
+<a data-m-less="Db" href="../../../ru/php/book/prime/driver/database.html">
+	Движок на базе данных
+</a>
+<a data-m-less="HRU" href="../../../ru/php/book/prime/driver/human-readable-url.html">
+	ЧПУ в движке
+</a>
+<a data-m-less="Rt" href="../../../ru/php/book/prime/driver/routing.html">
+	Простой роутинг
+</a>
+<a data-m-less="RNP" href="../../../ru/php/book/prime/driver/routing-named-parameters.html">
+	Роутинг с именованными параметрами
+</a>
+<a data-m-less="RSP" href="../../../ru/php/book/prime/driver/routing-several-parameters.html">
+	Несколько параметров в роуте
+</a>
+<a data-m-less="Prm" href="../../../ru/php/book/prime/driver/practicum.html">
+	Практика
+</a>
+</div>
+</div>			</main>
+						<footer data-w="ruct/foot">
+				<div data-w="nict/finf">
+	<span data-e="text" data-x>
+		Трепачёв Дмитрий &copy; 2012-2025	</span>
+	<br>
+	<a data-e="link" data-x href="https://t.me/trepachev_dmitry">t.me/trepachev_dmitry</a>
+</div>							</footer>
+			<div data-w="nict/jump">
+	<a href="#top"><span>&uarr;</span></a>
+</div>			<div data-w="nict/lagr">
+	</div>					</div>
+		
+		<script src="../../../tore/@/metrikaΣ.js?v=1"></script>	</body>
+</html>

@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Учебник Angular для новичков</title>
+		
+		<link rel="stylesheet" href="../../../../../tore/@/fonts/listΣ.css?v=1">
+<link rel="stylesheet" href="../../../../../tore/layd/deff/&/aefb44b7dac371a3860e9079298a950e.ructΣ.css">
+<link rel="stylesheet" href="../../../../../tore/&/d619cf2a52f5e2dd5479335d3ba58cae.apprΣ.css">
+
+<script src="../../../../../tore/&/abc868ba468b8ea8384332d74f771367.apprΣ.js?v=1" defer></script>
+
+
+<meta name="yandex-verification" content="00eb45b7559e5c68">
+<meta name="google-site-verification" content="Af0TM2OrwIEtjoQXxYz2-1C-21E1m7DB23_kWpE9sLg">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">		
+		<meta name="description" content="Учебник по JavaScript фреймворку Angular. Для новичков. Много теории и задач.">
+		<link rel="shortcut icon" type="image/x-icon" href="../../../../../favicon.ico">
+		
+		<link rel="alternate" hreflang="az" href="https://code.mu/az/javascript/framework/angular/book/prime/"><link rel="alternate" hreflang="bn" href="https://code.mu/bn/javascript/framework/angular/book/prime/"><link rel="alternate" hreflang="by" href="https://code.mu/by/javascript/framework/angular/book/prime/"><link rel="alternate" hreflang="cs" href="https://code.mu/cs/javascript/framework/angular/book/prime/"><link rel="alternate" hreflang="da" href="https://code.mu/da/javascript/framework/angular/book/prime/"><link rel="alternate" hreflang="de" href="https://code.mu/de/javascript/framework/angular/book/prime/"><link rel="alternate" hreflang="en" href="https://code.mu/en/javascript/framework/angular/book/prime/"><link rel="alternate" hreflang="es" href="https://code.mu/es/javascript/framework/angular/book/prime/"><link rel="alternate" hreflang="fr" href="https://code.mu/fr/javascript/framework/angular/book/prime/"><link rel="alternate" hreflang="hi" href="https://code.mu/hi/javascript/framework/angular/book/prime/"><link rel="alternate" hreflang="hu" href="https://code.mu/hu/javascript/framework/angular/book/prime/"><link rel="alternate" hreflang="hy" href="https://code.mu/hy/javascript/framework/angular/book/prime/"><link rel="alternate" hreflang="id" href="https://code.mu/id/javascript/framework/angular/book/prime/"><link rel="alternate" hreflang="it" href="https://code.mu/it/javascript/framework/angular/book/prime/"><link rel="alternate" hreflang="ka" href="https://code.mu/ka/javascript/framework/angular/book/prime/"><link rel="alternate" hreflang="kk" href="https://code.mu/kk/javascript/framework/angular/book/prime/"><link rel="alternate" hreflang="ms" href="https://code.mu/ms/javascript/framework/angular/book/prime/"><link rel="alternate" hreflang="nl" href="https://code.mu/nl/javascript/framework/angular/book/prime/"><link rel="alternate" hreflang="pl" href="https://code.mu/pl/javascript/framework/angular/book/prime/"><link rel="alternate" hreflang="pt" href="https://code.mu/pt/javascript/framework/angular/book/prime/"><link rel="alternate" hreflang="ro" href="https://code.mu/ro/javascript/framework/angular/book/prime/"> <link rel="canonical" href="https://code.mu/ru/javascript/framework/angular/book/prime/"><link rel="alternate" hreflang="ru" href="https://code.mu/ru/javascript/framework/angular/book/prime/"><link rel="alternate" hreflang="sv" href="https://code.mu/sv/javascript/framework/angular/book/prime/"><link rel="alternate" hreflang="sw" href="https://code.mu/sw/javascript/framework/angular/book/prime/"><link rel="alternate" hreflang="tr" href="https://code.mu/tr/javascript/framework/angular/book/prime/"><link rel="alternate" hreflang="uz-Cyrl" href="https://code.mu/uzc/javascript/framework/angular/book/prime/"><link rel="alternate" hreflang="uz-Latn" href="https://code.mu/uzl/javascript/framework/angular/book/prime/">	</head>
+	<body id="top" data-gq="D" data-gv-lesh="">
+		<div data-r="ruct/wrap">
+			<header>
+				<div data-r="ruct/topp">
+	<div data-r="topp/left">
+		<div data-w="nict/logo">
+	<img data-e="img" data-x src="" alt="">
+</div>	</div>
+	<div data-r="topp/righ">
+		offline version v4	</div>
+	<div data-r="topp/cent">
+		<div data-w="nict/adv">
+	<a href="https://mentor.code.mu/?course=NodeJS"><b>Курсы по NodeJS</b><br>
+Менторство: 200$ за курс. Репетиторство: 20$ за занятие. Жми для подробностей!
+
+</a></div>	</div>
+</div>								
+				<div data-r="ruct/navi">
+					<div data-w="nict/over">
+			</div>					<nav data-w="nict/mainmenu">
+	<section data-e="main" data-x data-gm-acte="T">
+		<span data-q-href="/ru/markup/" data-e="open" data-x data-m-targ="markup">Верстка</span>
+		<span data-q-href="/ru/javascript/" data-e="open" data-x data-m-targ="javascript">JavaScript</span>
+		<span data-q-href="/ru/php/" data-e="open" data-x data-m-targ="php">PHP</span>
+		<span data-q-href="/ru/javascript/typescript/" data-e="open" data-x data-m-targ="typescript">TypeScript</span>
+		
+			<span data-q-href="/ru/javascript/nodejs/" data-e="open" data-x data-m-targ="nodejs">NodeJS</span>
+			<span data-q-href="/ru/ajax/" data-e="open" data-x data-m-targ="ajax">AJAX</span>
+		
+		<span data-q-href="/ru/python/" data-e="open" data-x data-m-targ="python">Python</span>
+		<span data-q-href="/ru/java/" data-e="open" data-x data-m-targ="java">Java</span>
+		<span data-q-href="/ru/cpp/" data-e="open" data-x data-m-targ="cpp">C++</span>
+		<span data-q-href="/ru/rust/" data-e="open" data-x data-m-targ="rust">Rust</span>
+		
+			<span data-q-href="/ru/kotlin/" data-e="open" data-x data-m-targ="kotlin">Kotlin</span>
+		
+		
+			<span data-q-href="/ru/dart/" data-e="open" data-x data-m-targ="dart">Dart</span>
+		
+		
+			<span data-q-href="/ru/go/" data-e="open" data-x data-m-targ="go">Go</span>
+		
+		<span data-q-href="/ru/sql/" data-e="open" data-x data-m-targ="sql">SQL</span>
+		<span data-q-href="/ru/javascript/framework/vue/" data-e="open" data-x data-m-targ="vue">Vue</span>
+		<span data-q-href="/ru/javascript/framework/react/" data-e="open" data-x data-m-targ="react">React</span>
+		<span data-q-href="/ru/javascript/framework/angular/" data-e="open" data-x data-m-targ="angular">Angular</span>
+		<span data-q-href="/ru/javascript/framework/next/" data-e="open" data-x data-m-targ="next">Next</span>
+		<span data-q-href="/ru/javascript/lib/jquery/" data-e="open" data-x data-m-targ="jquery">jQuery</span>
+		
+		
+			<span data-q-href="/ru/php/framework/laravel/" data-e="open" data-x data-m-targ="laravel">Laravel</span>
+		
+			<span data-q-href="/ru/cms/opencart/" data-e="open" data-x data-m-targ="opencart">OpenCart</span>
+			<span data-q-href="/ru/cms/opencart/" data-e="open" data-x data-m-targ="wordpress">WordPress</span>
+			<span data-q-href="/ru/cms/drupal/" data-e="open" data-x data-m-targ="drupal">Drupal</span>
+		
+		
+		<span data-q-href="/ru/git/" data-e="open" data-x data-m-targ="git">Git</span>
+		
+		<span data-q-href="/ru/tool/webpack/" data-e="open" data-x data-m-targ="webpack">Webpack</span>
+		<span data-q-href="/ru/tool/gulp/" data-e="open" data-x data-m-targ="gulp">Gulp</span>
+		<span data-q-href="/ru/tool/terminal/" data-e="open" data-x data-m-targ="terminal">Terminal</span>
+		<span data-q-href="/ru/internet/" data-e="open" data-x data-m-targ="internet">Internet</span>
+		<span data-q-href="/ru/deploy/" data-e="open" data-x data-m-targ="deploy">Деплой</span>
+		<span data-q-href="/ru/theory/glossary/" data-e="open" data-x data-m-targ="glossary">Глоссарий</span>
+		
+			<span data-q-href="/ru/theory/slang/" data-e="open" data-x data-m-targ="slang">Сленг</span>
+			<span data-e="open" data-x data-m-targ="social">Соц. сети</span>
+		
+	</section>
+
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="markup">
+		<a href="../../../../../ru/markup/book/prime.html">Основной учебник</a>
+		<a href="../../../../../ru/markup/book/supreme.html">Высший учебник</a>
+		<a href="../../../../../ru/markup/book/prep/less.html">Учебник LESS</a>
+		<a href="../../../../../ru/markup/book/prep/sass.html">Учебник SASS</a>
+		<a href="../../../../../ru/markup/manual/html.html">Справочник HTML</a>
+		<a href="../../../../../ru/markup/manual/css.html">Справочник CSS</a>
+		<a href="../../../../../ru/markup/tasker/stager.html">Задачник по уровням</a>
+	</section>
+
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="php">
+		<a href="../../../../../ru/php/book/prime.html">Основной учебник</a>
+		<a href="../../../../../ru/php/book/oop.html">Учебник ООП</a>
+		<a href="../../../../../ru/php/book/mvc.html">Учебник MVC</a>
+		<a href="../../../../../ru/php/book/supreme.html">Высший учебник</a>
+		<a href="../../../../../ru/php/book/parsing.html">Учебник парсинга</a>
+		<a href="../../../../../ru/php/tasker/stager.html">Задачник по уровням</a>
+		<a href="../../../../../ru/php/manual.html">Справочник</a>
+		
+		<a href="../../../../../ru/php/video/lesson.html">Видеоуроки</a>
+		<a href="../../../../../ru/php/faq.html">FAQ</a>
+		
+	</section>
+
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="javascript">
+		<a href="../../../../../ru/javascript/book/prime.html">Основной учебник</a>
+		<a href="../../../../../ru/javascript/book/practice.html">Учебник практики</a>
+		<a href="../../../../../ru/javascript/book/supreme.html">Высший учебник</a>
+		<a href="../../../../../ru/javascript/book/oop.html">Учебник ООП</a>
+		<a href="../../../../../ru/javascript/tasker/stager.html">Задачник по уровням</a>
+		<a href="../../../../../ru/javascript/manual.html">Справочник</a>
+		
+		<a href="../../../../../ru/javascript/video/lesson.html">Видеоуроки</a>
+		<a href="../../../../../ru/javascript/mistake.html">Ошибки</a>
+		<a href="../../../../../ru/javascript/faq.html">FAQ</a>
+		
+	</section>
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="nodejs">
+		<a href="../../../../../ru/javascript/nodejs/book/prime.html">Основной учебник</a>
+		<a href="../../../../../ru/javascript/nodejs/book/express.html">Express</a>
+		<a href="../../../../../ru/javascript/nodejs/book/sql.html">SQL</a>
+		<a href="../../../../../ru/javascript/nodejs/book/mongo.html">Mongo</a>
+		<a href="../../../../../ru/javascript/nodejs/manual.html">Справочник</a>
+	</section>
+	
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="ajax">
+		<a href="../../../../../ru/ajax/book/php.html">AJAX в PHP</a>
+	</section>
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="python">
+		<a href="../../../../../ru/python/book/prime.html">Основной учебник</a>
+		<a href="../../../../../ru/python/book/supreme.html">Высший учебник</a>
+		<a href="../../../../../ru/python/manual.html">Справочник</a>
+		<a href="../../../../../ru/python/tasker/stager.html">Задачник по уровням</a>
+		
+		<a href="../../../../../ru/python/faq.html">FAQ</a>
+		
+	</section>
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="java">
+		<a href="../../../../../ru/java/tasker/stager.html">Задачник по уровням</a>
+	</section>
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="cpp">
+		<a href="../../../../../ru/cpp/tasker/stager.html">Задачник по уровням</a>
+	</section>
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="rust">
+		<a href="../../../../../ru/rust/tasker/stager.html">Задачник по уровням</a>
+	</section>
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="kotlin">
+		<a href="../../../../../ru/kotlin/tasker/stager.html">Задачник по уровням</a>
+		<a href="../../../../../ru/kotlin/manual.html">Справочник</a>
+	</section>
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="dart">
+		<a href="../../../../../ru/dart/tasker/stager.html">Задачник по уровням</a>
+	</section>
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="go">
+		<a href="../../../../../ru/go/tasker/stager.html">Задачник по уровням</a>
+	</section>
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="sql">
+		<a href="../../../../../ru/sql/book/pma.html">PhpMyAdmin</a>
+		
+		<a href="../../../../../ru/sql/manual.html">Справочник</a>
+		
+		<a href="../../../../../ru/sql/tasker/stager.html">Задачник по уровням</a>
+	</section>
+
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="typescript">
+		<a href="../../../../../ru/javascript/typescript/book/prime.html">Основной учебник</a>
+		<a href="../../../../../ru/javascript/typescript/book/supreme.html">Высший учебник</a>
+	</section>
+
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="vue">
+		<a href="../../../../../ru/javascript/framework/vue/book/prime.html">Основной учебник</a>
+	</section>
+
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="react">
+		<a href="../../../../../ru/javascript/framework/react/book/prime.html">Основной учебник</a>
+		<a href="../../../../../ru/javascript/framework/react/book/supreme.html">Высший учебник</a>
+		<a href="../../../../../ru/javascript/framework/react/book/redux.html">Учебник Redux</a>
+	</section>
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="angular">
+		<a href="../../../../../ru/javascript/framework/angular/book/prime.html">Основной учебник</a>
+	</section>
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="next">
+		<a href="../../../../../ru/javascript/framework/next/book/prime.html">Основной учебник</a>
+	</section>
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="jquery">
+		<a href="../../../../../ru/javascript/lib/jquery/book/prime.html">Основной учебник</a>
+		<a href="../../../../../ru/javascript/lib/jquery/manual.html">Справочник</a>
+	</section>
+	
+		<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="laravel">
+			<a href="../../../../../ru/php/framework/laravel/book/prime.html">Основной учебник</a>
+		</section>
+		
+		<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="opencart">
+			<a href="../../../../../ru/cms/opencart/manual/table.html">Справочник по таблицам</a>
+		</section>
+		
+		<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="wordpress">
+			<a href="../../../../../ru/cms/wordpress/manual/table.html">Справочник по таблицам</a>
+		</section>
+		<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="drupal">
+			<a href="../../../../../ru/cms/drupal/manual/table.html">Справочник по таблицам</a>
+		</section>
+	
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="git">
+		<a href="../../../../../ru/git/book/prime.html">Основной учебник</a>
+	</section>
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="terminal">
+		<a href="../../../../../ru/tool/terminal.html">Учебник по командной строке</a>
+	</section>
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="webpack">
+		<a href="../../../../../ru/tool/webpack.html">Учебник Webpack</a>
+	</section>
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="gulp">
+		<a href="../../../../../ru/tool/gulp.html">Учебник Gulp</a>
+	</section>
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="internet">
+		<a href="../../../../../ru/internet/protocol/http.html">Протокол HTTP</a>
+	</section>
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="deploy">
+		<a href="../../../../../ru/deploy/book/prime.html">Основной учебник</a>
+		<a href="../../../../../ru/deploy/book/sql/hosting.html">SQL на хостинге</a>
+		<a href="../../../../../ru/deploy/book/php/hosting.html">PHP на хостинге</a>
+		<a href="../../../../../ru/deploy/book/react/hosting.html">React на хостинге</a>
+		<a href="../../../../../ru/deploy/book/nodejs/server.html">NodeJS на сервере</a>
+	</section>
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="glossary">
+		<a href="../../../../../ru/theory/glossary.html">Глоссарий программистских терминов</a>
+	</section>
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="slang">
+		<a href="../../../../../ru/theory/slang.html">Сленг программиста</a>
+	</section>
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="social">
+		<a href="https://vk.com/codemu">Паблик сайта code.mu</a>
+		<a href="https://t.me/javascript_tricker">Занимательные задачи JavaScript</a>
+		<a href="https://t.me/php_tricker">Занимательные задачи PHP</a>
+		<a href="https://t.me/python_tricker">Занимательные задачи Python</a>
+	</section>
+	
+</nav>									</div>
+			</header>
+			<main>
+				<div data-w="nict/hett">
+	<h1>Учебник по фреймворку Angular</h1>
+</div>				<div data-w="menu/pane" data-m-mode="H" data-m-book="jsagPm">
+<h2>Основы</h2>
+<div data-m-sect="Bs">
+<a data-m-less="Inr" href="../../../../../ru/javascript/framework/angular/book/prime/basis/intro.html">
+	Введение в фреймворк
+</a>
+<a data-m-less="CW" href="../../../../../ru/javascript/framework/angular/book/prime/basis/components-way.html">
+	Компонентый подход
+</a>
+<a data-m-less="Ins" href="../../../../../ru/javascript/framework/angular/book/prime/basis/install.html">
+	Установка фреймворка
+</a>
+<a data-m-less="PC" href="../../../../../ru/javascript/framework/angular/book/prime/basis/project-creating.html">
+	Создание проекта
+</a>
+<a data-m-less="PS" href="../../../../../ru/javascript/framework/angular/book/prime/basis/project-structure.html">
+	Структура проекта
+</a>
+<a data-m-less="WDS" href="../../../../../ru/javascript/framework/angular/book/prime/basis/working-dir-structure.html">
+	Структура рабочий папки
+</a>
+<a data-m-less="LF" href="../../../../../ru/javascript/framework/angular/book/prime/basis/layout-file.html">
+	Файл макета
+</a>
+<a data-m-less="CSF" href="../../../../../ru/javascript/framework/angular/book/prime/basis/common-styles-file.html">
+	Файл общих стилей
+</a>
+<a data-m-less="CS" href="../../../../../ru/javascript/framework/angular/book/prime/basis/component-structure.html">
+	Структура компонента
+</a>
+<a data-m-less="CMF" href="../../../../../ru/javascript/framework/angular/book/prime/basis/component-markup-file.html">
+	Файл с версткой компонента
+</a>
+<a data-m-less="CSF" href="../../../../../ru/javascript/framework/angular/book/prime/basis/component-styles-file.html">
+	Файл стилей компонента
+</a>
+<a data-m-less="CCF" href="../../../../../ru/javascript/framework/angular/book/prime/basis/component-class-file.html">
+	Файл с классом компонента
+</a>
+</div><h2>Темплейт</h2>
+<div data-m-sect="Tp">
+<a data-m-less="Itp" href="../../../../../ru/javascript/framework/angular/book/prime/template/interpolation.html">
+	Интерполяция
+</a>
+<a data-m-less="TCP" href="../../../../../ru/javascript/framework/angular/book/prime/template/template-class-properties.html">
+	Свойства класса в темплейте
+</a>
+<a data-m-less="CPAt" href="../../../../../ru/javascript/framework/angular/book/prime/template/class-properties-attributes.html">
+	Свойства класса в атрибутах
+</a>
+<a data-m-less="CPAr" href="../../../../../ru/javascript/framework/angular/book/prime/template/class-properties-arrays.html">
+	Свойства-массивы в темплейте
+</a>
+<a data-m-less="CPO" href="../../../../../ru/javascript/framework/angular/book/prime/template/class-properties-objects.html">
+	Свойства-объекты в темплейте
+</a>
+<a data-m-less="TCM" href="../../../../../ru/javascript/framework/angular/book/prime/template/template-class-methods.html">
+	Методы класса в темплейте
+</a>
+<a data-m-less="Vr" href="../../../../../ru/javascript/framework/angular/book/prime/template/variables.html">
+	Шаблонные переменные
+</a>
+<a data-m-less="PAB" href="../../../../../ru/javascript/framework/angular/book/prime/template/properties-attributes-binding.html">
+	Привязка к свойствам и атрибутам
+</a>
+</div><h2>Условия</h2>
+<div data-m-sect="Cd">
+<a data-m-less="ID" href="../../../../../ru/javascript/framework/angular/book/prime/conditions/if-directive.html"> 
+	Директива if
+</a>
+<a data-m-less="IDO" href="../../../../../ru/javascript/framework/angular/book/prime/conditions/if-directive-operators.html">
+	Операторы в директиве if
+</a>
+<a data-m-less="IC" href="../../../../../ru/javascript/framework/angular/book/prime/conditions/if-construction.html"> 
+	Конструкция if
+</a>
+<a data-m-less="ICO" href="../../../../../ru/javascript/framework/angular/book/prime/conditions/if-construction-operators.html">
+	Операторы в конструкции if
+</a>
+<a data-m-less="EC" href="../../../../../ru/javascript/framework/angular/book/prime/conditions/else-construction.html"> 
+	Конструкция else
+</a>
+<a data-m-less="EIC" href="../../../../../ru/javascript/framework/angular/book/prime/conditions/else-if-construction.html"> 
+	Конструкция else-if
+</a>
+<a data-m-less="SCC" href="../../../../../ru/javascript/framework/angular/book/prime/conditions/switch-case-construction.html">
+	Конструкция switch-case
+</a>
+<a data-m-less="NTT" href="../../../../../ru/javascript/framework/angular/book/prime/conditions/ng-template-tag.html">
+	Тег ng-template
+</a>
+<a href="../../../../../ru/javascript/framework/angular/book/prime/conditions/syntactic-sugar.html">
+	Синтаксический сахар
+</a>
+</div><h2>Циклы</h2>
+<div data-m-sect="Lp">
+<a data-m-less="FD" href="../../../../../ru/javascript/framework/angular/book/prime/loops/for-directive.html">
+	Директива for
+</a>
+<a data-m-less="FC" href="../../../../../ru/javascript/framework/angular/book/prime/loops/for-construction.html">
+	Конструкция for
+</a>
+<a data-m-less="LI" href="../../../../../ru/javascript/framework/angular/book/prime/loops/loop-index.html">
+	Индексы циклов
+</a>
+<a data-m-less="FI" href="../../../../../ru/javascript/framework/angular/book/prime/loops/first-iter.html">
+	Первая итерация
+</a>
+<a data-m-less="LI" href="../../../../../ru/javascript/framework/angular/book/prime/loops/last-iter.html">
+	Последняя итерация
+</a>
+<a data-m-less="EI" href="../../../../../ru/javascript/framework/angular/book/prime/loops/even-iter.html">
+	Четная итерация
+</a>
+<a data-m-less="OI" href="../../../../../ru/javascript/framework/angular/book/prime/loops/odd-iter.html">
+	Нечетная итерация
+</a>
+</div><h2>События</h2>
+<div data-m-sect="">
+<a data-m-less="EH" href="../../../../../ru/javascript/framework/angular/book/prime/binding/event-handlers.html">
+	Привязка обработчиков
+</a>
+<a data-m-less="HP" href="../../../../../ru/javascript/framework/angular/book/prime/binding/handlers-parameters.html">
+	Параметры обработчиков
+</a>
+<a data-m-less="OE" href="../../../../../ru/javascript/framework/angular/book/prime/binding/object-event.html">
+	Объект event в обработчике
+</a>
+<a data-m-less="OEP" href="../../../../../ru/javascript/framework/angular/book/prime/binding/object-event-parameters.html">
+	Объект event и параметры
+</a>
+<a data-m-less="Rc" href="../../../../../ru/javascript/framework/angular/book/prime/binding/reactivity.html">
+	Реактивность
+</a>
+<a data-m-less="RL" href="../../../../../ru/javascript/framework/angular/book/prime/binding/reactivity-loops.html">
+	Реактивность циклов
+</a>
+<a data-m-less="RC" href="../../../../../ru/javascript/framework/angular/book/prime/binding/reactivity-conditions.html">
+	Реактивность условий
+</a>
+<a data-m-less="TW" href="../../../../../ru/javascript/framework/angular/book/prime/binding/two-way.html">
+	Двусторонняя привязка
+</a>
+</div><h2>Стилизация</h2>
+<div data-m-sect="St">
+<a data-m-less="Cm" href="../../../../../ru/javascript/framework/angular/book/prime/styles/component.html">
+	Стили компонента
+</a>
+<a data-m-less="CCB" href="../../../../../ru/javascript/framework/angular/book/prime/styles/css-classes-binding.html">
+	Привязка CSS классов
+</a>
+<a data-m-less="SEC" href="../../../../../ru/javascript/framework/angular/book/prime/styles/set-element-classes.html">
+	Массовая привязка CSS классов
+</a>
+<a data-m-less="CSB" href="../../../../../ru/javascript/framework/angular/book/prime/styles/css-styles-binding.html">
+	Привязка CSS стилей
+</a>
+<a data-m-less="SES" href="../../../../../ru/javascript/framework/angular/book/prime/styles/set-element-styles.html">
+	Массовая привязка CSS стилей
+</a>
+<a data-m-less="DSC" href="../../../../../ru/javascript/framework/angular/book/prime/styles/dynamic-style-changing.html">
+	Динамическое изменение стилей
+</a>
+</div><h2>Каналы</h2>
+<div data-m-sect="Pp">
+<a data-m-less="Inr" href="../../../../../ru/javascript/framework/angular/book/prime/pipes/intro.html">
+	Введение
+</a>
+<a data-m-less="Up" href="../../../../../ru/javascript/framework/angular/book/prime/pipes/uppercase.html">
+	Перевод в верхний регистр
+</a>
+<a data-m-less="Lw" href="../../../../../ru/javascript/framework/angular/book/prime/pipes/lowercase.html">
+	Перевод в нижний регистр
+</a>
+<a data-m-less="SS" href="../../../../../ru/javascript/framework/angular/book/prime/pipes/string-slicing.html">
+	Обрезание строки
+</a>
+<a data-m-less="Dt" href="../../../../../ru/javascript/framework/angular/book/prime/pipes/dates.html">
+	Форматирование дат
+</a>
+<a data-m-less="Nm" href="../../../../../ru/javascript/framework/angular/book/prime/pipes/numbers.html">
+	Форматирование чисел
+</a>
+<a data-m-less="Cr" href="../../../../../ru/javascript/framework/angular/book/prime/pipes/currencies.html">
+	Форматирование валюты
+</a>
+<a data-m-less="Ch" href="../../../../../ru/javascript/framework/angular/book/prime/pipes/chains.html">
+	Цепочки каналов
+	
+</a>
+<a data-m-less="Ls" href="../../../../../ru/javascript/framework/angular/book/prime/pipes/list.html">
+	Список каналов
+</a>
+</div><h2>Компоненты</h2>
+<div data-m-sect="CM">
+<a data-m-less="CC" href="../../../../../ru/javascript/framework/angular/book/prime/components/child-component.html">
+	Дочерний компонент
+</a>
+<a data-m-less="CPD" href="../../../../../ru/javascript/framework/angular/book/prime/components/child-passing-data.html">
+	Передача данных
+</a>
+<a data-m-less="CPP" href="../../../../../ru/javascript/framework/angular/book/prime/components/child-passing-props.html">
+	Передача свойств
+</a>
+<a data-m-less="MC" href="../../../../../ru/javascript/framework/angular/book/prime/components/multi-calling.html">
+	Множественный вызов компонента
+</a>
+<a data-m-less="LC" href="../../../../../ru/javascript/framework/angular/book/prime/components/loop-calling.html">
+	Вызов компонента в цикле
+</a>
+<a data-m-less="CPT" href="../../../../../ru/javascript/framework/angular/book/prime/components/child-passing-text.html">
+	Передача текста
+</a>
+<a data-m-less="CSP" href="../../../../../ru/javascript/framework/angular/book/prime/components/child-setter-passing.html">
+	Передача в сеттер
+</a>
+<a data-m-less="CDE" href="../../../../../ru/javascript/framework/angular/book/prime/components/child-data-emiting.html">
+	Испускание данных из потомка
+</a>
+<a data-m-less="EDB" href="../../../../../ru/javascript/framework/angular/book/prime/components/events-double-binding.html">
+	Двусторонняя привязка событий
+</a>
+<a data-m-less="TC" href="../../../../../ru/javascript/framework/angular/book/prime/components/tag-changing.html">
+	Смена тега
+</a>
+</div><h2>Жизненный цикл компонентов</h2>
+<div data-m-sect="LC">
+<a data-m-less="Inr" href="../../../../../ru/javascript/framework/angular/book/prime/life-cycle/intro.html">
+	Введение
+</a>
+<a data-m-less="OI" href="../../../../../ru/javascript/framework/angular/book/prime/life-cycle/on-init.html">
+	Хук ngOnInit
+</a>
+<a data-m-less="OD" href="../../../../../ru/javascript/framework/angular/book/prime/life-cycle/on-destroy.html">
+	Хук ngOnDestroy
+</a>
+<a data-m-less="SH" href="../../../../../ru/javascript/framework/angular/book/prime/life-cycle/several-hooks.html">
+	Несколько хуков
+</a>
+
+</div><h2>Сервисы</h2>
+<div data-m-sect="Sv">
+<a data-m-less="Inr" href="../../../../../ru/javascript/framework/angular/book/prime/services/intro.html">
+	Введение
+</a>
+<a data-m-less="Cr" href="../../../../../ru/javascript/framework/angular/book/prime/services/creating.html">
+	Создание сервиса
+</a>
+<a data-m-less="Us" href="../../../../../ru/javascript/framework/angular/book/prime/services/using.html">
+	Использование сервиса
+</a>
+<a data-m-less="ITS" href="../../../../../ru/javascript/framework/angular/book/prime/services/injecting-to-service.html">
+	Внедрение в сервис
+	
+</a>
+</div><h2>Роутинг</h2>
+<div data-m-sect="Rt">
+<a data-m-less="Inr" href="../../../../../ru/javascript/framework/angular/book/prime/routing/intro.html">
+	Введение
+</a>
+<a data-m-less="NP" href="../../../../../ru/javascript/framework/angular/book/prime/routing/new-project.html">
+	Создание нового проекта
+</a>
+<a data-m-less="CC" href="../../../../../ru/javascript/framework/angular/book/prime/routing/components-creating.html">
+	Создание компонентов
+</a>
+<a data-m-less="BR" href="../../../../../ru/javascript/framework/angular/book/prime/routing/basic-routing.html">
+	Настройка базового роутинга
+</a>
+<a data-m-less="Tg" href="../../../../../ru/javascript/framework/angular/book/prime/routing/tag.html">
+	Тег для роутинга
+</a>
+<a data-m-less="Ln" href="../../../../../ru/javascript/framework/angular/book/prime/routing/links.html">
+	Ссылки для роутинга
+</a>
+<a data-m-less="ALS" href="../../../../../ru/javascript/framework/angular/book/prime/routing/active-links-styling.html">
+	Стилизация активных ссылок
+</a>
+<a data-m-less="EAM" href="../../../../../ru/javascript/framework/angular/book/prime/routing/exact-address-match.html">
+	Toчное совпадение адресов
+</a>
+<a data-m-less="RP" href="../../../../../ru/javascript/framework/angular/book/prime/routing/routes-parameters.html">
+	Параметры маршрутов
+</a>
+<a data-m-less="RPV" href="../../../../../ru/javascript/framework/angular/book/prime/routing/routes-parameters-values.html">
+	Значения параметров маршрутов
+</a>
+<a data-m-less="RPU" href="../../../../../ru/javascript/framework/angular/book/prime/routing/routes-parameters-using.html">
+	Использование параметров маршрутов
+</a>
+<a data-m-less="RPL" href="../../../../../ru/javascript/framework/angular/book/prime/routing/routes-parameters-links.html">
+	Параметры маршрутов в ссылках
+</a>
+<a data-m-less="LSP" href="../../../../../ru/javascript/framework/angular/book/prime/routing/links-switching-problem.html">
+	Проблема с переключением ссылок
+</a>
+<a data-m-less="PN" href="../../../../../ru/javascript/framework/angular/book/prime/routing/program-navigation.html">
+	Программная навигация
+</a>
+<a data-m-less="AUC" href="../../../../../ru/javascript/framework/angular/book/prime/routing/all-urls-capching.html">
+	Захват всех URL
+</a>
+<a data-m-less="RO" href="../../../../../ru/javascript/framework/angular/book/prime/routing/routes-order.html">
+	Порядок маршрутов
+</a>
+<a data-m-less="Rd" href="../../../../../ru/javascript/framework/angular/book/prime/routing/redirects.html">
+	Переадресация
+</a>
+<a data-m-less="CR" href="../../../../../ru/javascript/framework/angular/book/prime/routing/child-routes.html">
+	Дочерние маршруты
+</a>
+</div><h2>Проекты</h2>
+<div data-m-sect="Prj">
+<a data-m-less="Ch" href="../../../../../ru/javascript/framework/react/book/prime/project/checklist.html">
+	Чеклист
+</a>
+<a data-m-less="Nt" href="../../../../../ru/javascript/framework/react/book/prime/project/notepad.html">
+	Блокнот
+</a>
+</div>
+</div>			</main>
+						<footer data-w="ruct/foot">
+				<div data-w="nict/finf">
+	<span data-e="text" data-x>
+		Трепачёв Дмитрий &copy; 2012-2025	</span>
+	<br>
+	<a data-e="link" data-x href="https://t.me/trepachev_dmitry">t.me/trepachev_dmitry</a>
+</div>							</footer>
+			<div data-w="nict/jump">
+	<a href="#top"><span>&uarr;</span></a>
+</div>			<div data-w="nict/lagr">
+	</div>					</div>
+		
+		<script src="../../../../../tore/@/metrikaΣ.js?v=1"></script>	</body>
+</html>

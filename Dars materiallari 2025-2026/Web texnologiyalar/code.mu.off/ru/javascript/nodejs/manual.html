@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Справочник NodeJS</title>
+		
+		<link rel="stylesheet" href="../../../tore/@/fonts/listΣ.css?v=1">
+<link rel="stylesheet" href="../../../tore/layd/deff/&/aefb44b7dac371a3860e9079298a950e.ructΣ.css">
+<link rel="stylesheet" href="../../../tore/&/d619cf2a52f5e2dd5479335d3ba58cae.apprΣ.css">
+
+<script src="../../../tore/&/abc868ba468b8ea8384332d74f771367.apprΣ.js?v=1" defer></script>
+
+
+<meta name="yandex-verification" content="00eb45b7559e5c68">
+<meta name="google-site-verification" content="Af0TM2OrwIEtjoQXxYz2-1C-21E1m7DB23_kWpE9sLg">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">		
+		<meta name="description" content="Удобный справочник NodeJS, написанный простым языком, с видео и примерами.">
+		<link rel="shortcut icon" type="image/x-icon" href="../../../favicon.ico">
+		
+		 <link rel="canonical" href="https://code.mu/ru/javascript/nodejs/manual/"><link rel="alternate" hreflang="ru" href="https://code.mu/ru/javascript/nodejs/manual/">	</head>
+	<body id="top" data-gq="D" data-gv-lesh="">
+		<div data-r="ruct/wrap">
+			<header>
+				<div data-r="ruct/topp">
+	<div data-r="topp/left">
+		<div data-w="nict/logo">
+	<img data-e="img" data-x src="" alt="">
+</div>	</div>
+	<div data-r="topp/righ">
+		offline version v4	</div>
+	<div data-r="topp/cent">
+		<div data-w="nict/adv">
+	<a href="https://mentor.code.mu/?course=practic"><b>Стажировка на реальных проектах:</b><br>
+наполнение портфолио, помощь с работой и заказами, пробные собеседования.
+Жми для подробностей&rarr;
+</a></div>	</div>
+</div>								
+				<div data-r="ruct/navi">
+					<div data-w="nict/over">
+			</div>					<nav data-w="nict/mainmenu">
+	<section data-e="main" data-x data-gm-acte="T">
+		<span data-q-href="/ru/markup/" data-e="open" data-x data-m-targ="markup">Верстка</span>
+		<span data-q-href="/ru/javascript/" data-e="open" data-x data-m-targ="javascript">JavaScript</span>
+		<span data-q-href="/ru/php/" data-e="open" data-x data-m-targ="php">PHP</span>
+		<span data-q-href="/ru/javascript/typescript/" data-e="open" data-x data-m-targ="typescript">TypeScript</span>
+		
+			<span data-q-href="/ru/javascript/nodejs/" data-e="open" data-x data-m-targ="nodejs">NodeJS</span>
+			<span data-q-href="/ru/ajax/" data-e="open" data-x data-m-targ="ajax">AJAX</span>
+		
+		<span data-q-href="/ru/python/" data-e="open" data-x data-m-targ="python">Python</span>
+		<span data-q-href="/ru/java/" data-e="open" data-x data-m-targ="java">Java</span>
+		<span data-q-href="/ru/cpp/" data-e="open" data-x data-m-targ="cpp">C++</span>
+		<span data-q-href="/ru/rust/" data-e="open" data-x data-m-targ="rust">Rust</span>
+		
+			<span data-q-href="/ru/kotlin/" data-e="open" data-x data-m-targ="kotlin">Kotlin</span>
+		
+		
+			<span data-q-href="/ru/dart/" data-e="open" data-x data-m-targ="dart">Dart</span>
+		
+		
+			<span data-q-href="/ru/go/" data-e="open" data-x data-m-targ="go">Go</span>
+		
+		<span data-q-href="/ru/sql/" data-e="open" data-x data-m-targ="sql">SQL</span>
+		<span data-q-href="/ru/javascript/framework/vue/" data-e="open" data-x data-m-targ="vue">Vue</span>
+		<span data-q-href="/ru/javascript/framework/react/" data-e="open" data-x data-m-targ="react">React</span>
+		<span data-q-href="/ru/javascript/framework/angular/" data-e="open" data-x data-m-targ="angular">Angular</span>
+		<span data-q-href="/ru/javascript/framework/next/" data-e="open" data-x data-m-targ="next">Next</span>
+		<span data-q-href="/ru/javascript/lib/jquery/" data-e="open" data-x data-m-targ="jquery">jQuery</span>
+		
+		
+			<span data-q-href="/ru/php/framework/laravel/" data-e="open" data-x data-m-targ="laravel">Laravel</span>
+		
+			<span data-q-href="/ru/cms/opencart/" data-e="open" data-x data-m-targ="opencart">OpenCart</span>
+			<span data-q-href="/ru/cms/opencart/" data-e="open" data-x data-m-targ="wordpress">WordPress</span>
+			<span data-q-href="/ru/cms/drupal/" data-e="open" data-x data-m-targ="drupal">Drupal</span>
+		
+		
+		<span data-q-href="/ru/git/" data-e="open" data-x data-m-targ="git">Git</span>
+		
+		<span data-q-href="/ru/tool/webpack/" data-e="open" data-x data-m-targ="webpack">Webpack</span>
+		<span data-q-href="/ru/tool/gulp/" data-e="open" data-x data-m-targ="gulp">Gulp</span>
+		<span data-q-href="/ru/tool/terminal/" data-e="open" data-x data-m-targ="terminal">Terminal</span>
+		<span data-q-href="/ru/internet/" data-e="open" data-x data-m-targ="internet">Internet</span>
+		<span data-q-href="/ru/deploy/" data-e="open" data-x data-m-targ="deploy">Деплой</span>
+		<span data-q-href="/ru/theory/glossary/" data-e="open" data-x data-m-targ="glossary">Глоссарий</span>
+		
+			<span data-q-href="/ru/theory/slang/" data-e="open" data-x data-m-targ="slang">Сленг</span>
+			<span data-e="open" data-x data-m-targ="social">Соц. сети</span>
+		
+	</section>
+
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="markup">
+		<a href="../../../ru/markup/book/prime.html">Основной учебник</a>
+		<a href="../../../ru/markup/book/supreme.html">Высший учебник</a>
+		<a href="../../../ru/markup/book/prep/less.html">Учебник LESS</a>
+		<a href="../../../ru/markup/book/prep/sass.html">Учебник SASS</a>
+		<a href="../../../ru/markup/manual/html.html">Справочник HTML</a>
+		<a href="../../../ru/markup/manual/css.html">Справочник CSS</a>
+		<a href="../../../ru/markup/tasker/stager.html">Задачник по уровням</a>
+	</section>
+
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="php">
+		<a href="../../../ru/php/book/prime.html">Основной учебник</a>
+		<a href="../../../ru/php/book/oop.html">Учебник ООП</a>
+		<a href="../../../ru/php/book/mvc.html">Учебник MVC</a>
+		<a href="../../../ru/php/book/supreme.html">Высший учебник</a>
+		<a href="../../../ru/php/book/parsing.html">Учебник парсинга</a>
+		<a href="../../../ru/php/tasker/stager.html">Задачник по уровням</a>
+		<a href="../../../ru/php/manual.html">Справочник</a>
+		
+		<a href="../../../ru/php/video/lesson.html">Видеоуроки</a>
+		<a href="../../../ru/php/faq.html">FAQ</a>
+		
+	</section>
+
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="javascript">
+		<a href="../../../ru/javascript/book/prime.html">Основной учебник</a>
+		<a href="../../../ru/javascript/book/practice.html">Учебник практики</a>
+		<a href="../../../ru/javascript/book/supreme.html">Высший учебник</a>
+		<a href="../../../ru/javascript/book/oop.html">Учебник ООП</a>
+		<a href="../../../ru/javascript/tasker/stager.html">Задачник по уровням</a>
+		<a href="../../../ru/javascript/manual.html">Справочник</a>
+		
+		<a href="../../../ru/javascript/video/lesson.html">Видеоуроки</a>
+		<a href="../../../ru/javascript/mistake.html">Ошибки</a>
+		<a href="../../../ru/javascript/faq.html">FAQ</a>
+		
+	</section>
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="nodejs">
+		<a href="../../../ru/javascript/nodejs/book/prime.html">Основной учебник</a>
+		<a href="../../../ru/javascript/nodejs/book/express.html">Express</a>
+		<a href="../../../ru/javascript/nodejs/book/sql.html">SQL</a>
+		<a href="../../../ru/javascript/nodejs/book/mongo.html">Mongo</a>
+		<a href="../../../ru/javascript/nodejs/manual.html">Справочник</a>
+	</section>
+	
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="ajax">
+		<a href="../../../ru/ajax/book/php.html">AJAX в PHP</a>
+	</section>
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="python">
+		<a href="../../../ru/python/book/prime.html">Основной учебник</a>
+		<a href="../../../ru/python/book/supreme.html">Высший учебник</a>
+		<a href="../../../ru/python/manual.html">Справочник</a>
+		<a href="../../../ru/python/tasker/stager.html">Задачник по уровням</a>
+		
+		<a href="../../../ru/python/faq.html">FAQ</a>
+		
+	</section>
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="java">
+		<a href="../../../ru/java/tasker/stager.html">Задачник по уровням</a>
+	</section>
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="cpp">
+		<a href="../../../ru/cpp/tasker/stager.html">Задачник по уровням</a>
+	</section>
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="rust">
+		<a href="../../../ru/rust/tasker/stager.html">Задачник по уровням</a>
+	</section>
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="kotlin">
+		<a href="../../../ru/kotlin/tasker/stager.html">Задачник по уровням</a>
+		<a href="../../../ru/kotlin/manual.html">Справочник</a>
+	</section>
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="dart">
+		<a href="../../../ru/dart/tasker/stager.html">Задачник по уровням</a>
+	</section>
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="go">
+		<a href="../../../ru/go/tasker/stager.html">Задачник по уровням</a>
+	</section>
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="sql">
+		<a href="../../../ru/sql/book/pma.html">PhpMyAdmin</a>
+		
+		<a href="../../../ru/sql/manual.html">Справочник</a>
+		
+		<a href="../../../ru/sql/tasker/stager.html">Задачник по уровням</a>
+	</section>
+
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="typescript">
+		<a href="../../../ru/javascript/typescript/book/prime.html">Основной учебник</a>
+		<a href="../../../ru/javascript/typescript/book/supreme.html">Высший учебник</a>
+	</section>
+
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="vue">
+		<a href="../../../ru/javascript/framework/vue/book/prime.html">Основной учебник</a>
+	</section>
+
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="react">
+		<a href="../../../ru/javascript/framework/react/book/prime.html">Основной учебник</a>
+		<a href="../../../ru/javascript/framework/react/book/supreme.html">Высший учебник</a>
+		<a href="../../../ru/javascript/framework/react/book/redux.html">Учебник Redux</a>
+	</section>
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="angular">
+		<a href="../../../ru/javascript/framework/angular/book/prime.html">Основной учебник</a>
+	</section>
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="next">
+		<a href="../../../ru/javascript/framework/next/book/prime.html">Основной учебник</a>
+	</section>
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="jquery">
+		<a href="../../../ru/javascript/lib/jquery/book/prime.html">Основной учебник</a>
+		<a href="../../../ru/javascript/lib/jquery/manual.html">Справочник</a>
+	</section>
+	
+		<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="laravel">
+			<a href="../../../ru/php/framework/laravel/book/prime.html">Основной учебник</a>
+		</section>
+		
+		<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="opencart">
+			<a href="../../../ru/cms/opencart/manual/table.html">Справочник по таблицам</a>
+		</section>
+		
+		<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="wordpress">
+			<a href="../../../ru/cms/wordpress/manual/table.html">Справочник по таблицам</a>
+		</section>
+		<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="drupal">
+			<a href="../../../ru/cms/drupal/manual/table.html">Справочник по таблицам</a>
+		</section>
+	
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="git">
+		<a href="../../../ru/git/book/prime.html">Основной учебник</a>
+	</section>
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="terminal">
+		<a href="../../../ru/tool/terminal.html">Учебник по командной строке</a>
+	</section>
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="webpack">
+		<a href="../../../ru/tool/webpack.html">Учебник Webpack</a>
+	</section>
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="gulp">
+		<a href="../../../ru/tool/gulp.html">Учебник Gulp</a>
+	</section>
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="internet">
+		<a href="../../../ru/internet/protocol/http.html">Протокол HTTP</a>
+	</section>
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="deploy">
+		<a href="../../../ru/deploy/book/prime.html">Основной учебник</a>
+		<a href="../../../ru/deploy/book/sql/hosting.html">SQL на хостинге</a>
+		<a href="../../../ru/deploy/book/php/hosting.html">PHP на хостинге</a>
+		<a href="../../../ru/deploy/book/react/hosting.html">React на хостинге</a>
+		<a href="../../../ru/deploy/book/nodejs/server.html">NodeJS на сервере</a>
+	</section>
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="glossary">
+		<a href="../../../ru/theory/glossary.html">Глоссарий программистских терминов</a>
+	</section>
+	
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="slang">
+		<a href="../../../ru/theory/slang.html">Сленг программиста</a>
+	</section>
+	<section data-e="subb" data-x data-gm-acte="F" data-m-tabb="social">
+		<a href="https://vk.com/codemu">Паблик сайта code.mu</a>
+		<a href="https://t.me/javascript_tricker">Занимательные задачи JavaScript</a>
+		<a href="https://t.me/php_tricker">Занимательные задачи PHP</a>
+		<a href="https://t.me/python_tricker">Занимательные задачи Python</a>
+	</section>
+	
+</nav>									</div>
+			</header>
+			<main>
+				<div data-w="nict/hett">
+	<h1>Справочник NodeJS</h1>
+</div>				<div data-w="menu/pane" data-m-mode="T">
+<section data-e="pane" data-x data-m-curr="F" data-m-type="P" data-m-tabb="Файлы">
+<h2>Модуль fs</h2>
+<div>
+	<a href="../../../ru/javascript/nodejs/manual/fs/readFile.html">
+		чтение файла
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/fs/read.html">
+		чтение данных из файла через файловый дескриптор
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/fs/writeFile.html">
+		запись данных в файл
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/fs/write.html">
+		запись данных в файл через буфер или строку
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/fs/appendFile.html">
+		добавление данных в файл
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/fs/copyFile.html">
+		копирование файла
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/fs/rename.html">
+		переименование файла
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/fs/open.html">
+		открытие файла
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/fs/createReadStream.html">
+		открытие потока для чтения данных
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/fs/createWriteStream.html">
+		открытие потока для записи данных
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/fs/closeSync.html">
+		синхронное закрытие файлового дескриптора
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/fs/ftruncate.html">
+		изменение размера файла через файловый дескриптор
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/fs/link.html">
+		изменение пути к файлу
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/fs/truncate.html">
+		изменение размера файла
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/fs/rm.html">
+		удаление файлов и папки
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/fs/mkdir.html">
+		создание папки
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/fs/readdir.html">
+		чтение папки
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/fs/cp.html">
+		копирование папки
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/fs/opendir.html">
+		открытие папки
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/fs/rmdir.html">
+		удаление папки
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/fs/mkdtemp.html">
+		создание временной папки
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/fs/symlink.html">
+		создание символической ссылки
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/fs/readlink.html">
+		чтение символической ссылки
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/fs/unlink.html">
+		удаление символической ссылки или файла
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/fs/access.html">
+		доступ к файлу
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/fs/chmod.html">
+		изменение права доступа к файлу
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/fs/chown.html">
+		изменение владельца файла
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/fs/fchmod.html">
+		установление права доступа к файлу через файловый дескриптор
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/fs/fchown.html">
+		установление владельца файла через файловый дескриптор
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/fs/stat.html">
+		статистика о файле или папки
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/fs/fstat.html">
+		статистика о файловом дескрипторе
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/fs/lstat.html">
+		статистика о файлах, папки, символической ссылке
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/fs/watchFile.html">
+		установление наблюдений за изменениями в файле
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/fs/watch.html">
+		установление наблюдений за изменениями в файле или папки
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/fs/unwatchFile.html">
+		прекращение наблюдения за изменениями в файле
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/fs/futimes.html">
+		изменение временных меток модификации и доступа файлового дескриптора
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/fs/utimes.html">
+		изменение временных меток модификации и доступа к файлу
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/fs/realpath.html">
+		определение фактического местоположения пути
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/fs/realpath.native.html">
+		определение фактического местоположения через коллбэк
+	</a>
+</div>
+
+<h2>Модуль path</h2>
+<div>
+	<a href="../../../ru/javascript/nodejs/manual/path/basename.html">
+		имя файла
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/path/delimiter.html">
+		разделитель пути
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/path/dirname.html">
+		имя папки
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/path/extname.html">
+		расширение файла
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/path/format.html">
+		путь к файлу из объекта
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/path/isAbsolute.html">
+		абсолютный путь
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/path/join.html">
+		объединяет сегменты пути
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/path/normalize.html">
+		нормализация пути
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/path/parse.html">
+		преобразование пути из строки в объект
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/path/posix.html">
+		реализации методов пути для POSIX
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/path/relative.html">
+		относительный путь от заданного пути к другому пути
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/path/resolve.html">
+		абсолютный путь из сегментов
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/path/sep.html">
+		разделитель сегментов пути
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/path/toNamespacedPath.html">
+		эквивалентный путь с префиксом из заданного пути
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/path/win32.html">
+		реализации методов пути для Windows
+	</a>
+</div>
+</section><section data-e="pane" data-x data-m-curr="F" data-m-type="P" data-m-tabb="ОС">
+<h2>Модуль os</h2>
+<div>
+	<a href="../../../ru/javascript/nodejs/manual/os/machine.html">
+		тип машины (ПК)
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/os/userInfo.html">
+		текущий пользователь
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/os/platform.html">
+		платформа операционной системы
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/os/release.html">
+		версия операционной системы
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/os/type.html">
+		имя операционной системы
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/os/arch.html">
+		архитектура процессора операционной системы
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/os/cpus.html">
+		информация о логических ядрах процессора
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/os/version.html">
+		версия ядра операционной системы
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/os/constants.html">
+		константы операционной системы
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/os/EOL.html">
+		получение символа конца строки
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/os/availableParallelism.html">
+		количество параллелизма программы по умолчанию
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/os/endianness.html">
+		эндианальность процессора
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/os/setPriority.html">
+		установка приоритета планирования процесса
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/os/getPriority.html">
+		приоритет планирования для процесса
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/os/loadavg.html">
+		средние значения нагрузки системы
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/os/uptime.html">
+		время работы системы
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/os/totalmem.html">
+		общий объем системной памяти
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/os/freemem.html">
+		количество свободной системной памяти
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/os/homedir.html">
+		путь к домашнему каталогу
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/os/devNull.html">
+		путь к файлу нулевого устройства
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/os/tmpdir.html">
+		путь к каталогу для временных файлов
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/os/networkInterfaces.html">
+		сетевой интерфейс компьютера
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/os/hostname.html">
+		имя хоста
+	</a>
+</div>
+</section><section data-e="pane" data-x data-m-curr="F" data-m-type="P" data-m-tabb="Строка запроса">
+<h2>Модуль Query string</h2>
+<div>
+	<a href="../../../ru/javascript/nodejs/manual/querystring/parse.html">
+		объект из URL-адреса
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/querystring/stringify.html">
+		URL-адрес из объекта
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/querystring/escape.html">
+		URL-адрес из строки через %
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/querystring/unescape.html">
+		строка из URL-адрес с %
+	</a>
+</div>
+</section><section data-e="pane" data-x data-m-curr="F" data-m-type="P" data-m-tabb="Assert">
+<h2>Модуль Assert</h2>
+<div>
+	<a href="../../../ru/javascript/nodejs/manual/assert/AssertionError.html">
+		ошибка утверждения двух параметров
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/assert/assert.html">
+		проверка истинности утверждения
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/assert/deepStrictEqual.html">
+		проверка параметров на глубокое строгое равенство
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/assert/doesNotMatch.html">
+		проверка несовпадения строки и регулярного выражения
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/assert/doesNotReject.html">
+		проверка не отклонен ли промис
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/assert/fail.html">
+		сообщение об ошибке по умолчанию
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/assert/ifError.html">
+		ошибка значения
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/assert/match.html">
+		проверка совпадения строки и регулярного выражения
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/assert/notDeepStrictEqual.html">
+		проверка параметров на глубокое строгое неравенство
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/assert/notStrictEqual.html">
+		проверка параметров на строгое неравенство
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/assert/rejects.html">
+		проверка отклонения промиса
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/assert/strictEqual.html">
+		проверка параметров на строгое неравенство
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/assert/throws.html">
+		проверка ошибки в функции
+	</a>
+</div>
+</section><section data-e="pane" data-x data-m-curr="F" data-m-type="P" data-m-tabb="Console">
+<h2>Модуль Console</h2>
+<div>
+	<a href="../../../ru/javascript/nodejs/manual/console/Console.html">
+		создание новой консоли
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/console/assert.html">
+		проверка истинности значения или утверждения в консоли
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/console/count.html">
+		счетчик вызовов консоли
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/console/countReset.html">
+		перезапуск счетчика вызовов консоли
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/console/dirxml.html">
+		иерархическая структура элемента XML/HTML
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/console/error.html">
+		сообщение об ошибке в консоли
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/console/warn.html">
+		предупреждающие сообщения в консоли
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/console/group.html">
+		группы сообщений в консоли
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/console/groupCollapsed.html">
+		сворачивает группы сообщений в консоли
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/console/groupEnd.html">
+		завершение группы сообщений в консоли
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/console/log.html">
+		сообщения в консоли
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/console/debug.html">
+		вывод сообщений в консоль
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/console/info.html">
+		вывод сообщений в консоль
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/console/table.html">
+		таблица в консоли
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/console/time.html">
+		запуск таймера в консоли
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/console/timeEnd.html">
+		остановка таймера в консоли
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/console/timeLog.html">
+		время выполнения кода в консоли
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/console/trace.html">
+		трассировка стека
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/console/clear.html">
+		очистка консоли
+	</a>
+</div>
+</section><section data-e="pane" data-x data-m-curr="F" data-m-type="P" data-m-tabb="События">
+<h2>EventEmitter</h2>
+<div>
+	<a href="../../../ru/javascript/nodejs/manual/events/EventEmitter.html">
+		создание события
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/events/EventEmitter/emit.html">
+		вызов слушателя для события
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/events/EventEmitter/eventNames.html">
+		названия событий
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/events/EventEmitter/getMaxListeners.html">
+		максимальное значение слушателей
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/events/EventEmitter/listenerCount.html">
+		количество слушателей события
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/events/EventEmitter/listeners.html">
+		копия массива слушателей события
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/events/EventEmitter/on.html">
+		добавление слушателя для события в конец массива слушателей
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/events/EventEmitter/addListener.html">
+		добавление слушателя для события
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/events/EventEmitter/once.html">
+		однократно добавляет слушателя для события в конец массива
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/events/EventEmitter/prependListener.html">
+		добавление слушателя для события в начало массива слушателей
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/events/EventEmitter/prependOnceListener.html">
+		однократное добавление слушателя для события в начало массива слушателей
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/events/EventEmitter/removeAllListeners.html">
+		удаление всех слушателей для события
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/events/EventEmitter/removeListener.html">
+		удаление одного слушателя для события
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/events/EventEmitter/off.html">
+		удаление одного слушателя для события
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/events/EventEmitter/setMaxListeners.html">
+		изменение максимального количества слушателей
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/events/EventEmitter/rawListeners.html">
+		копия массива слушателей события, включая все оболочки слушателей
+	</a>
+</div>
+
+<h2>Event</h2>
+<div>
+	<a href="../../../ru/javascript/nodejs/manual/events/cancelable.html">
+		проверка возможности отмены события
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/events/defaultPrevented.html">
+		проверка отменен ли вызов события
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/events/isTrusted.html">
+		проверка вызвано ли событие пользователем или скриптом
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/events/timeStamp.html">
+		отметка времени создания события
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/events/defaultMaxListeners.html">
+		максимальное количество слушателей по умолчанию
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/events/errorMonitor.html">
+		отслеживание ошибки слушателей
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/events/getEventListeners.html">
+		копия массива слушателей события
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/events/getMaxListeners.html">
+		максимальное количество слушателей
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/events/once.html">
+		создание промиса для события
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/events/on.html">
+		итерирует названия событий
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/events/setMaxListeners.html">
+		изменение максимального количества слушателей события
+	</a>
+</div>
+
+<h2>EventTarget</h2>
+<div>
+	<a href="../../../ru/javascript/nodejs/manual/events/eventTarget.html">
+		создание событий и слушателей для них
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/events/eventTarget/addEventListener.html">
+		добавление слушателя для события
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/events/eventTarget/dispatchEvent.html">
+		отправление события в список обработчиков
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/events/eventTarget/removeEventListener.html">
+		отправление события в список обработчиков
+	</a>
+</div>
+</section><section data-e="pane" data-x data-m-curr="F" data-m-type="P" data-m-tabb="Таймеры">
+<h2>Модуль Timers</h2>
+<div>
+	<a href="../../../ru/javascript/nodejs/manual/timers/setImmediate.html">
+		установка немедленного выполнения коллбэка
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/timers/setInterval.html">
+		установка интервала выполнения коллбэка
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/timers/setTimeout.html">
+		установка однократного выполнения коллбэка через задержку
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/timers/clearInterval.html">
+		отмена выполнения коллбэка
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/timers/clearImmediate.html">
+		отмена немедленного выполнения коллбэка
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/timers/clearTimeout.html">
+		отмена однократного выполнения коллбэка
+	</a>
+</div>
+
+<h2>Immediate</h2>
+<div>
+	<a href="../../../ru/javascript/nodejs/manual/timers/immediate/hasRef.html">
+		регулирует работу цикла событий
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/timers/immediate/ref.html">
+		продолжение работы цикла событий
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/timers/immediate/unref.html">
+		активный цикл событий
+	</a>
+</div>
+
+<h2>Timeout</h2>
+<div>
+	<a href="../../../ru/javascript/nodejs/manual/timers/timeout/hasRef.html">
+		регулирует работу цикла событий
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/timers/timeout/ref.html">
+		продолжение работы цикла событий
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/timers/timeout/refresh.html">
+		перезапускает таймер
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/timers/timeout/unref.html">
+		активный цикл событий
+	</a>
+</div>
+</section><section data-e="pane" data-x data-m-curr="F" data-m-type="P" data-m-tabb="Буфферы">
+<h2>Буфферы</h2>
+<div>
+	<a href="../../../ru/javascript/nodejs/manual/buffer/alloc.html">
+		создание объекта буфера
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/buffer/allocUnsafe.html">
+		создание небезопасного объекта буфера
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/buffer/allocUnsafeSlow.html">
+		создание небезопасного объекта буфера без инициализации
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/buffer/byteLength.html">
+		размер буфера
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/buffer/compare.html">
+		сравнение двух объектов буфера
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/buffer/concat.html">
+		объединение объектов буфера из массива
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/buffer/copyBytesFrom.html">
+		копирование базовой памяти в новый буфер
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/buffer/from.html">
+		создание объекта буфера из указанного значения
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/buffer/isBuffer.html">
+		проверка является ли объект буфером
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/buffer/isEncoding.html">
+		проверка поддерживается ли кодировка
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/buffer/poolSize.html">
+		размер выделенных экземпляров буфера
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/buffer/byteOffset.html">
+		смещение в байтах буфера
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/buffer/buffer.compare.html">
+		сравнение буфера с заданным объектом
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/buffer/buffer.copy.html">
+		копирование данных из буфера в заданный объект
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/buffer/entries.html">
+		пара индекс-байт из объекта буфера
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/buffer/equals.html">
+		сравнение буферов
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/buffer/fill.html">
+		заполнение объекта буфера данными
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/buffer/includes.html">
+		проверка есть ли в объекте буфера данное значение
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/buffer/indexOf.html">
+		поиск первого индекса заданного значения в объекте буфера
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/buffer/keys.html">
+		итератор индексов в объекте буфера
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/buffer/lastIndexOf.html">
+		поиск последнего индекса заданного значения в объекте буфера
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/buffer/length.html">
+		количество байтов в буфере
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/buffer/toJSON.html">
+		преобразование объекта буфера в формат JSON
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/buffer/toString.html">
+		преобразование объекта буфера в строку
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/buffer/values.html">
+		итератор байтов в объекте буфера
+	</a>
+	<a href="../../../ru/javascript/nodejs/manual/buffer/write.html">
+		запись строки в объект буфера
+	</a>
+</div>
+</section>
+</div>			</main>
+						<footer data-w="ruct/foot">
+				<div data-w="nict/finf">
+	<span data-e="text" data-x>
+		Трепачёв Дмитрий &copy; 2012-2025	</span>
+	<br>
+	<a data-e="link" data-x href="https://t.me/trepachev_dmitry">t.me/trepachev_dmitry</a>
+</div>							</footer>
+			<div data-w="nict/jump">
+	<a href="#top"><span>&uarr;</span></a>
+</div>			<div data-w="nict/lagr">
+	</div>					</div>
+		
+		<script src="../../../tore/@/metrikaΣ.js?v=1"></script>	</body>
+</html>
