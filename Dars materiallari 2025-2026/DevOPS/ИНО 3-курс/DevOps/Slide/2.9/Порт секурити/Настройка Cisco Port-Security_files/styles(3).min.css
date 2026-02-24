@@ -1,0 +1,457 @@
+:root {
+  --accent-blue: #3F67F2;
+  --accent-pink: #D8C6FF;
+  --not-black: #1F1F1F;
+  --h-gradient: linear-gradient(114.58deg, #2067EF 0%, #7466F5 100%);
+  --stroke-gray: #BDBCDB;
+  --txt-disabled: #C5C0DB;
+  --input-bg: #F7F7FD;
+  --white: #ffffff;
+  --purple: #605DEC;
+  --purple-gray: #E3E4EF;
+  --border-gray: #DBDBDB;
+  --main-bg: #F1F2F6; }
+
+body {
+  margin-top: 0;
+  margin-bottom: 70px;
+}
+
+@font-face {
+  font-family: "Benzin";
+  src: url("../../fonts/Benzin-Semibold.woff2") format("woff2"), url("../../fonts/Benzin-Semibold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+/*html {*/
+		/*font-size : 10px;*/
+	/*} */
+
+.banner-link{
+position: absolute;
+width: 100%;
+height: 100%;
+top: 0;
+left: 0;
+text-decoration: none; /* No underlines on the link */
+z-index: 10; /* Places the link above everything else in the div */
+background-color: #FFF; /* Fix to make div clickable in IE */
+opacity: 0; /* Fix to make div clickable in IE */
+filter: alpha(opacity=1); /* Fix to make div clickable in IE */
+}
+
+._wrapper {
+  background: #F1F2F6;
+  overflow-x: hidden; }
+  ._wrapper section {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto; }
+  ._wrapper img {
+    height: auto; }
+  ._wrapper .title {
+    font-weight: bold; }
+
+._section {
+  margin: 120px 0;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto; }
+
+._flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+._d-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+._centered {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.bold {
+  font-weight: bold; }
+
+._f-14 {
+  font-size: 14px;
+  line-height: 110%; }
+
+._f-18 {
+  font-size: 18px;
+  line-height: 110%; }
+
+._f-20 {
+  font-size: 20px;
+  line-height: 110%; }
+
+._f-27 {
+  font-size: 27px;
+  line-height: 110%; }
+
+._f-38 {
+  font-size: 38px;
+  line-height: 110%; }
+
+._f-56 {
+  font-size: 56px;
+  line-height: 110%; }
+
+._container-lg {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 1150px; }
+
+._container-xl {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 1346px; }
+
+._input {
+  display: block;
+  width: 100%;
+  height: 56px;
+  background: var(--white);
+  border: 1px solid var(--border-gray);
+  border-radius: 16px;
+  padding: 0 16px;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--not-black);
+  outline: none; }
+  ._input::-webkit-input-placeholder {
+    opacity: 0.6; }
+  ._input::-moz-placeholder {
+    opacity: 0.6; }
+  ._input:-ms-input-placeholder {
+    opacity: 0.6; }
+  ._input::-ms-input-placeholder {
+    opacity: 0.6; }
+  ._input::placeholder {
+    opacity: 0.6; }
+
+._btn {
+  width: 100%;
+  height: 56px;
+  -webkit-box-shadow: 0px 4px 0px #000000;
+          box-shadow: 0px 4px 0px #000000;
+  border-radius: 16px;
+  font-size: 16px;
+  border: none;
+  padding: 0;
+  -webkit-transition: .2s linear;
+  -o-transition: .2s linear;
+  transition: .2s linear; }
+  ._btn-no-shadow {
+    -webkit-box-shadow: none;
+            box-shadow: none; }
+  ._btn:hover {
+    -webkit-box-shadow: none;
+            box-shadow: none; }
+  ._btn:not([disabled]) {
+    cursor: pointer; }
+
+._button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 18px 32px;
+  background: var(--purple);
+  border-radius: 16px;
+  border: none;
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--white);
+  cursor: pointer; }
+
+._outline-border {
+  position: relative; }
+  ._outline-border::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--border-gray);
+    pointer-events: none; }
+
+._rounded {
+  border-radius: 34px; }
+
+@media (max-width: 1400px) {
+  ._container-xl {
+    max-width: 1146px; } }
+
+@media (max-width: 1200px) {
+  ._container-xl {
+    max-width: 946px; } }
+
+@media (max-width: 1024px) {
+  ._container-lg, ._container-xl {
+    max-width: 642px; }
+  .title {
+    font-size: 48px; }
+  ._section {
+    margin: 60px 0; }
+  ._f-20 {
+    font-size: 18px; }
+  ._f-27 {
+    font-size: 24px; }
+  ._f-38 {
+    font-size: 32px; }
+  ._f-56 {
+    font-size: 48px; } }
+
+@media (max-width: 767px) {
+  ._container-lg, ._container-xl {
+    max-width: 364px; }
+  .title {
+    font-size: 28px; }
+  ._section {
+    margin: 50px 0; }
+  ._f-20 {
+    font-size: 16px; }
+  ._f-27 {
+    font-size: 20px; }
+  ._f-38 {
+    font-size: 28px; }
+  ._f-56 {
+    font-size: 32px; }
+  ._input {
+    font-size: 14px; } }
+
+.discountBanner {
+  position: fixed;
+ /*  top: 0; */
+  left: 0;
+  right: 0;
+  bottom:0;
+  z-index: 99;
+  margin-left: auto;
+  margin-right: auto;
+/*   max-width: 1600px; */
+  height: 70px;
+  /*background: #FF5775;*/
+  background: linear-gradient(90.13deg, #B7FF9E 0%, #FAEE81 100.05%);
+  color: #1F1F1F; }
+  .discountBanner::before, .discountBanner::after {
+    position: absolute;
+    top: 0;
+    width: 174px;
+    height: 92px;
+    content: ""; }
+  .discountBanner::before {
+    left: 0;
+    /*background: url(../../images/banner/general/left_pic.png) 0 0 no-repeat;*/
+    background: url(../../images/banner/general/left_pic_winter.png) 0 0 no-repeat;
+    background-size: contain; }
+  .discountBanner::after {
+    right: 0;
+    /*background: url(../../images/banner/general/right_pic.png) 0 0 no-repeat;*/
+    background: url(../../images/banner/general/right_pic_winter.png) 0 0 no-repeat;
+    background-size: contain; }
+  .discountBanner__content {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 100%;
+    position: relative;
+    z-index: 3; }
+    .discountBanner__content-discounts {
+      margin-left: 30px;
+      margin-right: 30px; }
+    .discountBanner__content-btn {
+      margin-left: 30px; }
+  .discountBanner-title {
+    font-family: "Benzin";
+    font-size: 27px;
+    line-height: 140%; }
+  .discountBanner-timer {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 140%; }
+  .discountBanner-btn {
+    font-weight: bold;
+    padding: 14px 40px;
+    background:var(--not-black);
+    color: #FFFFFF; }
+	.discountBanner-btn:before{
+	content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+	}
+  .discountBanner-discounts__item {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px; }
+    .discountBanner-discounts__item:last-child {
+      margin-right: 0; }
+  .discountBanner-discounts__txt {
+    width: 44px;
+    height: 44px;
+    background: -o-radial-gradient(2.99% 15.05%, 85.39% 85.39%, #FFEC40 0%, #FFCE40 100%);
+    /*background: radial-gradient(85.39% 85.39% at 2.99% 15.05%, #FFEC40 0%, #FFCE40 100%);*/
+    border-radius: 12px;
+    font-weight: 800;
+    font-size: 15px;
+    color: #1F1F1F; }
+    .discountBanner-discounts__txt-1 {
+      background: url(../../images/banner/general/winter_40.png) center / contain no-repeat;
+      -webkit-transform: rotate(-8.23deg);
+          -ms-transform: rotate(-8.23deg);
+              transform: rotate(-8.23deg); }
+    .discountBanner-discounts__txt-2 {
+      background: url(../../images/banner/general/winter_40.png) center / contain no-repeat;
+      -webkit-transform: rotate(9.18deg);
+          -ms-transform: rotate(9.18deg);
+              transform: rotate(9.18deg); }
+    .discountBanner-discounts__txt-3 {
+      background: url(../../images/banner/general/winter_40.png) center / contain no-repeat;
+      -webkit-transform: rotate(-3.84deg);
+          -ms-transform: rotate(-3.84deg);
+              transform: rotate(-3.84deg); }
+
+@media (max-width: 1200px) {
+  .discountBanner::before {
+    left: -50px; }
+  .discountBanner::after {
+    right: -32px; }
+  .discountBanner__content-discounts {
+    margin-left: 28px;
+    margin-right: 28px; }
+  .discountBanner__content-btn {
+    margin-left: 28px; }
+  .discountBanner-title {
+    font-size: 27px; }
+  .discountBanner-timer {
+    font-size: 18px; }
+  .discountBanner-btn {
+    padding: 14px 32px; }
+  .discountBanner-discounts__item {
+    width: 42px;
+    height: 42px; }
+  .discountBanner-discounts__txt {
+    width: 38px;
+    height: 38px;
+    font-size: 13px;
+    border-radius: 8px; } }
+
+@media (max-width: 1024px) {
+  .discountBanner::before, .discountBanner::after {
+    width: 92px; }
+  .discountBanner::before {
+    left: 0;
+    /*background: url(../../images/banner/general/left_pic-m.png) 0 0 no-repeat;*/
+    background: url(../../images/banner/general/left_pic_mobile_winter.png) 0 0 no-repeat;
+    background-size: contain; }
+  .discountBanner::after {
+    right: 0;
+    /*background: url(../../images/banner/general/right_pic-m.png) 0 0 no-repeat;*/
+    background: url(../../images/banner/general/right_pic_mobile_winter.png) 0 0 no-repeat;
+    background-size: contain; }
+  .discountBanner__content {
+    max-width: 602px;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding-top: 5px; }
+    .discountBanner__content-timer {
+      position: absolute;
+      left: 0;
+      bottom: 12px; }
+    .discountBanner__content-btn {
+      margin-left: 24px;
+      padding-top: 8px; }
+    .discountBanner__content-discounts {
+      margin-left: auto;
+      margin-right: 0;
+      padding-top: 8px; }
+  .discountBanner-title {
+    font-size: 24px; }
+  .discountBanner-timer {
+    font-weight: 400;
+    font-size: 16px; }
+  .discountBanner-btn {
+    font-size: 14px;
+    line-height: 20px;
+    padding: 10px 20px; }
+  .discountBanner-discounts__item {
+    width: 42px;
+    height: 42px; }
+  .discountBanner-discounts__txt {
+    width: 36px;
+    height: 36px;
+    font-size: 13px; } }
+
+@media (max-width: 767px) {
+  .discountBanner::before {
+    /*background: url(../../images/banner/general/left_pic-m-2.png) 0 0 no-repeat;*/
+    background: url(../../images/banner/general/left_pic_mobile_winter.png) 0 0 no-repeat;
+    background-size: contain; }
+  .discountBanner__content {
+    /*max-width: 250px;*/
+    max-width: 270px;
+    padding-top: 0;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .discountBanner__content-btn {
+      display: none; }
+    .discountBanner__content-timer {
+      display: none; }
+    .discountBanner__content-discounts {
+      padding-top: 0;
+      margin-left: 16px; }
+  .discountBanner-discounts__item {
+    width: 60px;
+    height: 60px; }
+    .discountBanner-discounts__item:not(:last-child) {
+      display: none; }
+  .discountBanner-discounts__txt {
+    width: 46px;
+    height: 46px;
+    font-size: 16px;
+    border-radius: 13px; }
+  .discountBanner-title {
+    font-size: 18px; } }

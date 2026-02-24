@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<!-- saved from url=(0046)https://wiki.merionet.ru/articles/protocol-vtp -->
+<html lang="ru-RU"><head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# profile: http://ogp.me/ns/profile# fb: http://ogp.me/ns/fb#"><meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+    
+    <title>Протокол VTP
+</title><!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE = edge"><![endif]-->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Данная статья будет посвящена еще одному проприетарному протоколу компании CiscoSystems - VTP (VLANTrunkingProtocol)...">
+    <meta property="article:section" content="Сети">
+    <meta property="article:section" content="Теория">
+    <meta property="og:title" content="Протокол VTP
+">
+    <meta property="og:description" content="Данная статья будет посвящена еще одному проприетарному протоколу компании CiscoSystems - VTP (VLANTrunkingProtocol)...">
+    <meta property="og:url" content="https://wiki.merionet.ru/articles/protocol-vtp">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Merion Academy - База знаний">
+    <meta property="og:locale" content="ru_RU">
+    <meta property="article:modified_time" content="2015-11-21T00:00:01+0300">
+    <meta property="article:published_time" content="2015-11-21T00:00:01+0300">
+    <meta property="article:author" content="Merion Academy">
+    <meta property="og:image" content="https://ops.merionet.ru/render.jpeg?random=true&amp;text=%CF%F0%EE%F2%EE%EA%EE%EB+VTP%0D%0A&amp;tags[]=%D1%E5%F2%E8&amp;tags[]=%D2%E5%EE%F0%E8%FF">
+    <meta property="og:image:secure_url" content="https://ops.merionet.ru/render.jpeg?random=true&amp;text=%CF%F0%EE%F2%EE%EA%EE%EB+VTP%0D%0A&amp;tags[]=%D1%E5%F2%E8&amp;tags[]=%D2%E5%EE%F0%E8%FF">
+    <meta property="og:image:alt" content="Протокол VTP
+">
+    <meta property="og:image:width" content="1080">
+    <meta property="og:image:height" content="570">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://wiki.merionet.ru/articles/protocol-vtp">
+    <link rel="shortcut icon" href="https://wiki.merionet.ru/static/images/general/icons/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="./Протокол VTP_files/swiper-bundle.min.css">
+    <link rel="stylesheet" type="text/css" href="./Протокол VTP_files/styles.min.css">
+    <link rel="stylesheet" type="text/css" href="./Протокол VTP_files/styles(1).min.css">
+    <link rel="stylesheet" type="text/css" href="./Протокол VTP_files/styles(2).min.css">
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="./Протокол VTP_files/atom-one-dark.min.css">
+    <!-- Google Tag Manager -->
+<script type="text/javascript" async="" src="./Протокол VTP_files/js"></script><script async="" src="./Протокол VTP_files/tag.js.Без названия"></script><script type="text/javascript" async="" src="./Протокол VTP_files/analytics.js.Без названия"></script><script type="text/javascript" async="" src="./Протокол VTP_files/js(1)"></script><script async="" src="./Протокол VTP_files/gtm.js.Без названия"></script><script>(function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+            'gtm.start':
+                new Date().getTime(), event: 'gtm.js'
+        });
+        var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src =
+            'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-KSN469M');</script>
+<!-- End Google Tag Manager -->
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KSN469M"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+<!-- Global site tag(gtag.js)-Google Analytics -->
+<script async="" src="./Протокол VTP_files/js(2)"></script>
+<script>window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments)
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'UA-59106392-2', {'optimize_id': 'GTM-TNB8QG3'});</script><style class="fslightbox-styles">.fslightbox-absoluted{position:absolute;top:0;left:0}.fslightbox-fade-in{animation:fslightbox-fade-in .3s cubic-bezier(0,0,.7,1)}.fslightbox-fade-out{animation:fslightbox-fade-out .3s ease}.fslightbox-fade-in-strong{animation:fslightbox-fade-in-strong .3s cubic-bezier(0,0,.7,1)}.fslightbox-fade-out-strong{animation:fslightbox-fade-out-strong .3s ease}@keyframes fslightbox-fade-in{from{opacity:.65}to{opacity:1}}@keyframes fslightbox-fade-out{from{opacity:.35}to{opacity:0}}@keyframes fslightbox-fade-in-strong{from{opacity:.3}to{opacity:1}}@keyframes fslightbox-fade-out-strong{from{opacity:1}to{opacity:0}}.fslightbox-cursor-grabbing{cursor:grabbing}.fslightbox-full-dimension{width:100%;height:100%}.fslightbox-open{overflow:hidden;height:100%}.fslightbox-flex-centered{display:flex;justify-content:center;align-items:center}.fslightbox-opacity-0{opacity:0!important}.fslightbox-opacity-1{opacity:1!important}.fslightbox-scrollbarfix{padding-right:17px}.fslightbox-transform-transition{transition:transform .3s}.fslightbox-container{font-family:Arial,sans-serif;position:fixed;top:0;left:0;background:linear-gradient(rgba(30,30,30,.9),#000 1810%);touch-action:pinch-zoom;z-index:1000000000;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}.fslightbox-container *{box-sizing:border-box}.fslightbox-svg-path{transition:fill .15s ease;fill:#ddd}.fslightbox-nav{height:45px;width:100%;position:absolute;top:0;left:0}.fslightbox-slide-number-container{display:flex;justify-content:center;align-items:center;position:relative;height:100%;font-size:15px;color:#d7d7d7;z-index:0;max-width:55px;text-align:left}.fslightbox-slide-number-container .fslightbox-flex-centered{height:100%}.fslightbox-slash{display:block;margin:0 5px;width:1px;height:12px;transform:rotate(15deg);background:#fff}.fslightbox-toolbar{position:absolute;z-index:3;right:0;top:0;height:100%;display:flex;background:rgba(35,35,35,.65)}.fslightbox-toolbar-button{height:100%;width:45px;cursor:pointer}.fslightbox-toolbar-button:hover .fslightbox-svg-path{fill:#fff}.fslightbox-slide-btn-container{display:flex;align-items:center;padding:12px 12px 12px 6px;position:absolute;top:50%;cursor:pointer;z-index:3;transform:translateY(-50%)}@media (min-width:476px){.fslightbox-slide-btn-container{padding:22px 22px 22px 6px}}@media (min-width:768px){.fslightbox-slide-btn-container{padding:30px 30px 30px 6px}}.fslightbox-slide-btn-container:hover .fslightbox-svg-path{fill:#f1f1f1}.fslightbox-slide-btn{padding:9px;font-size:26px;background:rgba(35,35,35,.65)}@media (min-width:768px){.fslightbox-slide-btn{padding:10px}}@media (min-width:1600px){.fslightbox-slide-btn{padding:11px}}.fslightbox-slide-btn-container-previous{left:0}@media (max-width:475.99px){.fslightbox-slide-btn-container-previous{padding-left:3px}}.fslightbox-slide-btn-container-next{right:0;padding-left:12px;padding-right:3px}@media (min-width:476px){.fslightbox-slide-btn-container-next{padding-left:22px}}@media (min-width:768px){.fslightbox-slide-btn-container-next{padding-left:30px}}@media (min-width:476px){.fslightbox-slide-btn-container-next{padding-right:6px}}.fslightbox-down-event-detector{position:absolute;z-index:1}.fslightbox-slide-swiping-hoverer{z-index:4}.fslightbox-invalid-file-wrapper{font-size:22px;color:#eaebeb;margin:auto}.fslightbox-video{object-fit:cover}.fslightbox-youtube-iframe{border:0}.fslightboxl{display:block;margin:auto;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:67px;height:67px}.fslightboxl div{box-sizing:border-box;display:block;position:absolute;width:54px;height:54px;margin:6px;border:5px solid;border-color:#999 transparent transparent transparent;border-radius:50%;animation:fslightboxl 1.2s cubic-bezier(.5,0,.5,1) infinite}.fslightboxl div:nth-child(1){animation-delay:-.45s}.fslightboxl div:nth-child(2){animation-delay:-.3s}.fslightboxl div:nth-child(3){animation-delay:-.15s}@keyframes fslightboxl{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}.fslightbox-source{position:relative;z-index:2;opacity:0}</style><script type="text/javascript" async="" src="./Протокол VTP_files/openapi.js.Без названия"></script></head>
+<body>
+<div class="wrapper">
+    <header class="header fixed">
+    <div class="container">
+        <div class="header__content flex">
+            <div class="header__logo"><a class="logo" href="https://wiki.merionet.ru/" aria-label="merion academy"><img src="./Протокол VTP_files/logo_new.png" alt="logo"></a></div>
+            <div class="header__group">
+                <div class="header__menu">
+                    <div class="header__menu-inner flex">
+                        <div class="header__menu-item header__menu-item--top">
+                            <nav class="header-menu header-topMenu">
+                                <ul class="menu flex">
+                                    <li class="menu__item">
+                                        <a class="menu__link" href="https://wiki.merionet.ru/sections/devops?utm_source=knowledgebase&amp;utm_content=protocol-vtp">DevOps</a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a class="menu__link" href="https://wiki.merionet.ru/sections/security?utm_source=knowledgebase&amp;utm_content=protocol-vtp">Безоп</a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a class="menu__link" href="https://wiki.merionet.ru/sections/networks?utm_source=knowledgebase&amp;utm_content=protocol-vtp">Сети </a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a class="menu__link" href="https://wiki.merionet.ru/sections/voip?utm_source=knowledgebase&amp;utm_content=protocol-vtp">Воип</a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a class="menu__link" href="https://wiki.merionet.ru/sections/dev?utm_source=knowledgebase&amp;utm_content=protocol-vtp">Разработка</a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a class="menu__link" href="https://wiki.merionet.ru/sections/qa?utm_source=knowledgebase&amp;utm_content=protocol-vtp">QA</a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a class="menu__link" href="https://wiki.merionet.ru/sections/servers?utm_source=knowledgebase&amp;utm_content=protocol-vtp">Сервера</a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a class="menu__link" href="https://wiki.merionet.ru/sections/career?utm_source=knowledgebase&amp;utm_content=protocol-vtp">Карьера</a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a class="menu__link bold" href="https://wiki.merionet.ru/merion-academy?utm_source=knowledgebase&amp;utm_content=protocol-vtp" target="_blank">Академия</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="header__menu-item active" style="display: none;">
+                            <nav class="header-menu header-bottomMenu">
+                                <ul class="menu flex">
+                                    <li class="menu__item">
+                                        <a class="menu__link" href="https://wiki.merionet.ru/sections/how-to?utm_source=knowledgebase&amp;utm_content=protocol-vtp">How to</a>
+                                    </li>
+                                    <!--                                    <li class="menu__item">-->
+                                    <!--                                        <a class="menu__link" href="/sections/news">Новости</a>-->
+                                    <!--                                    </li>-->
+                                    <li class="menu__item">
+                                        <a class="menu__link" href="https://wiki.merionet.ru/sections/reviews?utm_source=knowledgebase&amp;utm_content=protocol-vtp">Обзоры </a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a class="menu__link" href="https://wiki.merionet.ru/sections/theory?utm_source=knowledgebase&amp;utm_content=protocol-vtp">Теория</a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a class="menu__link" href="https://wiki.merionet.ru/sections/useful?utm_source=knowledgebase&amp;utm_content=protocol-vtp">Полезно</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                <div class="header__search">
+                    <form class="searchForm" id="search" name="search" action="https://wiki.merionet.ru/search/" method="get">
+                        <div class="searchForm__inner">
+                            <button class="searchForm__open searchForm__btn" type="button">
+                                <div class="searchForm__open-search"><img src="./Протокол VTP_files/search-icon.svg" alt="search-icon"></div>
+                                <div class="searchForm__open-close"><img src="./Протокол VTP_files/close.svg" alt="close-icon"></div>
+                            </button>
+                            <input class="searchForm__input" title="search" name="search" id="input" required="" type="text" placeholder="Искать в Базе...">
+                            <button class="searchForm__submit searchForm__btn" type="submit"><img src="./Протокол VTP_files/search-icon.svg" alt="search-icon"></button>
+                        </div>
+                    </form>
+                </div>
+                <div class="header__m-menu"><a class="open-menu" href="https://wiki.merionet.ru/articles/protocol-vtp#" aria-label="mobile menu"><span> </span></a></div>
+            </div>
+        </div>
+    </div>
+</header>    <div class="content">
+        <div class="article section">
+            <div class="container">
+                <div class="article-head">
+                    <div class="article-head__tags">
+                        <div class="article-tags flex">
+                            <a class="article-tags__item" href="https://wiki.merionet.ru/sections/networks?utm_source=knowledgebase&amp;utm_content=protocol-vtp">
+                                <div class="tag networks-bg color-white">Сети</div>
+                            </a>
+                            <a class="article-tags__item" href="https://wiki.merionet.ru/sections/theory?utm_source=knowledgebase&amp;utm_content=protocol-vtp">
+                                <div class="tag theory-bg">Теория</div>
+                            </a>
+                            <div class="article-tags__item">
+                                <div class="tag">21.11.2015</div>
+                            </div>
+                            <div class="article-tags__item">
+                                <div class="tag">3 минуты</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="article-head__left">
+                        <div class="article-head__img">
+                            <picture>
+                                <source src="/static/images/general/icons/networks_theory.png" type="image/webp">
+                                <img src="./Протокол VTP_files/networks_theory.png" width="186" height="186" alt="img">
+                            </picture>
+                        </div>
+                    </div>
+                    <div class="article-head__right">
+                        <h1 class="article-head__title section-title">Протокол VTP
+</h1>
+                    </div>
+                </div>
+                <div class="article-item article-content">
+                    <p>Данная статья будет посвящена еще одному проприетарному протоколу компании Cisco Systems - <b>VTP (VLANTrunkingProtocol)</b>, который призван решать возможные проблемы в среде коммутации в случае расширения парка оборудования организации.</p>
+  <div class="article-item"><!--? include '../static/php/content/promo.php'; ?--></div> 
+<p>Для начала вспомним что же такое VLAN. VLAN – это Virtual Local Area Network, что дословно переводится как “виртуальная локальная сеть”. При создании VLAN’а хосты физической сети, объединенные общей функцией, выделяются в логическую виртуальную сеть, при этом их физическое местонахождение не имеет значения. Обычно VLAN настраивается на сетевом коммутаторе, по средствам добавления портов, за которыми находятся хосты подлежащие объединению, в группу. Выглядит это примерно так:</p>
+<a data-fslightbox="" href="./Протокол VTP_files/ATTACH1.png" class="image featured"><img class="article" src="./Протокол VTP_files/ATTACH1.png" alt="Протокол VTP" title="Протокол VTP"></a>
+<p>На слайде приведен случай, когда на коммутаторе настроено два VLAN’a. Порты с 1 по 3 принадлежат VLAN’у 10, а порты с 6 по 8 находятся во VLAN’е 20.</p>
+<p>Команды, которые вводил администратор для такой конфигурации, примерно такие:</p>
+<p>Создание VLAN 10</p>
+<pre class="prettyprint hljs language-bash">Switch(config)<span class="hljs-comment"># vlan 10</span>
+Switch(config)<span class="hljs-comment"># interface range fa0/1 - 3</span>
+Switch(config-if)<span class="hljs-comment"># switchport mode access</span>
+Switch(config-if)<span class="hljs-comment"># switchport access vlan 10</span>
+</pre>
+<p>Создание VLAN 20</p>
+<pre class="prettyprint hljs language-bash">Switch(config)<span class="hljs-comment"># vlan 20</span>
+Switch(config)<span class="hljs-comment"># interface range fa0/5 - 8</span>
+Switch(config-if)<span class="hljs-comment"># switchport mode access</span>
+Switch(config-if)<span class="hljs-comment"># switchport access vlan 20</span>
+</pre>
+<p>Как видите набор команд довольно простой, но администратор вводил их на единственном коммутаторе. Хосты реальных VLAN’ов могут быть рассредоточены по сети и находиться за разными устройствами, как показано на рисунке:</p>
+<a data-fslightbox="" href="./Протокол VTP_files/ATTACH2.png" class="image featured"><img class="article" src="./Протокол VTP_files/ATTACH2.png" alt="Принцип работы протокола VTP" title="Принцип работы протокола VTP"></a>
+<p>Как видно из рисунка хосты принадлежащие VLAN 10 рассредоточены по сети, они находятся как за коммутатором 1 так и за коммутатором 3. Для того, чтобы они могли корректно взаимодействовать, администратору вручную придется создавать VLAN на каждом устройстве и добавлять в них порты. Реальные сети могут содержать ещё больше VLAN сетей и каждую необходимо прописать вручную, в следствие чего растет вероятность допущения ошибок в конфигурации, которая может привести перекрестному соединению и многочисленным несогласованностям.</p>
+<p>Для того чтобы исключить вероятность таких ошибок и был разработан протокол VTP, который позволяет устройствам автоматически делиться информацией о настроенных на них VLAN’ах и самостоятельно вносить изменения в конфигурацию.</p>
+<hr>
+<h3>Режимы работы VTP</h3>
+<p>VTP коммутатор имеет два режима работы:</p>
+<ol>
+<li><b>Server</b></li>
+<p>В этом режиме можно создавать новые и вносить изменения в существующие VLAN’ы.</p>
+<p>Коммутатор будет обновлять свою базу VLAN’ов и сохранять информацию о настройках во Flashпамяти в файле vlan.dat.</p>
+<p>Генерирует и передает сообщения как от других коммутаторов, работающих в режиме сервера, так и от клиентов</p>
+<li><b>Client</b></li>
+<p>Коммутатор в этом режиме будет передавать информацию о VLAN’ах полученную от других коммутаторов и синхронизировать свою базу VLANпри получении VTPобновлений. Настройки нельзя будет поменять через командную строку такого устройства. 3)	Transparent</p>
+<p>В данном режиме коммутатор будет передавать VTPинформацию другим участникам, не синхронизируя свою базу и не генерируя собственные обновления. Настройки VLAN можно поменять лишь для локального коммутатора.</p>
+</ol>
+<hr>
+<h4>Типы сообщений VTP</h4>
+<p>В VTPсуществует три типа сообщений:</p>
+<ol>
+<li><b>Advertisement requests</b></li>
+<p>Представляет из себя запрос от клиента к серверу на оповещение SummaryAdvertisement</p>
+<li><b>Summary advertisements</b></li>
+<p>Данное сообщение по умолчанию сервер отправляет каждые 5 минут или сразу же после изменения конфигурации.</p>
+<li><b>Subset advertisements</b></li>
+<p>Отправляется сразу же после изменения конфигурации VLAN, а также после запроса на оповещение.</p>
+</ol>
+<p>Стоит отметить, что VTPкоммутатор, который получает информацию о новых VLAN’ах, внесет ее в свою конфигурацию только в том случае, если сообщение пришло от коммутатора с большим номером ревизии.</p>
+<p><b>Номер ревизии</b> это некий идентификатор “свежести” базы VLAN. Коммутатор воспринимает базу с наивысшим номером ревизии как самую “свежую” и вносит изменения в свою конфигурацию.</p>
+<p>Протокол VTPявляется проприетарным, т.е закрытым. Он сильно облегчает жизнь администраторам, работающим с оборудованием Cisco. </p>
+<p>Для оборудования других производителей существует аналогичный открытый стандарт - GVRP (GARP VLAN Registration Protocol).</p>                </div>
+                <div class="article-item">
+                    <div class="article-foot">
+                        <div class="article-foot__left">
+                            <div class="article-tags flex article-foot__tags">
+                                <a class="article-tags__item" href="https://wiki.merionet.ru/search/?search=%EF%F0%EE%F2%EE%EA%EE%EB%20VTP">
+            <div class="tag networks-bg color-white">протокол VTP</div>
+            </a><a class="article-tags__item" href="https://wiki.merionet.ru/search/?search=%20VLAN%20Trunking%20Protocol">
+            <div class="tag networks-bg color-white"> VLAN Trunking Protocol</div>
+            </a>                            </div>
+                        </div>
+                        <div class="article-foot__right">
+                            <div class="article-controls">
+                                <div class="article-controls__item">
+                                    <a class="article-controls__btn centered" id="like-btn" href="https://wiki.merionet.ru/articles/protocol-vtp#" onclick="like()">
+                                        <svg class="svg-sprite-icon icon-like">
+                                            <use xlink:href="/static/images/svg/symbol/sprite.svg#like"></use>
+                                        </svg>
+                                    </a></div>
+                                <div class="article-controls__item">
+                                    <a class="article-controls__btn centered" id="dislike-btn" href="https://wiki.merionet.ru/articles/protocol-vtp#" onclick="dislike()">
+                                        <svg class="svg-sprite-icon icon-dislike">
+                                            <use xlink:href="/static/images/svg/symbol/sprite.svg#dislike"></use>
+                                        </svg>
+                                    </a></div>
+                                <div class="article-controls__item popup">
+                                    <span class="popuptext" id="share_popup">Ссылка <br>скопирована</span>
+                                    <a class="article-controls__btn centered" href="https://wiki.merionet.ru/articles/protocol-vtp#" onclick="share()">
+                                        <svg class="svg-sprite-icon icon-share">
+                                            <use xlink:href="/static/images/svg/symbol/sprite.svg#share"></use>
+                                        </svg>
+                                    </a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="article-item">
+                    <div class="article-course article-course--pt-0">
+    <div class="_wrapper">
+        <div class="_container-xl-promo">
+            <div class="courseBanner _outline-border">
+                <div class="courseBanner-info">
+                    <div class="courseBanner-info__tags">
+                        <div class="courseBanner-tags">
+                            <div class="courseBanner-tags__list _flex">
+                                <div class="courseBanner-tags__list-item courseBanner-tags__list-item--m-100">
+                                    <div class="courseBanner-tag devops">DevOps</div>
+                                </div>
+                                <div class="courseBanner-tags__list-item">
+                                    <div class="courseBanner-tag sale">Скидка 25%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="courseBanner-info__content courseBanner-info__content--first active" data-step="1">
+                        <div class="courseBanner-info__title">
+                            <div class="courseBanner-title">DevOps-инженер с нуля</div>
+                        </div>
+                        <div class="courseBanner-info__txt">
+                            <div class="courseBanner-txt">Научитесь использовать инструменты и методы DevOps для автоматизации тестирования, сборки и развертывания кода, управления инфраструктурой и ускорения процесса доставки продуктов в продакшн.
+Станьте желанным специалистом в IT-индустрии и претендуйте на работу с высокой заработной платой.</div>
+                        </div>
+                        <div class="courseBanner-info__controls">
+                            <div class="courseBanner-controls">
+                                <div class="courseBanner-controls__list _flex">
+                                                                            <div class="courseBanner-controls__list-item"><a class="courseBanner-btn _button getLesson" href="https://wiki.merionet.ru/articles/protocol-vtp#">Бесплатный
+                                                урок</a>
+                                        </div>
+                                                                        <div class="courseBanner-controls__list-item">
+                                        <a class="courseBanner-btn _button _banner_button-outline" href="https://wiki.merionet.ru/merion-academy/courses/devops-inzhener-s-nulya?utm_medium=native&amp;utm_source=knowledgebase&amp;utm_content=protocol-vtp">Подробнее</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="courseBanner-info__content courseBanner-info__content--form" data-step="2">
+                        <div class="courseBanner-info__title">
+                            <div class="courseBanner-title">Получи бесплатный <br>вводный урок!</div>
+                        </div>
+                        <div class="courseBanner-info__controls">
+                            <form class="courseBanner-form _form" action="https://wiki.merionet.ru/">
+                                <div class="courseBanner-form__inner _flex">
+                                    <div class="courseBanner-form__inner-left">
+                                        <div class="_form-item">
+                                            <input class="courseBanner-form__input _input" type="text" data-email="" placeholder="E-mail" name="email">
+                                            <input class="courseBanner-form__input _input" type="hidden" name="utm_source" value="">
+                                            <input class="courseBanner-form__input _input" type="hidden" name="utm_medium" value="">
+                                            <input class="courseBanner-form__input _input" type="hidden" name="utm_campaign" value="">
+                                            <input class="courseBanner-form__input _input" type="hidden" name="utm_content" value="">
+                                            <input class="courseBanner-form__input _input" type="hidden" name="utm_term" value="">
+                                            <input class="courseBanner-form__input _input" type="hidden" name="invoice_id" value="6921058743">
+                                            <input class="courseBanner-form__input _input" type="hidden" name="course_id" value="15">
+                                            <div class="_form-error">Пожалуйста, укажите корректный e-mail</div>
+                                        </div>
+                                    </div>
+                                    <div class="courseBanner-form__inner-right">
+                                        <button class="courseBanner-form__btn _button" type="submit">Получить</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="courseBanner-info__content courseBanner-info__content--last" data-step="3">
+                        <div class="courseBanner-info__title">
+                            <div class="courseBanner-title">отправили вводный урок на&nbsp;твой e-mail!</div>
+                        </div>
+                        <div class="courseBanner-info__txt">
+                            <div class="courseBanner-txt">Получи все материалы в telegram и&nbsp;ускорь обучение!</div>
+                        </div>
+                        <div class="courseBanner-info__controls">
+                            <div class="courseBanner-controls">
+                                <div class="courseBanner-controls__list _flex">
+                                    <div class="courseBanner-controls__list-item">
+                                        <span class="loader" id="tg-loader"></span>
+                                        <a class="courseBanner-btn _button courseBanner-btn--short" id="tg-fl-link" href="https://t.me/MerionAcademy_bot"><span class="courseBanner-btn__icon _icon">
+                                <svg class="svg-sprite-icon icon-tg-icon">
+                                  <use xlink:href="../static/images/general/tg_sprite.svg#tg-icon"></use>
+                                </svg></span><span class="courseBanner-btn__txt">Получить</span></a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="courseBanner-img">
+                    <picture>
+                        <source srcset="/static/images/promo/coursebanners/devops-inzhener-s-nulya.webp" type="image/webp">
+                        <img src="./Протокол VTP_files/devops-inzhener-s-nulya.png" width="622" height="332" alt="img">
+                    </picture>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>                                    </div>
+                <div class="article-item">
+                    <div class="article-more">
+                        <div class="article-more__title section-title">Еще по теме:</div>
+                        
+    <div class="article-more__slider swiper-initialized swiper-horizontal swiper-pointer-events swiper-backface-hidden">
+    <div class="swiper-wrapper" id="swiper-wrapper-4337a22bb2c37df6" aria-live="polite" style="transform: translate3d(0px, 0px, 0px);">
+        <div class="article-more__slider-slide swiper-slide swiper-slide-active" role="group" aria-label="1 / 6" style="margin-right: 20px;">
+            <div class="articleCard">
+                <div class="articleCard-grid">
+                    <div class="articleCard-grid__img">
+                        <div class="articleCard-img">
+                            <picture>
+                                <source src="/static/images/general/icons/networks_theory.png" type="image/webp">
+                                <img src="./Протокол VTP_files/networks_theory.png" width="87" height="87" alt="img">
+                            </picture>
+                        </div>
+                    </div>
+                    <div class="articleCard-grid__tags">
+                        <div class="articleCard-tags">
+                            <div class="articleCard-tags__item">
+                                <a class="articleCard-tag networks-bg" href="https://wiki.merionet.ru/sections/networks?utm_source=knowledgebase&amp;utm_content=protocol-vtp">
+                                   Сети
+                                </a>
+                            </div>
+                            <div class="articleCard-tags__item">
+                             <a class="articleCard-tag how-to-bg" href="https://wiki.merionet.ru/sections/how-to?utm_source=knowledgebase&amp;utm_content=protocol-vtp">
+                              How to
+                             </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="articleCard-grid__title">
+                        <div class="articleCard-title s-bold">
+                            <a class="full-link" href="https://wiki.merionet.ru/articles/poisk-i-ustranenie-neispravnostei-sviazannyx-s-zaderzkoi-v-seti-s-pomoshhiu-wireshark?utm_source=knowledgebase&amp;utm_content=protocol-vtp">
+                        Поиск и устранение неисправностей, связанных с задержкой в сети, с помощью Wireshark</a></div>
+                    </div>
+                    <div class="articleCard-grid__txt">
+                        <div class="articleCard-txt">
+                        Задержка в сети, или сетевая задержка, - это временная задержка при передаче запросов или данных от источника к адресату в сетев
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="article-more__slider-slide swiper-slide swiper-slide-next" role="group" aria-label="2 / 6" style="margin-right: 20px;">
+            <div class="articleCard">
+                <div class="articleCard-grid">
+                    <div class="articleCard-grid__img">
+                        <div class="articleCard-img">
+                            <picture>
+                                <source src="/static/images/general/icons/networks_theory.png" type="image/webp">
+                                <img src="./Протокол VTP_files/networks_theory.png" width="87" height="87" alt="img">
+                            </picture>
+                        </div>
+                    </div>
+                    <div class="articleCard-grid__tags">
+                        <div class="articleCard-tags">
+                            <div class="articleCard-tags__item">
+                                <a class="articleCard-tag networks-bg" href="https://wiki.merionet.ru/sections/networks?utm_source=knowledgebase&amp;utm_content=protocol-vtp">
+                                   Сети
+                                </a>
+                            </div>
+                            <div class="articleCard-tags__item">
+                             <a class="articleCard-tag theory-bg" href="https://wiki.merionet.ru/sections/theory?utm_source=knowledgebase&amp;utm_content=protocol-vtp">
+                              Теория
+                             </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="articleCard-grid__title">
+                        <div class="articleCard-title s-bold">
+                            <a class="full-link" href="https://wiki.merionet.ru/articles/rekomendacii-dns-po-bezopasnosti-i-proizvoditelnosti?utm_source=knowledgebase&amp;utm_content=protocol-vtp">
+                        Рекомендации DNS по безопасности и производительности</a></div>
+                    </div>
+                    <div class="articleCard-grid__txt">
+                        <div class="articleCard-txt">
+                        Система доменных имен (DNS – Domain Name System) обеспечивает сетевую коммуникацию. DNS может показаться какой-то невидимой сило
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="article-more__slider-slide swiper-slide" role="group" aria-label="3 / 6" style="margin-right: 20px;">
+            <div class="articleCard">
+                <div class="articleCard-grid">
+                    <div class="articleCard-grid__img">
+                        <div class="articleCard-img">
+                            <picture>
+                                <source src="/static/images/general/icons/networks_theory.png" type="image/webp">
+                                <img src="./Протокол VTP_files/networks_theory.png" width="87" height="87" alt="img">
+                            </picture>
+                        </div>
+                    </div>
+                    <div class="articleCard-grid__tags">
+                        <div class="articleCard-tags">
+                            <div class="articleCard-tags__item">
+                                <a class="articleCard-tag networks-bg" href="https://wiki.merionet.ru/sections/networks?utm_source=knowledgebase&amp;utm_content=protocol-vtp">
+                                   Сети
+                                </a>
+                            </div>
+                            <div class="articleCard-tags__item">
+                             <a class="articleCard-tag theory-bg" href="https://wiki.merionet.ru/sections/theory?utm_source=knowledgebase&amp;utm_content=protocol-vtp">
+                              Теория
+                             </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="articleCard-grid__title">
+                        <div class="articleCard-title s-bold">
+                            <a class="full-link" href="https://wiki.merionet.ru/articles/kak-rabotaet-wi-fi-2-4-vs-5-ggc-chto-luchshe-i-pochemu-vaj-faj-opasen-dlya-zdorovya?utm_source=knowledgebase&amp;utm_content=protocol-vtp">
+                        Как работает Wi-Fi 2.4 vs 5 ГГц: что лучше и почему вай фай опасен для здоровья?</a></div>
+                    </div>
+                    <div class="articleCard-grid__txt">
+                        <div class="articleCard-txt">
+                        Wi-Fi это технология, которая использует радиоволны для отправки и получения сигналов от находящихся поблизости устройств, чтобы
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="article-more__slider-slide swiper-slide" role="group" aria-label="4 / 6" style="margin-right: 20px;">
+            <div class="articleCard">
+                <div class="articleCard-grid">
+                    <div class="articleCard-grid__img">
+                        <div class="articleCard-img">
+                            <picture>
+                                <source src="/static/images/general/icons/networks_theory.png" type="image/webp">
+                                <img src="./Протокол VTP_files/networks_theory.png" width="87" height="87" alt="img">
+                            </picture>
+                        </div>
+                    </div>
+                    <div class="articleCard-grid__tags">
+                        <div class="articleCard-tags">
+                            <div class="articleCard-tags__item">
+                                <a class="articleCard-tag networks-bg" href="https://wiki.merionet.ru/sections/networks?utm_source=knowledgebase&amp;utm_content=protocol-vtp">
+                                   Сети
+                                </a>
+                            </div>
+                            <div class="articleCard-tags__item">
+                             <a class="articleCard-tag theory-bg" href="https://wiki.merionet.ru/sections/theory?utm_source=knowledgebase&amp;utm_content=protocol-vtp">
+                              Теория
+                             </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="articleCard-grid__title">
+                        <div class="articleCard-title s-bold">
+                            <a class="full-link" href="https://wiki.merionet.ru/articles/osnovy-bgp?utm_source=knowledgebase&amp;utm_content=protocol-vtp">
+                        Основы BGP</a></div>
+                    </div>
+                    <div class="articleCard-grid__txt">
+                        <div class="articleCard-txt">
+                        BGP (Border Gateway Protocol) - это протокол граничного шлюза, предназначенный для обмена информацией о маршрутизации и доступно
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="article-more__slider-slide swiper-slide" role="group" aria-label="5 / 6" style="margin-right: 20px;">
+            <div class="articleCard">
+                <div class="articleCard-grid">
+                    <div class="articleCard-grid__img">
+                        <div class="articleCard-img">
+                            <picture>
+                                <source src="/static/images/general/icons/networks_theory.png" type="image/webp">
+                                <img src="./Протокол VTP_files/networks_theory.png" width="87" height="87" alt="img">
+                            </picture>
+                        </div>
+                    </div>
+                    <div class="articleCard-grid__tags">
+                        <div class="articleCard-tags">
+                            <div class="articleCard-tags__item">
+                                <a class="articleCard-tag networks-bg" href="https://wiki.merionet.ru/sections/networks?utm_source=knowledgebase&amp;utm_content=protocol-vtp">
+                                   Сети
+                                </a>
+                            </div>
+                            <div class="articleCard-tags__item">
+                             <a class="articleCard-tag theory-bg" href="https://wiki.merionet.ru/sections/theory?utm_source=knowledgebase&amp;utm_content=protocol-vtp">
+                              Теория
+                             </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="articleCard-grid__title">
+                        <div class="articleCard-title s-bold">
+                            <a class="full-link" href="https://wiki.merionet.ru/articles/rpki-zashchishchaem-bgp-marshrutizaciyu?utm_source=knowledgebase&amp;utm_content=protocol-vtp">
+                        RPKI – защищаем BGP маршрутизацию
+</a></div>
+                    </div>
+                    <div class="articleCard-grid__txt">
+                        <div class="articleCard-txt">
+                        Когда читаете данную статью, браузер подключается к провайдеру (или ISP) а пакеты, отправленные с компьютера, находят путь до се
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="article-more__slider-slide swiper-slide" role="group" aria-label="6 / 6" style="margin-right: 20px;">
+            <div class="articleCard">
+                <div class="articleCard-grid">
+                    <div class="articleCard-grid__img">
+                        <div class="articleCard-img">
+                            <picture>
+                                <source src="/static/images/general/icons/networks_theory.png" type="image/webp">
+                                <img src="./Протокол VTP_files/networks_theory.png" width="87" height="87" alt="img">
+                            </picture>
+                        </div>
+                    </div>
+                    <div class="articleCard-grid__tags">
+                        <div class="articleCard-tags">
+                            <div class="articleCard-tags__item">
+                                <a class="articleCard-tag networks-bg" href="https://wiki.merionet.ru/sections/networks?utm_source=knowledgebase&amp;utm_content=protocol-vtp">
+                                   Сети
+                                </a>
+                            </div>
+                            <div class="articleCard-tags__item">
+                             <a class="articleCard-tag theory-bg" href="https://wiki.merionet.ru/sections/theory?utm_source=knowledgebase&amp;utm_content=protocol-vtp">
+                              Теория
+                             </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="articleCard-grid__title">
+                        <div class="articleCard-title s-bold">
+                            <a class="full-link" href="https://wiki.merionet.ru/articles/chto-takoe-balansirovka-nagruzki-v-seti?utm_source=knowledgebase&amp;utm_content=protocol-vtp">
+                        Что такое балансировка нагрузки в сети?</a></div>
+                    </div>
+                    <div class="articleCard-grid__txt">
+                        <div class="articleCard-txt">
+                        Современные веб-сайты и приложения генерируют большой трафик и одновременно обслуживают многочисленные запросы клиентов. Баланси
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div></div><span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>                    </div>
+                </div>
+                <div class="article-item">
+                    <div class="article-comments" id="disqus_thread">
+                        <a class="article-comments__btn" id="disqus_trigger" onclick="load_disqus()" href="https://wiki.merionet.ru/articles/protocol-vtp#">Комментарии </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <link rel="stylesheet" href="./Протокол VTP_files/styles(3).min.css">
+<div class="_wrapper">
+    <div class="discountBanner">
+        <a class="banner-link" href="https://wiki.merionet.ru/merion-academy/courses/?utm_source=knowledgebase&amp;utm_medium=ribbon&amp;utm_content=/articles/protocol-vtp"></a>
+        <div class="discountBanner__content _d-flex">
+            <div class="discountBanner__content-title">
+                <div class="discountBanner-title bold">ЛЕТНИЕ СКИДКИ</div>
+            </div>
+            <div class="discountBanner__content-discounts">
+                <div class="discountBanner-discounts _d-flex">
+                    <div class="discountBanner-discounts__item _centered">
+                        <div class="discountBanner-discounts__txt _centered discountBanner-discounts__txt-1">40%</div>
+                    </div>
+                    <div class="discountBanner-discounts__item _centered">
+                        <div class="discountBanner-discounts__txt _centered discountBanner-discounts__txt-2">50%</div>
+                    </div>
+                    <div class="discountBanner-discounts__item _centered">
+                        <div class="discountBanner-discounts__txt _centered discountBanner-discounts__txt-3">60%</div>
+                    </div>
+                </div>
+            </div>
+            <div class="discountBanner__content-timer">
+                <div class="discountBanner-timer">До конца акции: <span class="discountBanner-timer__day">1</span>
+                    <span class="discountBanner-timer__txt">день</span> <span class="discountBanner-timer__hour">18</span> : <span class="discountBanner-timer__minute">43</span> : <span class="discountBanner-timer__second">51</span></div>
+            </div>
+            <div class="discountBanner__content-btn"><a class="discountBanner-btn _button" href="https://wiki.merionet.ru/merion-academy/">Выбрать курс</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="./Протокол VTP_files/main.js.Без названия"></script>    <footer class="footer">
+    <div class="footer__top">
+        <div class="container">
+            <div class="footer__content-top">
+                <div class="footer__content-col-1">
+                    <div class="footer-item">
+                        <div class="footer-item__head" data-container="toggle-1">
+                            <div class="footer-title bold">
+                                <div class="footer-title__txt">Направления</div>
+                                <div class="footer-title__arrow">
+                                    <svg class="svg-sprite-icon icon-down">
+                                        <use xlink:href="/static/images/svg/symbol/sprite.svg#down"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer-item__content toggle-container" id="toggle-1">
+                            <nav class="footer-nav">
+                                <ul class="footer-menu footer-menu--col-2">
+                                    <li class="footer-menu__item">
+                                        <a class="footer-menu__link" href="https://wiki.merionet.ru/merion-academy/courses?utm_source=knowledgebase&amp;utm_content=protocol-vtp">Все
+                                            направления</a></li>
+                                    <li class="footer-menu__item">
+                                        <a class="footer-menu__link" href="https://wiki.merionet.ru/merion-academy/courses/programmirovanie?utm_source=knowledgebase&amp;utm_content=protocol-vtp">Программирование</a>
+                                    </li>
+                                    <li class="footer-menu__item">
+                                        <a class="footer-menu__link" href="https://wiki.merionet.ru/merion-academy/courses/seti?utm_source=knowledgebase&amp;utm_content=protocol-vtp">Сети</a>
+                                    </li>
+                                    <li class="footer-menu__item">
+                                        <a class="footer-menu__link" href="https://wiki.merionet.ru/merion-academy/courses/sistemnoe-administrirovanie?utm_source=knowledgebase&amp;utm_content=protocol-vtp">Системное
+                                            администрирование</a>
+                                    </li>
+                                    <li class="footer-menu__item">
+                                        <a class="footer-menu__link" href="https://wiki.merionet.ru/merion-academy/courses/devops?utm_source=knowledgebase&amp;utm_content=protocol-vtp">DevOps</a>
+                                    </li>
+                                    <li class="footer-menu__item">
+                                        <a class="footer-menu__link" href="https://wiki.merionet.ru/merion-academy/courses/kiberbezopasnost?utm_source=knowledgebase&amp;utm_content=protocol-vtp">Кибербезопасность</a>
+                                    </li>
+                                    <li class="footer-menu__item">
+                                        <a class="footer-menu__link" href="https://wiki.merionet.ru/merion-academy/courses/virtualizaciya?utm_source=knowledgebase&amp;utm_content=protocol-vtp">Виртуализация</a>
+                                    </li>
+                                    <li class="footer-menu__item">
+                                        <a class="footer-menu__link" href="https://wiki.merionet.ru/merion-academy/courses/bazy-dannyh?utm_source=knowledgebase&amp;utm_content=protocol-vtp">Базы
+                                            данных</a></li>
+                                    <li class="footer-menu__item">
+                                        <a class="footer-menu__link" href="https://wiki.merionet.ru/merion-academy/courses/telefoniya?utm_source=knowledgebase&amp;utm_content=protocol-vtp">Телефония</a>
+                                    </li>
+                                    <li class="footer-menu__item">
+                                        <a class="footer-menu__link" href="https://wiki.merionet.ru/merion-academy/courses/qa?utm_source=knowledgebase&amp;utm_content=protocol-vtp">QA</a>
+                                    </li>
+<!--                                    <li class="footer-menu__item">-->
+<!--                                        <a class="footer-menu__link"-->
+<!--                                           href="https://wiki.merionet.ru/merion-academy/courses/karera--><!--">Карьера</a>-->
+<!--                                    </li>-->
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__content-col-2">
+                    <div class="footer__content-row">
+                        <div class="footer__content-col-3">
+                            <div class="footer-item">
+                                <div class="footer-item__head" data-container="toggle-2">
+                                    <div class="footer-title bold">
+                                        <div class="footer-title__txt">Сотрудничество</div>
+                                        <div class="footer-title__arrow">
+                                            <svg class="svg-sprite-icon icon-down">
+                                                <use xlink:href="/static/images/svg/symbol/sprite.svg#down"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="footer-item__content toggle-container" id="toggle-2">
+                                    <nav class="footer-nav">
+                                        <ul class="footer-menu">
+                                            <li class="footer-menu__item">
+                                                <a class="footer-menu__link" href="https://wiki.merionet.ru/merion-academy/company/kontakty/?utm_source=knowledgebase&amp;utm_content=protocol-vtp">
+                                                    Контакты</a></li>
+                                            <li class="footer-menu__item">
+                                                <a class="footer-menu__link" href="https://wiki.merionet.ru/merion-academy/company/korporativnoe-obuchenie/?utm_source=knowledgebase&amp;utm_content=protocol-vtp">
+                                                    Все о корпоративном обучении</a></li>
+                                            <li class="footer-menu__item">
+                                                <a class="footer-menu__link" href="https://wiki.merionet.ru/merion-academy/company/intensiv-po-rostu-karery-v-it-ot-hr-ekspertov?utm_source=knowledgebase&amp;utm_content=protocol-vtp" target="_blank">Карьерный центр</a></li>
+                                            <li class="footer-menu__item">
+                                                <a class="footer-menu__link" href="https://wiki.merionet.ru/merion-academy/company/anglijskij-dlya-it-specialistov">Английский для IT-специалистов</a></li>
+                                            <li class="footer-menu__item">
+                                                <a class="footer-menu__link" href="https://wiki.merionet.ru/merion-academy/company/stan-avtorom?utm_source=knowledgebase&amp;utm_content=protocol-vtp" target="_blank">Стать автором</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer__content-col-4">
+                            <div class="footer-item">
+                                <div class="footer-item__head" data-container="toggle-3">
+                                    <div class="footer-title bold">
+                                        <div class="footer-title__txt">Проекты</div>
+                                        <div class="footer-title__arrow">
+                                            <svg class="svg-sprite-icon icon-down">
+                                                <use xlink:href="/static/images/svg/symbol/sprite.svg#down"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="footer-item__content toggle-container" id="toggle-3">
+                                    <nav class="footer-nav">
+                                        <ul class="footer-menu">
+                                            <li class="footer-menu__item">
+                                                <a class="footer-menu__link" href="https://wiki.merionet.ru/merion-academy?utm_source=knowledgebase&amp;utm_content=protocol-vtp">Академия
+                                                    доступного IT образования</a></li>
+                                            <li class="footer-menu__item">
+                                                <a class="footer-menu__link" href="https://wiki.merionet.ru/?utm_source=knowledgebase&amp;utm_content=protocol-vtp" target="_blank">База
+                                                    знаний</a></li>
+                                            <li class="footer-menu__item">
+                                                <a class="footer-menu__link" href="https://www.youtube.com/@merionacademy" target="_blank">Образовательный
+                                                    Youtube канал</a></li>
+                                            <li class="footer-menu__item">
+                                                <a class="footer-menu__link" href="https://wiki.merionet.ru/merion-academy/company/proforientaciya-na-baze-ai/">
+                                                    Профориентация на базе AI</a>
+                                            </li>
+                                            <li class="footer-menu__item">
+                                                <a class="footer-menu__link" href="https://wiki.merionet.ru/merion-academy/company/kurs-v-podarok?utm_source=knowledgebase&amp;utm_content=protocol-vtp">
+                                                    <span class="footer-menu__link-icon">
+                                                        <img src="./Протокол VTP_files/gift.svg" alt=""></span><span class="footer-menu__link-txt">Курс в подарок</span>
+                                                </a>
+                                            </li>
+                                            <li class="footer-menu__item">
+                                                <a class="footer-menu__link" href="https://wiki.merionet.ru/merion-academy/company/proverka-sertifikatov/"> Проверка сертификатов</a>
+                                            </li>
+                                            <li class="footer-menu__item">
+                                                <a class="footer-menu__link" href="https://wiki.merionet.ru/merion-academy/company/mobilnyj-opyt">Мобильные
+                                                    приложения</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__content-col-5">
+                    <div class="footer-item">
+                        <div class="footer-item__head" data-container="toggle-4">
+                            <div class="footer-title bold">
+                                <div class="footer-title__txt">Правовая информация</div>
+                                <div class="footer-title__arrow">
+                                    <svg class="svg-sprite-icon icon-down">
+                                        <use xlink:href="/static/images/svg/symbol/sprite.svg#down"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer-item__content toggle-container" id="toggle-4">
+                            <nav class="footer-nav">
+                                <ul class="footer-menu">
+                                    <li class="footer-menu__item">
+                                        <a class="footer-menu__link" href="https://wiki.merionet.ru/merion-academy/company/svedeniya-ob-organizacii">Сведения
+                                            об образовательной организации</a>
+                                    </li>
+                                    <li class="footer-menu__item">
+                                        <a class="footer-menu__link" href="https://wiki.merionet.ru/docs/edoferta.pdf" target="_blank">Оферта</a>
+                                    </li>
+                                    <li class="footer-menu__item">
+                                        <a class="footer-menu__link" href="https://merionet.ru/politika-konfidencialnosti/" target="_blank">Политика
+                                            конфиденциальности</a></li>
+                                    <li class="footer-menu__item">
+                                        <a class="footer-menu__link" href="https://wiki.merionet.ru/docs/terms_of_use.pdf">Правила
+                                            пользования</a></li>
+                                    <li class="footer-menu__item">
+                                        <a class="footer-menu__link" href="https://wiki.merionet.ru/merion-academy/company/oplata">Оплата</a>
+                                    </li>
+                                    <li class="footer-menu__item">
+                                        <a class="footer-menu__link" href="https://wiki.merionet.ru/merion-academy/company/o-nas">О нас</a>
+                                    </li>
+                                    <li class="footer-menu__item">ИНН 7721855710</li>
+                                    <li class="footer-menu__item">ОГРН 5147746475289</li>
+                                    <li class="footer-menu__item footer-menu__item--hidden">г. Москва, пр-кт
+                                        Рязанский, д. 86/1, строение 3, пом. 3, Москва, 109542
+                                    </li>
+                                    <li class="footer-menu__item footer-menu__item--hidden">
+                                        <a href="https://wiki.merionet.ru/docs/ExtractFromTheRegistrar.pdf" target="_blank">Лицензия
+                                            на
+                                            образовательную деятельность №Л035- 01298-77/00554994</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__content-bottom">
+                <div class="footer__content-contacts">
+                    <div class="footer-contacts">
+                        <div class="footer-contacts__group">
+                            <div class="footer-contacts__item">
+                                <div class="footer-contacts__item-group">
+                                    <a class="footer-contacts__item-link bold" href="tel:88005114974">8 (800) 511
+                                        49-74</a>
+                                    <div class="footer-contacts__item-txt">Контактный центр</div>
+                                </div>
+                                <div class="footer-contacts__item-group">
+                                    <a class="footer-contacts__item-link bold" href="https://t.me/merion_academy_bot" target="_blank">Telegram-чат
+                                        <br>со
+                                        специалистом</a></div>
+                            </div>
+                        </div>
+                        <div class="footer-contacts__group">
+                            <div class="footer-contacts__item">
+                                <div class="footer-contacts__item-group">
+                                    <a class="footer-contacts__item-link bold" href="tel:+74951182959">8 (495) 118
+                                        29-59</a>
+                                    <div class="footer-contacts__item-txt">Служба заботы о студентах</div>
+                                </div>
+                                <div class="footer-contacts__item-group">
+                                    <a class="footer-contacts__item-link bold" href="mailto:info@merionet.ru">info@merionet.ru</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__content-txt">
+                    <div class="footer-txt">
+                        <div class="footer-txt__item">г. Москва, пр-кт Рязанский, д. 86/1, строение 3, пом. 3,
+                            Москва, 109542
+                        </div>
+                        <div class="footer-txt__item">
+                            <a href="https://wiki.merionet.ru/docs/ExtractFromTheRegistrar.pdf" target="_blank">Лицензия
+                                на
+                                образовательную деятельность
+                                №Л035-01298-77/00554994</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__content-social">
+                    <ul class="footer-social flex">
+                        <li class="footer-social__item"><a class="footer-social__link centered" href="https://www.youtube.com/@merionacademy"><img src="./Протокол VTP_files/yt.svg" alt="icon"></a></li>
+                        <li class="footer-social__item"><a class="footer-social__link centered" href="https://t.me/it_knowledge_base"><img src="./Протокол VTP_files/tg.svg" alt="icon"></a></li>
+<!--                        <li class="footer-social__item"><a class="footer-social__link centered"-->
+<!--                                                           href="https://vk.com/merion_academy"><img-->
+<!--                                        src="/static/images/general/vk.svg" alt="icon"></a></li>-->
+                        <li class="footer-social__item"><a class="footer-social__link centered" href="https://dzen.ru/merion_academy"><img src="./Протокол VTP_files/dzen.svg" alt="icon"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer__bottom">
+        <div class="container">
+            <div class="footer-copyright">© Мерион Академия, 2015 - 2024</div>
+        </div>
+    </div>
+</footer></div>
+<div class="modal fade" id="guideModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content modal-content--b-padding modal-content--m-pb-0">
+            <a class="modal-close _centered" href="https://wiki.merionet.ru/articles/protocol-vtp#" data-bs-dismiss="modal" aria-label="Close">
+                <img src="./Протокол VTP_files/close-2.svg" alt=""></a>
+            <div class="modal-guide">
+                <div class="modal-guide__title _f-32 lh-110">Забирай <span><img src="./Протокол VTP_files/guide-icon-title.svg" width="20" height="25" alt="icon"> бесплатные гайды</span>
+                    по&nbsp;изучению Python, PHP, Linux, FreePBX
+                </div>
+                <div class="modal-guide__txt _f-20 lh-160">Обещаем не спамить и вышлем все в одном письме. <br>Только
+                    полезное общение.
+                </div>
+                <div class="modal-guide__form">
+                    <form class="modal-guide-form _form" action="https://wiki.merionet.ru/">
+                        <div class="modal-guide-form__item _form-item">
+                            <input class="modal-guide-form__input _input" type="text" name="email" data-email="" placeholder="E-mail">
+                            <div class="_form-error">Пожалуйста, укажите корректный e-mail</div>
+                        </div>
+                        <button class="modal-guide-form__btn _button" type="submit">Получить гайды</button>
+                        <div class="modal-guide-form__txt _f-12">Нажимая на кнопку вы соглашаетесь <br>на
+                            <a href="https://wiki.merionet.ru/docs/privacy_policy.pdf" target="_blank">
+                                обработку персональных данных </a></div>
+                    </form>
+                </div>
+                <div class="modal-guide__img">
+                    <picture>
+                        <source srcset="/static/images/popup/guidecat_1.webp" type="image/webp">
+                        <img src="./Протокол VTP_files/guidecat_1.png" width="291" height="228" alt="img">
+                    </picture>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="guideSuccessModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content modal-content--b-padding modal-content--m-pb-0"><a class="modal-close _centered" href="https://wiki.merionet.ru/articles/protocol-vtp#" data-bs-dismiss="modal" aria-label="Close"> <img src="./Протокол VTP_files/close-2.svg" alt=""></a>
+            <div class="modal-guide">
+                <div class="modal-guide__title _f-32 lh-110">Проверь почту, <br>твои гайды ждут тебя!</div>
+                <div class="modal-guide__txt modal-guide__txt--mb-40 _f-20 lh-160">А заодно, можешь выбрать курс и
+                    пройти <br> бесплатный урок в нашей телеге <span>
+                   <img src="./Протокол VTP_files/guide-icon-tg.svg" width="16" height="16" alt="icon"> </span></div>
+                <a class="modal-guide__btn _button" target="_blank" href="https://t.me/MerionAcademy_bot">Выбрать
+                    курс</a>
+                <div class="modal-guide__img modal-guide__img--success">
+                    <picture>
+                        <source srcset="/static/images/popup/guidecat_1.webp" type="image/webp">
+                        <img src="./Протокол VTP_files/guidecat_1.png" width="291" height="228" alt="img">
+                    </picture>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><script src="./Протокол VTP_files/swiper-bundle.min.js.Без названия"></script>
+<script src="./Протокол VTP_files/jquery-3.3.1.min.js.Без названия"></script>
+<script src="./Протокол VTP_files/main(1).js.Без названия"></script>
+<script src="./Протокол VTP_files/libs.js.Без названия"></script>
+<script src="./Протокол VTP_files/popup.js.Без названия"></script>
+<script src="./Протокол VTP_files/libs(1).js.Без названия"></script>
+<script src="./Протокол VTP_files/main(2).js.Без названия"></script>
+<script src="./Протокол VTP_files/fslightbox.js.Без названия"></script>
+<script src="./Протокол VTP_files/highlight.min.js.Без названия"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        document.querySelectorAll('pre').forEach((el) => {
+            hljs.highlightElement(el);
+        });
+    });
+
+    fsLightbox.props.type = "image";
+
+    function load_disqus() {
+        event.preventDefault();
+        let disqus_trigger = document.getElementById('disqus_trigger');
+        let d = document, s = d.createElement('script');
+        s.src = '//wikimerionetru.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+        disqus_trigger.remove();
+    }
+
+    function share() {
+        event.preventDefault();
+        navigator.clipboard.writeText(document.location.href);
+        let popup = document.getElementById("share_popup");
+        popup.classList.toggle("show");
+    }
+
+    function like() {
+        event.preventDefault();
+        yaCounter33191803.reachGoal('ArticleGood');
+        let likeBtn = document.getElementById("like-btn");
+        likeBtn.style.fill = 'var(--purple)';
+        return true;
+    }
+
+    function dislike() {
+        event.preventDefault();
+        yaCounter33191803.reachGoal('ArticleBad');
+        let dislikeBtn = document.getElementById("dislike-btn");
+        dislikeBtn.style.fill = 'var(--purple)';
+        return true;
+    }
+
+</script>
+
+<script type="text/javascript" id="">!function(){var a=document.createElement("script");a.type="text/javascript";a.async=!0;a.src="https://vk.com/js/api/openapi.js?169";a.onload=function(){VK.Retargeting.Init("VK-RTRG-1193742-hU1Z7");VK.Retargeting.Hit()};document.head.appendChild(a)}();</script><noscript><img src="https://vk.com/rtrg?p=VK-RTRG-1193742-hU1Z7" style="position:fixed; left:-999px;" alt=""></noscript>
+<script type="text/javascript" id="">(function(b,e,f,g,c,a,d){b[c]=b[c]||function(){(b[c].a=b[c].a||[]).push(arguments)};b[c].l=1*new Date;for(a=0;a<document.scripts.length;a++)if(document.scripts[a].src===g)return;a=e.createElement(f);d=e.getElementsByTagName(f)[0];a.async=1;a.src=g;d.parentNode.insertBefore(a,d)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");ym(33191803,"init",{clickmap:!0,trackLinks:!0,accurateTrackBounce:!0,webvisor:!0});</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/33191803" style="position:absolute; left:-9999px;" alt=""></div></noscript><iframe allow="join-ad-interest-group" data-tagging-id="G-WG6CCDG8B2" data-load-time="1723526012319" height="0" width="0" src="./Протокол VTP_files/rul.html" style="display: none; visibility: hidden;"></iframe>
+</body></html>

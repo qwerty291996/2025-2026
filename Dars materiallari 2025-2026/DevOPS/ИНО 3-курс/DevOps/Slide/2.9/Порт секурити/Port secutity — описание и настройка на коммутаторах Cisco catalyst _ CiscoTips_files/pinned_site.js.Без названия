@@ -1,0 +1,15 @@
+window.onload = function() {
+  try {
+    if (window.external.msIsSiteMode()) {
+      window.external.msSiteModeClearJumpList();
+      window.external.msSiteModeCreateJumpList("");
+              window.external.msSiteModeAddJumpListItem("Мысли о подготовке к CCNA", "/certification-problems", "/favicon.ico");
+              window.external.msSiteModeAddJumpListItem(" Классы IPv4 адресов", "/ip-classes", "/favicon.ico");
+              window.external.msSiteModeAddJumpListItem("Зачем разделять IPv4 сети на подсети", "/subnetting-reasons", "/favicon.ico");
+              window.external.msSiteModeAddJumpListItem("Разбиение сети на подсети одинакового размера", "/subnetting-equal", "/favicon.ico");
+              window.external.msSiteModeAddJumpListItem("Учебная программа курса CCNAv7", "/ccna-routing-and-switching-review", "/favicon.ico");
+            window.external.msSiteModeShowJumplist();
+    }
+  }
+  catch (ex) {}
+}

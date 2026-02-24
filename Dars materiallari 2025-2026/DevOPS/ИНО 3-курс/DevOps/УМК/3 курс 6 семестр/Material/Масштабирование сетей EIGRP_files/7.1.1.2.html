@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!-- saved from url=(0059)http://ssa.kbgtk07.ru/3/course/module7/7.1.1.2/7.1.1.2.html -->
+<html dir="Введение" style="height: 100%; overflow: hidden;"><!-- Mirrored from da2001.ru/CCNA_5.02/3/course/module7/7.1.1.2/7.1.1.2.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 31 Mar 2022 09:43:14 GMT --><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>7.1.1.2 Протоколозависимые модули</title>
+    <!-- Content -->
+    <link type="text/css" rel="stylesheet" href="./course.css">
+    <script type="text/javascript" src="./jquery_bundle.min.js.Без названия"></script>
+    <script type="text/javascript" src="./jquery.ui.touch-punch.min.js.Без названия"></script>
+    <script type="text/javascript" src="./page.js.Без названия"></script>
+    <script>
+      var myLayout;
+      $(document).ready(function () {
+        var frame = document.getElementById('mainFrame');
+        if (isTextOnly(window)) {
+          frame.setAttribute('src', 'media_7.1.1.2_longdesc.txt');
+        } else {
+          frame.setAttribute('src', 'media/index.html');
+        }
+        myLayout = $('body').layout({
+          west__size: 300,
+          west__minSize: 300,
+          center__minWidth: 100,
+          resizerTip: 'Изменить размер',
+          sliderTip: 'Открыть слайд',
+          togglerTip_open: 'Закрыть',
+          togglerTip_closed: 'Открыть',
+          stateManagement__enabled: true,
+          maskIframesOnResize: true,
+          livePaneResizing: true,
+          onresize_end: resizeTextDiv,
+          stateManagement__cookie__name: "ui_pane",
+          stateManagement__cookie__expires: 1,
+          stateManagement__cookie__path: "/"
+        });
+        var isiPad = navigator.userAgent.match(/iPad/i) != null;
+        if(isiPad){
+          var paneOptions = myLayout.options["west"]; 
+          paneOptions.spacing_open = 12;
+          myLayout.resizeAll(); 
+        }
+      });
+      function resizeTextDiv() {
+        var DivHeight = document.getElementById("header").offsetHeight;
+        document.getElementById("content").style.top = String(DivHeight) + 'px';
+      }
+    </script>
+  </head>
+  <body class="onecolumn ui-layout-container" onload="resizeTextDiv()" style="position: relative; height: 100%; overflow: hidden; margin: 0px; padding: 0px; border: none;">
+    <div class="ui-layout-west ui-layout-pane ui-layout-pane-west" style="position: absolute; margin: 0px; inset: 0px auto 0px 0px; height: 451px; z-index: 0; width: 300px; display: block; visibility: visible;">
+      <div id="header">
+        <h1>Характеристики протокола EIGRP</h1>
+        <h2>Основные функции EIGRP</h2>
+      </div>
+      <div id="content" style="top: 69px;">
+<p>EIGRP поддерживает возможность маршрутизации ряда других протоколов, в том числе IPv4 и IPv6, используя протоколозависимые модули (protocol-dependent module, PDM). Хотя теперь это и устарело, EIGRP также использует модули PDM для маршрутизации протоколов сетевого уровня IPX компании Novell и AppleTalk компании Apple Computer. </p>
+<p></p>
+<p>Модули PDM отвечают за задачи, связанные с конкретным протоколом сетевого уровня. Примером является модуль EIGRP, используемый для передачи и получения пакетов EIGRP, инкапсулированных в IPv4. Этот модуль также отвечает за анализ пакетов и EIGRP и передачу в алгоритм DUAL новых полученных данных. EIGRP использует алгоритм DUAL для принятия решений о маршрутизации, но результаты хранятся в таблице маршрутизации IPv4.</p>
+<p></p>
+<p>Модули PDM отвечают за конкретные задачи маршрутизации для каждого протокола сетевого уровня, в числе которых: </p>
+<p>
+</p><ul>
+<li>ведение для маршрутизаторов EIGRP таблиц соседних устройств и топологии, относящихся к этому семейству протоколов;</li>
+</ul>
+<p></p>
+<p>
+</p><ul>
+<li>создание пакетов конкретного протокола и их преобразование для алгоритма DUAL;</li>
+</ul>
+<p></p>
+<p>
+</p><ul>
+<li>обеспечение взаимодействия между алгоритмом DUAL и таблицей маршрутизации конкретного протокола;</li>
+</ul>
+<p></p>
+<p>
+</p><ul>
+<li>вычисление метрики и передача этих сведений в алгоритм DUAL;</li>
+</ul>
+<p></p>
+<p>
+</p><ul>
+<li>реализация списков фильтрации и доступа;</li>
+</ul>
+<p></p>
+<p>
+</p><ul>
+<li>выполнение функций перераспределения между EIGRP и другими протоколами маршрутизации;</li>
+</ul>
+<p></p>
+<p>
+</p><ul>
+<li>перераспределение маршрутов, полученных другими протоколами маршрутизации.</li>
+</ul>
+<p></p>
+<p></p>
+<p>Обнаружив новое соседнее устройство, маршрутизатор вносит запись, содержащую адрес и интерфейс соседнего устройства, в таблицу соседних устройств. Для каждого модуля, зависящего от протокола, например для IPv4, ведется одна таблица соседних устройств. Для протокола EIGRP также ведется таблица топологии. Таблица топологии содержит все сети назначения, объявленные соседними маршрутизаторами. Таблица топологии также ведется отдельно для каждого PDM.</p>
+</div>
+    </div>
+    <iframe id="mainFrame" name="mainFrame" frameborder="0" class="ui-layout-center ui-layout-pane ui-layout-pane-center" alt="interactive graphic" src="./index.html" style="position: absolute; margin: 0px; inset: 0px 0px 0px 306px; height: 451px; width: 921px; z-index: 0; display: block; visibility: visible;"></iframe>
+  
+
+
+
+<div id="" class="ui-layout-resizer ui-layout-resizer-west ui-layout-resizer-open ui-layout-resizer-west-open" title="Изменить размер" aria-disabled="false" style="position: absolute; padding: 0px; margin: 0px; font-size: 1px; text-align: left; overflow: hidden; z-index: 2; cursor: w-resize; left: 300px; height: 451px; width: 6px; top: 0px;"><div id="" class="ui-layout-toggler ui-layout-toggler-west ui-layout-toggler-open ui-layout-toggler-west-open" title="Закрыть" style="position: absolute; display: block; padding: 0px; margin: 0px; overflow: hidden; text-align: center; font-size: 1px; cursor: pointer; z-index: 1; visibility: visible; height: 50px; width: 6px; top: 200px; left: 0px;"></div></div></body><!-- Mirrored from da2001.ru/CCNA_5.02/3/course/module7/7.1.1.2/7.1.1.2.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 31 Mar 2022 09:43:14 GMT --></html>

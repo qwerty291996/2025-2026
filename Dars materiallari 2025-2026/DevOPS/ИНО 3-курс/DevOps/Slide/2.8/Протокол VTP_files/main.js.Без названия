@@ -1,0 +1,45 @@
+"use strict";
+
+function countdownToDate(dateString) {
+    const dateParts = dateString.split('.');
+    //const endDate = new Date(`${dateParts[2]}-${dateParts[1]}-${dateParts[0]}`);
+    var endDate = new Date();
+    endDate.setDate(endDate.getDate() + 1);
+    endDate.setDate(endDate.getDate());
+    endDate.setUTCHours(23, 59, 59, 999);
+    const dayElement = document.querySelector('.discountBanner-timer__day');
+    const hourElement = document.querySelector('.discountBanner-timer__hour');
+    const minuteElement = document.querySelector('.discountBanner-timer__minute');
+    const secondElement = document.querySelector('.discountBanner-timer__second');
+    const dayTextElement = document.querySelector('.discountBanner-timer__txt');
+
+    function updateCountdown() {
+        const now = new Date();
+        const timeRemaining = Math.max(0, endDate - now);
+        const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+        const hours = Math.floor(timeRemaining / (1000 * 60 * 60) % 24);
+        const minutes = Math.floor(timeRemaining / 1000 / 60 % 60);
+        const seconds = Math.floor(timeRemaining / 1000 % 60);
+        dayElement.textContent = days;
+        hourElement.textContent = hours.toString().padStart(2, '0');
+        minuteElement.textContent = minutes.toString().padStart(2, '0');
+        secondElement.textContent = seconds.toString().padStart(2, '0');
+
+        //склоняем слово "день"
+        if (days === 1) {
+            dayTextElement.textContent = 'день';
+        } else if (days > 1 && days < 5) {
+            dayTextElement.textContent = 'дня';
+        } else {
+            dayTextElement.textContent = 'дней';
+        }
+    }
+
+    // вызываем функцию первый раз, чтобы избежать мигания таймера
+    updateCountdown();
+
+    // обновляем таймер каждую секунду
+    setInterval(updateCountdown, 1000);
+}
+
+countdownToDate('30.06.2023');

@@ -1,0 +1,159 @@
+(function() {
+	var scriptEls = document.getElementsByTagName('script');
+	for (var i = 0; i < scriptEls.length; i++) {
+		if (scriptEls[i].src) {
+			var url = new URL(scriptEls[i].src);
+
+			if (url.host === 'w.uptolike.com' && url.pathname === '/widgets/v1/zp.js' && url.searchParams.get('pid')) {
+				var scriptEl = scriptEls[i];
+				var type = url.searchParams.get('pid').substring(0, 2);
+
+				run(scriptEl, type);
+			}
+		}
+	}
+
+	function run (scriptEl, type) {
+		var root = findRoot(scriptEl);
+
+		if (root) {
+			var insert = 'after';
+
+			if (root.tagName === 'DIV') {
+				insert = 'top-right';
+			}
+
+			if (insert === 'top-right') {
+				root.style.position = 'relative';
+			}
+
+			var dataPromise;
+			var fetchData = function() {
+				if (!dataPromise) {
+					var url = type === 'tl' ? 'https://www.trustlink.ru/marking/get_info?target=' : 'https://www.linkfeed.ru/marking/get_info?target=';
+					// Получение данных. Должен возвращать объект: { erid: number, adv_inn: string, adv_name: string }[]
+					dataPromise = fetch(url + encodeURIComponent(window.location.href))
+						.then(function(resp) { return resp.json(); });
+				}
+
+				return dataPromise;
+			};
+
+			// Свг спиннера
+			var spinner = '' +
+				'<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">' +
+				'<style>' +
+				'.spinner_S1WN{animation:spinner_MGfb .8s linear infinite;animation-delay:-.8s}' +
+				'.spinner_Km9P{animation-delay:-.65s}' +
+				'.spinner_JApP{animation-delay:-.5s}' +
+				'@keyframes spinner_MGfb{93.75%,100%{opacity:.2}}' +
+				'</style>' +
+				'<circle class="spinner_S1WN" cx="4" cy="12" r="3"/>' +
+				'<circle class="spinner_S1WN spinner_Km9P" cx="12" cy="12" r="3"/>' +
+				'<circle class="spinner_S1WN spinner_JApP" cx="20" cy="12" r="3"/>' +
+				'</svg>';
+
+			// Свг менюшки
+			const menu = '' +
+				'<svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="100%" height="100%">' +
+				'<path fill="currentColor" d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"></path>' +
+				'</svg>';
+
+			// Основной элемент, который будет вставлен в root
+			var wrapper = document.createElement('span');
+
+			if (insert === 'top-right') {
+				wrapper.style.position = 'absolute';
+				wrapper.style.right = '8px';
+				wrapper.style.top = '8px';
+			} else {
+				wrapper.style.position = 'relative';
+			}
+
+			// Элемент менюшки, которая показывает попап
+			var opener = document.createElement('span');
+			opener.style.display = 'inline-block';
+			opener.style.width = '16px';
+			opener.style.height = '16px';
+			opener.style.color = 'inherit';
+			opener.style.cursor = 'pointer';
+			opener.innerHTML = menu;
+
+			// Элемент попапа, который отображается при клике на меню
+			var popup = document.createElement('div');
+			popup.style.position = 'absolute';
+			popup.style.right = '0px';
+			popup.style.top = '100%';
+			popup.style.color = '#000';
+			popup.style.background = '#fff';
+			popup.style.padding = '5px';
+			popup.style.border = '1px solid #000';
+			popup.style.marginTop = '2px';
+			popup.style.minWidth = '100px';
+			var stopPropagation = function(e) {
+				e.stopPropagation();
+			};
+
+			var openPopup = function(e) {
+				stopPropagation(e);
+
+				popup.innerHTML = '<div style="text-align:center;">' + spinner + '</div>';
+				wrapper.appendChild(popup);
+
+				fetchData().then(
+					function(data) {
+						// Контент попапа при успешном получении данных
+						var content = '';
+						for (var i = 0; i < data.length; i++) {
+							var cur = data[i];
+
+							if (cur.erid) {
+								if (i > 0) {
+									content += '<br>';
+								}
+
+								content += '<div style="white-space:nowrap;">' + cur.adv_name + '</div><div style="font-size:smaller;">' + cur.adv_inn + '</div><div style="font-size:smaller;">' + cur.erid + '</div>';
+							}
+						}
+						popup.innerHTML = content;
+					},
+					function() {
+						// Контент попапа при ошибке получения данных по токену
+						popup.innerHTML = '<div>Не удалось получить данные по рекламодателю.</div>';
+					}
+				);
+			};
+
+			var closePopup = function() {
+				if (popup.parentNode) {
+					wrapper.removeChild(popup);
+					popup.innerHTML = '';
+				}
+			};
+
+			wrapper.appendChild(opener);
+
+			if (insert === 'top-right') {
+				root.appendChild(wrapper);
+			} else {
+				root.after(wrapper);
+			}
+
+			opener.addEventListener('click', openPopup);
+			popup.addEventListener('click', stopPropagation);
+			document.addEventListener('click', closePopup);
+		}
+	}
+
+	function findRoot (el) {
+		var root = el.previousElementSibling;
+
+		if (root) {
+			if (['SCRIPT', 'STYLE'].includes(root.tagName)) {
+				return findRoot(root);
+			}
+		}
+
+		return root;
+	}
+}());

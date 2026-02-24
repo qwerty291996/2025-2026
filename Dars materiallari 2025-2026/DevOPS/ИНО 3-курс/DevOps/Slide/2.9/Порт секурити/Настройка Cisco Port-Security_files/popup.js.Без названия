@@ -1,0 +1,87 @@
+function isEmailValid(email) {
+    return /\S+@\S+\.\S+/.test(email);
+}
+
+const ajaxSend = async formData => {
+    const fetchResp = await fetch('../../static/php/email-subscribe.php', {
+        method: 'POST',
+        body: formData
+    });
+
+    if (!fetchResp.ok) {
+        throw new Error(`${url}, ${fetchResp.status}`);
+    }
+
+    return await fetchResp.text();
+};
+
+const modalForms = document.querySelectorAll('.modal-guide-form');
+const modal = document.getElementById('guideModal');
+const guideModal = new bootstrap.Modal('#guideModal');
+const guideSuccessModal = new bootstrap.Modal('#guideSuccessModal');
+
+function modalS() {
+    let modalClosedWithLead = localStorage.getItem('kb-modal-subscribe-lead');
+    let modalClosed = getCookie();
+    modal.addEventListener('hidden.bs.modal', function () {
+        let date = new Date();
+        date.setTime(date.getTime() + (24 * 60 * 60 * 1000));
+        let expires = "; expires=" + date.toUTCString();
+        document.cookie = "kb-modal-subscribe=true" + expires + "; path=/;"
+    });
+    if (!modalClosedWithLead && !modalClosed) {
+        setTimeout(() => {
+            guideModal.show();
+        }, 10000);
+    }
+}
+
+modalS();
+
+modalForms.forEach(form => {
+    const inputEmail = form.querySelector('input[data-email]');
+    inputEmail.addEventListener('focusin', () => {
+        inputEmail.classList.remove('error')
+    });
+    form.addEventListener('submit', function (e) {
+
+        const inputEmail = form.querySelector('input[data-email]');
+
+        e.preventDefault();
+
+        if (!isEmailValid(inputEmail.value)) {
+            inputEmail.classList.add('error');
+            return;
+        } else {
+            inputEmail.classList.remove('error');
+        }
+
+        const formData = new FormData(this);
+        formData.append("type", "popup");
+
+        ajaxSend(formData).then(response => {
+
+            guideModal.hide();
+            guideSuccessModal.show();
+
+            localStorage.setItem('kb-modal-subscribe-lead', 'true');
+
+            form.reset();
+        }).catch(err => console.log(err));
+    });
+});
+
+function getCookie() {
+    let nameEQ = "kb-modal-subscribe" + "=";
+    let cookies = document.cookie.split(';');
+    for (let i = 0; i < cookies.length; i++) {
+        let cookie = cookies[i];
+        while (cookie.charAt(0) === ' ') {
+            cookie = cookie.substring(1, cookie.length);
+        }
+        if (cookie.indexOf(nameEQ) === 0) {
+            return cookie.substring(nameEQ.length, cookie.length);
+        }
+    }
+    return null;
+}

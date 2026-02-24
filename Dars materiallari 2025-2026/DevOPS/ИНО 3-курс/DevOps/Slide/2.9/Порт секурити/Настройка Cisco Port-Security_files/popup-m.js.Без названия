@@ -1,0 +1,138 @@
+(function() {
+    const popups = document.querySelectorAll('.popup');
+
+    popups.forEach(popup => {
+        const delay = parseInt(popup.getAttribute('data-popup-delay')) || 1;
+        const cookieKey = popup.getAttribute('data-popup-cookie-key');
+        const subscribeForm = popup.querySelector('.popup-form');
+        const successHidden = popup.querySelector('.success-hidden');
+        const closeButton = popup.querySelector('.popup-close');
+        const successBlock = popup.querySelector('.form_success');
+        const errorElement = popup.querySelector('.input-error');
+        const inputFields = popup.querySelectorAll('.popup-input');
+
+        if (!cookieKey || isPopupSuppressed(cookieKey)) {
+            return;
+        }
+
+        setTimeout(() => {
+            popup.style.display = 'flex';
+            setTimeout(() => {
+                popup.classList.add('show');
+            }, 50);
+
+        }, delay * 1000);
+
+        closeButton.addEventListener('click', () => {
+            closePopup(popup, cookieKey);
+        });
+
+
+        subscribeForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const formData = new FormData(subscribeForm);
+            formData.forEach((value, key) => {
+                //console.log(`${key}: ${value}`);
+            });
+            const formJSON = {};
+            let isValid = true;
+
+            formData.forEach((value, key) => {
+                if (formJSON.hasOwnProperty(key)) {
+                    if (!Array.isArray(formJSON[key])) {
+                        formJSON[key] = [formJSON[key]];
+                    }
+                    formJSON[key].push(value);
+                } else {
+                    formJSON[key] = value;
+                }
+
+            });
+
+            console.log(formJSON);
+
+            if (isValid) {
+                sendForm(subscribeForm.action, formJSON)
+                    .then(response => {
+                        if (response.ok) {
+                            successBlock.classList.add('visible');
+                            successHidden.classList.add('hidden');
+                            setTimeout(function() {
+                                closePopup(popup, cookieKey);
+                            }, 3000);
+                        } else {
+                            response.json().then(data => {
+                                const errors = data.errors;
+                                let errorMessages = [];
+
+                                for (let field in errors) {
+                                    if (errors.hasOwnProperty(field)) {
+                                        for (let messageKey in errors[field]) {
+                                            if (errors[field].hasOwnProperty(messageKey)) {
+                                                errorMessages.push(errors[field][messageKey]);
+                                            }
+                                        }
+                                    }
+                                }
+                                const errorText = errorMessages.join('\n');
+                                showError(errorElement, errorText);
+                            }).catch(() => {
+                                showError(errorElement, 'Ошибка обработки данных от API.');
+                            });
+                        }
+                    })
+                    .catch(() => {
+                        showError(errorElement, 'Ошибка сети. Попробуйте позже.');
+                    });
+            }
+        });
+    });
+
+
+    function showError(element, message) {
+        element.textContent = message;
+        element.classList.add('error');
+    }
+
+    function closePopup(popup, cookieKey) {
+        popup.classList.remove('show');
+        popup.style.display = 'none';
+        suppressPopup(cookieKey);
+    }
+
+    function isPopupSuppressed(key) {
+        const cookieValue = getCookie(key);
+        return cookieValue && cookieValue === 'true';
+    }
+
+    function suppressPopup(key) {
+        setCookie(key, 'true', 90);
+    }
+
+    function setCookie(name, value, days) {
+        const date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        document.cookie = `${name}=${value}; expires=${date.toUTCString()}; path=/`;
+    }
+
+    function getCookie(name) {
+        const nameEQ = `${name}=`;
+        const ca = document.cookie.split(';');
+        for(let i = 0; i < ca.length; i++) {
+            let c = ca[i];
+            while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+            if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+        }
+        return null;
+    }
+
+    function sendForm(url, data) {
+        return fetch(url, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        });
+    }
+})();

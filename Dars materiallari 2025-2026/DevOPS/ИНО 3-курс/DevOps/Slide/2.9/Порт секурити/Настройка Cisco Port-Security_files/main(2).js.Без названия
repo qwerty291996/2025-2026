@@ -1,0 +1,72 @@
+// function isEmailValid(email) {
+//     return /\S+@\S+\.\S+/.test(email);
+// }
+
+const ajaxSendPromo = async formData => {
+    const fetchResp = await fetch('/merion-academy/vendor/php/sub.php', {
+        method: 'POST',
+        body: formData
+    });
+
+    if (!fetchResp.ok) {
+        throw new Error(`${url}, ${fetchResp.status}`);
+    }
+
+    return await fetchResp.text();
+};
+
+
+function bannerContents() {
+    const banners = document.querySelectorAll('.courseBanner');
+    if (!banners.length) return;
+
+    banners.forEach(banner => {
+        const getLesson = banner.querySelector('.getLesson');
+        const contents = banner.querySelectorAll('.courseBanner-info__content');
+        const form = banner.querySelector('.courseBanner-form');
+        let loader = document.getElementById('tg-loader');
+        let link = document.getElementById('tg-fl-link');
+
+        if (getLesson == null) {
+            return
+        }
+
+        getLesson.addEventListener('click', (e) => {
+            e.preventDefault();
+
+            contents.forEach(i => i.classList.remove('active'));
+            banner.querySelector('[data-step="2"]').classList.add('active')
+        });
+
+        form.addEventListener('submit', function (e) {
+            const inputEmail = form.querySelector('input[data-email]');
+
+            e.preventDefault();
+
+            if (!isEmailValid(inputEmail.value)) {
+                inputEmail.classList.add('error');
+                return;
+            } else {
+                inputEmail.classList.remove('error');
+
+                contents.forEach(i => i.classList.remove('active'));
+                banner.querySelector('[data-step="3"]').classList.add('active')
+                link.style.display = "none";
+            }
+
+            const formData = new FormData(this);
+            formData.append("type", "free-lesson");
+
+            ajaxSendPromo(formData).then(response => {
+                if (response != "error") {
+                    loader.style.display = "none";
+                    link.style.display = "flex";
+                    link.href = "https://tg.pulse.is/MerionAcademy_bot?start=611f4274b885ab028959d95c|uuid=" + response;
+                }
+                form.reset();
+            }).catch(err => console.log(err));
+        })
+    })
+}
+
+bannerContents();
