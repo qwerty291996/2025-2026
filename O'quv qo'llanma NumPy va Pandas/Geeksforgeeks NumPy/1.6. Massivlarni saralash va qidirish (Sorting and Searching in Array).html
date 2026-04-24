@@ -3,7 +3,7 @@
 <html lang="en">
 <head><meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>1.1. NumPy-ga kirish va asosiy tushunchalar</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>1.6. Massivlarni saralash va qidirish (Sorting and Searching in Array)</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <style type="text/css">
     pre { line-height: 125%; }
 td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
@@ -7795,12 +7795,12 @@ a.anchor-link {
 </style>
 <!-- End of mermaid configuration --></head>
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
-<main><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=0ab0bb97-7d07-408b-97dd-7c225280f601">
+<main><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=dbb41860-737b-4dbb-a8d7-43ed863e6f12">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [22]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">IPython.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTML</span>
@@ -8082,308 +8082,68 @@ a.anchor-link {
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=d9e98faa-25be-4cbc-9ca5-8bd2b1d2a329">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=8429b388-6302-4a3f-a0cd-c3500a725ff0">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="I-BOB.-NUMPY:-MA%E2%80%99LUMOTLARNI-QAYTA-ISHLASHNING-MATEMATIK-ASOSLARI">I BOB. NUMPY: MA’LUMOTLARNI QAYTA ISHLASHNING MATEMATIK ASOSLARI<a class="anchor-link" href="#I-BOB.-NUMPY:-MA%E2%80%99LUMOTLARNI-QAYTA-ISHLASHNING-MATEMATIK-ASOSLARI">¶</a></h2><p>NumPy — Python'da sonli hisob-kitoblar uchun mo‘ljallangan kuchli kutubxona. U yirik, ko‘p o‘lchamli massivlar va matritsalarni qo‘llab-quvvatlaydi, shuningdek, ushbu massivlar ustida amallar bajarish uchun matematik funksiyalar to‘plamini taqdim etadi. NumPy massiv obyektlari xotira jihatidan ancha samarali va Python ro‘yxatlariga (lists) qaraganda yaxshiroq ishlaydi, bu esa ilmiy hisob-kitoblar, ma’lumotlar tahlili va mashinali o‘rganish vazifalari uchun juda muhimdir. Qo‘llanmaning NumPy-ga mo‘ljallangan ushbu bobi uning asosiy xususiyatlari hamda soddadan murakkabgacha bo‘lgan barcha tushunchalarni 11 ta paragrafga bo‘lingan holda qamrab oladi.</p>
+<h2 id="1.6.-Massivlarni-saralash-va-qidirish-(Sorting-and-Searching-in-Array)">1.6. Massivlarni saralash va qidirish (Sorting and Searching in Array)<a class="anchor-link" href="#1.6.-Massivlarni-saralash-va-qidirish-(Sorting-and-Searching-in-Array)">¶</a></h2>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=5771605f-a44b-4bcc-8839-258d43cf73c0">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=39c5476f-1bbb-4f3c-ad0a-94ea671740b8">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="1.1.-NumPy-ga-kirish-va-asosiy-tushunchalar">1.1. NumPy-ga kirish va asosiy tushunchalar<a class="anchor-link" href="#1.1.-NumPy-ga-kirish-va-asosiy-tushunchalar">¶</a></h2>
+<p>NumPy-da saralash (<strong>Sorting</strong>) — bu massiv elementlarini ma’lum bir tartibda, ya’ni o‘sish yoki kamayish tartibida joylashtirishni anglatadi. Buning uchun <code>np.sort()</code> funksiyasidan foydalaniladi. Odatiy holatda u elementlarni o‘sish tartibida saralaydi, kamayish tartibiga esa <code>[::-1]</code> kabi slicing (kesib olish) usullari yordamida erishish mumkin.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=7a85d823-8fbb-4c61-aee0-d83f7d2724e9">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=04954c09-7d65-47c2-a3a0-fd5b5445062a">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="1.1.1.-Python-NumPy-moduli-haqida-umumiy-tushuncha">1.1.1. Python NumPy moduli haqida umumiy tushuncha<a class="anchor-link" href="#1.1.1.-Python-NumPy-moduli-haqida-umumiy-tushuncha">¶</a></h3><p><code>ndarray</code> deb ham ataladigan <strong>numpy massivi</strong> — barchasi bir xil turdagi qiymatlardan tashkil topgan to‘rdir. Ular <strong>bir o‘lchamli</strong> (ro‘yxat kabi), <strong>ikki o‘lchamli</strong> (matritsa kabi) yoki <strong>ko‘p o‘lchamli</strong> (satr va ustunli jadval kabi) bo‘lishi mumkin.</p>
+<h3 id="1.6.1.-NumPy-massivlarini-saralash-(Sorting-NumPy-Array)">1.6.1. NumPy massivlarini saralash (Sorting NumPy Array)<a class="anchor-link" href="#1.6.1.-NumPy-massivlarini-saralash-(Sorting-NumPy-Array)">¶</a></h3>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=79809c06-fd74-4c03-8cbb-78d6afbfb494">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=2dce1767-bf93-4d95-93b5-0c3149f3409b">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p><strong>NumPy</strong> — “Numerical Python” (Sonli Python) degan ma’noni anglatadi va u yirik, ko‘p o‘lchamli massivlar hamda matritsalar bilan ishlash uchun ishlatiladi. Python’ning o‘rnatilgan ro‘yxatlaridan (lists) farqli o‘laroq, <strong>NumPy massivlari</strong> sonli va ilmiy hisob-kitoblar uchun samarali saqlash va tezroq qayta ishlashni ta’minlaydi. U chiziqli algebra va tasodifiy sonlarni generatsiya qilish uchun funksiyalarni taklif etadi va u ma’lumotlar fani (data science) va mashinali o‘rganish (machine learning) uchun juda muhimdir.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=4c80c09a-2d61-410c-a8f7-2c292b0c6b97">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="1.1.2.-Massiv-turlari-(Types-of-Array)">1.1.2. Massiv turlari (Types of Array)<a class="anchor-link" href="#1.1.2.-Massiv-turlari-(Types-of-Array)">¶</a></h3><p>Massivlarning turli xillari quyidagilardan iborat:</p>
-<p><strong>1. Bir o‘lchamli massiv</strong></p>
-<p>Bir o‘lchamli massiv — bu chiziqli massivning bir turi.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=5135ee54-522f-44c7-808b-46efa0b347dc">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="text-align: center; margin-top: 2em; margin-bottom: 2em;">
-<img alt="Python list indexing" src="Images/1.1.webp" style="max-width: 85%; height: auto; display: block; margin: 0 auto;"/>
-<p style="font-family: ’Times New Roman’, serif !important; 
-            font-size: 12pt !important; 
-            text-align: center !important; 
-            text-indent: 0 !important; 
-            margin-top: 15px !important; 
-            display: block !important;
-            color: #333;">
-    1.1-rasm. Bir o‘lchamli (1D) massiv.
-  </p>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=7c13811a-8abf-4f2d-a6ca-185b698128ff">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-
-<span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
-
-<span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Pythondagi ro‘yxat : "</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Pythondagi Numpy massivi :"</span><span class="p">,</span> <span class="n">arr</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Pythondagi ro‘yxat :  [1, 2, 3, 4]
-Pythondagi Numpy massivi : [1 2 3 4]
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=6288402c-d9d1-4d96-9bf5-15e4ffc2cede">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Ro‘yxat va massiv uchun ma’lumot turini tekshirish:</p>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=1992d35d-69e0-46a2-9a03-94b5315cb6f1">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
-<span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
-
-<span class="c1"># Ro‘yxat turini tekshirish</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
-
-<span class="c1"># Numpy massiv turini tekshirish</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">arr</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>&lt;class 'list'&gt;
-&lt;class 'numpy.ndarray'&gt;
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=9e8cfbe6-f2b2-43c5-8664-0024e633a60b">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p><strong>2. Ko‘p o‘lchamli massiv</strong></p>
-<p>Ko‘p o‘lchamli massiv — bu ma’lumotlarni satrlar va ustunlar kabi birdan ortiq o‘lchamda saqlashi mumkin bo‘lgan massivdir. Oddiy tilda aytganda, bu massivlar ichidagi massivdir.
-Masalan, 2D massiv satr va ustunlardan iborat jadvalga o‘xshaydi, unda har bir elementga ikkita indeks orqali murojaat qilinadi: biri satr uchun, ikkinchisi ustun uchun. 3D massivlar kabi yuqori o‘lchamlar qo‘shimcha qatlamlar qo‘shishni nazarda tutadi.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=93b86fe7-b863-47aa-88e2-d688388d1b46">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<div style="text-align: center; margin-top: 2em; margin-bottom: 2em;">
-<img alt="Python list indexing" src="Images/1.2.webp" style="max-width: 85%; height: auto; display: block; margin: 0 auto;"/>
-<p style="font-family: ’Times New Roman’, serif !important; 
-            font-size: 12pt !important; 
-            text-align: center !important; 
-            text-indent: 0 !important; 
-            margin-top: 15px !important; 
-            display: block !important;
-            color: #333;">
-    1.2-rasm. Ikki o‘lchamli (2D) massiv.
-  </p>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=77fb4701-0685-49ec-972c-bd33481cbd30">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">list_1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
-<span class="n">list_2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
-<span class="n">list_3</span> <span class="o">=</span> <span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">]</span>
-
-<span class="n">sample_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">list_1</span><span class="p">,</span> 
-                         <span class="n">list_2</span><span class="p">,</span>
-                         <span class="n">list_3</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Pythonda Numpy ko‘p o‘lchamli massivi</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="n">sample_array</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Pythonda Numpy ko‘p o‘lchamli massivi
- [[ 1  2  3  4]
- [ 5  6  7  8]
- [ 9 10 11 12]]
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=69f91637-6f20-4f54-b6aa-3aa84d00d7c9">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p><strong>Eslatma</strong>: ko‘p o‘lchamli massivlar uchun <code>numpy.array()</code> ichida <code>[ ]</code> operatorlaridan foydalaning.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=412e1f3e-bbda-4eca-aa89-dab384eb5731">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Numpy massivining parametrlari</p>
+<p>Massivni saralash ma’lumotlar tahlilida juda muhim bosqich hisoblanadi, chunki u ma’lumotlarni tartiblashga yordam beradi, qidirish va tozalash jarayonlarini osonlashtiradi.</p>
+<p>Ushbu qo‘llanmada biz NumPy-da massivni qanday saralashni o‘rganamiz. Siz NumPy-da massivni quyidagicha saralashingiz mumkin:</p>
+<ul>
+<li><code>np.sort()</code> funksiyasidan foydalangan holda (in-line saralash)</li>
+<li>Turli o‘qlar (axes) bo‘ylab saralash</li>
+<li><code>np.argsort()</code> funksiyasidan foydalanish</li>
+<li><code>np.lexsort()</code> funksiyasidan foydalanish</li>
+</ul>
+<h3 id="sort()-funksiyasidan-foydalanish"><strong><code>sort()</code> funksiyasidan foydalanish</strong><a class="anchor-link" href="#sort()-funksiyasidan-foydalanish">¶</a></h3><p><code>sort()</code> metodi berilgan ma’lumotlar tuzilmasi (bu yerda massiv) elementlarini saralaydi. Elementlarni saralash uchun <code>sort</code> funksiyasini massiv obyekti bilan birga chaqiring.</p>
+<p><code>sort()</code> metodi yordamida massivni saralashning ikkita holati mavjud:</p>
 <ol>
-<li>Axis (O‘q): Massiv o‘qi massivga indekslash tartibini tavsiflaydi.
-Axis 0 = bir o‘lchamli
-Axis 1 = ikki o‘lchamli
-Axis 2 = uch o‘lchamli</li>
+<li>NumPy massivini o‘z o‘rnida (<strong>in-place</strong>) saralash</li>
+<li>NumPy massivini o‘qlar (<strong>axes</strong>) bo‘ylab saralash</li>
 </ol>
+<p>Biz quyida ushbu usullarning har ikkalasini misol bilan ko‘rib chiqamiz:</p>
+<h3 id="Massivni-o%E2%80%98z-o%E2%80%98rnida-(In-Place)-saralash"><strong>Massivni o‘z o‘rnida (In-Place) saralash</strong><a class="anchor-link" href="#Massivni-o%E2%80%98z-o%E2%80%98rnida-(In-Place)-saralash">¶</a></h3><p>Massivni o‘z o‘rnida saralash — bu asl massiv elementlarini to‘g‘ridan-to‘g‘ri saralashni anglatadi.
+U massivning yangi nusxasini yaratmaydi va xotira jihatidan juda samarali hisoblanadi.</p>
+<p><strong>Misol:</strong>
+NumPy massividagi elementlarni o‘z o‘rnida saralash uchun <code>sort()</code> metodidan foydalanish.</p>
 </div>
 </div>
 </div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=a632a687-39be-4ea3-b341-438460db4a1e">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="1.1.3.-NumPy-massivining-parametrlari-(Parameters-of-a-NumPy-Array)">1.1.3. NumPy massivining parametrlari (Parameters of a NumPy Array)<a class="anchor-link" href="#1.1.3.-NumPy-massivining-parametrlari-(Parameters-of-a-NumPy-Array)">¶</a></h3>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=9d37c118-658a-44a4-88a0-59f4cbb97d25">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p><strong>1. Axis:</strong> O‘q massivga indekslash tartibini tavsiflaydi.</p>
-<blockquote>
-<p><em>Axis 0 = bir o‘lchamli</em></p>
-<p><em>Axis 1 = ikki o‘lchamli</em></p>
-<p><em>Axis 2 = uch o‘lchamli</em></p>
-</blockquote>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=3e9a2790-f7ec-4786-b7bb-765e7d8a4764">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p><strong>2. Shape:</strong> Har bir o‘q bo‘yicha elementlar soni va u kortej (tuple) sifatida qaytariladi.</p>
-<blockquote>
-<p><em>Misol:</em></p>
-</blockquote>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=84a8a457-741c-47e7-bc43-9393db6f9e2d">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=8bc39f4b-1454-498f-bc76-359bf32dd779">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -8391,14 +8151,15 @@ Axis 2 = uch o‘lchamli</li>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">sample_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
-                       <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span>
-                       <span class="p">[</span><span class="mi">23</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span>
-                       <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span>
-                       <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">]])</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># kutubxonalarni yuklash</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">"massivning o‘lchami (shape) :"</span><span class="p">,</span>
-      <span class="n">sample_array</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">12</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Saralashdan oldingi massiv:"</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
+
+<span class="c1"># o‘z o‘rnida saralash</span>
+<span class="n">a</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Saralashdan keyingi massiv:"</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -8411,51 +8172,39 @@ Axis 2 = uch o‘lchamli</li>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>massivning o‘lchami (shape) : (5, 3)
+<pre>Saralashdan oldingi massiv: [12 15 10  1]
+Saralashdan keyingi massiv: [ 1 10 12 15]
 </pre>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=4942a80c-d093-4d9d-b507-1f0935c26343">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=757bc347-1abb-4640-ad96-14b907ef0d8e">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p><strong>3. Rank:</strong> Massivning rangi (rank) shunchaki undagi o‘qlar yoki o‘lchamlar sonidir.</p>
-<blockquote>
-<p><em>Bir o‘lchamli massiv 1-rangga ega.</em></p>
-<p><em>Ikki o‘lchamli massiv 2-rangga ega.</em></p>
-</blockquote>
+<p><strong>Izoh:</strong>
+E’tibor bering, <code>a.sort()</code> metodi chaqirilgandan so‘ng <code>a</code> o‘zgaruvchisining asl qiymati o‘zgardi. Bu xotirani tejash uchun foydalidir, chunki yangi massiv obyekti yaratilmaydi.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=44847761-45a8-4e15-9c70-b14edf077bf6">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=55719397-ed5e-4120-8cf2-21f704204632">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p><strong>4. Ma’lumot turi obyektlari (dtype):</strong> Ma’lumot turi obyektlari (dtype) <code>numpy.dtype</code> sinfining (klassining) bir misolidir. U massiv elementiga mos keladigan xotiraning belgilangan o‘lchamdagi blokidagi baytlar qanday talqin qilinishi kerakligini tavsiflaydi.</p>
+<h3 id="Massivni-turli-o%E2%80%98qlar-(Axes)-bo%E2%80%98ylab-saralash"><strong>Massivni turli o‘qlar (Axes) bo‘ylab saralash</strong><a class="anchor-link" href="#Massivni-turli-o%E2%80%98qlar-(Axes)-bo%E2%80%98ylab-saralash">¶</a></h3><p>Ushbu usul berilgan NumPy massivining saralangan nusxasini yaratadi. Bu ko‘pincha ko‘p o‘lchamli massivlarda ma’lum bir o‘lcham bo‘ylab saralash kerak bo‘lganda qo‘llaniladi.</p>
+<p><strong>Misol:</strong>
+NumPy massivi elementlarini o‘qlar (axis) bo‘ylab saralash uchun <code>sort()</code> funksiyasidan foydalanish.</p>
 </div>
 </div>
 </div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=fc4d05f6-0b8e-45ae-9ad6-77d5377ce1fd">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>NumPy-da <strong>dtype</strong> massivda saqlanadigan ma’lumotlar turini va har bir qiymat qancha xotira ishlatishini belgilaydi. U xom xotira baytlari qanday talqin qilinishini nazorat qiladi, bu esa NumPy operatsiyalarini tez va samarali qiladi. <strong>dtype</strong>-ni tushunish samaradorlik va xotiradan foydalanishni boshqarishga yordam beradi.</p>
-<p>Ushbu misol NumPy massivining ma’lumot turini qanday aniqlashni ko‘rsatadi.</p>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=46419cb2-b752-4eac-b437-505f3c50910e">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=0fddd9ac-fde1-4770-a843-b2e56bcedc5b">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -8463,8 +8212,20 @@ Axis 2 = uch o‘lchamli</li>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">arr</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Birinchi o‘q (axis = 0) bo‘ylab saralash (ustunlar bo‘yicha)</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">12</span><span class="p">,</span> <span class="mi">15</span><span class="p">],</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">1</span><span class="p">]])</span>
+<span class="n">arr1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>        
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Birinchi o‘q bo‘ylab:</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="n">arr1</span><span class="p">)</span>        
+
+<span class="c1"># Oxirgi o‘q (axis = -1) bo‘ylab saralash (qatorlar bo‘yicha)</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">15</span><span class="p">],</span> <span class="p">[</span><span class="mi">12</span><span class="p">,</span> <span class="mi">1</span><span class="p">]])</span>
+<span class="n">arr2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">axis</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>        
+<span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">Oxirgi o‘q bo‘ylab:</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="n">arr2</span><span class="p">)</span>
+
+<span class="c1"># Hech qanday o‘qsiz (axis = None) saralash (yassilangan holda)</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">12</span><span class="p">,</span> <span class="mi">15</span><span class="p">],</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">1</span><span class="p">]])</span>
+<span class="n">arr3</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">axis</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span>        
+<span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">o‘qsiz saralash:</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="n">arr3</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -8477,36 +8238,51 @@ Axis 2 = uch o‘lchamli</li>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>int64
+<pre>Birinchi o‘q bo‘ylab:
+ [[10  1]
+ [12 15]]
+
+Oxirgi o‘q bo‘ylab:
+ [[10 15]
+ [ 1 12]]
+
+o‘qsiz saralash:
+ [ 1 10 12 15]
 </pre>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=251fe1a7-5e61-48ce-be47-49cecae6cc6e">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=e9944428-c627-44e5-8777-982f529f1f57">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p><strong>Izoh:</strong> <code>arr.dtype</code> atributi massiv elementlarining ma’lumot turini qaytaradi, bu holatda u <strong>int</strong> (butun son), chunki barcha qiymatlar butun sonlardir.</p>
+<p><strong>Izoh:</strong></p>
+<ul>
+<li><strong><code>axis = 0</code></strong>: Elementlar ustunlar bo‘yicha saralanadi. Ya’ni har bir ustunning ichidagi qiymatlar tepadan pastga qarab o‘sib boradi.</li>
+<li><strong><code>axis = -1</code></strong> (yoki <code>axis = 1</code> 2D massiv uchun): Elementlar qatorlar bo‘yicha saralanadi. Har bir qator ichidagi qiymatlar chapdan o‘ngga qarab tartiblanadi.</li>
+<li><strong><code>axis = None</code></strong>: Massiv avval yassilanadi (1D holatiga keltiriladi) va barcha elementlar yaxlit holatda saralanadi.</li>
+</ul>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=94bd7449-92cc-42ba-8d74-7daa70870921">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=040610d5-8cad-4c34-a122-ff22b07ed12f">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p><strong>dtype obyektini yaratish</strong></p>
-<p>dtype obyekti <code>numpy.dtype</code> sinfining nusxasidir. Siz uni <code>np.dtype()</code> funksiyasidan foydalanib yaratishingiz mumkin.</p>
+<h3 id="argsort()-funksiyasidan-foydalanish"><strong><code>argsort()</code> funksiyasidan foydalanish</strong><a class="anchor-link" href="#argsort()-funksiyasidan-foydalanish">¶</a></h3><p><strong><code>argsort()</code></strong> metodi NumPy massivini berilgan o‘q bo‘ylab saralashning bilvosita usulidir. U asl massivni o‘sish tartibida saralash uchun kerak bo‘ladigan <strong>indekslar massivini</strong> qaytaradi.</p>
+<p><strong>Misol:</strong>
+NumPy massivi elementlarini saralash uchun <code>argsort()</code> dan foydalanish.</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=48764310-b601-4e41-80b8-bd4c57594330">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=bdb2aca9-45de-4b9d-8e70-8b86becfe9d0">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -8514,7 +8290,23 @@ Axis 2 = uch o‘lchamli</li>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">dtype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">int16</span><span class="p">))</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># NumPy massivini yaratish</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
+
+<span class="c1"># Saralanmagan massivni chop etish</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'Asl massiv:</span><span class="se">\n</span><span class="s1">'</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
+
+<span class="c1"># Massiv indekslarini saralash</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argsort</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'Asl massivning saralangan indekslari -&gt;'</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+
+<span class="c1"># Saralangan indekslar yordamida saralangan massivni olish</span>
+<span class="c1"># c - b bilan bir xil uzunlikdagi vaqtinchalik massiv</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">b</span><span class="p">),</span> <span class="n">dtype</span> <span class="o">=</span> <span class="nb">int</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">b</span><span class="p">)):</span>
+    <span class="n">c</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">'Saralangan massiv -&gt;'</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -8527,40 +8319,138 @@ Axis 2 = uch o‘lchamli</li>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>int16
+<pre>Asl massiv:
+ [9 3 1 7 4 3 6]
+Asl massivning saralangan indekslari -&gt; [2 1 5 4 6 3 0]
+Saralangan massiv -&gt; [1 3 3 4 6 7 9]
 </pre>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=a6f787a4-726b-4032-99b6-7484270a88c0">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=fccbb0ea-42e3-4364-96e9-2bfd32e883ff">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p><strong>Tushuntirish:</strong></p>
-<blockquote>
-<p><code>np.int16</code> 16 bitli butun sonni anglatadi
-<code>np.dtype()</code> uni dtype obyektiga aylantiradi</p>
-</blockquote>
+<p><strong>Izoh:</strong></p>
+<ul>
+<li><strong><code>np.argsort(a)</code></strong> funksiyasi bizga elementlarning o‘zini emas, balki ularning tartiblangan o‘rnini (indeksini) beradi. Masalan, eng kichik element <code>1</code> bo‘lib, u asl massivda <code>2</code>-indeksda turibdi, shuning uchun natijaviy indekslar massivining birinchi elementi <code>2</code> ga teng.</li>
+<li>Kodning oxirgi qismida saralangan indekslar yordamida qiymatlarni qayta terib chiqish orqali saralangan massiv hosil qilinadi.</li>
+<li>Aslida, NumPy-da saralangan massivni olish uchun sikl (loop) ishlatish shart emas, buni <strong>fancy indexing</strong> yordamida osonroq bajarish mumkin: <code>a[b]</code>.</li>
+</ul>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=f5ecb615-1b52-4fbd-b6eb-22b7add7efe9">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=71332505-acca-4d46-a617-15f01ada001a">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p><strong>Bayt tartibi va hajmini tushunish</strong></p>
-<p>NumPy ma’lumotlarni xotirada xom baytlar sifatida saqlaydi, bunda bayt tartibi baytlarning qanday joylashishini nazorat qiladi va hajmi har bir qiymat uchun xotira sarfini belgilaydi. Bu turli tizimlarda ma’lumotlarning to‘g‘ri va samarali ishlanishini ta’minlaydi.</p>
+<h3 id="Kalitlar-ketma-ketligidan-foydalanish"><strong>Kalitlar ketma-ketligidan foydalanish</strong><a class="anchor-link" href="#Kalitlar-ketma-ketligidan-foydalanish">¶</a></h3><p>Kalitlar ketma-ketligi yordamida saralash bizga massivni bir nechta mezonlar asosida tartiblash imkonini beradi. Ushbu usulni <strong><code>np.lexsort()</code></strong> funksiyasi orqali amalga oshirish mumkin. <code>lexsort()</code> funksiyasi asl massivni saralash uchun kerak bo‘ladigan indekslar massivini qaytaradi.</p>
+<p><strong>Misol:</strong>
+Kalitlar ketma-ketligi yordamida barqaror saralashni amalga oshirish.</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=113f5278-2ef1-42bf-8443-e3e524276f9c">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=9cd7f54e-57ab-4e37-8490-cb3d32d1a7c5">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Birinchi ustun</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
+<span class="c1"># Ikkinchi ustun</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">'a ustuni, b ustuni'</span><span class="p">)</span>
+<span class="k">for</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="s1">'   '</span><span class="p">,</span> <span class="n">j</span><span class="p">)</span>
+
+<span class="c1"># Avval "a" bo‘yicha, keyin esa "b" bo‘yicha saralash</span>
+<span class="c1"># Eslatma: lexsort oxirgi kalit bo‘yicha asosiy saralashni bajaradi</span>
+<span class="n">ind</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">lexsort</span><span class="p">((</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">'Saralangan indekslar -&gt;'</span><span class="p">,</span> <span class="n">ind</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>a ustuni, b ustuni
+9     4
+3     6
+1     9
+3     2
+4     1
+3     8
+6     7
+Saralangan indekslar -&gt; [2 3 1 5 4 6 0]
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=d43d800b-3b0d-4233-8ad5-ae178d4b5e12">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><strong>Izoh:</strong>
+<code>np.lexsort((b, a))</code> funksiyasida eng oxirgi ko‘rsatilgan massiv (<code>a</code>) asosiy saralash kaliti hisoblanadi. Agar <code>a</code> massivida bir xil qiymatlar bo‘lsa (masalan, 3 soni bir necha bor kelgan), u holda tartibni aniqlash uchun <code>b</code> massividagi mos qiymatlarga qaraladi. Bu xuddi Excel-dagi ko‘p darajali saralashga o‘xshaydi.</p>
+<h3 id="Xulosa"><strong>Xulosa</strong><a class="anchor-link" href="#Xulosa">¶</a></h3><p>NumPy massivini saralash takrorlanuvchi elementlarni, maksimal va minimal qiymatlarni topishni osonlashtiradi. Bu ma’lumotlar bilan ishlashda juda muhim operatsiya bo‘lib, ma’lumotlar manipulyatsiyasini sezilarli darajada soddalashtiradi.</p>
+<p>Ushbu qo‘llanmada biz NumPy-da massivni saralashning uchta usulini ko‘rib chiqdik: <strong><code>sort()</code></strong>, <strong><code>argsort()</code></strong> va <strong><code>lexsort()</code></strong>. Bu usullarning barchasi NumPy-dagi <code>ndarray</code> ob'ektlarini saralash uchun turlicha funksionalliklarni taqdim etadi. Mavzuni to‘liq tushunishingiz uchun biz ushbu usullarni oddiy so‘zlar va misollar bilan tushuntirib berdik.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=ed83870f-7157-4bc0-964d-97c3416b92ad">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="1.6.2.-Saralash-texnikalarining-turlari-(Different-Types-of-Sorting-Techniques)">1.6.2. Saralash texnikalarining turlari (Different Types of Sorting Techniques)<a class="anchor-link" href="#1.6.2.-Saralash-texnikalarining-turlari-(Different-Types-of-Sorting-Techniques)">¶</a></h3>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=90f16d5a-0c38-42fb-af38-1277515d9f5e">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Ushbu saralash usullari bir-biridan sezilarli darajada farq qiladi. Keling, har bir texnika qanday ishlashini va qaysi birini tanlash kerakligini o‘rganamiz.</p>
+<p>Faraz qilaylik, <code>a</code> — bu NumPy massivi bo‘lsin:</p>
+<h3 id="a.sort()-metodi"><strong><code>a.sort()</code> metodi</strong><a class="anchor-link" href="#a.sort()-metodi">¶</a></h3><ol>
+<li><strong>o‘z o‘rnida saralaydi (In-place):</strong> Massivni to‘g‘ridan-to‘g‘ri o‘zgartiradi va <code>None</code> qiymatini qaytaradi.</li>
+<li><strong>Qaytarish turi:</strong> <code>None</code> (ya’ni hech qanday yangi obyekt qaytarmaydi).</li>
+<li><strong>Xotira tejamkorligi:</strong> Kam joy egallaydi. Asl massivning nusxasi yaratilmagani uchun xotira sarfi minimal bo‘ladi.</li>
+<li><strong>Tezkorlik:</strong> Python-ning standart <code>sorted(a)</code> funksiyasiga qaraganda ancha tezroq ishlaydi.</li>
+</ol>
+<p><strong>Misol:</strong></p>
+<p><code>a.sort()</code> yordamida massivni o‘z o‘rnida saralash.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=117175fb-4036-4e16-9dcf-888ef624e4d8">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -8568,10 +8458,17 @@ Axis 2 = uch o‘lchamli</li>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">dt</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dtype</span><span class="p">(</span><span class="s1">'&gt;i4'</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Bayt tartibi:"</span><span class="p">,</span> <span class="n">dt</span><span class="o">.</span><span class="n">byteorder</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Hajmi:"</span><span class="p">,</span> <span class="n">dt</span><span class="o">.</span><span class="n">itemsize</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Ma’lumot turi:"</span><span class="p">,</span> <span class="n">dt</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># NumPy massivini yaratish</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
+
+<span class="c1"># Saralanmagan massivni chop etish</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'Asl massiv:</span><span class="se">\n</span><span class="s1">'</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
+
+<span class="c1"># Qaytarish turini tekshirish (None bo‘lishi kerak)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'Qaytarish turi:'</span><span class="p">,</span> <span class="n">a</span><span class="o">.</span><span class="n">sort</span><span class="p">())</span>
+
+<span class="c1"># Saralangan asl massiv natijasi</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'Saralangan asl massiv -&gt;'</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -8584,73 +8481,68 @@ Axis 2 = uch o‘lchamli</li>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Bayt tartibi: &gt;
-Hajmi: 4
-Ma’lumot turi: int32
+<pre>Asl massiv:
+ [9 3 1 7 4 3 6]
+Qaytarish turi: None
+Saralangan asl massiv -&gt; [1 3 3 4 6 7 9]
 </pre>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=9e4f854b-bf94-4424-a36a-5e66b5c7f8c2">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=b37efb32-54c5-4e4a-b700-c4c088a16235">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p><strong>Izoh:</strong></p>
-<blockquote>
-<p><code>&gt;</code> <strong>big-endian</strong> bayt tartibini bildiradi, ya’ni eng muhim bayt xotirada birinchi bo‘lib saqlanadi.
-<code>i4</code> <strong>4 baytli</strong> butun son ma’lumot turini anglatadi.
-<code>itemsize</code> bitta qiymatni saqlash uchun qancha bayt ishlatilishini ko‘rsatadi, bu <strong>int32</strong> uchun 4 baytni tashkil qiladi.
-Umuman olganda, bu massiv 32 bitli butun sonlarni <strong>big-endian</strong> bayt tartibidan foydalangan holda saqlashini va har bir qiymat xotirada 4 bayt joy egallashini anglatadi.</p>
-</blockquote>
+<p><strong>Izoh:</strong>
+<code>a.sort()</code> metodi ishlatilganda, siz yangi o‘zgaruvchiga ehtiyoj sezmaysiz. Bu usul ayniqsa juda katta hajmdagi ma’lumotlar (Big Data) bilan ishlaganda xotira (RAM) yetishmovchiligini oldini olish uchun eng ma’qul yo‘ldir. Biroq, ehtiyot bo‘ling: agar sizga asl (saralanmagan) ma’lumotlar keyinchalik kerak bo‘lsa, bu metod ularni butunlay o‘zgartirib yuboradi.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=1a1cb27f-9d56-4de4-b656-c4a9a0d5b22c">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=7f67a390-d48f-4e8e-85b3-fdd88779c3b6">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>NumPy-dagi umumiy tur spetsifikatorlari (Type Specifiers)</p>
-<p>Ba’zi ko‘p ishlatiladigan tur kodlari quyidagilardir:</p>
-<blockquote>
-<p><code>i1, i2, i4, i8</code> -&gt; ishorali butun sonlar (Ham manfiy, ham musbat sonlarni saqlashi mumkin, masalan: -5, 0, 10)</p>
-<p><code>u1, u2, u4, u8</code> -&gt; ishorasiz butun sonlar (Faqat manfiy bo‘lmagan sonlarni saqlashi mumkin, masalan: 0, 5, 100)</p>
-<p><code>f4, f8</code> -&gt; suzuvchi nuqtali (o‘nli kasr) sonlar (o‘nli kasr qiymatlarni saqlaydi, masalan: 3.14, -0.75)</p>
-<p><code>c8, c16</code> -&gt; kompleks sonlar (Haqiqiy va mavhum qismlardan iborat sonlarni saqlaydi, masalan: 2+3j)</p>
-<p><code>a, U</code> -&gt; satrlar (Matnli qiymatlarni saqlaydi, masalan: “NumPy”)</p>
-</blockquote>
+<h3 id="sorted(a)-funksiyasi"><strong><code>sorted(a)</code> funksiyasi</strong><a class="anchor-link" href="#sorted(a)-funksiyasi">¶</a></h3><p><code>sorted()</code> — bu Python-ning o‘rnatilgan (built-in) funksiyasi bo‘lib, u NumPy massivlari bilan ham ishlaydi, biroq uning ishlash tamoyili <code>a.sort()</code> metodidan tubdan farq qiladi.</p>
+<ol>
+<li><strong>Yangi nusxa yaratadi:</strong> Eski massiv asosida yangi ro‘yxat yaratadi va uni saralangan holda qaytaradi.</li>
+<li><strong>Qaytarish turi:</strong> Har doim <strong>list (ro‘yxat)</strong> qaytaradi (hatto kiruvchi ma’lumot NumPy massivi bo‘lsa ham).</li>
+<li><strong>Xotira sarfi:</strong> Ko‘proq joy egallaydi, chunki asl massivning nusxasi yaratiladi va shundan so‘ng saralanadi.</li>
+<li><strong>Tezkorlik:</strong> NumPy-ning ichki <code>a.sort()</code> metodiga qaraganda sekinroq ishlaydi.</li>
+</ol>
+<p><strong>Misol:</strong>
+<code>sorted()</code> yordamida saralangan nusxa yaratish.</p>
 </div>
 </div>
 </div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=1d739a13-33d1-4649-9466-f24fbfffb1be">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p><em>type va dtype o‘rtasidagi farq</em></p>
-<p>NumPy-da <strong>type</strong> va <strong>dtype</strong> turli maqsadlarga xizmat qiladi va ko‘pincha yangi boshlovchilarni chalkashtirib yuboradi. <strong>type</strong> obyektning o‘zi nima ekanligini tavsiflaydi (masalan, NumPy massivi), <strong>dtype</strong> esa massiv ichida saqlangan ma’lumotlar turini tavsiflaydi.</p>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=78078c12-6c43-45a4-ab94-9d44daf72016">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=414906dd-ff4d-48f6-9a59-454386cf2a5c">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [12]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"type:"</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"dtype:"</span><span class="p">,</span> <span class="n">a</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># NumPy massivini yaratish</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
+
+<span class="c1"># Saralanmagan massivni chop etish</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'Asl massiv:</span><span class="se">\n</span><span class="s1">'</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
+
+<span class="c1"># Saralangan nusxa b o‘zgaruvchisiga saqlanadi</span>
+<span class="n">b</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+
+<span class="c1"># b - saralangan ro‘yxat, turi &lt;class 'list'&gt;</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'Yangi saralangan ro‘yxat (b) -&gt;'</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+
+<span class="c1"># Asl massiv o‘zgarishsiz qoladi</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'Asl massiv (a) -&gt;'</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -8663,102 +8555,46 @@ Umuman olganda, bu massiv 32 bitli butun sonlarni <strong>big-endian</strong> ba
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>type: &lt;class 'numpy.ndarray'&gt;
-dtype: int64
+<pre>Asl massiv:
+ [9 3 1 7 4 3 6]
+Yangi saralangan ro‘yxat (b) -&gt; [np.int64(1), np.int64(3), np.int64(3), np.int64(4), np.int64(6), np.int64(7), np.int64(9)]
+Asl massiv (a) -&gt; [9 3 1 7 4 3 6]
 </pre>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=01982b68-d039-48bb-807d-e961d581b4fc">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=4a726b20-fa26-465f-a558-7af2c99ab9f1">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p><strong>Izoh:</strong></p>
-<blockquote>
-<p><code>type(a)</code> <strong>a</strong> obyekti NumPy massiv obyekti ekanligini ko‘rsatadi.
-<code>a.dtype</code> massiv 64 bitli butun sonlarni saqlashini ko‘rsatadi.
-Bitta obyekt faqat bitta turga (type) ega bo‘lishi mumkin, ammo uning <strong>dtype</strong>-i saqlangan ma’lumotlarni nazorat qiladi.</p>
-</blockquote>
+<p><code>sorted(a)</code> funksiyasining eng katta afzalligi shundaki, u <strong>asl ma’lumotlarni saqlab qoladi</strong>. Agar sizga ham saralangan, ham dastlabki tartibdagi ma’lumotlar bir vaqtda kerak bo‘lsa, ushbu funksiyadan foydalanish maqsadga muvofiqdir. Biroq, natija NumPy massivi emas, balki standart Python ro‘yxati (<code>list</code>) bo‘lib qaytishini yodda tutishingiz kerak. Agar sizga yana massiv kerak bo‘lsa, natijani <code>np.array(b)</code> orqali o‘girib olishingizga to‘g‘ri keladi.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=25f85b87-810f-47c6-b4f6-98fc4287678a">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=d58b369a-8491-408e-8379-a41bf0d12ad2">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p><em>dtype yordamida tuzilmali massivlar (Structured Arrays)</em></p>
-<p>Ba’zan bitta massivda bir nechta turdagi ma’lumotlarni birga saqlash zarurati tug‘iladi, masalan, ism va sonli qiymatlar. NumPy buni <em>tuzilmali massivlar</em> (structured arrays) yordamida amalga oshiradi, bunda har bir element nomlangan maydonlarga ega kichik yozuv kabi ishlaydi.</p>
-<p><em>Tuzilmali dtype-ni aniqlash</em></p>
-<p>Ushbu misolda biz ikkita maydondan iborat maxsus ma’lumot turini aniqlaymiz: matnli maydon va sonli maydon.</p>
+<h3 id="np.argsort(a)-funksiyasi"><strong><code>np.argsort(a)</code> funksiyasi</strong><a class="anchor-link" href="#np.argsort(a)-funksiyasi">¶</a></h3><p><code>np.argsort()</code> — bu massivni bilvosita saralash usuli bo‘lib, u qiymatlarning o‘zini emas, balki ularni tartibga soluvchi indekslarni qaytaradi.</p>
+<ol>
+<li><strong>Indekslarni qaytaradi:</strong> Massivni o‘sish tartibida saralash uchun kerak bo‘ladigan indekslar ketma-ketligini aniqlaydi.</li>
+<li><strong>Qaytarish turi:</strong> <strong>NumPy massivi</strong> (<code>ndarray</code>) qaytaradi.</li>
+<li><strong>Xotira sarfi:</strong> Yangi indekslar massivi yaratilgani uchun qo‘shimcha xotira egallaydi.</li>
+</ol>
+<p><strong>Misol:</strong>
+<code>np.argsort()</code> yordamida indekslar orqali saralash.</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=70d667b8-6ff4-4137-ba5a-b66e7c9bb7d9">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [11]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">dt</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dtype</span><span class="p">([(</span><span class="s1">'name'</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">str_</span><span class="p">,</span> <span class="mi">16</span><span class="p">),</span> <span class="p">(</span><span class="s1">'scores'</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">,</span> <span class="p">(</span><span class="mi">2</span><span class="p">,))</span> <span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">dt</span><span class="p">[</span><span class="s1">'name'</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">dt</span><span class="p">[</span><span class="s1">'scores'</span><span class="p">])</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>&lt;U16
-('&lt;f8', (2,))
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=0327ff84-0f7c-4ee7-b97b-734ad71c1968">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p><strong>Izoh:</strong></p>
-<blockquote>
-<p><strong>name</strong> — 16 tagacha belgini saqlashi mumkin bo‘lgan satrli (string) maydon.</p>
-<p><strong>scores</strong> — ikkita haqiqiy sonni kichik massiv ko‘rinishida saqlaydi.</p>
-<p>Har bir maydon uning nomi va ma’lumot turi yordamida aniqlanadi.</p>
-</blockquote>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=026690a9-5732-4c69-b5ff-06fa3a53b232">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p><strong>Tuzilmali massiv yaratish</strong></p>
-<p>Bu yerda biz har bir qatori yuqorida aniqlangan tuzilmali <strong>dtype</strong>-ga amal qiladigan massiv yaratamiz.</p>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=e47ebe91-47d8-4c85-95f2-6ceada0b82e2">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=cbfbf671-a0d3-4967-b0a0-43ef4effd474">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -8766,12 +8602,23 @@ Bitta obyekt faqat bitta turga (type) ega bo‘lishi mumkin, ammo uning <strong>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [13]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">dt</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dtype</span><span class="p">([</span> <span class="p">(</span><span class="s1">'name'</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">str_</span><span class="p">,</span> <span class="mi">16</span><span class="p">),</span> <span class="p">(</span><span class="s1">'scores'</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">,</span> <span class="p">(</span><span class="mi">2</span><span class="p">,))</span> <span class="p">])</span>
-<span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span> <span class="p">(</span><span class="s1">'Emma'</span><span class="p">,</span> <span class="p">(</span><span class="mf">8.5</span><span class="p">,</span> <span class="mf">7.0</span><span class="p">)),</span> <span class="p">(</span><span class="s1">'Lucas'</span><span class="p">,</span> <span class="p">(</span><span class="mf">6.0</span><span class="p">,</span> <span class="mf">7.5</span><span class="p">))</span> <span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">dt</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># NumPy massivini yaratish</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Ballar:"</span><span class="p">,</span> <span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="s1">'scores'</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Ismlar:"</span><span class="p">,</span> <span class="n">data</span><span class="p">[</span><span class="s1">'name'</span><span class="p">])</span>
+<span class="c1"># Saralanmagan massivni chop etish</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'Asl massiv:</span><span class="se">\n</span><span class="s1">'</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
+
+<span class="c1"># Massiv indekslarini saralash</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argsort</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'Asl massivning saralangan indekslari -&gt;'</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+
+<span class="c1"># Saralangan indekslar yordamida saralangan massivni olish</span>
+<span class="c1"># c - b bilan bir xil uzunlikdagi vaqtinchalik massiv</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">b</span><span class="p">),</span> <span class="n">dtype</span> <span class="o">=</span> <span class="nb">int</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">b</span><span class="p">)):</span>
+    <span class="n">c</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span>
+    
+<span class="nb">print</span><span class="p">(</span><span class="s1">'Saralangan massiv -&gt;'</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -8784,68 +8631,179 @@ Bitta obyekt faqat bitta turga (type) ega bo‘lishi mumkin, ammo uning <strong>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>('Lucas', [6.0, 7.5])
-Ballar: [6.  7.5]
-Ismlar: ['Emma' 'Lucas']
+<pre>Asl massiv:
+ [9 3 1 7 4 3 6]
+Asl massivning saralangan indekslari -&gt; [2 1 5 4 6 3 0]
+Saralangan massiv -&gt; [1 3 3 4 6 7 9]
 </pre>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=a4838c1d-d6bf-4e2e-aae0-5c63e94020a3">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=093a7c95-a730-411a-a9fe-d3d9caaa7e2a">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><strong>Izoh:</strong>
+<code>np.argsort()</code> metodining eng foydali tomoni shundaki, u bizga bir nechta bog‘liq massivlarni bitta kalit bo‘yicha saralash imkonini beradi. Masalan, sizda talabalar ismlari va ularning ballari alohida massivlarda bo‘lsa, ballar bo‘yicha <code>argsort()</code> qilib, olingan indekslar yordamida ismlar massivini ham ballarga mos ravishda tartiblashingiz mumkin.</p>
+<p><strong>Maslahat:</strong> Yuqoridagi misolda <code>for</code> sikli o‘rniga NumPy-ning <strong>"fancy indexing"</strong> imkoniyatidan foydalanish ancha samarali:
+<code>c = a[b]</code> — bu bitta qator kod sikl bilan bir xil natijani beradi va ancha tezroq ishlaydi.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=a8bc0c2b-0323-4d97-ad02-0ff19bd05685">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="np.lexsort((b,-a))-funksiyasi"><strong><code>np.lexsort((b, a))</code> funksiyasi</strong><a class="anchor-link" href="#np.lexsort((b,-a))-funksiyasi">¶</a></h3><p><code>np.lexsort()</code> — bu bir nechta kalitlar (massivlar) ketma-ketligi yordamida bilvosita saralashni amalga oshiradi. Bu usul ma’lumotlar bazasidagi bir nechta ustun bo‘yicha tartiblashga (masalan, familiyasi bir xil bo‘lganlarni ismi bo‘yicha saralashga) o‘xshaydi.</p>
+<ol>
+<li><strong>Kalitlar ketma-ketligi bo‘yicha bilvosita saralash:</strong> Bir nechta mezon asosida indekslarni aniqlaydi.</li>
+<li><strong>Ketma-ketlik tartibi:</strong> <code>np.lexsort((b, a))</code> funksiyasida <strong>oxirgi</strong> ko‘rsatilgan massiv (<code>a</code>) asosiy saralash kaliti bo‘ladi, undan oldingisi (<code>b</code>) esa yordamchi kalit hisoblanadi.</li>
+<li><strong>Qaytarish turi:</strong> Indekslardan iborat <code>ndarray</code> (butun sonli massiv) qaytaradi.</li>
+<li><strong>Xotira sarfi:</strong> Juftliklar bo‘yicha hisoblangan yangi indekslar massivi yaratilgani uchun qo‘shimcha xotira egallaydi.</li>
+</ol>
+<p><strong>Misol:</strong>
+<code>np.lexsort()</code> yordamida bir nechta massiv bo‘yicha saralash.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=a60efc81-79ea-425d-9ef5-262f96e94270">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># NumPy massivlarini yaratish</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span> <span class="c1"># Birinchi ustun (Asosiy kalit)</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">])</span> <span class="c1"># Ikkinchi ustun (Yordamchi kalit)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">'a ustuni, b ustuni'</span><span class="p">)</span>
+<span class="k">for</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="s1">'   '</span><span class="p">,</span> <span class="n">j</span><span class="p">)</span>
+
+<span class="c1"># Avval a bo‘yicha, a lar teng bo‘lsa b bo‘yicha saralash</span>
+<span class="n">ind</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">lexsort</span><span class="p">((</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="p">))</span> 
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">'Saralangan indekslar -&gt;'</span><span class="p">,</span> <span class="n">ind</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>a ustuni, b ustuni
+9     4
+3     6
+1     9
+3     2
+4     1
+3     8
+6     7
+Saralangan indekslar -&gt; [2 3 1 5 4 6 0]
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=da066a0a-c396-4c6a-91c3-958d44c178c5">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p><strong>Izoh:</strong></p>
-<blockquote>
-<p>Ma’lumotlarning har bir elementi ham ismni (<strong>name</strong>), ham ballarni (<strong>scores</strong>) o‘z ichiga oladi.
-<code>data[1]</code> ikkinchi yozuvga murojaat qiladi.
-Maydonlarga ularning nomlari orqali murojaat qilinadi, masalan: <code>data['name']</code>.
-Tuzilmali massivlar xuddi nomlangan ustunlarga ega jadval qatorlari kabi ishlaydi.</p>
-</blockquote>
+<p>Natijani tahlil qilsak, nima uchun bunday indekslar chiqqanini tushunish oson:</p>
+<ul>
+<li><code>a</code> massividagi eng kichik qiymat <code>1</code> (indeksi <code>2</code>). U birinchi bo‘lib chiqadi.</li>
+<li>Keyingi kichik qiymat <code>3</code>. Lekin <code>3</code> soni <code>1</code>, <code>3</code> va <code>5</code>-indekslarda joylashgan.</li>
+<li>Endi NumPy <code>b</code> massiviga qaraydi: <code>b[1]=6</code>, <code>b[3]=2</code>, <code>b[5]=8</code>.</li>
+<li>Ularning ichida eng kichigi <code>2</code>, shuning uchun keyingi indeks <code>3</code>, keyin <code>1</code> (chunki <code>6 &lt; 8</code>) va keyin <code>5</code> bo‘ladi.</li>
+</ul>
+<p>Bu usul murakkab jadvallarni tartibga solishda juda qo‘l keladi.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=1687be31-b245-4f50-a389-3ce4a3e5e36e">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=13060c78-d795-41ce-8d25-5f53142c49f4">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="1.1.4.-NumPy-massivini-yaratishning-turli-usullari-(Different-Ways-of-Creating-NumPy-Array)">1.1.4. NumPy massivini yaratishning turli usullari (Different Ways of Creating NumPy Array)<a class="anchor-link" href="#1.1.4.-NumPy-massivini-yaratishning-turli-usullari-(Different-Ways-of-Creating-NumPy-Array)">¶</a></h3>
+<hr/>
+<p>NumPy-da qidirish (<strong>Searching</strong>) — bu massiv ichidan muayyan qiymatlarni yoki shartlarni topishni anglatadi. Ushbu bo‘limda biz NumPy massivlarida qidirishning turli usullarini, jumladan, <code>np.where()</code> orqali aniq qiymatlarni topish, <code>np.searchsorted()</code> va barcha nolga teng bo‘lmagan elementlar indekslarini qaytaruvchi <code>np.nonzero()</code> funksiyalarini ko‘rib chiqamiz.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=d2edf9b8-5a58-4703-a32f-6208691d9efc">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=0472e431-2c69-44c9-ab18-fd8a3e24f858">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p><strong>1. <code>numpy.array()</code>:</strong> Numpy-dagi massiv obyekti <strong>ndarray</strong> deb ataladi. Biz ushbu funksiya yordamida <strong>ndarray</strong> yaratishimiz mumkin.</p>
-<p><strong>Sintaksis:</strong> <code>numpy.array(parameter)</code></p>
-<blockquote>
-<p><em>Misol:</em></p>
-</blockquote>
+<h3 id="1.6.3.-NumPy-massivlarida-qidiruv-amallari-(Searching-in-NumPy-Array)">1.6.3. NumPy massivlarida qidiruv amallari (Searching in NumPy Array)<a class="anchor-link" href="#1.6.3.-NumPy-massivlarida-qidiruv-amallari-(Searching-in-NumPy-Array)">¶</a></h3>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=35735225-a3c6-4d0c-97b1-ffbd7025edff">
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=2f3a21b7-621b-475d-8546-4662f977cd35">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>NumPy har xil turdagi sonli qiymatlarni qidirish uchun turli usullarni taqdim etadi, ushbu maqolada biz ulardan ikkita muhimini ko‘rib chiqamiz: <code>numpy.where()</code> va <code>numpy.searchsorted()</code>.</p>
+<h3 id="1.-numpy.where()"><strong>1. <code>numpy.where()</code></strong><a class="anchor-link" href="#1.-numpy.where()">¶</a></h3><p>Ushbu funksiya berilgan shart bajarilgan kiruvchi massiv elementlarining indekslarini qaytaradi.</p>
+<p><strong>Sintaksis:</strong> <code>numpy.where(shart[, x, y])</code></p>
+<p><strong>Parametrlar:</strong></p>
+<ul>
+<li><strong>condition (shart):</strong> Shart rost (<code>True</code>) bo‘lganda <code>x</code> qiymatini, aks holda <code>y</code> qiymatini beradi.</li>
+<li><strong>x, y:</strong> Tanlash uchun qiymatlar. <code>x</code>, <code>y</code> va <code>shart</code> ma’lum bir shaklga mos kelishi (broadcastable) kerak.</li>
+</ul>
+<p><strong>Qaytariladigan qiymat:</strong></p>
+<ul>
+<li><strong>out:</strong> [ndarray yoki ndarray'lar korteji] Agar <code>x</code> va <code>y</code> ko‘rsatilgan bo‘lsa, chiqish massivi shart rost bo‘lgan joylarda <code>x</code> elementlarini, boshqa joylarda esa <code>y</code> elementlarini o‘z ichiga oladi.</li>
+<li>Agar faqat shart berilgan bo‘lsa, <code>condition.nonzero()</code> korteji, ya’ni shart rost bo‘lgan indekslar qaytariladi.</li>
+</ul>
+<p><strong>Misol:</strong>
+Quyidagi misol <code>where()</code> yordamida qanday qidirishni namoyish etadi.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=deed9478-785f-4ac6-a32f-f7a5b4b9c335">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [14]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [15]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># massiv yaratish</span>
+<span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">82</span><span class="p">,</span> <span class="mi">91</span><span class="p">,</span> <span class="mi">45</span><span class="p">])</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Massiv :"</span><span class="p">,</span> <span class="n">arr</span><span class="p">)</span>
+<span class="c1"># arr ni chop etish</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"arr = </span><span class="si">{}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">arr</span><span class="p">))</span>
+
+<span class="c1"># arr ichidan 30 qiymatini qidirish va uning indeksini i da saqlash</span>
+<span class="n">i</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">arr</span> <span class="o">==</span> <span class="mi">30</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"i = </span><span class="si">{}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -8858,156 +8816,54 @@ Tuzilmali massivlar xuddi nomlangan ustunlarga ega jadval qatorlari kabi ishlayd
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Massiv : [3 4 5 5]
+<pre>arr = [10 32 30 50 20 82 91 45]
+i = (array([2]),)
 </pre>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=97ef94a7-c954-40c3-b704-43704e53c57c">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=4c9356d6-2128-4bc7-bfb0-46674da5340f">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p><strong>2. <code>numpy.fromiter()</code>:</strong> <code>fromiter()</code> funksiyasi takrorlanuvchi (iterable) obyektdan foydalangan holda yangi bir o‘lchamli massiv hosil qiladi.</p>
-<p><strong>Sintaksis:</strong> <code>numpy.array(iterable, dtype, count=-1)</code></p>
-<blockquote>
-<p><em>Misol:</em></p>
-</blockquote>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=0dde48bf-57a8-45e2-8c53-f04d5ff14279">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [16]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Takrorlanuvchi obyekt sifatida o‘zbekcha so‘zdan foydalanamiz</span>
-<span class="n">matn</span> <span class="o">=</span> <span class="s2">"Ma’lumotlar"</span>
-
-<span class="c1"># Har bir belgini alohida element sifatida massivga o‘tkazamiz</span>
-<span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">fromiter</span><span class="p">(</span><span class="n">matn</span><span class="p">,</span> <span class="n">dtype</span> <span class="o">=</span> <span class="s1">'U1'</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">"fromiter() yordamida yaratilgan massiv :"</span><span class="p">,</span> <span class="n">arr</span><span class="p">)</span>
+<p>Ko‘rib turganingizdek, <code>i</code> o‘zgaruvchisi qidirilgan qiymatimizning indeksini birinchi element sifatida saqlovchi takrorlanuvchi obyekt (iterable) hisoblanadi. Oxirgi chop etish (print) qismini quyidagiga almashtirish orqali uni chiroyliroq ko‘rinishga keltirishimiz mumkin:
+<code>print("i = {}".format(i[0]))</code></p>
+<p>Bu yakuniy natijani quyidagicha o‘zgartiradi:</p>
+<div class="highlight"><pre><span></span>arr = [10 32 30 50 20 82 91 45]
+i = [2]
 </pre></div>
+<p><strong>Izoh:</strong>
+<code>np.where()</code> nafaqat bitta qiymatni, balki murakkab shartlarni ham qidira oladi. Masalan, <code>np.where(arr &gt; 40)</code> barcha 40 dan katta elementlar indeksini qaytaradi. Bu funksiya ma’lumotlarni filtrlash va shartli o‘zgartirishlar uchun juda qulaydir.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>fromiter() yordamida yaratilgan massiv : ['M' 'a' '’' 'l' 'u' 'm' 'o' 't' 'l' 'a' 'r']
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=acc747bf-eafc-4adf-8edf-cf667196b560">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=5e5b5863-0dc1-4b94-bf2a-173038bffda3">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p><strong>Izoh:</strong></p>
-<blockquote>
-<p><code>matn</code>: Massivga aylantiriladigan satrli obyekt.
-<code>dtype = 'U1'</code>: Har bir element 1 ta Unicode belgidan iborat bo‘lishini belgilaydi.
-Bu usul yirik hajmli ma’lumotlar oqimi bilan ishlashda xotirani tejash uchun juda samaralidir.</p>
-</blockquote>
+<h3 id="2.-numpy.searchsorted()"><strong>2. <code>numpy.searchsorted()</code></strong><a class="anchor-link" href="#2.-numpy.searchsorted()">¶</a></h3><p>Ushbu funksiya saralangan <code>arr</code> massivida ko‘rsatilgan qiymatlar tartibni buzmagan holda qaysi indeksga joylashtirilishi kerakligini aniqlash uchun ishlatiladi. Kerakli indekslarni topishda <strong>ikkilik qidiruv (binary search)</strong> algoritmidan foydalaniladi.</p>
+<p><strong>Sintaksis:</strong> <code>numpy.searchsorted(arr, num, side='left', sorter=None)</code></p>
+<p><strong>Parametrlar:</strong></p>
+<ul>
+<li><strong>arr:</strong> [array_like] Kiruvchi massiv. Agar <code>sorter</code> berilmagan bo‘lsa, u o‘sish tartibida saralangan bo‘lishi kerak.</li>
+<li><strong>num:</strong> [array_like] Massivga joylashtirmoqchi bo‘lgan qiymat(lar).</li>
+<li><strong>side:</strong> ['left', 'right'], ixtiyoriy. Agar <code>'left'</code> bo‘lsa, topilgan birinchi mos joyning indeksi beriladi. Agar <code>'right'</code> bo‘lsa, oxirgi shunday indeks qaytariladi.</li>
+<li><strong>sorter:</strong> [array_like, ixtiyoriy] Massivni o‘sish tartibida saralovchi butun sonli indekslar massivi (odatda <code>argsort</code> natijasi).</li>
+</ul>
+<p><strong>Qaytaradi:</strong> [indices] <code>num</code> bilan bir xil shakldagi joylashtirish nuqtalari (indekslar) massivi.</p>
+<p><strong>Misol:</strong>
+Quyidagi misol <code>searchsorted()</code> funksiyasidan foydalanishni tushuntiradi.</p>
 </div>
 </div>
 </div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=1e5782cc-21de-46db-9b33-1212fea9f499">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p><strong>3. <code>numpy.arange()</code>:</strong> Bu NumPy’ning o‘rnatilgan funksiyasi bo‘lib, berilgan oraliqda bir xil qadam bilan joylashgan qiymatlarni qaytaradi.</p>
-<p><strong>Sintaksis:</strong> <code>numpy.arange( boshlanish, tugash, qadam, dtype=None )</code></p>
-<blockquote>
-<p><em>Misol:</em></p>
-</blockquote>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=47d4001f-47e1-4009-a81e-85b71db6b4f7">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [21]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># 1 dan 25 gacha bo‘lgan sonlarni 3 qadam bilan yaratamiz</span>
-<span class="c1"># Eslatma: ’tugash’ qiymati (25) massivga kirmaydi</span>
-<span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">dtype</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">"arange() yordamida yaratilgan massiv:</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="n">arr</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>arange() yordamida yaratilgan massiv:
- [ 1.  4.  7. 10. 13. 16. 19. 22.]
-</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=7566bbb4-becc-4ff3-91d3-21d5fa54ef35">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p><strong>Izoh:</strong></p>
-<blockquote>
-<p><strong>1 (start):</strong> Ketma-ketlikning boshlanishi.</p>
-<p><strong>25 (stop):</strong> Ketma-ketlikning oxiri (bu qiymat natijaga kirmaydi).</p>
-<p><strong>3 (step):</strong> Qiymatlar orasidagi masofa (qadam).</p>
-<p><strong>dtype:</strong> Massiv elementlarining turi (bu misolda o‘nli kasr sonlar).</p>
-</blockquote>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=17cb436a-dc4a-4c11-ab51-3e4fc5b644c6">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p><strong>4. <code>numpy.linspace()</code>:</strong> Ushbu funksiya belgilangan ikki chegara oralig‘ida bir xil masofada joylashgan sonlarni qaytaradi. <code>arange()</code> dan farqi shundaki, bu yerda qadam hajmi emas, balki nechta element kerakligi ko‘rsatiladi.</p>
-<p><strong>Sintaksis:</strong> <code>numpy.linspace(boshlanish, tugash, soni=50, endpoint=True, retstep=False, dtype=None, axis=0)</code></p>
-<blockquote>
-<p><em>Misol:</em></p>
-</blockquote>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=c2e373a0-c40b-4b6d-9467-aa8de08d7ae7">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=b4af81ed-b878-469a-8d4f-d048c805b3f9">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9015,11 +8871,15 @@ Bu usul yirik hajmli ma’lumotlar oqimi bilan ishlashda xotirani tejash uchun j
 <div class="jp-InputPrompt jp-InputArea-prompt">In [17]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># 5 dan 15 gacha bo‘lgan oraliqda aniq 4 ta son hosil qilamiz</span>
-<span class="c1"># Bunda oraliq avtomatik ravishda teng qismlarga bo‘linadi</span>
-<span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="n">dtype</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># massiv yaratish</span>
+<span class="n">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"arr = </span><span class="si">{}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">arr</span><span class="p">))</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">"linspace() yordamida yaratilgan massiv:</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="n">arr</span><span class="p">)</span>
+<span class="c1"># Eng chapdagi 3 (birinchi uchrashi mumkin bo‘lgan joy)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Eng chapdagi indeks = </span><span class="si">{}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">searchsorted</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">side</span><span class="o">=</span><span class="s2">"left"</span><span class="p">)))</span>
+
+<span class="c1"># Eng o‘ngdagi 3 (oxirgi uchrashi mumkin bo‘lgan joy)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Eng o‘ngdagi indeks = </span><span class="si">{}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">searchsorted</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">side</span><span class="o">=</span><span class="s2">"right"</span><span class="p">)))</span>
 </pre></div>
 </div>
 </div>
@@ -9032,46 +8892,56 @@ Bu usul yirik hajmli ma’lumotlar oqimi bilan ishlashda xotirani tejash uchun j
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>linspace() yordamida yaratilgan massiv:
- [ 5.          8.33333333 11.66666667 15.        ]
+<pre>arr = [1, 2, 2, 3, 3, 3, 4, 5, 6, 6]
+Eng chapdagi indeks = 3
+Eng o'ngdagi indeks = 6
 </pre>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=ca86580f-509b-4eac-b928-2dc76275249b">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=fafe04ae-4ccf-425a-860e-a12b1bb07095">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p><strong>Izoh:</strong></p>
-<blockquote>
-<p><strong>boshlanish (5):</strong> Ketma-ketlikning boshlang‘ich qiymati.</p>
-<p><strong>tugash (15):</strong> Ketma-ketlikning yakuniy qiymati.</p>
-<p><strong>soni (4):</strong> Hosil qilinishi kerak bo‘lgan elementlar soni.</p>
-<p><strong>endpoint=True:</strong> Agar <code>True</code> bo‘lsa, “tugash” qiymati massivga kiritiladi (standart holatda <code>True</code>).</p>
-</blockquote>
+<ul>
+<li><code>side="left"</code> bo‘lganda, funksiya massivdagi birinchi uchragan <code>3</code> ning o‘rnini (3-indeks) qaytaradi.</li>
+<li><code>side="right"</code> bo‘lganda esa, oxirgi <code>3</code> dan keyingi o‘rinni (6-indeks) qaytaradi, chunki yangi <code>3</code> ni o‘sha yerga qo‘ysak ham tartib saqlanib qoladi.</li>
+<li>Bu funksiya juda katta hajmdagi saralangan ma’lumotlar bilan ishlashda oddiy qidiruvga qaraganda ancha samaralidir.</li>
+</ul>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=bcad1eb3-347f-4e38-8b14-9e0169c9d9cc">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=72e49d8f-9fed-44ca-af88-17479de1d31a">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p><strong>5. <code>numpy.empty()</code>:</strong> Ushbu funksiya berilgan shakl (o‘lcham) va turga ega bo‘lgan, lekin qiymatlari boshlang‘ich holatga keltirilmagan yangi massiv yaratadi. Bu usul juda tez ishlaydi, chunki u xotiradagi mavjud "axlat" qiymatlarni tozalab o‘tirmaydi.</p>
-<p><strong>Sintaksis:</strong> <code>numpy.empty(shakl, dtype=float, order='C')</code></p>
-<blockquote>
-<p><em>Misol:</em></p>
-</blockquote>
+<h3 id="1.6.4.-NumPy-massivlarida-qidirish,-saralash-va-sanash-(Searching,-Sorting,-and-Counting)">1.6.4. NumPy massivlarida qidirish, saralash va sanash (Searching, Sorting, and Counting)<a class="anchor-link" href="#1.6.4.-NumPy-massivlarida-qidirish,-saralash-va-sanash-(Searching,-Sorting,-and-Counting)">¶</a></h3>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=aafd411f-41a1-481b-abd6-901675929ca0">
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=cb8ec4e4-c73e-4f32-98da-dbf8989ebf35">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>NumPy — bu sonli hisoblashlar uchun ishlatiladigan Python kutubxonasi bo‘lib, u massivlar bilan bog‘liq amallarni tez va samarali bajarishga imkon beradi. U massivlarni saralash, muayyan elementlarni qidirish va qiymatlar uchrash sonini hisoblash uchun o‘rnatilgan funksiyalarni taqdim etadi. Ushbu funksiyalar ma’lumotlar manipulyatsiyasi va tahlilini soddalashtirishga yordam beradi, bu esa katta ma’lumotlar to‘plamlarida murakkab amallarni osonlik bilan bajarish imkonini beradi.</p>
+<h3 id="Saralash-(Sorting)"><strong>Saralash (Sorting)</strong><a class="anchor-link" href="#Saralash-(Sorting)">¶</a></h3><p>NumPy-da saralash massiv elementlarini ma’lum bir tartibda, masalan, sonlar o‘sishi yoki alifbo tartibida joylashtirishni anglatadi. Bu ma’lumotlar tashkil etilishini yaxshilaydi hamda qidirish va tahlil qilish jarayonlarini samaraliroq qiladi, ayniqsa katta hajmdagi yoki ko‘p o‘lchamli massivlar bilan ishlashda juda qo‘l keladi.</p>
+<h4 id="1.-numpy.sort()"><strong>1. <code>numpy.sort()</code></strong><a class="anchor-link" href="#1.-numpy.sort()">¶</a></h4><p><code>numpy.sort()</code> metodi asl massivni o‘zgartirmagan holda kiruvchi massivning saralangan nusxasini qaytaradi. Bu asl ma’lumotlarni o‘zgarishsiz saqlab, saralangan ma’lumotlarga ega bo‘lishni xohlaganingizda foydalidir.</p>
+<p><strong>Misol:</strong></p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=dd56554f-779a-42b0-8b6c-b0f0f5379cc1">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9079,11 +8949,10 @@ Bu usul yirik hajmli ma’lumotlar oqimi bilan ishlashda xotirani tejash uchun j
 <div class="jp-InputPrompt jp-InputArea-prompt">In [18]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># 2 qator va 4 ustunli massiv yaratamiz</span>
-<span class="c1"># order='F' (Fortran tartibi) - ma’lumotlarni ustunlar bo‘yicha joylashtiradi</span>
-<span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="n">dtype</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">int16</span><span class="p">,</span> <span class="n">order</span> <span class="o">=</span> <span class="s1">'F'</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">])</span>
+<span class="n">sorted_arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">"empty() yordamida yaratilgan massiv:</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="n">arr</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sorted_arr</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -9096,46 +8965,38 @@ Bu usul yirik hajmli ma’lumotlar oqimi bilan ishlashda xotirani tejash uchun j
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>empty() yordamida yaratilgan massiv:
- [[ 69 109 109  97]
- [  0   0   0   0]]
+<pre>[1 2 5 7 9]
 </pre>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=66b31542-e84e-493e-b298-348d7d28d485">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=1d84f532-4ae5-4680-9ef7-9f4dd35cd008">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p><strong>Eslatma:</strong> Natijadagi sonlar sizda boshqacha chiqishi mumkin, chunki ular xotiradagi tasodifiy qoldiq qiymatlardir.</p>
-<p><strong>Izoh:</strong></p>
-<blockquote>
-<p><strong>shakl ([2, 4]):</strong> 2 ta qator va 4 ta ustun.</p>
-<p><strong>order = 'F'</strong>: Ma’lumotlarning xotirada joylashish tartibi. 'C' - qatorlar bo‘yicha (C-style), 'F' - ustunlar bo‘yicha (Fortran-style). Bu parametr katta massivlar bilan ishlashda hisoblash tezligiga ta’sir qilishi mumkin.</p>
-</blockquote>
+<p><strong>Izoh:</strong>
+<code>np.sort()</code> funksiyasi o‘zgaruvchan bo‘lmagan (immutable) yondashuvni afzal ko‘radigan holatlar uchun mos keladi. Agar sizga asl massivning o‘zini saralash kerak bo‘lsa, yuqorida ko‘rib chiqqanimizdek <code>arr.sort()</code> metodidan foydalanishingiz mumkin.</p>
+<p>NumPy-ning qidiruv va hisoblash funksiyalari bo‘yicha yana qanday ma’lumotlar kerak?</p>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=cb8565d3-edb0-4280-a861-b0047221ff8d">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=51eb769c-0ae5-49fe-a6f4-97d47ae4448a">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p><strong>6. <code>numpy.ones()</code>:</strong> Ushbu funksiya berilgan shakl (o‘lcham) va turga ega bo‘lgan, barcha elementlari bir (1) soni bilan to‘ldirilgan yangi massiv yaratish uchun ishlatiladi.</p>
-<p><strong>Sintaksis:</strong> <code>numpy.ones(shakl, dtype=None, order='C')</code></p>
-<blockquote>
-<p><em>Misol:</em></p>
-</blockquote>
+<h4 id="2.-numpy.argsort()"><strong>2. <code>numpy.argsort()</code></strong><a class="anchor-link" href="#2.-numpy.argsort()">¶</a></h4><p><code>numpy.argsort()</code> funksiyasi saralangan qiymatlarning o‘zini emas, balki massivni saralash uchun kerak bo‘ladigan <strong>indekslarni</strong> qaytaradi. Bu usul ko‘pincha bir massivdagi tartib asosida boshqa bir bog‘liq massivni qayta tartiblash kerak bo‘lganda qo‘llaniladi.</p>
+<p><strong>Misol:</strong></p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=393ee708-0426-4d30-a15d-4308ad95c7db">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=00e27174-5aae-4cb0-97f0-de42f88889a0">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9143,11 +9004,16 @@ Bu usul yirik hajmli ma’lumotlar oqimi bilan ishlashda xotirani tejash uchun j
 <div class="jp-InputPrompt jp-InputArea-prompt">In [19]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># 4 ta qator va 3 ta ustundan iborat massiv yaratamiz</span>
-<span class="c1"># Barcha elementlar 1 ga teng bo‘ladi</span>
-<span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="n">dtype</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">,</span> <span class="n">order</span> <span class="o">=</span> <span class="s1">'f'</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">scores</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">88</span><span class="p">,</span> <span class="mi">95</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">85</span><span class="p">])</span>
+<span class="n">students</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="s2">"Anish"</span><span class="p">,</span> <span class="s2">"Rahul"</span><span class="p">,</span> <span class="s2">"Priya"</span><span class="p">,</span> <span class="s2">"Vikram"</span><span class="p">])</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">"ones() yordamida yaratilgan massiv:</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="n">arr</span><span class="p">)</span>
+<span class="c1"># Ballar bo‘yicha saralangan indekslarni olamiz</span>
+<span class="n">sorted_indices</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argsort</span><span class="p">(</span><span class="n">scores</span><span class="p">)</span>
+
+<span class="c1"># Ushbu indekslar yordamida talabalar ismlarini tartiblaymiz</span>
+<span class="n">sorted_students</span> <span class="o">=</span> <span class="n">students</span><span class="p">[</span><span class="n">sorted_indices</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">sorted_students</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -9160,49 +9026,25 @@ Bu usul yirik hajmli ma’lumotlar oqimi bilan ishlashda xotirani tejash uchun j
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>ones() yordamida yaratilgan massiv:
- [[1 1 1]
- [1 1 1]
- [1 1 1]
- [1 1 1]]
+<pre>['Priya' 'Vikram' 'Anish' 'Rahul']
 </pre>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=2ec78dfb-8988-4581-a897-d2139c276b34">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=ee0a8f62-15d3-4865-91aa-a610bb91006b">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p><strong>Izoh:</strong></p>
-<blockquote>
-<p><strong>shakl ([4, 3]):</strong> Massivning o‘lchami (4 qator, 3 ustun).</p>
-<p><strong>dtype = np.int32:</strong> Elementlar butun son turida bo‘lishini belgilaydi.</p>
-<p><strong>order = 'f':</strong> Ma’lumotlarni xotirada Fortran tartibida (ustunlar bo‘yicha) joylashtiradi.</p>
-<p><code>ones()</code> funksiyasi ko‘pincha matematik hisoblashlarda massivlarni boshlang‘ich qiymat bilan to‘ldirish uchun juda qulaydir.</p>
-</blockquote>
+<h4 id="3.-numpy.lexsort()"><strong>3. <code>numpy.lexsort()</code></strong><a class="anchor-link" href="#3.-numpy.lexsort()">¶</a></h4><p>Ushbu funksiya bir nechta saralash kalitlaridan foydalangan holda bilvosita barqaror saralashni amalga oshiradi. Kiruvchi kortejdagi <strong>oxirgi kalit</strong> asosiy saralash kaliti sifatida ishlatiladi. Bu funksiya ayniqsa tuzilmaviy yoki jadval ko‘rinishidagi ma’lumotlarni saralashda juda foydalidir.</p>
+<p><strong>Misol:</strong></p>
 </div>
 </div>
 </div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=bf2df8dc-2fcb-4925-b46d-ac7dd4f8fb47">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p><strong>7. <code>numpy.zeros()</code>:</strong> Ushbu funksiya berilgan shakl (o‘lcham) va turga ega bo‘lgan, barcha elementlari nol (0) bilan to‘ldirilgan yangi massiv yaratish uchun ishlatiladi.</p>
-<p><strong>Sintaksis:</strong> <code>numpy.zeros(shakl, dtype=None, order='C')</code></p>
-<blockquote>
-<p><em>Misol:</em></p>
-</blockquote>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=ba74791f-0c00-4a05-b248-3583202c2811">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=d8fa6dcb-976a-44f8-8e61-6fab81952a4a">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -9210,11 +9052,13 @@ Bu usul yirik hajmli ma’lumotlar oqimi bilan ishlashda xotirani tejash uchun j
 <div class="jp-InputPrompt jp-InputArea-prompt">In [20]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># 4 ta qator va 3 ta ustunli massiv yaratamiz</span>
-<span class="c1"># Barcha qiymatlar 0 ga teng bo‘ladi</span>
-<span class="n">massiv</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="n">dtype</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">,</span> <span class="n">order</span> <span class="o">=</span> <span class="s1">'f'</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">age</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">25</span><span class="p">,</span> <span class="mi">35</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">])</span>
+<span class="n">salary</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">50000</span><span class="p">,</span> <span class="mi">60000</span><span class="p">,</span> <span class="mi">45000</span><span class="p">,</span> <span class="mi">55000</span><span class="p">])</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">"zeros() yordamida yaratilgan massiv:</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="n">massiv</span><span class="p">)</span>
+<span class="c1"># Avval yosh (age) bo‘yicha saralaydi (chunki kortejda oxirgi turibdi)</span>
+<span class="n">sorted_indices</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">lexsort</span><span class="p">((</span><span class="n">salary</span><span class="p">,</span> <span class="n">age</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">sorted_indices</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -9227,56 +9071,961 @@ Bu usul yirik hajmli ma’lumotlar oqimi bilan ishlashda xotirani tejash uchun j
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>zeros() yordamida yaratilgan massiv:
- [[0 0 0]
- [0 0 0]
- [0 0 0]
- [0 0 0]]
+<pre>[2 0 3 1]
 </pre>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=45abe8cc-0225-44d0-9203-cadd8af8fd4a">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=a99b8dc2-967d-4e49-894d-9c30d3babcf7">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><strong>Izoh:</strong>
+Natijadagi <code>[2 0 3 1]</code> indekslari yoshning o‘sib borish tartibini bildiradi: 20 (indeks 2), 25 (indeks 0), 30 (indeks 3) va 35 (indeks 1). Agar yoshlar teng bo‘lib qolsa, u holda maosh (salary) qiymatlariga qarab tartiblanadi.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=6db184a7-b949-4412-9ad0-bb31611910e7">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h4 id="4.-ndarray.sort()"><strong>4. <code>ndarray.sort()</code></strong><a class="anchor-link" href="#4.-ndarray.sort()">¶</a></h4><p>Ushbu metod massivni o‘z o‘rnida (<strong>in-place</strong>) saralaydi, ya’ni asl massivning o‘zi modifikatsiya qilinadi. Yangi massiv yaratilmagani sababli, bu usul xotira jihatidan juda samarali hisoblanadi.</p>
+<p><strong>Misol:</strong></p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=cb0bafe1-6b5b-446f-89a5-96fbfdfd7cc5">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [21]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">cities</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="s2">"Delhi"</span><span class="p">,</span> <span class="s2">"Mumbai"</span><span class="p">,</span> <span class="s2">"Chennai"</span><span class="p">,</span> <span class="s2">"Bangalore"</span><span class="p">])</span>
+<span class="n">cities</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">cities</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>['Bangalore' 'Chennai' 'Delhi' 'Mumbai']
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=f291e3eb-bf05-4310-8d8e-a0717623e042">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h4 id="5.-numpy.sort_complex()"><strong>5. <code>numpy.sort_complex()</code></strong><a class="anchor-link" href="#5.-numpy.sort_complex()">¶</a></h4><p><code>numpy.sort_complex()</code> funksiyasi kompleks sonlardan iborat massivni saralash uchun mo‘ljallangan. U avval sonning haqiqiy (real) qismi bo‘yicha saralaydi, agar haqiqiy qismlar teng bo‘lsa, u holda mavhum (imaginary) qismi bo‘yicha tartiblaydi.</p>
+<p><strong>Misol:</strong></p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=34b8d71b-fafa-41d0-a2a3-c65dca4bf420">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [22]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">3</span><span class="o">+</span><span class="mi">2</span><span class="n">j</span><span class="p">,</span> <span class="mi">1</span><span class="o">+</span><span class="mi">5</span><span class="n">j</span><span class="p">,</span> <span class="mi">3</span><span class="o">+</span><span class="mi">1</span><span class="n">j</span><span class="p">])</span>
+<span class="n">sorted_arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sort_complex</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">sorted_arr</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>[1.+5.j 3.+1.j 3.+2.j]
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=393132f8-0e0e-42da-92d5-6f23e756402c">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><strong>Izoh:</strong>
+Natijada ko‘rib turganingizdek, avval haqiqiy qismi eng kichik bo‘lgan <code>1.+5.j</code> chiqdi. Keyin haqiqiy qismi bir xil (<code>3</code>) bo‘lgan sonlar keldi va ular orasida mavhum qismi kichikrog‘i (<code>1j</code>) birinchi bo‘lib joylashdi.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=121121a0-859b-497b-acb4-7182d2ad347d">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h4 id="6.-numpy.partition()"><strong>6. <code>numpy.partition()</code></strong><a class="anchor-link" href="#6.-numpy.partition()">¶</a></h4><p><code>numpy.partition()</code> metodi massivni qisman saralaydi, ya'ni berilgan pozitsiyadagi element o‘zining to‘g‘ri o‘rniga joylashtiriladi. Undan kichik bo‘lgan elementlar uning oldidan, kattalari esa undan keyin joylashadi, biroq butun massiv to‘liq saralanishi kafolatlanmaydi.</p>
+<p><strong>Misol:</strong></p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=e0b9c6e2-9320-420b-be2a-4edbae50ca59">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [23]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">prices</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1200</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">800</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="mi">1500</span><span class="p">])</span>
+<span class="c1"># 2-indeksdagi elementni o‘z o‘rniga qo‘ygan holda qisman saralash</span>
+<span class="n">partitioned_prices</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">partition</span><span class="p">(</span><span class="n">prices</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">partitioned_prices</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>[ 300  500  800 1200 1500]
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=c8e43825-efb4-441e-b1d4-7b8f7c5e04ad">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h4 id="7.-numpy.argpartition()"><strong>7. <code>numpy.argpartition()</code></strong><a class="anchor-link" href="#7.-numpy.argpartition()">¶</a></h4><p><code>numpy.argpartition()</code> funksiyasi massivni berilgan pozitsiya atrofida qismlarga ajratuvchi <strong>indekslarni</strong> qaytaradi. Bu usul eng katta yoki eng kichik $k$ ta elementni (top-k or bottom-k) samarali topish uchun juda foydalidir.</p>
+<p><strong>Misol:</strong></p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=1ba39c70-2db5-40d4-b061-4ebe99faf2d4">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [24]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">marks</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">78</span><span class="p">,</span> <span class="mi">92</span><span class="p">,</span> <span class="mi">65</span><span class="p">,</span> <span class="mi">88</span><span class="p">,</span> <span class="mi">70</span><span class="p">])</span>
+<span class="c1"># Eng katta 2 ta elementni ajratib olish uchun indekslarni aniqlash</span>
+<span class="n">top_indices</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argpartition</span><span class="p">(</span><span class="n">marks</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">marks</span><span class="p">[</span><span class="n">top_indices</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>[65 70 78 88 92]
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=438d4209-b791-49ac-8c78-d72f82119956">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><strong>Izoh:</strong>
+<code>np.argpartition(marks, -2)</code> funksiyasi massivning eng oxirgi ikkita o‘rniga (eng katta qiymatlar uchun) mos indekslarni joylashtiradi. Bu usul to‘liq saralashga (<code>sort</code>) qaraganda ancha tezroq ishlaydi, chunki u barcha elementlarni tartibga solishga vaqt sarflamaydi, faqat kerakli qismni ajratib beradi.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=f11dfb84-b7d2-43a2-bf1c-1ea623b6ca9f">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="Qidirish-(Searching)"><strong>Qidirish (Searching)</strong><a class="anchor-link" href="#Qidirish-(Searching)">¶</a></h3><p>NumPy-da qidirish muayyan shart yoki taqqoslashga mos keladigan elementlarning o‘rnini (indeksini) aniqlash uchun ishlatiladi. U 1-D va 2-D massivlar, satrlar, mantiqiy (boolean) qiymatlar va yetishmayotgan qiymatlarga ega massivlar kabi turli ma’lumotlar tuzilmalarini qo‘llab-quvvatlaydi. Ushbu operatsiyalar katta ma’lumotlar to‘plamida maksimal, minimal yoki mos keluvchi elementlarni samarali aniqlashga yordam beradi.</p>
+<h4 id="1.-numpy.argmax()"><strong>1. <code>numpy.argmax()</code></strong><a class="anchor-link" href="#1.-numpy.argmax()">¶</a></h4><p><code>numpy.argmax()</code> funksiyasi massivdagi maksimal qiymatning <strong>indeksini</strong> qaytaradi. Biz qidiruvni butun massiv bo‘ylab yoki ko‘p o‘lchamli ma’lumotlarda ma’lum bir o‘q (axis) bo‘ylab amalga oshirishimiz mumkin.</p>
+<p><strong>Misol:</strong></p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=dfa3bd2e-265a-415f-9b82-acda7a4962c4">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [25]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># 2-D massiv yaratish (masalan, talabalar baholari)</span>
+<span class="n">marks</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">78</span><span class="p">,</span> <span class="mi">85</span><span class="p">,</span> <span class="mi">90</span><span class="p">],</span>
+                  <span class="p">[</span><span class="mi">88</span><span class="p">,</span> <span class="mi">76</span><span class="p">,</span> <span class="mi">95</span><span class="p">]])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Kiruvchi massiv:</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="n">marks</span><span class="p">)</span>
+
+<span class="c1"># Butun massiv bo‘ylab eng katta element indeksi</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Umumiy maksimal indeks:"</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">marks</span><span class="p">))</span>
+
+<span class="c1"># Ustunlar bo‘yicha (axis=0) maksimal indekslar</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Ustunlar bo‘yicha maksimal indeks:"</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">marks</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">))</span>
+
+<span class="c1"># Qatorlar bo‘yicha (axis=1) maksimal indekslar</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Qatorlar bo‘yicha maksimal indeks:"</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">marks</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Kiruvchi massiv:
+ [[78 85 90]
+ [88 76 95]]
+Umumiy maksimal indeks: 5
+Ustunlar bo'yicha maksimal indeks: [1 0 1]
+Qatorlar bo'yicha maksimal indeks: [2 2]
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=f61aa81c-a26f-4bdf-92f2-6b75737b41ca">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p><strong>Izoh:</strong></p>
-<blockquote>
-<p><strong>shakl ([4, 3]):</strong> Massiv 4 ta qator va 3 ta ustundan iborat.</p>
-<p><strong>dtype = np.int32:</strong> Ma’lumotlar turi sifatida butun son tanlangan.</p>
-<p><strong>order = 'f':</strong> Xotirada ustunlar bo‘yicha tartiblash.</p>
-</blockquote>
+<ul>
+<li><strong>Umumiy maksimal indeks (5):</strong> NumPy massivni yassilangan (flattened) deb tasavvur qiladi. 95 soni 5-indeksda joylashgan.</li>
+<li><strong>Ustunlar bo‘yicha (<code>axis=0</code>):</strong> Har bir ustundagi eng katta sonning qator indeksini qaytaradi. Masalan, birinchi ustunda 78 va 88 bor, 88 kattaroq va u 1-qatorda (indeks 1).</li>
+<li><strong>Qatorlar bo‘yicha (<code>axis=1</code>):</strong> Har bir qatordagi eng katta sonning ustun indeksini qaytaradi. Birinchi qatorda 90 eng katta va u 2-indeksda joylashgan.</li>
+</ul>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=4ab17309-aa00-4fbe-91ae-b5c217461867">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=5fca7fbe-dcc2-4165-a93d-082142045f2d">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="%F0%9F%93%9D-Nazorat-savollari">📝 Nazorat savollari<a class="anchor-link" href="#%F0%9F%93%9D-Nazorat-savollari">¶</a></h2><h3 id="1-daraja:-Asosiy-tushunchalar">1-daraja: Asosiy tushunchalar<a class="anchor-link" href="#1-daraja:-Asosiy-tushunchalar">¶</a></h3><ol>
-<li><strong>NumPy</strong> so‘zining ma’nosi nima va bu kutubxona asosan nima uchun ishlatiladi?</li>
-<li><strong>ndarray</strong> nima va u Python-ning standart ro‘yxatlaridan (lists) qanday farq qiladi?</li>
-<li>NumPy massivlari qanday o‘lchamlarda bo‘lishi mumkin? Har biriga bittadan misol keltiring.</li>
-<li>Massivning <strong>o‘qi (axis)</strong> nima va u 0, 1, 2 qiymatlarida qanday o‘lchamlarni ifodalaydi?</li>
+<h4 id="2.-numpy.nanargmax()"><strong>2. <code>numpy.nanargmax()</code></strong><a class="anchor-link" href="#2.-numpy.nanargmax()">¶</a></h4><p><code>numpy.nanargmax()</code> funksiyasi <code>argmax()</code> kabi ishlaydi, biroq qidiruv jarayonida <strong>NaN</strong> (mavjud bo‘lmagan/son emas) qiymatlarni e’tiborsiz qoldiradi. Bu funksiya to‘liq bo‘lmagan yoki ma’lumotlari yetishmaydigan to‘plamlar bilan ishlashda juda foydali.</p>
+<p><strong>Misol:</strong></p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=f9cb58a3-2c1b-4bfc-bf96-a0feb1ec8ab3">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [26]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># NaN qiymatga ega bo‘lgan massiv</span>
+<span class="n">temperatures</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="mi">40</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Kiruvchi ma’lumot:"</span><span class="p">,</span> <span class="n">temperatures</span><span class="p">)</span>
+
+<span class="c1"># NaN ni hisobga olmasdan maksimal qiymat indeksini topish</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"NaN dan tashqari maksimal indeks:"</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nanargmax</span><span class="p">(</span><span class="n">temperatures</span><span class="p">))</span>
+
+<span class="c1"># NaN qiymatga ega 2D massiv</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="mi">25</span><span class="p">],</span>
+                 <span class="p">[</span><span class="mi">30</span><span class="p">,</span> <span class="mi">28</span><span class="p">]])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"2D massiv:</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+
+<span class="c1"># Qatorlar bo‘yicha (axis=1) NaN ni hisobga olmasdan maksimal indekslar</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Qatorlar bo‘yicha maksimal indeks:"</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nanargmax</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Kiruvchi ma'lumot: [nan 32. 45. 40.]
+NaN dan tashqari maksimal indeks: 2
+2D massiv:
+ [[nan 25.]
+ [30. 28.]]
+Qatorlar bo'yicha maksimal indeks: [1 0]
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=7fb6b0ec-ad78-42b9-8a2a-b4e32c0395bc">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><strong>Izoh:</strong></p>
+<ul>
+<li><strong><code>temperatures</code> massivida:</strong> Oddiy <code>argmax()</code> funksiyasi NaN qiymatini ko‘rganda xatolik berishi yoki noto‘g‘ri natija qaytarishi mumkin, lekin <code>nanargmax()</code> uni shunchaki tashlab ketadi va 45 sonining indeksi bo‘lgan <code>2</code> ni qaytaradi.</li>
+<li><strong>2D massivda:</strong> Birinchi qatorda <code>[nan, 25]</code> berilgan. <code>nanargmax</code> NaN ni o‘tkazib yuboradi va yagona qolgan qiymat <code>25</code> ning indeksi <code>1</code> ni qaytaradi. Ikkinchi qatorda esa <code>30 &gt; 28</code> bo‘lgani uchun indeks <code>0</code> ni qaytaradi.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=0798c834-4d26-41b0-8458-53d191e9a520">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h4 id="3.-numpy.argmin()"><strong>3. <code>numpy.argmin()</code></strong><a class="anchor-link" href="#3.-numpy.argmin()">¶</a></h4><p><code>numpy.argmin()</code> funksiyasi massivdagi eng kichik (minimal) qiymatning <strong>indeksini</strong> qaytaradi. Bu funksiya eng kichik elementning o‘rnini tez va samarali aniqlashga yordam beradi.</p>
+<p><strong>Misol:</strong></p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=fc9ce106-d446-4d59-9462-1e0067a8e5b9">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [27]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">prices</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1200</span><span class="p">,</span> <span class="mi">850</span><span class="p">,</span> <span class="mi">999</span><span class="p">,</span> <span class="mi">650</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Narxlar:"</span><span class="p">,</span> <span class="n">prices</span><span class="p">)</span>
+
+<span class="c1"># Eng arzon narxning indeksini topish</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Eng past narx indeksi:"</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">argmin</span><span class="p">(</span><span class="n">prices</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Narxlar: [1200  850  999  650]
+Eng past narx indeksi: 3
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=c4822828-5c45-4060-b370-40e5fdbf10d2">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h4 id="4.-numpy.nanargmin()"><strong>4. <code>numpy.nanargmin()</code></strong><a class="anchor-link" href="#4.-numpy.nanargmin()">¶</a></h4><p><code>numpy.nanargmin()</code> funksiyasi <strong>NaN</strong> (mavjud bo‘lmagan) qiymatlarni hisobga olmagan holda massivdagi minimal qiymat indeksini qaytaradi. Bu ma’lumotlar to‘plamida bo‘sh kataklar yoki yetishmayotgan yozuvlar bo‘lganda ishonchli natija olishni ta'minlaydi.</p>
+<p><strong>Misol:</strong></p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=0fbaab3a-c0e2-4be1-aa84-3f6c70991625">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [28]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">scores</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="mi">78</span><span class="p">,</span> <span class="mi">65</span><span class="p">,</span> <span class="mi">80</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Ballar:"</span><span class="p">,</span> <span class="n">scores</span><span class="p">)</span>
+
+<span class="c1"># NaN ni e'tiborsiz qoldirib, minimal qiymat indeksini topish</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"NaN dan tashqari minimal indeks:"</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nanargmin</span><span class="p">(</span><span class="n">scores</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Ballar: [nan 78. 65. 80.]
+NaN dan tashqari minimal indeks: 2
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=6123bbc8-e7f7-483a-8feb-102bba2e282d">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><strong>Izoh:</strong>
+<code>nanargmin</code> funksiyasi bo‘lmaganda, oddiy <code>argmin</code> funksiyasi NaN qiymatini eng kichik deb hisoblashi yoki natijada xatolik (warning) berishi mumkin edi. <code>nanargmin</code> esa <code>65</code> sonini eng kichik deb topadi va uning indeksi bo‘lgan <code>2</code> ni qaytaradi.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=3134cd16-3f8a-435b-b9f9-3e2953115a24">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h4 id="5.-numpy.argwhere()"><strong>5. <code>numpy.argwhere()</code></strong><a class="anchor-link" href="#5.-numpy.argwhere()">¶</a></h4><p><code>numpy.argwhere()</code> funksiyasi berilgan shartga mos keladigan elementlarning indekslarini qaytaradi. Natija har bir element bo‘yicha guruhlanadi (ustun ko‘rinishida), bu esa ma’lumotlarni filtrlash uchun juda qulaydir.</p>
+<p><strong>Misol:</strong></p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=2cd6b995-2b90-4281-bb79-3a37749cd599">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [29]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">8</span><span class="p">])</span>
+<span class="c1"># 0 dan katta elementlar indeksini topish</span>
+<span class="n">indices</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argwhere</span><span class="p">(</span><span class="n">arr</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">indices</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>[[0]
+ [4]]
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=503a9286-c595-4a22-94d7-37dbe180bab4">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h4 id="6.-numpy.nonzero()"><strong>6. <code>numpy.nonzero()</code></strong><a class="anchor-link" href="#6.-numpy.nonzero()">¶</a></h4><p><code>numpy.nonzero()</code> funksiyasi massivdagi nolga teng bo‘lmagan barcha elementlarning indekslarini qaytaradi. U ko‘pincha shartga asoslangan tezkor qidiruvlar uchun ishlatiladi.</p>
+<p><strong>Misol:</strong></p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=9cbc315f-0eba-4e09-ab24-32fc7031e9df">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [30]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">values</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">30</span><span class="p">])</span>
+
+<span class="c1"># Nolga teng bo‘lmagan elementlar indeksini topish</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Nolga teng bo‘lmagan indekslar:"</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nonzero</span><span class="p">(</span><span class="n">values</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Nolga teng bo'lmagan indekslar: (array([0, 2, 4]),)
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=74cd21a8-4f33-4dc9-85a8-3fc26552b16d">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><strong>Izoh:</strong></p>
+<ul>
+<li><strong><code>argwhere</code></strong> natijani 2D massiv ko‘rinishida qaytaradi, bu esa har bir topilgan indeksni alohida qator sifatida ko‘rish imkonini beradi.</li>
+<li><strong><code>nonzero</code></strong> esa natijani kortej (tuple) ichida qaytaradi. <code>np.nonzero(a)</code> aslida <code>np.where(a != 0)</code> bilan bir xil ishlaydi.</li>
+<li>Agar sizda ko‘p o‘lchamli massiv bo‘lsa, <code>nonzero</code> har bir o‘lcham uchun alohida massivlar kortejini qaytaradi, bu esa o‘sha elementlarning koordinatalarini bildiradi.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=5856e2e9-e292-4414-ac13-9e68cf58344a">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h4 id="7.-numpy.flatnonzero()"><strong>7. <code>numpy.flatnonzero()</code></strong><a class="anchor-link" href="#7.-numpy.flatnonzero()">¶</a></h4><p><code>numpy.flatnonzero()</code> funksiyasi massivni yassilangan (1-D) deb hisoblagan holda, uning nolga teng bo‘lmagan elementlari indekslarini qaytaradi. Bu, ayniqsa, ko‘p o‘lchamli massivlar bilan ishlayotganda va ularni bitta qatorli indekslar orqali boshqarish kerak bo‘lganda juda qo‘l keladi.</p>
+<p><strong>Misol:</strong></p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=74fd5fcf-6b23-4eee-8ca0-b22afc08da83">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [31]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">]])</span>
+
+<span class="c1"># Yassilangan holatdagi nol bo‘lmagan indekslarni topish</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Yassilangan nol bo‘lmagan indekslar:"</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">flatnonzero</span><span class="p">(</span><span class="n">matrix</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Yassilangan nol bo'lmagan indekslar: [1 2]
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=3c7e3e24-0477-4276-9722-faeac506ffd1">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h4 id="8.-numpy.where()"><strong>8. <code>numpy.where()</code></strong><a class="anchor-link" href="#8.-numpy.where()">¶</a></h4><p><code>numpy.where()</code> funksiyasi berilgan shartga asoslangan elementlarni qaytaradi. U ko‘pincha ma’lumotlarni shartli ravishda o‘zgartirish yoki ikkita massivdan qiymatlarni tanlab olish uchun ishlatiladi.</p>
+<p><strong>Misol:</strong></p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=cc90261f-b96e-4374-83fc-964c0be1d643">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [32]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">marks</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">45</span><span class="p">,</span> <span class="mi">72</span><span class="p">,</span> <span class="mi">88</span><span class="p">,</span> <span class="mi">60</span><span class="p">])</span>
+
+<span class="c1"># Shart: agar baho 60 dan katta yoki teng bo‘lsa "Pass", aks holda "Fail"</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">marks</span> <span class="o">&gt;=</span> <span class="mi">60</span><span class="p">,</span> <span class="s2">"Pass"</span><span class="p">,</span> <span class="s2">"Fail"</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Natija:"</span><span class="p">,</span> <span class="n">result</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Natija: ['Fail' 'Pass' 'Pass' 'Pass']
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=bf8f1c6e-600b-4516-9427-e6628318cfb5">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><strong>Izoh:</strong></p>
+<ul>
+<li><strong><code>flatnonzero</code></strong>: Yuqoridagi misolda <code>matrix</code> yassilansa <code>[0, 1, 2, 0]</code> ko‘rinishiga keladi. Nolga teng bo‘lmagan <code>1</code> va <code>2</code> sonlari mos ravishda <code>1</code> va <code>2</code>-indekslarda joylashgan.</li>
+<li><strong><code>where</code></strong>: Bu funksiya “if-else” mantiqi bo‘yicha butun massiv ustida bir marta amallarni bajarishga imkon beradi (vectorization), bu esa oddiy sikllarga qaraganda ancha tezroqdir.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=4849104b-c7ef-46ea-b940-c460c0a47a35">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h4 id="9.-numpy.searchsorted()"><strong>9. <code>numpy.searchsorted()</code></strong><a class="anchor-link" href="#9.-numpy.searchsorted()">¶</a></h4><p><code>numpy.searchsorted()</code> funksiyasi tartiblangan massivda ma’lum bir qiymatning tartibni buzmagan holda qayerga joylashtirilishi kerakligini (indeksini) aniqlaydi. Bu funksiya asosan ikkilik qidiruv (binary search) algoritmlarida qo‘llaniladi.</p>
+<p><strong>Misol:</strong></p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=8e1d2669-ed5f-4c74-91b8-436dd78da0c7">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [33]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">sorted_scores</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">40</span><span class="p">,</span> <span class="mi">55</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">85</span><span class="p">])</span>
+
+<span class="c1"># 65 soni tartibni saqlash uchun qaysi indeksga qo‘shilishi kerak?</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"65 uchun joylashtirish o‘rni:"</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">searchsorted</span><span class="p">(</span><span class="n">sorted_scores</span><span class="p">,</span> <span class="mi">65</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>65 uchun joylashtirish o'rni: 2
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=f797a4ef-7847-4c15-aa64-adfd15d15627">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h4 id="10.-numpy.extract()"><strong>10. <code>numpy.extract()</code></strong><a class="anchor-link" href="#10.-numpy.extract()">¶</a></h4><p><code>numpy.extract()</code> funksiyasi berilgan shartga mos keladigan elementlarning o‘zini qaytaradi. Bu funksiya ma’lumotlarni to‘g‘ridan-to‘g‘ri filtrlash va ajratib olish uchun juda qulaydir.</p>
+<p><strong>Misol:</strong></p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=67e40d40-f55d-4978-94f6-91e5753065da">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [34]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">ages</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">12</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">30</span><span class="p">])</span>
+
+<span class="c1"># 18 va undan katta yoshdagilarni ajratib olish</span>
+<span class="n">adults</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">extract</span><span class="p">(</span><span class="n">ages</span> <span class="o">&gt;=</span> <span class="mi">18</span><span class="p">,</span> <span class="n">ages</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Kattalar:"</span><span class="p">,</span> <span class="n">adults</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Kattalar: [18 25 30]
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=e2f3ebe3-a069-44c5-9012-a607c7b2d99d">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><strong>Izoh:</strong></p>
+<ul>
+<li><strong><code>searchsorted</code></strong>: 65 soni 55 va 70 ning orasiga tushishi kerak, shuning uchun u 2-indeksni qaytaradi. Shuni yodda tutingki, ushbu funksiya massivning <strong>saralangan</strong> bo‘lishini talab qiladi.</li>
+<li><strong><code>extract</code></strong>: Bu funksiya mantiqiy shart (<code>ages &gt;= 18</code>) asosida ishlaydi. U <code>np.where</code> funksiyasiga o‘xshash, lekin indekslarni emas, balki qiymatlarning o‘zini massiv ko‘rinishida qaytaradi.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=7c6eccfa-5172-4c35-a293-68a1b14c7401">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="Hisoblash-(Counting)"><strong>Hisoblash (Counting)</strong><a class="anchor-link" href="#Hisoblash-(Counting)">¶</a></h3><p>NumPy-da hisoblash amallari muayyan shartga mos keladigan elementlar sonini (masalan, nolga teng bo‘lmagan qiymatlar, mantiqiy mosliklar yoki takrorlanish chastotasi) aniqlash uchun ishlatiladi. Ushbu operatsiyalar ma’lumotlarni samarali umumlashtirish va massivlardan muhim statistik tushunchalarni ajratib olishga yordam beradi. NumPy-ning optimallashtirilgan hisoblash mexanizmlari ham bir o‘lchamli, ham ko‘p o‘lchamli ma’lumotlar bilan juda yaxshi ishlaydi.</p>
+<h4 id="1.-numpy.count_nonzero()"><strong>1. <code>numpy.count_nonzero()</code></strong><a class="anchor-link" href="#1.-numpy.count_nonzero()">¶</a></h4><p><code>numpy.count_nonzero()</code> funksiyasi massivdagi nolga teng bo‘lmagan elementlar sonini qaytaradi. U sonli qiymatlar, mantiqiy (boolean) ifodalar va shartli amallar bilan ishlay oladi.</p>
+<p><strong>Misol:</strong></p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=0fe7ac23-d23e-420a-9212-4c264070b0a9">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [35]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+<span class="n">count</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">count_nonzero</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Massiv:"</span><span class="p">,</span> <span class="n">arr</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Nol bo‘lmaganlar soni:"</span><span class="p">,</span> <span class="n">count</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Massiv: [ 0 10  0 25 30  0]
+Nol bo'lmaganlar soni: 3
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=07e4eb66-20cf-4f3b-9d63-8602fae82480">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><strong>Izoh:</strong>
+Bu funksiya nafaqat sonlarni, balki shartli hisoblashlarni ham bajara oladi. Masalan, <code>np.count_nonzero(arr &gt; 15)</code> deb yozsangiz, massivdagi 15 dan katta bo‘lgan elementlar sonini qaytaradi. Bu NumPy-da ma’lum bir shartga mos keladigan elementlar sonini topishning eng tezkor usulidir.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=7817a6a4-6550-4b90-89f0-68602e6a2141">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h4 id="2.-numpy.bincount()"><strong>2. <code>numpy.bincount()</code></strong><a class="anchor-link" href="#2.-numpy.bincount()">¶</a></h4><p><code>numpy.bincount()</code> funksiyasi massivdagi manfiy bo‘lmagan butun sonlarning uchrash sonini hisoblaydi. Natijadagi har bir indeks butun son qiymatini, o‘sha indeksdagi qiymat esa uning necha marta takrorlanganini bildiradi.</p>
+<p><strong>Misol:</strong></p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=9c23c841-35be-43c1-b250-d99771e6f914">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [36]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
+<span class="n">frequency_counts</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">bincount</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Har bir sonning takrorlanish chastotasi:"</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">value</span><span class="p">,</span> <span class="n">count</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">frequency_counts</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">count</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s2"> soni </span><span class="si">{</span><span class="n">count</span><span class="si">}</span><span class="s2"> marta qatnashgan"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Har bir sonning takrorlanish chastotasi:
+1 soni 1 marta qatnashgan
+2 soni 2 marta qatnashgan
+3 soni 3 marta qatnashgan
+4 soni 1 marta qatnashgan
+5 soni 2 marta qatnashgan
+10 soni 1 marta qatnashgan
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=87cc4fec-e5ef-414e-874a-896ddc7bcd13">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h4 id="3.-numpy.unique()"><strong>3. <code>numpy.unique()</code></strong><a class="anchor-link" href="#3.-numpy.unique()">¶</a></h4><p><code>numpy.unique()</code> funksiyasi massivdagi takrorlanmas (unikal) elementlarni topish uchun ishlatiladi. Shuningdek, u har bir unikal qiymatning chastotasi, birinchi marta uchrash indekslari kabi qo‘shimcha ma’lumotlarni ham qaytarishi mumkin. Bu uni ma’lumotlar tahlili uchun juda foydali qiladi.</p>
+<p><strong>Misol:</strong></p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=e6425394-d237-4227-98a4-35b9d043d05a">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [37]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="s2">"apple"</span><span class="p">,</span> <span class="s2">"banana"</span><span class="p">,</span> <span class="s2">"apple"</span><span class="p">,</span> <span class="s2">"orange"</span><span class="p">,</span> <span class="s2">"banana"</span><span class="p">,</span> <span class="s2">"apple"</span><span class="p">])</span>
+
+<span class="c1"># Unikal elementlar va ularning sonini aniqlash</span>
+<span class="n">unique_items</span><span class="p">,</span> <span class="n">counts</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">return_counts</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Takrorlanmas elementlar:"</span><span class="p">,</span> <span class="n">unique_items</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Ularning soni:"</span><span class="p">,</span> <span class="n">counts</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Takrorlanmas elementlar: ['apple' 'banana' 'orange']
+Ularning soni: [3 2 1]
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=e1a48a10-18af-46fe-b790-36826f364775">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><strong>Izoh:</strong></p>
+<ul>
+<li><strong><code>bincount</code></strong>: Faqat manfiy bo‘lmagan butun sonlar (<code>int</code>) bilan ishlaydi. Agar massivda 10 soni bo‘lsa, natijaviy massiv uzunligi kamida 11 bo‘ladi (chunki 0 dan 10 gacha indekslar bo‘lishi kerak).</li>
+<li><strong><code>unique</code></strong>: Istalgan turdagi ma’lumotlar (matn, suzuvchi nuqtali sonlar va h.k.) bilan ishlay oladi. <code>return_counts=True</code> parametri orqali har bir element necha marta kelganini osongina bilish mumkin.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=af839033-8aed-4263-9a44-30ae90bfc4eb">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="%F0%9F%93%9D-Nazorat-savollari">📝 Nazorat savollari<a class="anchor-link" href="#%F0%9F%93%9D-Nazorat-savollari">¶</a></h3><h3 id="1-daraja:-Asosiy-tushunchalar">1-daraja: Asosiy tushunchalar<a class="anchor-link" href="#1-daraja:-Asosiy-tushunchalar">¶</a></h3><ol>
+<li>NumPy-da saralash (<code>sorting</code>) tushunchasi nimani anglatadi va u odatda qaysi tartibda amalga oshiriladi?</li>
+<li><code>np.sort()</code> funksiyasi yordamida massivni kamayish tartibida saralash uchun qanday usuldan foydalaniladi?</li>
+<li>Massivni oʻz oʻrnida (<code>in-place</code>) saralash bilan yangi nusxa yaratib saralashning asosiy farqi nimada?</li>
+<li>Python-ning standart <code>sorted()</code> funksiyasi NumPy massivi bilan ishlatilganda qanday turdagi ma’lumot qaytaradi?</li>
 </ol>
-<h3 id="2-daraja:-Massiv-parametrlari-va-turlari">2-daraja: Massiv parametrlari va turlari<a class="anchor-link" href="#2-daraja:-Massiv-parametrlari-va-turlari">¶</a></h3><ol start="5">
-<li>Massivning <strong>shakli (shape)</strong> va <strong>rangi (rank)</strong> deganda nima tushuniladi?</li>
-<li><strong>dtype</strong> nima va u xotiradagi ma’lumotlarni boshqarishda qanday rol o‘ynaydi?</li>
-<li><code>type()</code> va <code>dtype</code> buyruqlari o‘rtasidagi asosiy farq nimadan iborat?</li>
-<li><strong>Tuzilmali massivlar</strong> (Structured Arrays) nima va ular qanday holatlarda qo‘llaniladi?</li>
+<h3 id="2-daraja:-Funksiyalarning-ishlash-mexanizmi">2-daraja: Funksiyalarning ishlash mexanizmi<a class="anchor-link" href="#2-daraja:-Funksiyalarning-ishlash-mexanizmi">¶</a></h3><ol start="5">
+<li><code>np.sort()</code> funksiyasida <code>axis=0</code> va <code>axis=-1</code> parametrlari 2D massivda saralash yoʻnalishini qanday belgilaydi?</li>
+<li><code>np.argsort()</code> funksiyasi qiymatlarning oʻzini emas, indekslarni qaytarishi amaliyotda qanday qulaylik yaratadi?</li>
+<li><code>np.lexsort()</code> funksiyasida bir nechta kalitlar bilan saralashda qaysi massiv asosiy kalit vazifasini bajaradi?</li>
+<li><code>np.searchsorted()</code> funksiyasi ishlashi uchun kiruvchi massiv qanday holatda boʻlishi talab etiladi?</li>
 </ol>
-<h3 id="3-daraja:-Funksiyalar-bilan-ishlash">3-daraja: Funksiyalar bilan ishlash<a class="anchor-link" href="#3-daraja:-Funksiyalar-bilan-ishlash">¶</a></h3><ol start="9">
-<li><code>np.arange()</code> funksiyasi yordamida massiv yaratilganda, <strong>stop</strong> (tugash) qiymati massivga kiritiladimi?</li>
-<li><code>np.linspace()</code> funksiyasi <code>np.arange()</code> dan qaysi jihati bilan farq qiladi?</li>
-<li><code>np.empty()</code> funksiyasi yaratgan massiv nima uchun “axlat” qiymatlardan iborat bo‘ladi?</li>
-<li><code>order='C'</code> va <code>order='F'</code> parametrlari ma’lumotlarni xotirada qanday tartibda joylashtiradi?</li>
+<h3 id="3-daraja:-Amaliy-tahlil-va-murakkab-amallar">3-daraja: Amaliy tahlil va murakkab amallar<a class="anchor-link" href="#3-daraja:-Amaliy-tahlil-va-murakkab-amallar">¶</a></h3><ol start="9">
+<li><code>np.where()</code> funksiyasidan faqat shart berilgan holatda foydalanilsa, u qanday natija qaytaradi?</li>
+<li><code>np.partition()</code> va <code>np.argpartition()</code> funksiyalari toʻliq saralashdan koʻra qaysi jihati bilan samaraliroq hisoblanadi?</li>
+<li>NaN (mavjud boʻlmagan) qiymatlarga ega massivlarda maksimal indeksni topishda <code>np.argmax()</code> va <code>np.nanargmax()</code> farqini tushuntiring.</li>
+<li><code>np.bincount()</code> va <code>np.unique()</code> funksiyalari elementlarni sanashda qanday cheklovlar yoki afzalliklarga ega?</li>
 </ol>
 </div>
 </div>
